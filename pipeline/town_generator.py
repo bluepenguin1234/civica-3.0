@@ -422,14 +422,18 @@ def build_fundamentals_card(row):
                   'municipal agency matched)</span>') if int(row['crime_imputed']) == 1 else ''
     inc_note = (' <span class="tcap" style="display:inline;">(county fallback — no ZIP '
                 'allocation)</span>') if int(row['income_imputed']) == 1 else ''
+    sch_note = (' <span class="tcap" style="display:inline;">(county/RUCC-tier estimate)</span>'
+                ) if int(row['schools_imputed']) == 1 else ''
     rb = row['rent_burden'] * 100
     return f'''<div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="g3">
+    <div class="tcap" style="margin:-10px 0 16px;">The underlying federal figures behind the score.</div>
+    <div class="numgrid">
       <div class="sb"><div class="sb-val">{money(row['town_income'])}</div><div class="sb-lbl">Town income / return (IRS ZIP){inc_note}</div></div>
       <div class="sb"><div class="sb-val">{rb:.0f}%</div><div class="sb-lbl">Rent burden (2BR FMR ÷ income)</div></div>
       <div class="sb"><div class="sb-val">{row['hpi_3yr_avg']:+.1f}%</div><div class="sb-lbl">3yr appreciation (FHFA)</div></div>
       <div class="sb"><div class="sb-val">{money(row['avg_annual_wage'])}</div><div class="sb-lbl">Avg annual wage (BLS QCEW)</div></div>
+      <div class="sb"><div class="sb-val">{row['school_score']:.0f}</div><div class="sb-lbl">School proficiency, {row['state_abbr']} %ile (EDFacts){sch_note}</div></div>
       <div class="sb"><div class="sb-val">{row['violent_per100k']:.0f}</div><div class="sb-lbl">Violent crime / 100k (NIBRS){crime_note}</div></div>
       <div class="sb"><div class="sb-val">{row['property_per100k']:.0f}</div><div class="sb-lbl">Property crime / 100k (NIBRS)</div></div>
       <div class="sb"><div class="sb-val">{row['town_growth_5yr']*100:+.1f}%</div><div class="sb-lbl">Town pop growth, 5yr (Census)</div></div>
@@ -584,8 +588,8 @@ def generate_page(row, style, geo, siblings):
   {build_glance(row)}
   {build_dimension_card(row)}
   {build_position_card(row)}
-  {build_location_card(row, lat, lon)}
   {build_fundamentals_card(row)}
+  {build_location_card(row, lat, lon)}
   {build_peers_card(siblings, fips, place)}
   {build_howto(row)}
   {build_schools_card(row)}

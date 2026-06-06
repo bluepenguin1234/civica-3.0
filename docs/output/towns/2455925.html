@@ -225,11 +225,12 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 /* GRIDS */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.numgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:12px; }
 .g4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; }
 @media(max-width:400px) { .g2,.g3,.g4 { grid-template-columns:1fr; } }
 
 /* STAT BOX */
-.sb { background:#f5f5f7; border-radius:var(--r-sm); padding:14px; border:1px solid var(--border); }
+.sb { background:#f6f9fd; border-radius:var(--r-sm); padding:14px 14px 16px; border:1px solid var(--border); }
 .sb-val { font-size:24px; font-weight:800; color:var(--navy); line-height:1; }
 .sb-val.big { font-size:32px; }
 .sb-lbl { font-size:11px; color:var(--muted); margin-top:4px; font-weight:500; line-height:1.3; }
@@ -544,24 +545,26 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
     </div>
   </div>
   <div class="card">
-    <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
-    <div id="locmap" data-lat="39.5429" data-lon="-77.0992" data-col="#16a34a"></div>
-    <div class="tcap">New Windsor town, MD · 1,749 residents.
-      Scroll to zoom; drag to pan.</div>
-  </div>
-  <div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="g3">
+    <div class="tcap" style="margin:-10px 0 16px;">The underlying federal figures behind the score.</div>
+    <div class="numgrid">
       <div class="sb"><div class="sb-val">$100,663</div><div class="sb-lbl">Town income / return (IRS ZIP)</div></div>
       <div class="sb"><div class="sb-val">22%</div><div class="sb-lbl">Rent burden (2BR FMR ÷ income)</div></div>
       <div class="sb"><div class="sb-val">+5.1%</div><div class="sb-lbl">3yr appreciation (FHFA)</div></div>
       <div class="sb"><div class="sb-val">$53,672</div><div class="sb-lbl">Avg annual wage (BLS QCEW)</div></div>
+      <div class="sb"><div class="sb-val">75</div><div class="sb-lbl">School proficiency, MD %ile (EDFacts) <span class="tcap" style="display:inline;">(county/RUCC-tier estimate)</span></div></div>
       <div class="sb"><div class="sb-val">0</div><div class="sb-lbl">Violent crime / 100k (NIBRS)</div></div>
       <div class="sb"><div class="sb-val">0</div><div class="sb-lbl">Property crime / 100k (NIBRS)</div></div>
       <div class="sb"><div class="sb-val">+20.5%</div><div class="sb-lbl">Town pop growth, 5yr (Census)</div></div>
       <div class="sb"><div class="sb-val">+10.6%</div><div class="sb-lbl">Town income growth (IRS ZIP)</div></div>
       <div class="sb"><div class="sb-val">+0.1</div><div class="sb-lbl">County net migration / 1k (Census)</div></div>
     </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
+    <div id="locmap" data-lat="39.5429" data-lon="-77.0992" data-col="#16a34a"></div>
+    <div class="tcap">New Windsor town, MD · 1,749 residents.
+      Scroll to zoom; drag to pan.</div>
   </div>
   <div class="card">
     <div class="card-title"><span class="ct-icon">🏘️</span> Towns in the Same County</div>
