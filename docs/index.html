@@ -73,10 +73,10 @@
     <h1 id="hero-h">Know before you <span class="ac">buy.</span></h1>
     <p class="lead">Every US town scored on affordability, economy, safety &amp; place, growth, and schools — each ranked inside its county.</p>
     <div class="search" role="search">
-      <label for="q" style="display:block;margin-bottom:8px;color:var(--muted);font-weight:500;font-size:14px;">Search a town or state</label>
+      <label for="q" style="display:block;margin-bottom:8px;color:var(--muted);font-weight:500;font-size:14px;">Search a town</label>
       <div class="search-field">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-        <input id="q" type="text" placeholder='Try "Tennessee" or "Nolensville"…' autocomplete="off"
+        <input id="q" type="text" placeholder='Try "Nolensville" or "Brookhaven"…' autocomplete="off"
           role="combobox" aria-expanded="false" aria-controls="drop" aria-autocomplete="list"
           oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)">
       </div>
@@ -136,21 +136,16 @@
 
 <script>
 const LABEL_COLOR = { 'Strong Buy':'#16a34a', 'Buy':'#0b57c2', 'Hold':'#f59e0b', 'Caution':'#dc2626' };
-const STATE_NAMES = {AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'};
 let TOWNS=[]; const q=document.getElementById('q'), drop=document.getElementById('drop');
 fetch('output/town_index.json').then(r=>r.json()).then(d=>{TOWNS=d;})
   .catch(()=>{ drop.innerHTML='<div class="opt-row"><span class="opt-meta">Run a local server to load town data.</span></div>'; });
-function detectState(v){ const u=v.trim().toUpperCase(); if(STATE_NAMES[u])return u;
-  const l=v.trim().toLowerCase(); return Object.keys(STATE_NAMES).find(k=>STATE_NAMES[k].toLowerCase().startsWith(l))||null; }
 function row(c){ const col=LABEL_COLOR[c.label]||'#5b6170';
   return `<a class="opt-row" role="option" href="output/towns/${c.fips}.html">
     <span><span class="opt-name">${c.name}, ${c.state}</span><br><span class="opt-meta">${c.county} · #${c.rank_in_county} in county</span></span>
     <span class="opt-score" style="background:${col}">${Math.round(c.score)}</span></a>`; }
 function handleSearch(val){
   if(!val.trim()||!TOWNS.length){ drop.className='drop'; q.setAttribute('aria-expanded','false'); return; }
-  const st=detectState(val); let hits;
-  if(st){ hits=TOWNS.filter(c=>c.state===st).slice(0,8); }
-  else { const l=val.toLowerCase(); hits=TOWNS.filter(c=>c.name.toLowerCase().includes(l)).slice(0,8); }
+  const l=val.toLowerCase(); const hits=TOWNS.filter(c=>c.name.toLowerCase().includes(l)).slice(0,8);
   drop.innerHTML = hits.length ? hits.map(row).join('') : '<div class="opt-row"><span class="opt-meta">No towns found</span></div>';
   drop.className='drop open'; q.setAttribute('aria-expanded','true');
 }
