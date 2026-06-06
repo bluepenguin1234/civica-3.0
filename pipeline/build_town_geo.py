@@ -46,6 +46,35 @@ def fetch_gaz():
     raise SystemExit("Could not download a Census Gazetteer place file.")
 
 
+COUSUB_CANDIDATES = [
+    ('2024', 'https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_cousubs_national.zip'),
+    ('2023', 'https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_cousubs_national.zip'),
+    ('2021', 'https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2021_Gazetteer/2021_Gaz_cousubs_national.zip'),
+]
+
+
+def fetch_cousub_gaz():
+    """County-subdivisions gazetteer (New England MCD town coordinates). Cached."""
+    local = os.path.join(DATA, 'gaz_cousubs.txt')
+    if os.path.exists(local) and os.path.getsize(local) > 100_000:
+        print("  using cached cousub gazetteer")
+        return local
+    for yr, url in COUSUB_CANDIDATES:
+        try:
+            print(f"  downloading {yr} cousub gazetteer...")
+            r = requests.get(url, headers=HEADERS, timeout=120); r.raise_for_status()
+            z = zipfile.ZipFile(io.BytesIO(r.content))
+            name = [n for n in z.namelist() if n.lower().endswith('.txt')][0]
+            with z.open(name) as f, open(local, 'wb') as o:
+                o.write(f.read())
+            print(f"    saved {os.path.getsize(local)/1e6:.1f} MB ({name})")
+            return local
+        except Exception as e:
+            print(f"    {yr} failed: {e}")
+    print("  WARNING: no cousub gazetteer — New England towns will lack coordinates.")
+    return None
+
+
 def main():
     gaz = fetch_gaz()
     # Tab-delimited; some rows have trailing spaces in column names.
@@ -55,6 +84,16 @@ def main():
     g['lat'] = pd.to_numeric(g['INTPTLAT'], errors='coerce')
     g['lon'] = pd.to_numeric(g['INTPTLONG'], errors='coerce')
     geo = g.set_index('fips')[['lat', 'lon']]
+
+    # New England MCD town coordinates from the county-subdivisions gazetteer (10-digit GEOID).
+    cg = fetch_cousub_gaz()
+    if cg:
+        gc = pd.read_csv(cg, sep='\t', dtype={'GEOID': str}, encoding='latin1')
+        gc.columns = [c.strip() for c in gc.columns]
+        gc['fips'] = gc['GEOID'].str.zfill(10)
+        gc['lat'] = pd.to_numeric(gc['INTPTLAT'], errors='coerce')
+        gc['lon'] = pd.to_numeric(gc['INTPTLONG'], errors='coerce')
+        geo = pd.concat([geo, gc.set_index('fips')[['lat', 'lon']]])
 
     df = pd.read_csv(SCORES, dtype={'fips': str})
     df['fips'] = df['fips'].str.zfill(7)

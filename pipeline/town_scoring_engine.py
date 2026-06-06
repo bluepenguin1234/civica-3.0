@@ -87,34 +87,29 @@ C_POINTS = sum(p for p, layer in POINTS.values() if layer == 'C')   # 41.8
 
 # ── New town-resolved loaders ────────────────────────────────────────────────────
 
+MCD_GEOIDS = set()  # New England town (MCD) GEOIDs; set by load_subest, reused by the crosswalk
+# New England states whose governing municipalities are MCDs (county subdivisions), not
+# Census incorporated places: CT, ME, MA, NH, RI, VT.
+NE_MCD_STATES = {'09', '23', '25', '33', '44', '50'}
+
+
 def load_subest():
-    """Census sub-est: town universe (SUMLEV 162), place->county crosswalk (157),
-    town growth features, and county totals (050) for share + relative growth."""
+    """Census sub-est: town universe + growth + place->county crosswalk + county totals.
+
+    Universe = incorporated places (SUMLEV 162) PLUS New England governing towns
+    (SUMLEV 061 with FUNCSTAT 'A' = active government). The 'A' filter is the dedup: NE
+    cities appear as FUNCSTAT 'F' duplicates of their incorporated place and are skipped,
+    so the two layers don't double-count. MCD towns carry a 10-digit state+county+cousub
+    GEOID as `fips` and are flagged is_mcd=1."""
     df = pd.read_csv(
         f'{DATA}/census_population/sub-est.csv', encoding='latin1',
-        dtype={'SUMLEV': str, 'STATE': str, 'COUNTY': str, 'PLACE': str},
+        dtype={'SUMLEV': str, 'STATE': str, 'COUNTY': str, 'PLACE': str,
+               'COUSUB': str, 'FUNCSTAT': str},
     )
     for c in POP_COLS:
         df[c] = pd.to_numeric(df[c], errors='coerce')
 
-    # Universe: incorporated places (whole). COUNTY is '000' on these records.
-    places = df[df['SUMLEV'] == '162'].copy()
-    places['fips'] = places['STATE'].str.zfill(2) + places['PLACE'].str.zfill(5)
-    places['place_name'] = places['NAME'].astype(str)
-    places['state_abbr'] = places['STATE'].map(FIPS_STATE)
-
-    # Crosswalk place->county from the place-county-part records (157).
-    parts = df[df['SUMLEV'] == '157'].copy()
-    parts['fips'] = parts['STATE'].str.zfill(2) + parts['PLACE'].str.zfill(5)
-    parts['county_fips'] = parts['STATE'].str.zfill(2) + parts['COUNTY'].str.zfill(3)
-    parts = parts.dropna(subset=['POPESTIMATE2025'])
-    # Primary county = the county part holding the largest share of the place's pop.
-    idx = parts.groupby('fips')['POPESTIMATE2025'].idxmax()
-    primary = (parts.loc[idx, ['fips', 'county_fips']]
-               .rename(columns={'county_fips': 'primary_county_fips'}))
-    places = places.merge(primary, on='fips', how='left')
-
-    # County totals + names + 5yr county growth from the county records (050).
+    # County totals + names + 5yr growth from the county records (050).
     counties = df[df['SUMLEV'] == '050'].copy()
     counties['cfips'] = counties['STATE'].str.zfill(2) + counties['COUNTY'].str.zfill(3)
     cpop25 = counties.set_index('cfips')['POPESTIMATE2025']
@@ -122,27 +117,57 @@ def load_subest():
     cname = counties.set_index('cfips')['NAME'].astype(str)
     cgrowth = (cpop25 / cpop20.replace(0, np.nan) - 1)
 
-    places['county_name'] = places['primary_county_fips'].map(cname)
-    places['county_total_2025'] = places['primary_county_fips'].map(cpop25)
-    places['county_growth_5yr'] = places['primary_county_fips'].map(cgrowth)
+    # Incorporated places (whole). COUNTY is '000' on these records.
+    places = df[df['SUMLEV'] == '162'].copy()
+    places['fips'] = places['STATE'].str.zfill(2) + places['PLACE'].str.zfill(5)
+    places['is_mcd'] = 0
+    # Primary county = the place-county part (157) holding the largest pop share.
+    parts = df[df['SUMLEV'] == '157'].copy()
+    parts['fips'] = parts['STATE'].str.zfill(2) + parts['PLACE'].str.zfill(5)
+    parts['county_fips'] = parts['STATE'].str.zfill(2) + parts['COUNTY'].str.zfill(3)
+    parts = parts.dropna(subset=['POPESTIMATE2025'])
+    idx = parts.groupby('fips')['POPESTIMATE2025'].idxmax()
+    primary = (parts.loc[idx, ['fips', 'county_fips']]
+               .rename(columns={'county_fips': 'primary_county_fips'}))
+    places = places.merge(primary, on='fips', how='left')
+
+    # New England governing towns (MCDs). A 061 'A' record sits in one county, so its
+    # state+county+cousub GEOID is the whole town and the county is read off the record.
+    mcd = df[(df['SUMLEV'] == '061') & (df['FUNCSTAT'] == 'A') &
+             (df['STATE'].str.zfill(2).isin(NE_MCD_STATES))].copy()
+    mcd['fips'] = (mcd['STATE'].str.zfill(2) + mcd['COUNTY'].str.zfill(3)
+                   + mcd['COUSUB'].str.zfill(5))
+    mcd['primary_county_fips'] = mcd['STATE'].str.zfill(2) + mcd['COUNTY'].str.zfill(3)
+    mcd['is_mcd'] = 1
+
+    common = ['fips', 'NAME', 'STATE', 'primary_county_fips', 'is_mcd'] + POP_COLS
+    uni = pd.concat([places[common], mcd[common]], ignore_index=True)
+    uni['place_name'] = uni['NAME'].astype(str)
+    uni['state_abbr'] = uni['STATE'].map(FIPS_STATE)
+    uni['county_name'] = uni['primary_county_fips'].map(cname)
+    uni['county_total_2025'] = uni['primary_county_fips'].map(cpop25)
+    uni['county_growth_5yr'] = uni['primary_county_fips'].map(cgrowth)
 
     # Town growth features (all T).
-    p20 = places['POPESTIMATE2020'].replace(0, np.nan)
-    p24 = places['POPESTIMATE2024'].replace(0, np.nan)
-    places['town_growth_5yr'] = places['POPESTIMATE2025'] / p20 - 1
-    places['town_growth_1yr'] = places['POPESTIMATE2025'] / p24 - 1
-    annual = places[POP_COLS].pct_change(axis=1).iloc[:, 1:]
-    places['town_growth_vol'] = annual.replace([np.inf, -np.inf], np.nan).std(axis=1)
-    places['town_pop_share'] = places['POPESTIMATE2025'] / places['county_total_2025']
-    places['town_growth_rel_county'] = places['town_growth_5yr'] - places['county_growth_5yr']
+    p20 = uni['POPESTIMATE2020'].replace(0, np.nan)
+    p24 = uni['POPESTIMATE2024'].replace(0, np.nan)
+    uni['town_growth_5yr'] = uni['POPESTIMATE2025'] / p20 - 1
+    uni['town_growth_1yr'] = uni['POPESTIMATE2025'] / p24 - 1
+    annual = uni[POP_COLS].pct_change(axis=1).iloc[:, 1:]
+    uni['town_growth_vol'] = annual.replace([np.inf, -np.inf], np.nan).std(axis=1)
+    uni['town_pop_share'] = uni['POPESTIMATE2025'] / uni['county_total_2025']
+    uni['town_growth_rel_county'] = uni['town_growth_5yr'] - uni['county_growth_5yr']
 
     # Town threshold: >= 1,000 pop (documented, parallels county >= 5,000 rule).
-    places = places[places['POPESTIMATE2025'] >= 1000].copy()
+    uni = uni[uni['POPESTIMATE2025'] >= 1000].copy()
+
+    global MCD_GEOIDS
+    MCD_GEOIDS = set(uni.loc[uni['is_mcd'] == 1, 'fips'])
 
     keep = ['fips', 'place_name', 'state_abbr', 'primary_county_fips', 'county_name',
             'POPESTIMATE2025', 'town_growth_5yr', 'town_growth_1yr', 'town_growth_vol',
-            'town_pop_share', 'town_growth_rel_county']
-    return places[keep].dropna(subset=['primary_county_fips']).reset_index(drop=True)
+            'town_pop_share', 'town_growth_rel_county', 'is_mcd']
+    return uni[keep].dropna(subset=['primary_county_fips']).reset_index(drop=True)
 
 
 def _zip_income_for_year(yy):
@@ -181,8 +206,11 @@ def load_irs_zip():
 
 
 def load_zip_place_crosswalk():
-    """2020 ZCTA->Place relationship file. Weight = AREALAND_PART (overlap land area;
-    this file carries no overlap-population column — documented approximation)."""
+    """2020 ZCTA->Place relationship file, plus ZCTA->County-Subdivision for the New
+    England MCD towns in the universe. Weight = AREALAND_PART (overlap land area; no
+    overlap-population column exists — documented approximation). `place_fips` holds the
+    7-digit place FIPS or the 10-digit MCD GEOID, so downstream income + school joins are
+    uniform."""
     df = pd.read_csv(
         f'{DATA}/crosswalks/zcta_place_rel_2020.txt', sep='|',
         dtype=str, encoding='utf-8-sig',
@@ -193,7 +221,20 @@ def load_zip_place_crosswalk():
     df['zcta'] = df['GEOID_ZCTA5_20'].str.zfill(5)
     df['place_fips'] = df['GEOID_PLACE_20'].str.zfill(7)
     df['w'] = pd.to_numeric(df['AREALAND_PART'], errors='coerce').fillna(0.0)
-    return df[['zcta', 'place_fips', 'w']]
+    out = df[['zcta', 'place_fips', 'w']]
+
+    if MCD_GEOIDS:  # New England town income via ZCTA->county-subdivision overlap
+        c = pd.read_csv(
+            f'{DATA}/crosswalks/zcta_cousub_rel_2020.txt', sep='|',
+            dtype=str, encoding='utf-8-sig',
+        )
+        c = c[['GEOID_ZCTA5_20', 'GEOID_COUSUB_20', 'AREALAND_PART']].dropna()
+        c['zcta'] = c['GEOID_ZCTA5_20'].str.zfill(5)
+        c['place_fips'] = c['GEOID_COUSUB_20'].str.zfill(10)
+        c['w'] = pd.to_numeric(c['AREALAND_PART'], errors='coerce').fillna(0.0)
+        c = c[c['place_fips'].isin(MCD_GEOIDS)]
+        out = pd.concat([out, c[['zcta', 'place_fips', 'w']]], ignore_index=True)
+    return out
 
 
 def town_income(zip_income_df, crosswalk):
@@ -606,7 +647,7 @@ def main():
         'school_score', 'schools_imputed',
         'town_growth_5yr', 'town_growth_1yr', 'town_growth_rel_county',
         'RNETMIG2023', 'inmover_income_ratio', 'total_permits',
-        'income_imputed',
+        'income_imputed', 'is_mcd',
     ]
     available = [c for c in out_cols if c in df.columns]
     out = df[available].copy().round(4)

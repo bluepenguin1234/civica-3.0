@@ -1,8 +1,8 @@
 # Civica Towns
 
-Research-grade housing intelligence for **every US town**. Civica scores **10,267
-incorporated places** (population ≥ 1,000) on a single **0–100 Civica Score** built from
-five dimensions, using **100% federal government data** (no survey data). Each town is also
+Research-grade housing intelligence for **every US town**. Civica scores **11,306
+towns** (incorporated places, plus New England governing towns/MCDs, population ≥ 1,000) on a
+single **0–100 Civica Score** built from five dimensions, using **100% federal government data** (no survey data). Each town is also
 ranked inside its own county.
 
 No ads. No agents. No proprietary feeds.
@@ -105,7 +105,7 @@ of raw data.
   and towns with no matched agency inherit the county/RUCC-tier rate (flagged, not penalized).
 - ~42% of each score is county-inherited.
 - No home-value level — affordability is rent-vs-income + appreciation.
-- Universe = incorporated places ≥ 1,000 pop. New England MCD-towns and CDPs are excluded
+- Universe = incorporated places + New England governing towns (MCDs) ≥ 1,000 pop. Township-style units outside New England and CDPs are excluded
   for now (see `TODO.md`).
 
 See `methodology.html` for the full writeup. Scores are informational only — not financial,

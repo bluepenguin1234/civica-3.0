@@ -47,8 +47,8 @@ def validate_scores():
 
     n = len(df)
     print(f"  town count = {n:,}")
-    # Universe is the 19,483 incorporated places filtered to >=1,000 pop.
-    check(9000 <= n <= 19483, f"town count in expected band [9000, 19483] (got {n:,})")
+    # Universe = incorporated places (>=1,000 pop) + New England governing towns (MCDs).
+    check(9000 <= n <= 21000, f"town count in expected band [9000, 21000] (got {n:,})")
 
     s = df['civica_score']
     print(f"  score mean={s.mean():.2f} std={s.std():.2f} "
@@ -57,9 +57,9 @@ def validate_scores():
     check(4 <= s.std() <= 12, f"score std in [4,12] (got {s.std():.2f})")
     check(s.min() >= 0 and s.max() <= 100, "scores within [0,100]")
 
-    # fips must be 7-digit zero-padded strings
-    bad_fips = df['fips'][~df['fips'].str.match(r'^\d{7}$')]
-    check(len(bad_fips) == 0, f"all fips are 7-digit strings ({len(bad_fips)} bad)")
+    # fips are 7-digit place codes, or 10-digit state+county+cousub for New England MCD towns
+    bad_fips = df['fips'][~df['fips'].str.match(r'^\d{7}$|^\d{10}$')]
+    check(len(bad_fips) == 0, f"all fips are 7- or 10-digit strings ({len(bad_fips)} bad)")
 
     # no nulls in the headline columns
     check(df['civica_score'].notna().all(), "no null civica_score")

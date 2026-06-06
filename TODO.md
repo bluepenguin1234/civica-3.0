@@ -4,21 +4,14 @@
 
 ## Next up
 
-### 1. Add New England towns (MCDs) — biggest coverage gap
-In the six New England states (MA, CT, RI, VT, NH, ME) the real municipalities are
-**Minor Civil Divisions (MCDs / "towns")**, not Census *incorporated places*. The current
-universe is incorporated places only, so well-known New England towns are missing
-(e.g. **Danvers, MA** — pop ~29,211, exists in Census as a SUMLEV 061 town, excluded).
-This is ~1,500–2,000 real towns absent from the map, search, and rankings.
-
-To add them, the pipeline needs three new wirings (the incorporated-places path doesn't
-cover MCDs):
-- **County mapping** via the MCD-part records (`SUMLEV==071`) instead of `157`.
-- **Town income** via a ZCTA→**county-subdivision** crosswalk (the current ZIP→place file
-  doesn't include MCDs).
-- **Coordinates** from the Census **county-subdivisions** gazetteer (not the places gazetteer).
-- Decide scope: New England only (cleanest), or all MCD states (also NJ/PA/NY/WI/MI...).
-- Flag MCD towns in the UI so the universe stays honest.
+### 1. Remaining coverage gaps (deliberate exclusions for now)
+- **Township-style municipalities outside New England** (~9,164 ≥1,000 in NJ/NY/PA/WI/MI/OH…).
+  Messier than New England: many *overlap* incorporated places (double-count risk) and aren't
+  the primary government. Needs a per-state overlap/dedup rule before adding.
+- **CDPs (unincorporated communities)** — ~thousands, but not in the annual sub-county
+  estimates file at all; needs decennial/ACS data with a different vintage and no growth signal.
+- **Incorporated places under 1,000 pop** (~9,212) — in the data, filtered out; data gets too
+  sparse below 1,000 to score honestly.
 
 ## Smaller follow-ups
 - **+ Compare button** on each town report (compare.html already works via its own search).
@@ -33,7 +26,11 @@ cover MCDs):
   `town_generator.py`.
 
 ## Done (for reference)
-- Town model built: 10,267 incorporated places ≥ 1,000 pop, 5 dimensions (incl. Schools), ~58% town-resolved.
+- ~~New England towns (MCDs)~~ **DONE** — added 1,039 NE governing towns (SUMLEV 061,
+  FUNCSTAT 'A'; 10-digit GEOID, is_mcd flag). Income via ZCTA→cousub crosswalk (86% direct),
+  coords via county-subdivisions gazetteer (100%), crime matched for ~60%, schools for ~59%;
+  rest use county fallback (flagged). Universe 10,267 → 11,306.
+- Town model built: 11,306 towns ≥ 1,000 pop, 5 dimensions (incl. Schools), ~58% town-resolved.
 - Full site converted to towns: landing search, zoomable Leaflet town map, leaderboard,
   compare, per-state pages, methodology.
 - Visual town reports: radar, glance tiles, percentile bars, location mini-map, county peers.

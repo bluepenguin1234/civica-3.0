@@ -6,7 +6,7 @@ plus output/town_index.json (front-page search) and output/towns/_progress.json 
 
 Design system (colors, fonts, cards, score ring, dimension bars) is reused verbatim
 from town_template.html via extract_style(). The town report is intentionally
-lean: one score ring, four dimension bars, a four-label verdict, an in-county rank line,
+lean: one score ring, five dimension bars, a four-label verdict, an in-county rank line,
 and the honest town/county data-coverage chip. No Zillow / price-to-rent / breakeven UI.
 
 Usage:
@@ -126,7 +126,7 @@ def rank_phrase(rank, total):
 
 def build_head(row, place, state, county, score, label, fips, style):
     desc = (
-        f"{place}, {state} scores {score:.0f}/100 on Civica's 4-dimension town housing model. "
+        f"{place}, {state} scores {score:.0f}/100 on Civica's 5-dimension town housing model. "
         f"Signal: {label}. Ranks #{int(row['rank_in_county'])} of {int(row['towns_in_county'])} "
         f"towns in {county}. Town-level crime, income, and growth on 100% federal data."
     )
@@ -254,12 +254,17 @@ def build_hero(row, place, state, county):
     pill = LABEL_PILL.get(label, 'vb-frontier')
     top_pct = max(1, round(row['national_rank'] / row['_n_national'] * 100))
     rk, tot = int(row['rank_in_county']), int(row['towns_in_county'])
+    mcd = int(row.get('is_mcd', 0) or 0)
+    mcd_tag = (' &nbsp;·&nbsp; <span style="font-size:11px;font-weight:700;color:#5aa8ff;'
+               'border:1px solid rgba(255,255,255,.28);border-radius:100px;padding:2px 9px;" '
+               'title="A New England town governed as a Minor Civil Division, not a Census incorporated place.">'
+               'New England town (MCD)</span>') if mcd else ''
 
     return f'''<div class="hero">
   <div class="hero-id">
     <div class="hero-eyebrow">Town Report · 2026</div>
     <h1>{place}, {state}</h1>
-    <div class="hero-sub">{county} · Pop. {pop:,}</div>
+    <div class="hero-sub">{county} · Pop. {pop:,}{mcd_tag}</div>
     <div class="rank-line">Ranks <span>#{rk} of {tot}</span> towns in {county} — {rank_phrase(rk, tot)}</div>
     <div class="dc-chip">Town-level: <b>crime · income · growth · schools</b> &nbsp;·&nbsp; County-level: <i>economy · appreciation · climate</i></div>
   </div>
@@ -354,7 +359,7 @@ def build_glance(row):
       </div>'''
     return f'''<div class="card">
     <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
-    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 10,267 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
+    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 11,306 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
     <div class="glance">{cells}
     </div>
   </div>'''

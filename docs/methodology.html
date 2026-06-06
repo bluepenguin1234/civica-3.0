@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How the Civica Score Works — Methodology</title>
-<meta name="description" content="How Civica scores 10,267 US towns in plain English: 5 dimensions, 17 measures, 18 federal datasets, no surveys, no listings, no ads. ~58% of every score is resolved at the town level.">
+<meta name="description" content="How Civica scores 11,306 US towns in plain English: 5 dimensions, 17 measures, 18 federal datasets, no surveys, no listings, no ads. ~58% of every score is resolved at the town level.">
 <meta property="og:title" content="How the Civica Score Works">
 <meta property="og:image" content="https://civica.app/og_image.png">
 <link rel="canonical" href="https://civica.app/methodology.html">
@@ -140,7 +140,7 @@
       <div class="step">
         <div class="step-n">2</div>
         <h3>Rank</h3>
-        <p>Each number becomes a <b>0–100 ranking</b> — how this town compares to all 10,267 others. Where lower is better (crime, rent burden), we flip it so higher always means better.</p>
+        <p>Each number becomes a <b>0–100 ranking</b> — how this town compares to all 11,306 others. Where lower is better (crime, rent burden), we flip it so higher always means better.</p>
       </div>
       <div class="step">
         <div class="step-n">3</div>
@@ -205,26 +205,26 @@
       <div class="verdict" style="--vc:#16a34a">
         <div class="vh"><span class="vbadge2">Strong Buy</span><span class="thr">≥ 62</span></div>
         <p>Fundamentals lead both the county and most of the country.</p>
-        <div class="ct">1,493 towns · 14.5%</div>
+        <div class="ct">1,656 towns · 14.6%</div>
       </div>
       <div class="verdict" style="--vc:#0b57c2">
         <div class="vh"><span class="vbadge2">Buy</span><span class="thr">52–61</span></div>
         <p>Solid all around, with one softer dimension worth a look.</p>
-        <div class="ct">2,768 towns · 27.0%</div>
+        <div class="ct">3,005 towns · 26.6%</div>
       </div>
       <div class="verdict" style="--vc:#f59e0b">
         <div class="vh"><span class="vbadge2">Hold</span><span class="thr">44–51</span></div>
         <p>A balanced, middle-of-the-pack market — buy for fit, not for outperformance.</p>
-        <div class="ct">2,859 towns · 27.8%</div>
+        <div class="ct">3,116 towns · 27.6%</div>
       </div>
       <div class="verdict" style="--vc:#dc2626">
         <div class="vh"><span class="vbadge2">Caution</span><span class="thr">&lt; 44</span></div>
         <p>Several fundamentals trail national peers — understand the trade-offs first.</p>
-        <div class="ct">3,147 towns · 30.7%</div>
+        <div class="ct">3,529 towns · 31.2%</div>
       </div>
     </div>
     <div class="note" style="margin-top:var(--s3);">
-      <b>Why these cutoffs hold steady:</b> ranking every town as a percentile fixes the national average at ~50 and the spread (std) near 11 on every run, so the fixed thresholds (62 / 52 / 44) stay meaningful. Scores span <b>16.8 to 86.9</b>. The verdict comes from the total score only — there’s no hidden “direction” adjustment.
+      <b>Why these cutoffs hold steady:</b> ranking every town as a percentile fixes the national average at ~50 and the spread (std) near 11 on every run, so the fixed thresholds (62 / 52 / 44) stay meaningful. Scores span <b>16.8 to 87.2</b>. The verdict comes from the total score only — there’s no hidden “direction” adjustment.
     </div>
   </section>
 
@@ -239,7 +239,7 @@
       <svg class="acc-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="acc-body"><div class="acc-inner"><div class="acc-content">
-      <p class="acc-intro">Each metric is scored as a national percentile, so a town is always compared to all 10,267 others. <span class="pill-t">T</span> = resolved at the town level; <span class="pill-c">C</span> = inherited from the parent county. The percentage is the metric’s share of its dimension.</p>
+      <p class="acc-intro">Each metric is scored as a national percentile, so a town is always compared to all 11,306 others. <span class="pill-t">T</span> = resolved at the town level; <span class="pill-c">C</span> = inherited from the parent county. The percentage is the metric’s share of its dimension.</p>
 
       <div class="mblock">
         <h4>🏠 Affordability — 25 points</h4>
@@ -346,7 +346,7 @@
         </table>
       </div>
       <div class="note">
-        <b>Honest approximations:</b> town income is a ZIP→place address-share estimate, not a survey median. Crime is matched from reporting agencies to places by name; county sheriffs (who cover unincorporated land) stay in the county pool, and towns with no matched agency inherit the county/peer-tier rate (flagged, never penalized). School proficiency is EDFacts SY2017–18 (the latest complete year available) and is ranked within state because state tests aren’t comparable nationally. ~42% of each score is county-inherited. Civica covers official, self-governing towns and cities (Census “incorporated places”) with at least 1,000 residents — about 10,267 nationwide. Unincorporated communities and New England’s town-style townships aren’t included yet. Finally, the 58% “town-resolved” figure is a structural maximum: rent burden uses HUD Fair Market Rents, which are set at the metro/county level (only the income side varies by town), and where a town’s schools or crime fall back to a county estimate, those points are effectively county-inherited even though the model counts them toward the town total.
+        <b>Honest approximations:</b> town income is a ZIP→place address-share estimate, not a survey median. Crime is matched from reporting agencies to places by name; county sheriffs (who cover unincorporated land) stay in the county pool, and towns with no matched agency inherit the county/peer-tier rate (flagged, never penalized). School proficiency is EDFacts SY2017–18 (the latest complete year available) and is ranked within state because state tests aren’t comparable nationally. ~42% of each score is county-inherited. Civica covers self-governing US towns and cities with at least 1,000 residents — Census incorporated places plus New England’s governing towns (MCDs, e.g. Danvers, MA) — about 11,306 nationwide. Unincorporated communities (Census Designated Places) and township-style units outside New England aren’t included yet. Finally, the 58% “town-resolved” figure is a structural maximum: rent burden uses HUD Fair Market Rents, which are set at the metro/county level (only the income side varies by town), and where a town’s schools or crime fall back to a county estimate, those points are effectively county-inherited even though the model counts them toward the town total.
       </div>
     </div></div></div>
   </div>
@@ -359,8 +359,8 @@
     </button>
     <div class="acc-body"><div class="acc-inner"><div class="acc-content">
       <div class="faq">
-        <h4>What counts as a “town,” and why 10,267?</h4>
-        <p>A town here is a US Census <b>incorporated place</b> with at least 1,000 residents — 10,267 of them nationwide. Below 1,000 people, town income, crime, and growth get too sparse to score honestly. Census Designated Places (unincorporated communities) are excluded for now because the annual growth data doesn’t cover them.</p>
+        <h4>What counts as a “town,” and why 11,306?</h4>
+        <p>A town here is a self-governing municipality with at least 1,000 residents — a US Census <b>incorporated place</b>, or in New England a governing <b>town</b> (a Minor Civil Division like Danvers, MA). There are 11,306 nationwide. Below 1,000 people, town income, crime, and growth get too sparse to score honestly. Unincorporated communities (Census Designated Places) and township-style units outside New England are excluded for now because no clean annual growth signal exists for them.</p>
       </div>
       <div class="faq">
         <h4>Why is ~42% of the score inherited from the county?</h4>

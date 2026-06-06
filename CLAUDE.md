@@ -4,7 +4,7 @@ Guide for Claude Code working in this repo. Keep it accurate; keep it short.
 
 ## What this is
 
-A static site that scores **10,267 US towns** (incorporated places ≥ 1,000 pop) on a single
+A static site that scores **11,306 US towns** (incorporated places + New England governing towns/MCDs, ≥ 1,000 pop) on a single
 **0–100 Civica Score** from **5 dimensions**, built entirely from **federal data**. Each town
 is ranked inside its county. See `README.md` for the public overview and `methodology.html`
 for the full model writeup.
@@ -93,8 +93,9 @@ Town income is a ZIP→place approximation, not a survey median. Crime is mapped
 name to place; county sheriffs cover unincorporated area and stay in the county pool; towns
 with no matched agency inherit the county/RUCC-tier rate (flagged, never penalized). Schools use
 EDFacts proficiency ranked within state (state tests aren't nationally comparable). ~42% of each
-score is county-inherited. No home-value level exists. Universe = incorporated places
-≥ 1,000 pop (New England MCD-towns and CDPs excluded — see `TODO.md`).
+score is county-inherited. No home-value level exists. Universe = incorporated places + New England governing
+towns (MCDs, 1,039 of them, flagged is_mcd) ≥ 1,000 pop. Township-style units outside New
+England and CDPs are excluded — see `TODO.md`.
 
 ## Deploy / publish changes
 
@@ -118,5 +119,6 @@ was enabled once via the REST API using the cached git credential, so it stays o
 
 ## Next steps
 
-See `TODO.md`. The headline item is **adding New England towns (MCDs)** — the largest current
-coverage gap (e.g. Danvers, MA).
+See `TODO.md`. New England towns (MCDs) are **done** (1,039 added). Remaining coverage gaps —
+all deliberate for now — are township-style municipalities outside New England (overlap/dedup
+problem), CDPs (different dataset), and sub-1,000-pop places (too sparse).
