@@ -131,14 +131,27 @@ def load_subest():
                .rename(columns={'county_fips': 'primary_county_fips'}))
     places = places.merge(primary, on='fips', how='left')
 
-    # New England governing towns (MCDs). A 061 'A' record sits in one county, so its
-    # state+county+cousub GEOID is the whole town and the county is read off the record.
-    mcd = df[(df['SUMLEV'] == '061') & (df['FUNCSTAT'] == 'A') &
-             (df['STATE'].str.zfill(2).isin(NE_MCD_STATES))].copy()
+    # Governing towns (MCDs). A 061 'A' record sits in one county, so its state+county+cousub
+    # GEOID is the whole town and the county is read off the record. We keep ALL New England
+    # towns (cities there are 'F' duplicates, already excluded), PLUS towns elsewhere (notably
+    # New York) that are >= 70% unincorporated by the SUMLEV 071 "Balance of township"
+    # population — i.e. genuinely standalone governments, not an outline around an incorporated
+    # city we already score. The unincorporated-share gate is the dedup that prevents
+    # double-counting places that live inside a township.
+    mcd = df[(df['SUMLEV'] == '061') & (df['FUNCSTAT'] == 'A')].copy()
     mcd['fips'] = (mcd['STATE'].str.zfill(2) + mcd['COUNTY'].str.zfill(3)
                    + mcd['COUSUB'].str.zfill(5))
     mcd['primary_county_fips'] = mcd['STATE'].str.zfill(2) + mcd['COUNTY'].str.zfill(3)
     mcd['is_mcd'] = 1
+    # Unincorporated population from the 071 "Balance of <township>" records (PLACE 99990).
+    bal = df[(df['SUMLEV'] == '071') & (df['PLACE'] == '99990')].copy()
+    bal['fips'] = (bal['STATE'].str.zfill(2) + bal['COUNTY'].str.zfill(3)
+                   + bal['COUSUB'].str.zfill(5))
+    balpop = bal.groupby('fips')['POPESTIMATE2025'].sum()
+    unincorp = (balpop / mcd.set_index('fips')['POPESTIMATE2025']).clip(0, 1)
+    mcd['unincorp_share'] = mcd['fips'].map(unincorp)
+    is_ne = mcd['STATE'].str.zfill(2).isin(NE_MCD_STATES)
+    mcd = mcd[is_ne | (mcd['unincorp_share'] >= 0.70)].copy()
 
     common = ['fips', 'NAME', 'STATE', 'primary_county_fips', 'is_mcd'] + POP_COLS
     uni = pd.concat([places[common], mcd[common]], ignore_index=True)
@@ -160,6 +173,7 @@ def load_subest():
 
     # Town threshold: >= 1,000 pop (documented, parallels county >= 5,000 rule).
     uni = uni[uni['POPESTIMATE2025'] >= 1000].copy()
+    uni = uni.drop_duplicates(subset='fips').copy()   # one row per GEOID — no duplicates
 
     global MCD_GEOIDS
     MCD_GEOIDS = set(uni.loc[uni['is_mcd'] == 1, 'fips'])

@@ -257,8 +257,8 @@ def build_hero(row, place, state, county):
     mcd = int(row.get('is_mcd', 0) or 0)
     mcd_tag = (' &nbsp;·&nbsp; <span style="font-size:11px;font-weight:700;color:#5aa8ff;'
                'border:1px solid rgba(255,255,255,.28);border-radius:100px;padding:2px 9px;" '
-               'title="A New England town governed as a Minor Civil Division, not a Census incorporated place.">'
-               'New England town (MCD)</span>') if mcd else ''
+               'title="Governed as a county subdivision (Minor Civil Division), not a Census incorporated place.">'
+               'Town government (MCD)</span>') if mcd else ''
 
     return f'''<div class="hero">
   <div class="hero-id">
@@ -359,7 +359,7 @@ def build_glance(row):
       </div>'''
     return f'''<div class="card">
     <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
-    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 11,306 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
+    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 12,192 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
     <div class="glance">{cells}
     </div>
   </div>'''

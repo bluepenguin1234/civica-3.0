@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Town Map — Civica</title>
-<meta name="description" content="Interactive, zoomable map of all 11,306 Civica-scored US towns — colored by verdict. Click any dot for the full report.">
+<meta name="description" content="Interactive, zoomable map of all 12,192 Civica-scored US towns — colored by verdict. Click any dot for the full report.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,12 +66,12 @@
 <main id="main" class="wrap">
   <section class="page-hero" aria-labelledby="h">
     <span class="eyebrow">Interactive map</span>
-    <h1 id="h">11,306 towns, one map</h1>
+    <h1 id="h">12,192 towns, one map</h1>
     <p>Every scored town as a dot, colored by verdict. Scroll to zoom, drag to pan, click a dot for the report.</p>
   </section>
 
   <div class="statline">
-    <div class="s"><div class="n" id="stTotal">11,306</div><div class="k">Towns mapped</div></div>
+    <div class="s"><div class="n" id="stTotal">12,192</div><div class="k">Towns mapped</div></div>
     <div class="s"><div class="n green" id="stSbuy">—</div><div class="k">Strong Buy</div></div>
     <div class="s"><div class="n blue" id="stBuy">—</div><div class="k">Buy</div></div>
     <div class="s"><div class="n">51</div><div class="k" title="All 50 states plus Washington, D.C.">States covered (50 + D.C.)</div></div>
@@ -121,7 +121,7 @@ else{
   const BASE={all:'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',clean:'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png'};
   let baseLayer=L.tileLayer(BASE.all,{attribution:'© OpenStreetMap, © CARTO',subdomains:'abcd',maxZoom:18}).addTo(map);
   window.toggleBasemap=function(clean){ map.removeLayer(baseLayer); baseLayer=L.tileLayer(clean?BASE.clean:BASE.all,{attribution:'© OpenStreetMap, © CARTO',subdomains:'abcd',maxZoom:18}).addTo(map); baseLayer.bringToBack(); };
-  setTimeout(()=>map.invalidateSize(),250); mapMsg('Loading 11,306 towns…');
+  setTimeout(()=>map.invalidateSize(),250); mapMsg('Loading 12,192 towns…');
   function popupHtml(t){ const col=COLOR[t.l]||'#5b6170';
     return `<div class="pop-name">${t.n}</div><div class="pop-meta">${t.c}, ${t.s}</div>
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="width:34px;height:34px;border-radius:8px;background:${col};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:Inconsolata;">${Math.round(t.sc)}</span><span class="vbadge ${ {'Strong Buy':'v-sbuy','Buy':'v-buy','Hold':'v-hold','Caution':'v-caut'}[t.l] }">${t.l}</span></div>

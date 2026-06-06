@@ -4,22 +4,14 @@
 
 ## Next up
 
-### 1. Remaining coverage gaps (deliberate exclusions for now)
-- **Township-style municipalities outside New England** — **6,681** governing townships
-  (SUMLEV 061, FUNCSTAT 'A', ≥1,000 pop) in PA/OH/MI/NY/IN/IL/WI/NJ…. Income + coords are
-  already covered by our national crosswalk/gazetteer, BUT they **cannot be deduped with the
-  data we have** (scoped 2026-06-06). New England worked because cities are flagged 'F';
-  outside NE, townships *and* the incorporated villages inside them are both 'A', and no
-  column separates them — tested `PLACE`/`CONCIT` (all 00000), `PRIMGEO_FLAG` (4,008/0 split
-  but doesn't track overlap), name+county twin (catches only 32%), and a ZCTA land-area bridge
-  (broken — ZCTAs cluster on places, so it smears coverage onto rural townships). **Correct
-  dedup needs TIGER/Line shapefiles (places + county subdivisions) + a geopandas spatial-overlap
-  step** — a new dataset + geospatial code the pipeline doesn't have. Real project, not a quick
-  add. Until then, adding them would double-count villages-inside-townships.
+### 1. Remaining coverage gaps (deliberate exclusions)
 - **CDPs (unincorporated communities)** — ~thousands, but not in the annual sub-county
-  estimates file at all; needs decennial/ACS data with a different vintage and no growth signal.
-- **Incorporated places under 1,000 pop** (~9,212) — in the data, filtered out; data gets too
-  sparse below 1,000 to score honestly.
+  estimates file at all; needs decennial/ACS data (different vintage, no growth signal).
+- **Incorporated places under 1,000 pop** (~9,216) — in the file, filtered out; town-level
+  crime/income/school signals get too sparse below 1,000 to score honestly.
+- **Townships <70% unincorporated** (~5,795) — deliberately skipped: they mostly wrap an
+  incorporated place we already score, so adding them would double-count. (Lowering the 70%
+  threshold to 50% would add ~540 more; revisit if desired.)
 
 ## Monetization / go-to-market (the next big push — see in-depth brief 2026-06-06)
 
@@ -36,7 +28,7 @@ the scores visibly incorruptible.
 - [ ] **Per-page OG images** — prototype done (`build_og_images.py`); finish once domain exists.
 
 ### Phase 1 — traffic (1–3 mo)
-- Programmatic SEO is the asset: 11,306 buyer-intent pages ("is [town] a good place to buy").
+- Programmatic SEO is the asset: 12,192 buyer-intent pages ("is [town] a good place to buy").
   Internal linking, indexing, Reddit (r/RealEstate, r/personalfinance, city subs), "best towns
   2026" listicles, leaderboard as link-bait.
 
@@ -69,11 +61,13 @@ affiliate signups. **Everything else Claude can build.**
   `town_generator.py`.
 
 ## Done (for reference)
-- ~~New England towns (MCDs)~~ **DONE** — added 1,039 NE governing towns (SUMLEV 061,
-  FUNCSTAT 'A'; 10-digit GEOID, is_mcd flag). Income via ZCTA→cousub crosswalk (86% direct),
-  coords via county-subdivisions gazetteer (100%), crime matched for ~60%, schools for ~59%;
-  rest use county fallback (flagged). Universe 10,267 → 11,306.
-- Town model built: 11,306 towns ≥ 1,000 pop, 5 dimensions (incl. Schools), ~58% town-resolved.
+- ~~Governing towns (MCDs)~~ **DONE** — added 1,925 governing towns (SUMLEV 061, FUNCSTAT 'A';
+  10-digit GEOID, is_mcd flag): all New England towns + non-NE standalone townships that are
+  ≥70% unincorporated by the SUMLEV 071 "balance" record (e.g. New York — Brookhaven, Islip,
+  Oyster Bay). Income via ZCTA→cousub crosswalk, coords via county-subdivisions gazetteer (100%),
+  crime/schools matched where possible else county fallback (flagged). Universe 10,267 → 12,192;
+  zero duplicates verified (fips + name/state/county).
+- Town model built: 12,192 towns ≥ 1,000 pop, 5 dimensions (incl. Schools), ~58% town-resolved.
 - Full site converted to towns: landing search, zoomable Leaflet town map, leaderboard,
   compare, per-state pages, methodology.
 - Visual town reports: radar, glance tiles, percentile bars, location mini-map, county peers.

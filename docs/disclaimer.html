@@ -53,7 +53,7 @@ td { padding:11px 14px; border-bottom:1px solid #f3f4f6; }
   </div>
 
   <h2>What Civica Scores Measure</h2>
-  <p>Civica scores are composite indices derived entirely from federal government data, normalized relative to all 11,306 scored US towns (incorporated places plus New England governing towns, with at least 1,000 residents). A high score means a town ranks well on five dimensions — affordability, economy, safety &amp; place, growth, and schools — relative to all other scored towns. About 58% of each score is resolved at the town level (crime, income, growth, scale, schools) and the remainder is inherited from the town's parent county. A high score does not mean the town is a good investment for your specific situation, timeline, or risk tolerance.</p>
+  <p>Civica scores are composite indices derived entirely from federal government data, normalized relative to all 12,192 scored US towns (incorporated places plus governing towns/townships — New England and standalone ones elsewhere, with at least 1,000 residents). A high score means a town ranks well on five dimensions — affordability, economy, safety &amp; place, growth, and schools — relative to all other scored towns. About 58% of each score is resolved at the town level (crime, income, growth, scale, schools) and the remainder is inherited from the town's parent county. A high score does not mean the town is a good investment for your specific situation, timeline, or risk tolerance.</p>
 
   <h2>What Civica Scores Do Not Measure</h2>
   <ul>
@@ -75,7 +75,7 @@ td { padding:11px 14px; border-bottom:1px solid #f3f4f6; }
       <tr><td>No home-value level post-Zillow</td><td>Affordability is rent-vs-income + appreciation; there is no median home price in the model</td><td>Federal place-level value source if one becomes available</td></tr>
       <tr><td>BLS QCEW: 18-month data lag</td><td>Economy scores reflect 2023 county data; recent job losses or gains may not be captured</td><td>Quarterly updates</td></tr>
       <tr><td>FBI NIBRS: not all agencies report</td><td>Towns with low reporting receive the county/RUCC-tier median — not actual town crime data</td><td>Imputed towns are flagged in the scoring engine</td></tr>
-      <tr><td>Universe = incorporated places + New England towns</td><td>Unincorporated communities (CDPs) and township-style units outside New England are not scored — no clean annual growth signal exists for them</td><td>Decennial place population integration (future)</td></tr>
+      <tr><td>Universe = incorporated places + governing towns (MCDs)</td><td>Unincorporated communities (CDPs), townships that mostly wrap an existing incorporated place, and sub-1,000-pop places are not scored</td><td>Decennial place population integration (future)</td></tr>
       <tr><td>Permits as demand proxy, not permit-gap ratio</td><td>High-permit counties score well even if permits exceed household formation</td><td>ACS household formation projections (future)</td></tr>
     </tbody>
   </table>
