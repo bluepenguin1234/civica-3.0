@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Towns — Civica</title>
+<meta name="description" content="Compare up to three US towns side by side on Civica's five dimensions — 100% federal data.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="clean.css">
+<style>
+.cmp-search{ max-width:480px; margin-top:var(--s3); }
+.empty{ text-align:center; padding:var(--s6) var(--s3); border:1px dashed var(--border); border-radius:var(--r); color:var(--muted); }
+.cards{ display:grid; gap:var(--s3); margin-top:var(--s4); }
+.tcard{ position:relative; }
+.tcard .rm{ position:absolute; top:12px; right:12px; width:44px; height:44px; border:none; background:transparent;
+  color:var(--muted); font-size:18px; cursor:pointer; border-radius:var(--r-sm); }
+.tcard .rm:hover{ background:var(--surface-soft); color:var(--danger); }
+.tcard .nm{ font-family:'Poppins'; font-weight:700; font-size:20px; color:var(--ink); padding-right:32px; }
+.tcard .sub{ font-size:13px; color:var(--muted); margin-bottom:var(--s2); }
+.tcard .sc{ font-family:'Poppins'; font-weight:800; font-size:40px; color:var(--ink); line-height:1; }
+.tcard .pills{ display:grid; grid-template-columns:1fr 1fr; gap:var(--s1); margin:var(--s3) 0; }
+.pill{ background:var(--surface-soft); border-radius:var(--r-sm); padding:8px 10px; }
+.pill .k{ font-size:11px; color:var(--muted); } .pill .v{ font-weight:700; font-size:14px; color:var(--ink); }
+.best{ color:var(--success) !important; font-weight:800; }
+.dimbars .row2{ display:grid; grid-template-columns:90px 1fr 36px; align-items:center; gap:10px; margin:8px 0; }
+.dimbars .l{ font-size:13px; color:var(--text); } .dimbars .v{ font-size:13px; font-weight:700; color:var(--ink); text-align:right; font-family:'Inconsolata'; }
+.track{ height:8px; background:var(--surface-sunken); border-radius:var(--r-pill); overflow:hidden; }
+.fill{ height:100%; background:var(--primary); border-radius:var(--r-pill); }
+.cmp-meta th,.cmp-meta td{ font-size:14px; }
+.cmp-meta td:first-child{ color:var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="index.html" aria-label="Civica Towns home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="map.html">Map</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a class="opt" href="compare.html" aria-current="page">Compare</a>
+      <a class="opt" href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="page-hero" aria-labelledby="h">
+    <span class="eyebrow">Side by side</span>
+    <h1 id="h">Compare towns</h1>
+    <p>Add up to three towns to compare scores, fundamentals, and the five dimensions.</p>
+    <div class="search cmp-search" role="search">
+      <div class="search-field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input id="q" type="text" placeholder="Search a town to add…" autocomplete="off"
+          role="combobox" aria-expanded="false" aria-controls="drop" aria-autocomplete="list"
+          oninput="onSearch(this.value)" onfocus="onSearch(this.value)">
+      </div>
+      <div class="drop" id="drop" role="listbox" aria-label="Town results"></div>
+    </div>
+  </section>
+
+  <div id="empty" class="empty" style="display:none;">No towns selected. Search above, or open any town report and add it.</div>
+  <div class="cards" id="cards" style="display:none;"></div>
+
+  <section id="cmp" style="display:none;">
+    <hr class="rule" style="margin:var(--s5) 0;">
+    <h2 class="section-title">Key metrics</h2>
+    <div style="overflow-x:auto;"><table class="tbl cmp-meta" id="metrics"></table></div>
+    <h2 class="section-title" style="margin-top:var(--s5);">Five dimensions</h2>
+    <div class="card dimbars" id="dims"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap center">
+    <div class="foot-links" style="justify-content:center;"><a href="map.html">Map</a><a href="leaderboard.html">Leaderboard</a><a href="methodology.html">Methodology</a></div>
+    100% federal data · Informational only — not financial, investment, or real estate advice. &copy; 2026 Civica.
+  </div>
+</footer>
+
+<script>
+const VDOT={'Strong Buy':'var(--success)','Buy':'var(--primary-strong)','Hold':'var(--warning)','Caution':'var(--caution)'};
+const VCLS={'Strong Buy':'v-sbuy','Buy':'v-buy','Hold':'v-hold','Caution':'v-caut'};
+const DIMS=[['dim1','Affordability',25],['dim2','Economy',24],['dim3','Safety & Place',22],['dim4','Growth',15],['dim5','Schools',14]];
+const KEY='civica_compare';
+let ALL=[], sel=[];
+const $=id=>document.getElementById(id);
+const money=v=>'$'+Math.round(v).toLocaleString();
+
+fetch('output/town_index.json').then(r=>r.json()).then(d=>{
+  ALL=d; const p=new URLSearchParams(location.search).getAll('c');
+  if(p.length){ p.slice(0,3).forEach(f=>{const c=ALL.find(x=>x.fips===f); if(c)sel.push(c);}); save(); }
+  else { try{ sel=JSON.parse(localStorage.getItem(KEY)||'[]').slice(0,3).map(s=>ALL.find(c=>c.fips===s)).filter(Boolean); }catch(e){} render(); }
+}).catch(()=>{ $('empty').style.display='block'; $('empty').textContent='Could not load town data. Open via a local server.'; });
+
+function save(){ localStorage.setItem(KEY,JSON.stringify(sel.map(c=>c.fips))); render(); }
+function add(f){ if(sel.length>=3){alert('Maximum 3 towns.');return;} const c=ALL.find(x=>x.fips===f);
+  if(!c||sel.find(s=>s.fips===f))return; sel.push(c); $('q').value=''; $('drop').className='drop'; save(); url(); }
+function remove(f){ sel=sel.filter(c=>c.fips!==f); save(); url(); }
+function url(){ history.replaceState(null,'','?'+sel.map(c=>'c='+c.fips).join('&')); }
+
+function render(){
+  const cards=$('cards');
+  if(!sel.length){ $('empty').style.display='block'; cards.style.display='none'; $('cmp').style.display='none'; return; }
+  $('empty').style.display='none'; cards.style.display='grid';
+  cards.style.gridTemplateColumns=`repeat(${sel.length},1fr)`;
+  cards.innerHTML=sel.map(c=>`<div class="card tcard">
+    <button class="rm" onclick="remove('${c.fips}')" aria-label="Remove ${c.name}">✕</button>
+    <div class="nm">${c.name}</div><div class="sub">${c.county}, ${c.state} · #${c.rank_in_county} in county</div>
+    <div class="sc">${Math.round(c.score)}</div>
+    <div style="margin-top:8px;"><span class="vbadge ${VCLS[c.label]||''}">${c.label}</span></div>
+    <div class="pills">
+      <div class="pill"><div class="k">Town income</div><div class="v">${money(c.town_income)}</div></div>
+      <div class="pill"><div class="k">Rent burden</div><div class="v">${Math.round(c.rent_burden*100)}%</div></div>
+      <div class="pill"><div class="k">Appreciation</div><div class="v">${c.hpi_3yr_avg>=0?'+':''}${c.hpi_3yr_avg.toFixed(1)}%</div></div>
+      <div class="pill"><div class="k">Growth 5yr</div><div class="v">${c.town_growth_5yr>=0?'+':''}${(c.town_growth_5yr*100).toFixed(1)}%</div></div>
+    </div>
+    <a class="btn btn-ghost" href="output/towns/${c.fips}.html" style="width:100%;">View report</a>
+  </div>`).join('');
+  if(sel.length>=2){ $('cmp').style.display='block'; metrics(); dims(); url(); } else $('cmp').style.display='none';
+}
+
+function metrics(){
+  const rows=[
+    ['Civica Score',c=>c.score.toFixed(1),'hi'],
+    ['Verdict',c=>c.label,null],
+    ['Town income',c=>money(c.town_income),'hi'],
+    ['Rent burden',c=>Math.round(c.rent_burden*100)+'%','lo'],
+    ['Appreciation',c=>(c.hpi_3yr_avg>=0?'+':'')+c.hpi_3yr_avg.toFixed(1)+'%','hi'],
+    ['Avg wage',c=>money(c.avg_annual_wage),'hi'],
+    ['Growth 5yr',c=>(c.town_growth_5yr>=0?'+':'')+(c.town_growth_5yr*100).toFixed(1)+'%','hi'],
+    ['Violent /100k',c=>Math.round(c.violent_per100k),'lo'],
+    ['Rank in county',c=>'#'+c.rank_in_county+' of '+c.towns_in_county,null],
+    ['National rank',c=>'#'+c.rank.toLocaleString(),'lo'],
+  ];
+  const num={'Civica Score':c=>c.score,'Town income':c=>c.town_income,'Rent burden':c=>c.rent_burden,
+    'Appreciation':c=>c.hpi_3yr_avg,'Avg wage':c=>c.avg_annual_wage,'Growth 5yr':c=>c.town_growth_5yr,
+    'Violent /100k':c=>c.violent_per100k,'National rank':c=>c.rank};
+  const head='<thead><tr><th>Metric</th>'+sel.map(c=>`<th>${c.name}, ${c.state}</th>`).join('')+'</tr></thead>';
+  const tb=rows.map(([lbl,fn,dir])=>{
+    let best=-1;
+    if(dir&&num[lbl]){ const vals=sel.map(num[lbl]); const b=dir==='hi'?Math.max(...vals):Math.min(...vals); best=vals.findIndex(v=>v===b); }
+    const cells=sel.map((c,i)=>`<td class="${i===best?'best':''}">${fn(c)}</td>`).join('');
+    return `<tr><td>${lbl}</td>${cells}</tr>`;
+  }).join('');
+  $('metrics').innerHTML=head+'<tbody>'+tb+'</tbody>';
+}
+
+function dims(){
+  $('dims').innerHTML=DIMS.map(([k,name,max])=>{
+    const bars=sel.map(c=>{ const p=Math.round(c[k]/max*100);
+      return `<div class="row2"><span class="l">${c.name.split(' ')[0]}</span><span class="track"><span class="fill" style="width:${p}%"></span></span><span class="v">${p}</span></div>`;
+    }).join('');
+    return `<div style="margin-bottom:var(--s3);"><div style="font-weight:700;color:var(--ink);margin-bottom:6px;">${name} <span class="muted" style="font-weight:400;font-size:12px;">/100</span></div>${bars}</div>`;
+  }).join('');
+}
+
+const STATE_NAMES={AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'};
+function onSearch(val){
+  const drop=$('drop'); const q=val.trim().toLowerCase();
+  if(!q||!ALL.length){ drop.className='drop'; return; }
+  const hits=ALL.filter(c=>c.name.toLowerCase().includes(q)||c.state.toLowerCase()===q).slice(0,8);
+  drop.innerHTML = hits.length ? hits.map(c=>`<div class="opt-row" role="option" tabindex="0" onclick="add('${c.fips}')" onkeydown="if(event.key==='Enter')add('${c.fips}')">
+    <span><span class="opt-name">${c.name}, ${c.state}</span><br><span class="opt-meta">${c.county} · Score ${c.score.toFixed(1)}</span></span>
+    <span class="opt-score" style="background:${VDOT[c.label]}">${Math.round(c.score)}</span></div>`).join('')
+    : '<div class="opt-row"><span class="opt-meta">No towns found</span></div>';
+  drop.className='drop open';
+}
+document.addEventListener('click',e=>{ if(!e.target.closest('.search')) $('drop').className='drop'; });
+</script>
+</body>
+</html>

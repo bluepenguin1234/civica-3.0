@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Disclaimer — Civica</title>
+<meta name="description" content="Important disclosures about Civica's housing market scores, data sources, methodological limitations, and appropriate use of this research tool.">
+<link rel="canonical" href="https://civica.app/disclaimer.html">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#f0f2f5; color:#1f2937; }
+.nav { background:#fff; height:56px; padding:0 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:300; box-shadow:0 1px 0 #e5e7eb; }
+.logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.logo-text { font-size:18px; font-weight:800; color:#1a3a5c; }
+.logo-text em { font-style:normal; color:#1a7ff0; }
+.nav-back { font-size:13px; color:#6b7280; text-decoration:none; font-weight:500; }
+.nav-back:hover { color:#1a3a5c; }
+.wrap { max-width:760px; margin:0 auto; padding:52px 28px; }
+.page-title { font-size:36px; font-weight:900; color:#1a3a5c; margin-bottom:8px; }
+.page-date { font-size:13px; color:#9ca3af; margin-bottom:42px; }
+.alert { background:#fef3c7; border:1px solid #fcd34d; border-radius:12px; padding:18px 22px; margin-bottom:32px; font-size:14px; color:#78350f; line-height:1.7; }
+h2 { font-size:18px; font-weight:700; color:#1a3a5c; margin:32px 0 10px; }
+p, li { font-size:15px; color:#374151; line-height:1.75; }
+ul { padding-left:22px; margin-top:8px; }
+li { margin-bottom:6px; }
+a { color:#1a7ff0; }
+table { width:100%; border-collapse:collapse; margin-top:12px; font-size:13px; }
+th { background:#f8fafc; padding:10px 14px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#6b7280; text-align:left; border-bottom:2px solid #e5e7eb; }
+td { padding:11px 14px; border-bottom:1px solid #f3f4f6; }
+.footer { background:#111827; padding:36px 28px; text-align:center; margin-top:64px; }
+.footer p { font-size:11px; color:rgba(255,255,255,.25); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html">
+    <svg width="22" height="22" viewBox="0 0 30 30" fill="none">
+      <rect width="30" height="30" rx="6" fill="#1a7ff0"/>
+      <path d="M9 21L15 9L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="11" y1="17" x2="19" y2="17" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <span class="logo-text">civi<em>ca</em></span>
+  </a>
+  <a class="nav-back" href="index.html">← Home</a>
+</nav>
+
+<div class="wrap">
+  <h1 class="page-title">Research Disclaimer</h1>
+  <p class="page-date">Last updated: May 2026</p>
+
+  <div class="alert">
+    <strong>Important:</strong> Civica scores are derived from federal government data and are for informational research purposes only. They do not constitute investment, financial, or real estate advice. Past appreciation is not indicative of future returns. Always consult a licensed professional before making major financial decisions.
+  </div>
+
+  <h2>What Civica Scores Measure</h2>
+  <p>Civica scores are composite indices derived entirely from federal government data, normalized relative to all 10,267 scored US towns (incorporated places with at least 1,000 residents). A high score means a town ranks well on five dimensions — affordability, economy, safety &amp; place, growth, and schools — relative to all other scored towns. About 58% of each score is resolved at the town level (crime, income, growth, scale, schools) and the remainder is inherited from the town's parent county. A high score does not mean the town is a good investment for your specific situation, timeline, or risk tolerance.</p>
+
+  <h2>What Civica Scores Do Not Measure</h2>
+  <ul>
+    <li>Specific neighborhoods, ZIP codes, or individual properties within a town.</li>
+    <li>School quality (not included in current model — see <a href="methodology.html">methodology</a>).</li>
+    <li>Future economic shocks, employer exits, natural disasters, or policy changes.</li>
+    <li>Your personal financial situation, debt-to-income ratio, or credit standing.</li>
+    <li>Local zoning rules, HOA restrictions, or title encumbrances.</li>
+    <li>Current mortgage rates available to you specifically.</li>
+  </ul>
+
+  <h2>Known Methodological Limitations</h2>
+  <table>
+    <thead><tr><th>Limitation</th><th>Impact</th><th>Candidate Fix</th></tr></thead>
+    <tbody>
+      <tr><td>Town income is a ZIP→place approximation</td><td>IRS ZIP AGI allocated by land-area overlap; not a survey-grade town median income</td><td>Census place-level income survey integration (future)</td></tr>
+      <tr><td>~42% of each score is county-inherited</td><td>Wages, appreciation, climate, migration, and permits are scored at the county level, not the town level</td><td>Inherent to regional data; disclosed on every report</td></tr>
+      <tr><td>Crime mapped from agency name to place</td><td>County sheriffs stay in the county pool; towns with no matched agency inherit the county/RUCC-tier rate (flagged)</td><td>Agency-to-place geocoding (future)</td></tr>
+      <tr><td>No home-value level post-Zillow</td><td>Affordability is rent-vs-income + appreciation; there is no median home price in the model</td><td>Federal place-level value source if one becomes available</td></tr>
+      <tr><td>BLS QCEW: 18-month data lag</td><td>Economy scores reflect 2023 county data; recent job losses or gains may not be captured</td><td>Quarterly updates</td></tr>
+      <tr><td>FBI NIBRS: not all agencies report</td><td>Towns with low reporting receive the county/RUCC-tier median — not actual town crime data</td><td>Imputed towns are flagged in the scoring engine</td></tr>
+      <tr><td>Universe is incorporated places only</td><td>Census Designated Places (CDPs) are not scored — no annual sub-county growth signal exists for them</td><td>Decennial place population integration (future)</td></tr>
+      <tr><td>Permits as demand proxy, not permit-gap ratio</td><td>High-permit counties score well even if permits exceed household formation</td><td>ACS household formation projections (future)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Data Currency</h2>
+  <p>Scores are based on data available as of the scoring engine's last run (Q2 2026). Key data lags:</p>
+  <ul>
+    <li><strong>FHFA HPI:</strong> through Q4 2024</li>
+    <li><strong>BLS QCEW wages:</strong> 2023 annual</li>
+    <li><strong>BEA per capita income:</strong> 2023</li>
+    <li><strong>IRS SOI migration:</strong> 2022–23 tax year</li>
+    <li><strong>FBI NIBRS crime:</strong> 2024 national master file</li>
+    <li><strong>FEMA NFIP:</strong> 10-year average through 2023</li>
+    <li><strong>Census population:</strong> July 2023 estimate</li>
+  </ul>
+
+  <h2>Town vs. County Coverage</h2>
+  <p>Roughly 58% of each town's score is resolved at the town level (crime, income, growth, population scale, schools). The remaining ~42% is inherited from the town's parent county (wages, appreciation, climate risk, migration, permits) because those metrics genuinely operate at a regional scale. Civica discloses this split on every town report and does not claim town-level precision for county-inherited metrics. Town income is a ZIP→place approximation, and town crime is mapped from reporting agencies to places — both are labeled as approximations.</p>
+
+  <h2>Strong Buy / Buy / Hold / Caution Labels</h2>
+  <p>These are Civica's shorthand for score tiers (Strong Buy ≥ 62/100, Buy ≥ 52, Hold ≥ 44, Caution &lt; 44), not personalized investment recommendations. A town labeled Caution may be an excellent choice for some buyers; a town labeled Strong Buy may be wrong for others. The label reflects relative fundamentals, not an instruction to transact.</p>
+
+  <h2>Source Data Licenses</h2>
+  <p>All Civica data comes from US federal government sources (FBI, IRS, Census, BLS, BEA, FHFA, FEMA, NOAA, USFS, USDA, HUD), which are in the public domain. There are no commercial or proprietary data sources in the model. All source data attribution is provided on each town report page.</p>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 Civica. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html" style="color:rgba(255,255,255,.4);">Privacy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:rgba(255,255,255,.4);">Terms</a></p>
+</footer>
+</body>
+</html>

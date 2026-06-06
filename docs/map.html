@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Town Map — Civica</title>
+<meta name="description" content="Interactive, zoomable map of all 10,267 Civica-scored US towns — colored by verdict. Click any dot for the full report.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="clean.css">
+<style>
+.statline{ display:flex; gap:var(--s4); flex-wrap:wrap; margin-bottom:var(--s3); }
+.statline .s .n{ font-family:'Poppins'; font-weight:800; font-size:22px; color:var(--ink); }
+.statline .s .n.blue{ color:var(--primary-strong); }
+.statline .s .n.green{ color:var(--success); }
+.statline .s .k{ font-size:12px; color:var(--muted); }
+.map-shell{ position:relative; }
+#map{ width:100%; height:70vh; min-height:440px; border:1px solid var(--border); border-radius:var(--r); background:var(--surface-sunken); z-index:0; }
+.map-search{ position:absolute; top:16px; left:16px; z-index:500; width:300px; max-width:calc(100% - 88px); }
+#mapMsg{ position:absolute; z-index:500; left:50%; top:14px; transform:translateX(-50%); background:var(--surface);
+  border:1px solid var(--border); border-radius:var(--r-sm); box-shadow:var(--shadow); padding:8px 16px; font-size:13px; font-weight:600; }
+.legend{ position:absolute; bottom:18px; right:16px; z-index:500; background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r); box-shadow:var(--shadow); padding:12px 14px; font-size:13px; }
+.legend .t{ font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.lg-item{ display:flex; align-items:center; gap:8px; padding:5px 0; cursor:pointer; min-height:32px; user-select:none; }
+.lg-item.off{ opacity:.35; }
+.lg-dot{ width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+.lg-ct{ margin-left:auto; color:var(--muted); font-family:'Inconsolata'; font-weight:700; }
+.lg-hint{ font-size:11px; color:var(--muted); margin-top:6px; }
+.leaflet-popup-content-wrapper{ border-radius:var(--r); }
+.pop-name{ font-weight:700; color:var(--ink); font-family:'Poppins'; }
+.pop-meta{ font-size:12px; color:var(--muted); margin:2px 0 8px; }
+/* qualify selector so it beats Leaflet's .leaflet-container a (which forces a teal link color) */
+.leaflet-popup-content a.pop-link{ display:block; text-align:center; background:var(--primary-strong); color:#fff; border-radius:var(--r-sm); padding:8px; font-weight:700; font-size:13px; text-decoration:none; }
+.leaflet-popup-content a.pop-link:hover{ background:var(--primary-hover); color:#fff; text-decoration:none; }
+@media(max-width:640px){ .map-search{ left:12px; right:60px; width:auto; } #map{ height:64vh; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="index.html" aria-label="Civica Towns home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="map.html" aria-current="page">Map</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a class="opt" href="compare.html">Compare</a>
+      <a class="opt" href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="page-hero" aria-labelledby="h">
+    <span class="eyebrow">Interactive map</span>
+    <h1 id="h">10,267 towns, one map</h1>
+    <p>Every scored town as a dot, colored by verdict. Scroll to zoom, drag to pan, click a dot for the report.</p>
+  </section>
+
+  <div class="statline">
+    <div class="s"><div class="n" id="stTotal">10,267</div><div class="k">Towns mapped</div></div>
+    <div class="s"><div class="n green" id="stSbuy">—</div><div class="k">Strong Buy</div></div>
+    <div class="s"><div class="n blue" id="stBuy">—</div><div class="k">Buy</div></div>
+    <div class="s"><div class="n">51</div><div class="k" title="All 50 states plus Washington, D.C.">States covered (50 + D.C.)</div></div>
+  </div>
+
+  <div class="map-shell" style="margin-bottom:var(--s5);">
+    <div id="map"></div>
+    <div class="map-search">
+      <div class="search"><div class="search-field" style="height:46px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input id="q" type="text" placeholder="Search a town…" autocomplete="off" aria-label="Search a town" oninput="onSearch(this.value)">
+      </div><div class="drop" id="searchDrop" role="listbox" aria-label="Town results"></div></div>
+    </div>
+    <div class="legend" id="legend">
+      <div class="t">Verdict — click to filter</div>
+      <div class="lg-item" data-label="Strong Buy"><span class="lg-dot" style="background:var(--success)"></span>Strong Buy<span class="lg-ct" id="c-sb">—</span></div>
+      <div class="lg-item" data-label="Buy"><span class="lg-dot" style="background:var(--primary-strong)"></span>Buy<span class="lg-ct" id="c-b">—</span></div>
+      <div class="lg-item" data-label="Hold"><span class="lg-dot" style="background:var(--warning)"></span>Hold<span class="lg-ct" id="c-h">—</span></div>
+      <div class="lg-item" data-label="Caution"><span class="lg-dot" style="background:var(--caution)"></span>Caution<span class="lg-ct" id="c-c">—</span></div>
+      <div class="lg-hint">Color = each town's verdict</div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap center">
+    <div class="foot-links" style="justify-content:center;"><a href="leaderboard.html">Leaderboard</a><a href="compare.html">Compare</a><a href="methodology.html">Methodology</a></div>
+    Basemap © <a href="https://carto.com/">CARTO</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Civica scores are informational only. &copy; 2026 Civica.
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const COLOR={'Strong Buy':'#16a34a','Buy':'#0b57c2','Hold':'#f59e0b','Caution':'#dc2626'};
+let TOWNS=[], markers=[], byFips={}, map=null, draw=function(){};
+const active=new Set(['Strong Buy','Buy','Hold','Caution']);
+function mapMsg(msg,color){ let el=document.getElementById('mapMsg');
+  if(!el){ el=document.createElement('div'); el.id='mapMsg'; document.getElementById('map').appendChild(el); }
+  el.textContent=msg; el.style.color=color||'var(--ink)'; }
+
+if(typeof L==='undefined'){ mapMsg('⚠️ Map library failed to load — check your connection.', 'var(--danger)'); }
+else{
+  map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([39.5,-97.5],4.3);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap, © CARTO',subdomains:'abcd',maxZoom:18}).addTo(map);
+  setTimeout(()=>map.invalidateSize(),250); mapMsg('Loading 10,267 towns…');
+  function radiusFor(z){ return z<=4?3:z<=6?4:z<=8?5.5:7.5; }
+  function popupHtml(t){ const col=COLOR[t.l]||'#5b6170';
+    return `<div class="pop-name">${t.n}</div><div class="pop-meta">${t.c}, ${t.s}</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="width:34px;height:34px;border-radius:8px;background:${col};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:Inconsolata;">${Math.round(t.sc)}</span><span class="vbadge ${ {'Strong Buy':'v-sbuy','Buy':'v-buy','Hold':'v-hold','Caution':'v-caut'}[t.l] }">${t.l}</span></div>
+      <a class="pop-link" href="output/towns/${t.f}.html">View full report →</a>`; }
+  draw=function(){ const r=radiusFor(map.getZoom()); markers.forEach(m=>{ const on=active.has(m._t.l); m.setStyle({radius:r,opacity:on?1:0,fillOpacity:on?0.85:0}); }); };
+  fetch('output/towns_geo.json',{cache:'no-store'}).then(r=>{ if(!r.ok)throw new Error('HTTP '+r.status); return r.json(); }).then(data=>{
+    TOWNS=data; const counts={'Strong Buy':0,'Buy':0,'Hold':0,'Caution':0}; const r0=radiusFor(map.getZoom());
+    data.slice().sort((a,b)=>a.sc-b.sc).forEach(t=>{ counts[t.l]=(counts[t.l]||0)+1;
+      const m=L.circleMarker([t.lat,t.lon],{radius:r0,color:'#fff',weight:0.5,fillColor:COLOR[t.l]||'#9ca3af',fillOpacity:0.85});
+      m._t=t; m.bindPopup(popupHtml(t)); markers.push(m); byFips[t.f]=m; });
+    L.featureGroup(markers).addTo(map);
+    const el=document.getElementById('mapMsg'); if(el)el.remove();
+    stTotal.textContent=data.length.toLocaleString(); stSbuy.textContent=counts['Strong Buy'].toLocaleString(); stBuy.textContent=counts['Buy'].toLocaleString();
+    document.getElementById('c-sb').textContent=counts['Strong Buy'].toLocaleString(); document.getElementById('c-b').textContent=counts['Buy'].toLocaleString();
+    document.getElementById('c-h').textContent=counts['Hold'].toLocaleString(); document.getElementById('c-c').textContent=counts['Caution'].toLocaleString();
+    map.invalidateSize();
+  }).catch(e=>mapMsg('⚠️ Could not load town data ('+e.message+'). Hard-refresh (Ctrl+Shift+R).','var(--danger)'));
+  map.on('zoomend',draw);
+}
+document.querySelectorAll('.lg-item').forEach(el=>el.addEventListener('click',()=>{ const lab=el.dataset.label;
+  if(active.has(lab)){ active.delete(lab); el.classList.add('off'); } else { active.add(lab); el.classList.remove('off'); } draw(); }));
+
+const STATE_NAMES={AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'};
+function detectState(v){ const u=v.trim().toUpperCase(); if(STATE_NAMES[u])return u; const l=v.trim().toLowerCase(); return Object.keys(STATE_NAMES).find(k=>STATE_NAMES[k].toLowerCase().startsWith(l))||null; }
+function onSearch(val){ const drop=document.getElementById('searchDrop'); const qq=val.trim().toLowerCase();
+  if(!qq||!TOWNS.length){ drop.className='drop'; return; }
+  const trow=c=>`<div class="opt-row" tabindex="0" onclick="goTown('${c.f}')" onkeydown="if(event.key==='Enter')goTown('${c.f}')">
+    <span><span class="opt-name">${c.n}, ${c.s}</span><br><span class="opt-meta">${c.c}</span></span>
+    <span class="opt-score" style="background:${COLOR[c.l]||'#5b6170'}">${Math.round(c.sc)}</span></div>`;
+  const st=detectState(val); let hits = st ? TOWNS.filter(c=>c.s===st).slice(0,8) : TOWNS.filter(c=>c.n.toLowerCase().includes(qq)).slice(0,8);
+  drop.innerHTML = hits.length ? hits.map(trow).join('') : '<div class="opt-row"><span class="opt-meta">No towns found</span></div>'; drop.className='drop open';
+}
+function goTown(f){ const t=TOWNS.find(x=>x.f===f); if(!t)return; document.getElementById('searchDrop').className='drop';
+  document.getElementById('q').value=t.n; map.flyTo([t.lat,t.lon],11,{duration:0.8}); const m=byFips[f]; if(m)setTimeout(()=>m.openPopup(),850); }
+document.addEventListener('click',e=>{ if(!e.target.closest('.map-search')) document.getElementById('searchDrop').className='drop'; });
+</script>
+</body>
+</html>

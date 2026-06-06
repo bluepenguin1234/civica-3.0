@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top US Towns to Buy a Home — Civica</title>
+<meta name="description" content="The best US towns to buy a home in 2026, ranked by Civica's 5-dimension town model on 100% federal data.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="clean.css">
+<style>
+.tabs{ display:flex; gap:var(--s1); flex-wrap:wrap; margin-bottom:var(--s3); }
+.tab{ font:inherit; font-size:14px; font-weight:600; min-height:44px; padding:0 16px; border-radius:var(--r-pill);
+  border:1px solid var(--border); background:var(--surface); color:var(--muted); cursor:pointer; transition:all .15s; }
+.tab:hover{ color:var(--text); }
+.tab[aria-selected="true"]{ background:var(--primary-strong); color:#fff; border-color:var(--primary-strong); }
+.view-desc{ color:var(--muted); font-size:14px; margin-bottom:var(--s3); max-width:70ch; }
+.rk{ font-family:'Inconsolata'; font-weight:700; color:var(--muted); }
+.rk.top3{ color:var(--primary-strong); }
+.t-name{ font-weight:700; color:var(--ink); }
+.t-sub{ font-size:12px; color:var(--muted); }
+.sc{ font-family:'Inconsolata'; font-weight:700; font-size:16px; color:var(--ink); }
+.pos{ color:var(--success); } .neg{ color:var(--danger); }
+.load-more{ width:100%; margin-top:var(--s3); }
+@media(max-width:640px){ .tbl .col-opt{ display:none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="index.html" aria-label="Civica Towns home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="map.html">Map</a>
+      <a href="leaderboard.html" aria-current="page">Leaderboard</a>
+      <a class="opt" href="compare.html">Compare</a>
+      <a class="opt" href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="page-hero" aria-labelledby="h">
+    <span class="eyebrow">National rankings · 2026</span>
+    <h1 id="h">The best US towns to buy</h1>
+    <p>Ranked by Civica Score across all <span id="total">10,267</span> towns — 100% federal data, each ranked inside its county.</p>
+    <p class="muted" id="statline" style="font-size:14px;margin-top:var(--s2);"></p>
+  </section>
+
+  <hr class="rule">
+  <section class="section">
+    <div class="tabs" role="tablist" aria-label="Ranking views">
+      <button class="tab" role="tab" aria-selected="true"  onclick="setView('top100',this)">Top 100</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="setView('strongbuy',this)">Strong Buy</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="setView('affordable',this)">Most affordable</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="setView('safest',this)">Safest</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="setView('caution',this)">Use caution</button>
+    </div>
+    <p class="view-desc" id="viewDesc"></p>
+
+    <table class="tbl" aria-label="Town rankings">
+      <thead><tr>
+        <th style="width:44px;">#</th><th>Town</th><th>Score</th><th>Verdict</th>
+        <th class="r col-opt">Town income</th><th class="r col-opt">Growth 5yr</th><th class="r">Violent /100k</th>
+      </tr></thead>
+      <tbody id="body"><tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">Loading…</td></tr></tbody>
+    </table>
+    <button class="btn btn-ghost load-more" id="more" style="display:none;" onclick="loadMore()">Show more</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap center">
+    <div class="foot-links" style="justify-content:center;"><a href="map.html">Map</a><a href="compare.html">Compare</a><a href="methodology.html">Methodology</a></div>
+    100% federal data · Civica scores are informational only — not financial, investment, or real estate advice. &copy; 2026 Civica.
+  </div>
+</footer>
+
+<script>
+const VDOT = { 'Strong Buy':'var(--success)', 'Buy':'var(--primary-strong)', 'Hold':'var(--warning)', 'Caution':'var(--caution)' };
+const VCLS = { 'Strong Buy':'v-sbuy', 'Buy':'v-buy', 'Hold':'v-hold', 'Caution':'v-caut' };
+let ALL=[], view='top100', visible=50;
+const VIEW = {
+  top100:    { d:'Towns with the highest composite Civica scores.', fn:d=>d },
+  strongbuy: { d:'Towns labeled Strong Buy — top-tier fundamentals (score ≥ 62).', fn:d=>d.filter(c=>c.label==='Strong Buy').sort((a,b)=>b.score-a.score) },
+  affordable:{ d:'Lowest rent burden (2BR rent ÷ town income) among towns scoring ≥ 50.', fn:d=>d.filter(c=>c.score>=50).sort((a,b)=>a.rent_burden-b.rent_burden) },
+  safest:    { d:'Lowest violent crime per 100k among towns scoring ≥ 50.', fn:d=>d.filter(c=>c.score>=50).sort((a,b)=>a.violent_per100k-b.violent_per100k) },
+  caution:   { d:'Towns labeled Caution — fundamentals below national peers (score < 44).', fn:d=>d.filter(c=>c.label==='Caution').sort((a,b)=>a.score-b.score) },
+};
+const body=document.getElementById('body'), moreBtn=document.getElementById('more');
+
+if(location.protocol==='file:'){
+  body.innerHTML='<tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">Open via a local server to load data.</td></tr>';
+}else{
+  fetch('output/town_index.json').then(r=>r.json()).then(d=>{ ALL=d; stats(); render(); })
+   .catch(()=>{ body.innerHTML='<tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">Could not load town data.</td></tr>'; });
+}
+function stats(){
+  const s=ALL.map(c=>c.score).sort((a,b)=>a-b); const med=s[Math.floor(s.length/2)].toFixed(1);
+  const sb=ALL.filter(c=>c.label==='Strong Buy').length;
+  document.getElementById('total').textContent=ALL.length.toLocaleString();
+  document.getElementById('statline').textContent=`Median score ${med} · ${sb.toLocaleString()} Strong Buy towns`;
+}
+function setView(v,btn){ view=v; visible=50;
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false')); btn.setAttribute('aria-selected','true'); render(); }
+function render(){
+  const rows=VIEW[view].fn(ALL); document.getElementById('viewDesc').textContent=VIEW[view].d;
+  const shown=rows.slice(0,visible);
+  if(!shown.length){ body.innerHTML='<tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">No towns match.</td></tr>'; moreBtn.style.display='none'; return; }
+  body.innerHTML=shown.map((c,i)=>{
+    const pos=i+1, g=c.town_growth_5yr*100;
+    return `<tr onclick="location='output/towns/${c.fips}.html'">
+      <td><span class="rk ${pos<=3?'top3':''}">${pos}</span></td>
+      <td><div class="t-name">${c.name}</div><div class="t-sub">${c.county}, ${c.state} · #${c.rank_in_county} in county</div></td>
+      <td><span class="sc">${Math.round(c.score)}</span></td>
+      <td><span class="vbadge ${VCLS[c.label]||''}">${c.label}</span></td>
+      <td class="r col-opt mono">$${Math.round(c.town_income/1000)}k</td>
+      <td class="r col-opt mono ${g>=0?'pos':'neg'}">${g>=0?'+':''}${g.toFixed(1)}%</td>
+      <td class="r mono">${Math.round(c.violent_per100k)}</td>
+    </tr>`; }).join('');
+  moreBtn.style.display = rows.length>visible ? 'block' : 'none';
+}
+function loadMore(){ visible+=50; render(); }
+</script>
+</body>
+</html>

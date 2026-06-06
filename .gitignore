@@ -1,0 +1,21 @@
+# Raw federal datasets (~7 GB) — fetch with download_town_data.py + the county data.
+# Not in the repo; lives next to the scripts as civica_data/.
+civica_data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs / scratch
+*.log
+_*.log
+_*.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

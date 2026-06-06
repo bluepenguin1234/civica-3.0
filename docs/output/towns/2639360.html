@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Houghton city, MI Town Housing Score — Civica Research</title>
+<meta name="description" content="Houghton city, MI scores 57/100 on Civica's 4-dimension town housing model. Signal: Buy. Ranks #1 of 4 towns in Houghton County. Town-level crime, income, and growth on 100% federal data.">
+<meta property="og:title" content="Houghton city, MI Town Housing Score — Civica">
+<meta property="og:description" content="Houghton city, MI scores 57/100 on Civica's 4-dimension town housing model. Signal: Buy. Ranks #1 of 4 towns in Houghton County. Town-level crime, income, and growth on 100% federal data.">
+<meta property="og:url" content="https://civica.app/output/towns/2639360.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://civica.app/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://civica.app/og_image.png">
+<link rel="canonical" href="https://civica.app/output/towns/2639360.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Houghton city, MI Housing Market Analysis","description":"Houghton city, MI scores 57/100 on Civica's 4-dimension town housing model. Signal: Buy. Ranks #1 of 4 towns in Houghton County. Town-level crime, income, and growth on 100% federal data.","url":"https://civica.app/output/towns/2639360.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://civica.app/"},{"@type":"ListItem","position":2,"name":"Houghton County","item":"https://civica.app/output/towns/2639360.html"},{"@type":"ListItem","position":3,"name":"Houghton city","item":"https://civica.app/output/towns/2639360.html"}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style> block below. -->
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Civica Clean tokens (white + blue) */
+  --blue:    #0d2d52;   /* ink / navy */
+  --blue-lt: #1a7ff0;   /* primary accent */
+  --navy:    #0d2d52;
+  --green:   #16a34a;
+  --yellow:  #b45309;
+  --red:     #dc2626;
+  --purple:  #0b57c2;   /* remapped to AA blue (no purple in palette) */
+  --bg:      #ffffff;
+  --card:    #ffffff;
+  --border:  #e6e8ee;
+  --muted:   #5b6170;
+  --text:    #111827;
+  --subtext: #5b6170;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow:    0 4px 16px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12), 0 4px 12px rgba(0,0,0,.06);
+  --r:    16px;
+  --r-sm: 10px;
+  --r-xs:  6px;
+}
+
+body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); }
+h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans-serif; letter-spacing:-.01em; }
+.num, .mono, .dv, .gt-tag, .posbar .pl, code { font-family: 'Inconsolata', ui-monospace, monospace; }
+
+/* NAV */
+.nav { background:rgba(255,255,255,.88); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--border); height:56px; padding:0 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:200; }
+.logo { display:flex; align-items:center; gap:9px; text-decoration:none; }
+.logo-text { font-size:17px; font-weight:800; color:#0d2d52; letter-spacing:-.3px; }
+.logo-text em { font-style:normal; color:#1a7ff0; }
+.nav-right { display:flex; align-items:center; gap:16px; }
+.nav-tag { font-size:11px; font-weight:700; background:#f5f5f7; color:var(--subtext); padding:4px 10px; border-radius:100px; letter-spacing:.04em; border:1px solid var(--border); }
+.nav-back { font-size:13px; color:#1a7ff0; text-decoration:none; font-weight:500; }
+
+/* HERO */
+.hero { background:linear-gradient(150deg,#0a2440 0%,#0d2d52 100%); color:#fff; padding:30px 34px; border-radius:var(--r);
+  display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; box-shadow:var(--shadow); }
+.hero-id { flex:1 1 280px; min-width:0; }
+.hero-score { display:flex; align-items:center; gap:26px; flex-wrap:wrap; }
+.hero-eyebrow { font-size:11px; font-weight:700; letter-spacing:.12em; color:rgba(255,255,255,.45); text-transform:uppercase; margin-bottom:10px; }
+.hero h1 { font-size:30px; font-weight:800; line-height:1.1; letter-spacing:-.4px; }
+.hero-sub { font-size:14px; color:rgba(255,255,255,.62); margin-top:6px; }
+
+/* VERDICT BADGE */
+.verdict-badge { display:flex; flex-direction:column; align-items:flex-start; gap:6px; }
+.vb-label { font-size:10px; color:rgba(255,255,255,.4); text-transform:uppercase; letter-spacing:.08em; }
+.vb-pill { font-size:13px; font-weight:800; padding:8px 18px; border-radius:100px; }
+.vb-accelerating { background:#16a34a; color:#fff; }
+.vb-peaking      { background:#22c55e; color:#fff; }
+.vb-established  { background:#0b57c2; color:#fff; }
+.vb-emerging     { background:#8b5cf6; color:#fff; }
+.vb-frontier     { background:#f59e0b; color:#fff; }
+.vb-turning      { background:#dc2626; color:#fff; }
+.vb-speculative  { background:#ef4444; color:#fff; }
+.vb-avoid        { background:#dc2626; color:#fff; }
+.vb-score { font-size:11px; color:rgba(255,255,255,.55); text-align:left; margin-top:2px; }
+
+/* SCORE RING */
+.score-hero { display:flex; flex-direction:column; align-items:center; }
+.sh-ring { width:110px; height:110px; position:relative; display:flex; align-items:center; justify-content:center; flex-direction:column; }
+.sh-ring svg { position:absolute; top:0; left:0; width:100%; height:100%; transform:rotate(-90deg); }
+.sh-num   { font-size:34px; font-weight:900; line-height:1; color:#fff; position:relative; z-index:1; }
+.sh-denom { font-size:13px; color:rgba(255,255,255,.4); position:relative; z-index:1; }
+.sh-grade { margin-top:5px; font-size:12px; font-weight:700; color:#4ade80; }
+
+/* HERO STATS STRIP — 6 pills, 3-col grid on mobile */
+.hero-pills { display:flex; border-top:1px solid rgba(255,255,255,.1); background:rgba(0,0,0,.2); margin-top:24px; }
+.hero-pill { flex:1; padding:13px 18px; border-right:1px solid rgba(255,255,255,.08); display:flex; flex-direction:column; gap:3px; min-width:108px; }
+.hero-pill:last-child { border-right:none; }
+.hp-lbl { font-size:9px; color:rgba(255,255,255,.45); text-transform:uppercase; letter-spacing:.06em; font-weight:600; }
+.hp-val { font-size:13px; font-weight:700; }
+.hp-green  { color:#4ade80; }
+.hp-yellow { color:#fbbf24; }
+.hp-red    { color:#f87171; }
+.hp-white  { color:#fff; }
+.hp-purple { color:#c4b5fd; }
+
+@media(max-width:640px){
+  /* ── NAV ── */
+  .nav { padding:0 14px; }
+  .nav-tag { display:none; }
+  .nav-back { font-size:12px; }
+
+  /* ── HERO ── */
+  .hero { padding:22px 20px; gap:18px; }
+  .hero-eyebrow { font-size:10px; margin-bottom:6px; }
+  .hero h1 { font-size:23px; letter-spacing:-.3px; }
+  .hero-sub { font-size:12px; margin-top:4px; }
+  .hero-score { gap:16px; }
+  .sh-ring { width:80px; height:80px; }
+  .sh-num  { font-size:26px; }
+  .sh-denom{ font-size:11px; }
+  .sh-grade{ font-size:10px; margin-top:3px; }
+  .vb-label{ font-size:9px; }
+  .vb-pill { font-size:12px; padding:6px 14px; }
+  .vb-score{ font-size:10px; }
+
+  /* ── HERO PILLS — 3×2 grid ── */
+  .hero-pills { display:grid; grid-template-columns:repeat(3,1fr); }
+  .hero-pill { min-width:unset; flex:unset; border-right:none; border-bottom:1px solid rgba(255,255,255,.08); padding:11px 12px; }
+  .hero-pill:nth-child(4),.hero-pill:nth-child(5),.hero-pill:nth-child(6) { border-bottom:none; }
+  .hero-pill:nth-child(1),.hero-pill:nth-child(2),
+  .hero-pill:nth-child(4),.hero-pill:nth-child(5) { border-right:1px solid rgba(255,255,255,.08); }
+  .hp-lbl { font-size:8px; letter-spacing:.04em; }
+  .hp-val { font-size:12px; }
+
+  /* ── PAGE + ACCORDION ── */
+  .page { padding:14px 12px; gap:12px; }
+  .acc-section { border-radius:var(--r-sm); }
+  .acc-header { padding:14px 16px; }
+  .acc-title { font-size:13px; }
+  .acc-icon { font-size:16px; }
+  .acc-content { padding:14px; gap:14px; }
+
+  /* ── CARDS ── */
+  .card { padding:16px; }
+  .card-title { font-size:10px; margin-bottom:12px; }
+  .card-intro { font-size:12px; margin-bottom:12px; }
+
+  /* ── SCORE BANNER (thesis): hide redundant ring, stack vertically ── */
+  .score-banner { flex-direction:column; gap:12px; padding:16px; }
+  .score-banner > div:first-child { display:none; } /* ring already in hero */
+  .score-banner h3 { font-size:14px; line-height:1.4; }
+  .score-banner p  { font-size:12px; line-height:1.55; }
+  .sbb-items { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:10px; }
+  .sbb-item  { min-width:unset; padding:8px; }
+  .sbb-name  { font-size:8px; }
+  .sbb-val   { font-size:13px; }
+  .sbb-wt    { font-size:9px; }
+
+  /* ── GRIDS ── */
+  .g2 { grid-template-columns:1fr; gap:12px; }
+  .g3 { grid-template-columns:1fr 1fr; gap:12px; }
+  .g4 { grid-template-columns:1fr 1fr; gap:10px; }
+
+  /* ── STAT BOXES ── */
+  .sb { padding:12px; }
+  .sb-val { font-size:20px; }
+  .sb-lbl { font-size:10px; margin-top:3px; }
+  .sb-delta { font-size:11px; margin-top:3px; }
+
+  /* ── SIGNALS ── */
+  .signal { padding:11px 13px; gap:10px; }
+  .signal .icon { font-size:17px; }
+  .signal .body { font-size:12px; line-height:1.5; }
+
+  /* ── VALUATION METERS ── */
+  .meter-row { flex-wrap:wrap; gap:6px 14px; padding:10px 0; }
+  .meter-lbl { width:100%; margin-bottom:2px; font-size:12px; }
+  .meter-val { font-size:12px; width:56px; }
+
+  /* ── SCENARIO GRID ── */
+  .scenario-grid { grid-template-columns:1fr; gap:10px; }
+
+  /* ── BAR CHART ── */
+  .bar-lbl { width:80px; font-size:11px; }
+  .bar-val { font-size:11px; }
+
+  /* ── RISK MATRIX ── */
+  .risk-matrix { grid-template-columns:1fr 1fr; gap:8px; }
+  .rm-card { padding:12px; }
+  .rm-name { font-size:11px; }
+  .rm-impact { font-size:11px; }
+
+  /* ── COMP TABLE ── */
+  .comp-table { font-size:11px; }
+  .comp-table td, .comp-table th { padding:7px 5px; }
+
+  /* ── CTA + FOOTER ── */
+  .cta { font-size:13px; padding:11px; min-width:unset; }
+  .footer { font-size:10px; padding:20px 14px 48px; line-height:1.6; }
+}
+
+/* PAGE */
+.page { max-width:960px; margin:0 auto; padding:28px 20px; display:flex; flex-direction:column; gap:16px; }
+
+/* CARD */
+.card { background:var(--card); border-radius:var(--r-sm); padding:24px; border:1px solid var(--border); }
+.card-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:18px; display:flex; align-items:center; gap:7px; }
+.card-title .ct-icon { font-size:16px; }
+.card-intro { font-size:14px; color:var(--subtext); line-height:1.65; margin-bottom:18px; }
+
+/* ACCORDION */
+.acc-section { background:var(--card); border-radius:var(--r); box-shadow:var(--shadow); border:1px solid var(--border); overflow:hidden; }
+.acc-header { display:flex; align-items:center; justify-content:space-between; padding:18px 24px; cursor:pointer; user-select:none; transition:background .15s; }
+.acc-header:hover { background:#fafafa; }
+.acc-title { font-size:15px; font-weight:700; color:var(--navy); display:flex; align-items:center; gap:10px; }
+.acc-icon { font-size:20px; }
+.acc-chevron { color:var(--muted); transition:transform .25s; font-size:20px; line-height:1; }
+.acc-section.open .acc-chevron { transform:rotate(180deg); }
+.acc-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .28s ease; }
+.acc-section.open .acc-body { grid-template-rows:1fr; }
+.acc-inner { overflow:hidden; }
+.acc-content { border-top:1px solid var(--border); padding:24px; display:flex; flex-direction:column; gap:20px; }
+
+/* GRIDS */
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.g4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; }
+@media(max-width:400px) { .g2,.g3,.g4 { grid-template-columns:1fr; } }
+
+/* STAT BOX */
+.sb { background:#f5f5f7; border-radius:var(--r-sm); padding:14px; border:1px solid var(--border); }
+.sb-val { font-size:24px; font-weight:800; color:var(--navy); line-height:1; }
+.sb-val.big { font-size:32px; }
+.sb-lbl { font-size:11px; color:var(--muted); margin-top:4px; font-weight:500; line-height:1.3; }
+.sb-delta { font-size:12px; font-weight:600; margin-top:5px; }
+.up     { color:var(--green); }
+.down   { color:var(--red); }
+.flat   { color:var(--yellow); }
+.purple { color:var(--purple); }
+
+/* SIGNALS */
+.signal { border-radius:var(--r-sm); padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
+.prof-standout { padding:12px 16px; background:#f0f6ff; border-radius:var(--r-sm); font-size:.82rem; line-height:1.6; color:#1d4ed8; border:1px solid rgba(13,45,82,.12); margin-top:14px; }
+.sig-green  { background:#f0fdf4; border:1px solid #bbf7d0; }
+.sig-yellow { background:#fffbeb; border:1px solid #fde68a; }
+.sig-red    { background:#fef2f2; border:1px solid #fecaca; }
+.sig-blue   { background:#eff6ff; border:1px solid #bfdbfe; }
+.sig-purple { background:#f5f3ff; border:1px solid #ddd6fe; }
+.signal .icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+.signal .body { font-size:13px; line-height:1.55; }
+.sig-green  .body { color:#14532d; }
+.sig-yellow .body { color:#78350f; }
+.sig-red    .body { color:#7f1d1d; }
+.sig-blue   .body { color:#1e3a5f; }
+.sig-purple .body { color:#4c1d95; }
+
+/* SCORE BANNER */
+.score-banner { background:linear-gradient(135deg,#091f3a 0%,#060f1e 100%); border-radius:var(--r); padding:24px; color:#fff; display:flex; gap:24px; align-items:center; flex-wrap:wrap; box-shadow:var(--shadow-lg); }
+.score-banner h3 { font-size:17px; font-weight:800; margin-bottom:6px; }
+.score-banner p  { font-size:13px; color:rgba(255,255,255,.65); line-height:1.6; max-width:480px; }
+.sbb-items { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+.sbb-item  { background:rgba(255,255,255,.1); border-radius:8px; padding:8px 12px; min-width:90px; }
+.sbb-name  { font-size:10px; color:rgba(255,255,255,.45); text-transform:uppercase; letter-spacing:.06em; }
+.sbb-val   { font-size:15px; font-weight:800; color:#fff; margin-top:2px; }
+.sbb-wt    { font-size:10px; color:rgba(255,255,255,.35); }
+
+/* VALUATION METER */
+.meter-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid #f3f4f6; flex-wrap:wrap; }
+.meter-row:last-child { border-bottom:none; }
+.meter-lbl { font-size:13px; font-weight:600; color:var(--navy); width:160px; flex-shrink:0; }
+.meter-track { flex:1; min-width:120px; background:#f1f5f9; border-radius:100px; height:8px; position:relative; }
+.meter-fill  { height:100%; border-radius:100px; }
+.meter-marker { position:absolute; top:-4px; width:2px; height:16px; background:var(--subtext); border-radius:1px; }
+.meter-vals { display:flex; justify-content:space-between; font-size:10px; color:var(--muted); margin-top:3px; }
+.meter-val  { font-size:13px; font-weight:700; width:70px; text-align:right; }
+
+/* SCENARIO TABLE */
+.scenario-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+.scenario-card { border-radius:var(--r-sm); padding:18px; }
+.sc-bull { background:#f0fdf4; border:2px solid #bbf7d0; }
+.sc-base { background:#eff6ff; border:2px solid #bfdbfe; }
+.sc-bear { background:#fef2f2; border:2px solid #fecaca; }
+.sc-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; margin-bottom:8px; }
+.sc-bull .sc-label { color:#15803d; }
+.sc-base .sc-label { color:#1d4ed8; }
+.sc-bear .sc-label { color:#b91c1c; }
+.sc-prob  { font-size:11px; color:var(--muted); margin-bottom:12px; }
+.sc-val   { font-size:24px; font-weight:900; margin-bottom:2px; }
+.sc-bull .sc-val { color:#15803d; }
+.sc-base .sc-val { color:#1d4ed8; }
+.sc-bear .sc-val { color:#b91c1c; }
+.sc-rate  { font-size:13px; font-weight:600; margin-bottom:10px; }
+.sc-trigger { font-size:12px; color:var(--subtext); line-height:1.5; }
+
+/* BAR CHART */
+.bar-chart { display:flex; flex-direction:column; gap:10px; }
+.bar-row   { display:flex; align-items:center; gap:10px; }
+.bar-lbl   { font-size:12px; color:var(--subtext); width:140px; flex-shrink:0; text-align:right; }
+.bar-track { flex:1; background:#f1f5f9; border-radius:4px; height:10px; }
+.bar-fill  { height:100%; border-radius:4px; }
+.bar-val   { font-size:12px; font-weight:600; color:var(--text); width:60px; }
+
+/* RISK MATRIX */
+.risk-matrix { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.rm-card { background:#f5f5f7; border-radius:var(--r-sm); padding:14px; border:1px solid var(--border); }
+.rm-icon { font-size:20px; margin-bottom:6px; }
+.rm-name { font-size:12px; font-weight:700; color:var(--navy); }
+.rm-prob { font-size:11px; color:var(--muted); margin-top:2px; }
+.rm-impact { font-size:12px; font-weight:600; margin-top:4px; }
+.impact-low  { color:var(--green); }
+.impact-med  { color:var(--yellow); }
+.impact-high { color:var(--red); }
+
+/* COMP TABLE */
+.comp-table { width:100%; border-collapse:collapse; font-size:13px; }
+.comp-table th { text-align:left; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); padding:0 10px 10px; border-bottom:1px solid var(--border); }
+.comp-table th:not(:first-child) { text-align:center; }
+.comp-table td { padding:9px 10px; border-top:1px solid #f3f4f6; }
+.comp-table td:not(:first-child) { text-align:center; font-weight:600; }
+.comp-table .hl td { background:#eff6ff; }
+.comp-table .hl .cn { font-weight:700; color:var(--blue); }
+.cn { font-weight:500; }
+.tag { font-size:10px; font-weight:700; padding:2px 8px; border-radius:100px; }
+.tag-g { background:#dcfce7; color:#15803d; }
+.tag-y { background:#fef3c7; color:#92400e; }
+.tag-r { background:#fee2e2; color:#b91c1c; }
+
+/* SPARKLINE */
+.spark-wrap { position:relative; height:72px; }
+.spark-wrap svg { width:100%; height:100%; }
+.spark-lbl { display:flex; justify-content:space-between; font-size:10px; color:var(--muted); margin-top:3px; }
+
+/* CTA */
+.cta-strip { display:flex; gap:12px; flex-wrap:wrap; }
+.cta { flex:1; min-width:150px; border:none; border-radius:10px; padding:13px; font-size:14px; font-weight:700; cursor:pointer; text-align:center; }
+.cta-p { background:var(--blue); color:#fff; }
+.cta-p:hover { background:#1568cc; }
+.cta-s { background:var(--card); color:var(--navy); border:1.5px solid var(--border); }
+.cta-s:hover { background:#f8fafc; }
+
+/* FOOTER */
+.footer { text-align:center; font-size:11px; color:var(--muted); padding:32px 24px 64px; line-height:1.8; }
+
+/* COMP TABLE signal pill */
+.lb-sbuy  { background:#16a34a; color:#fff; }
+.lb-buy   { background:#1a7ff0; color:#fff; }
+.lb-watch { background:#f59e0b; color:#fff; }
+.lb-caut  { background:#dc2626; color:#fff; }
+.lb-avoid { background:#dc2626; color:#fff; }
+</style>
+<style>
+.dc-chip { display:inline-flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:11px; color:rgba(255,255,255,.6); background:rgba(0,0,0,.2); border:1px solid rgba(255,255,255,.12); border-radius:100px; padding:6px 14px; margin-top:14px; }
+.dc-chip b { color:#4ade80; font-weight:700; }
+.dc-chip i { color:#fbbf24; font-style:normal; font-weight:700; }
+.rank-line { font-size:14px; color:#fff; font-weight:600; margin-top:16px; }
+.rank-line span { color:#4ade80; }
+.howto { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:0 18px; margin-top:16px; }
+.howto summary { cursor:pointer; font-weight:700; font-size:14px; color:#0d2d52; padding:16px 0; list-style:none; }
+.howto summary::-webkit-details-marker { display:none; }
+.howto summary::before { content:'▸ '; color:#1a7ff0; }
+.howto[open] summary::before { content:'▾ '; }
+.howto-body { font-size:13px; line-height:1.6; color:#475569; padding:0 0 18px; }
+.schools-soon { opacity:.7; }
+.tcap { font-size:11px; color:#94a3b8; margin-top:6px; }
+/* glance stat tiles */
+.glance { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.gtile { background:#fff; border:1px solid #eef1f5; border-radius:14px; padding:14px 15px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+.gt-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.gt-icon { font-size:17px; }
+.gt-tag { font-size:10px; font-weight:800; letter-spacing:.02em; padding:3px 8px; border-radius:100px; }
+.gt-val { font-size:23px; font-weight:900; color:#0d2d52; line-height:1; }
+.gt-lbl { font-size:11px; color:#6e6e73; margin:5px 0 9px; }
+.gt-bar { height:6px; background:#eef2f7; border-radius:100px; overflow:hidden; }
+.gt-fill { height:100%; border-radius:100px; }
+/* dimension percentile rows */
+.dimrow { display:flex; align-items:center; gap:12px; margin-bottom:13px; }
+.dimrow .dn { width:130px; flex-shrink:0; font-size:13px; font-weight:700; color:#0d2d52; }
+.dimrow .dt { flex:1; position:relative; height:14px; background:#eef2f7; border-radius:100px; }
+.dimrow .df { position:absolute; left:0; top:0; bottom:0; border-radius:100px; }
+.dimrow .dmed { position:absolute; left:50%; top:-3px; bottom:-3px; width:2px; background:#cbd5e1; }
+.dimrow .dv { width:118px; flex-shrink:0; text-align:right; font-size:12px; font-weight:700; color:#0d2d52; }
+.dimrow .dv small { color:#94a3b8; font-weight:600; }
+.radar-wrap { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+.radar-wrap svg { flex-shrink:0; }
+.radar-side { flex:1; min-width:240px; }
+/* position / distribution bars */
+.posbar { margin-bottom:16px; }
+.posbar .pl { display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px; }
+.posbar .pl b { color:#0d2d52; }
+.postrack { position:relative; height:12px; border-radius:100px; background:linear-gradient(90deg,#dc2626,#f59e0b,#0b57c2,#16a34a); }
+.posmark { position:absolute; top:-4px; width:6px; height:20px; border-radius:3px; background:#0d2d52; box-shadow:0 0 0 2px #fff; transform:translateX(-3px); }
+.posends { display:flex; justify-content:space-between; font-size:10px; color:#94a3b8; margin-top:5px; }
+/* location map */
+#locmap { height:240px; border-radius:12px; overflow:hidden; z-index:0; }
+/* peers */
+.peer { display:flex; align-items:center; gap:12px; padding:9px 10px; border-radius:10px; text-decoration:none; }
+.peer:hover { background:#f6f8fb; }
+.peer.me { background:#eef6ff; border:1px solid #cfe3ff; }
+.peer-rk { width:26px; font-size:12px; font-weight:800; color:#c7c7cc; text-align:center; flex-shrink:0; }
+.peer-nm { flex:1; font-size:13px; font-weight:600; color:#0d2d52; }
+.peer-sc { width:30px; height:30px; border-radius:50%; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0; }
+@media (max-width:640px) { .glance { grid-template-columns:repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="../../index.html">
+    <svg width="28" height="28" viewBox="0 0 30 30" fill="none">
+      <rect width="30" height="30" rx="7" fill="#0d2d52"/>
+      <rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/>
+      <rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/>
+      <rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/>
+    </svg>
+    <span class="logo-text">civi<em>ca</em></span>
+  </a>
+  <div class="nav-right">
+    <span class="nav-tag" style="margin-right:8px;">Town Report</span>
+    <a class="nav-back" href="../../index.html">← All Towns</a>
+  </div>
+</nav>
+<div class="page">
+  <div class="hero">
+  <div class="hero-id">
+    <div class="hero-eyebrow">Town Report · 2026</div>
+    <h1>Houghton city, MI</h1>
+    <div class="hero-sub">Houghton County · Pop. 8,560</div>
+    <div class="rank-line">Ranks <span>#1 of 4</span> towns in Houghton County — one of the strongest towns in its county</div>
+    <div class="dc-chip">Town-level: <b>crime · income · growth · schools</b> &nbsp;·&nbsp; County-level: <i>economy · appreciation · climate</i></div>
+  </div>
+  <div class="hero-score">
+    <div class="score-hero">
+      <div class="sh-ring">
+        <svg viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/>
+          <circle cx="55" cy="55" r="46" fill="none" stroke="#5aa8ff" stroke-width="9"
+            stroke-dasharray="289.02" stroke-dashoffset="124.72" stroke-linecap="round"/>
+        </svg>
+        <div class="sh-num">57</div>
+        <div class="sh-denom">/100</div>
+      </div>
+      <div class="sh-grade">Top 27% · #2,751 of 10,267</div>
+    </div>
+    <div class="verdict-badge">
+      <div class="vb-label">Verdict</div>
+      <div class="vb-pill vb-established">Buy</div>
+      <div class="vb-score">Civica Score 56.8</div>
+    </div>
+  </div>
+</div>
+  <div class="signal sig-green" style="margin:0 0 16px;">
+    <div class="icon">✅</div>
+    <div class="body" style="font-size:14px;"><strong>Civica Verdict:</strong> Houghton city is a <strong>Buy</strong>. Schools (96/100) anchors solid fundamentals; watch Economy (40/100) as the softer dimension.</div>
+  </div>
+  <div class="card">
+    <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
+    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 10,267 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
+    <div class="glance">
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">🎯</span><span class="gt-tag" style="color:#0b57c2;background:#dbeafe;">ABOVE AVG</span></div>
+        <div class="gt-val">57</div>
+        <div class="gt-lbl">Civica Score (0–100)</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:73%;background:#0b57c2;"></div></div>
+      </div>
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">💵</span><span class="gt-tag" style="color:#0b57c2;background:#dbeafe;">ABOVE AVG</span></div>
+        <div class="gt-val">$78,678</div>
+        <div class="gt-lbl">Town income / return</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:64%;background:#0b57c2;"></div></div>
+      </div>
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">🏠</span><span class="gt-tag" style="color:#16a34a;background:#dcfce7;">TOP 14%</span></div>
+        <div class="gt-val">15%</div>
+        <div class="gt-lbl">Rent burden</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:86%;background:#16a34a;"></div></div>
+      </div>
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">🛡️</span><span class="gt-tag" style="color:#b45309;background:#fef3c7;">BELOW AVG</span></div>
+        <div class="gt-val">210</div>
+        <div class="gt-lbl">Violent crime / 100k</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:46%;background:#b45309;"></div></div>
+      </div>
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">📈</span><span class="gt-tag" style="color:#0b57c2;background:#dbeafe;">ABOVE AVG</span></div>
+        <div class="gt-val">+2.3%</div>
+        <div class="gt-lbl">Population growth, 5yr</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:63%;background:#0b57c2;"></div></div>
+      </div>
+      <div class="gtile">
+        <div class="gt-top"><span class="gt-icon">🎓</span><span class="gt-tag" style="color:#16a34a;background:#dcfce7;">TOP 11%</span></div>
+        <div class="gt-val">89</div>
+        <div class="gt-lbl">School proficiency (state %ile)</div>
+        <div class="gt-bar"><div class="gt-fill" style="width:89%;background:#16a34a;"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">📊</span> Five-Dimension Breakdown</div>
+    <div class="radar-wrap">
+      <svg width="244" height="200" viewBox="-22 0 244 200"><polygon points="100.0,81.5 117.6,94.3 110.9,115.0 89.1,115.0 82.4,94.3" fill="none" stroke="#e5eaf1" stroke-width="1"/><polygon points="100.0,63.0 135.2,88.6 121.7,129.9 78.3,129.9 64.8,88.6" fill="none" stroke="#e5eaf1" stroke-width="1"/><polygon points="100.0,44.5 152.8,82.8 132.6,144.9 67.4,144.9 47.2,82.8" fill="none" stroke="#e5eaf1" stroke-width="1"/><polygon points="100.0,26.0 170.4,77.1 143.5,159.9 56.5,159.9 29.6,77.1" fill="none" stroke="#e5eaf1" stroke-width="1"/><line x1="100.0" y1="100.0" x2="100.0" y2="26.0" stroke="#e5eaf1"/><line x1="100.0" y1="100.0" x2="170.4" y2="77.1" stroke="#e5eaf1"/><line x1="100.0" y1="100.0" x2="143.5" y2="159.9" stroke="#e5eaf1"/><line x1="100.0" y1="100.0" x2="56.5" y2="159.9" stroke="#e5eaf1"/><line x1="100.0" y1="100.0" x2="29.6" y2="77.1" stroke="#e5eaf1"/><polygon points="100.0,60.7 128.5,90.7 121.0,128.9 71.5,139.2 32.5,78.1" fill="rgba(26,127,240,.20)" stroke="#1a7ff0" stroke-width="2"/><circle cx="100.0" cy="60.7" r="3" fill="#0d2d52"/><circle cx="128.5" cy="90.7" r="3" fill="#0d2d52"/><circle cx="121.0" cy="128.9" r="3" fill="#0d2d52"/><circle cx="71.5" cy="139.2" r="3" fill="#0d2d52"/><circle cx="32.5" cy="78.1" r="3" fill="#0d2d52"/><text x="100.0" y="16.0" text-anchor="middle" font-size="9" fill="#6e6e73" font-weight="700">Afford.</text><text x="182.7" y="76.1" text-anchor="start" font-size="9" fill="#6e6e73" font-weight="700">Econ.</text><text x="151.1" y="173.4" text-anchor="start" font-size="9" fill="#6e6e73" font-weight="700">Safety</text><text x="48.9" y="173.4" text-anchor="end" font-size="9" fill="#6e6e73" font-weight="700">Growth</text><text x="17.3" y="76.1" text-anchor="end" font-size="9" fill="#6e6e73" font-weight="700">Schools</text></svg>
+      <div class="radar-side">
+      <div class="dimrow">
+        <div class="dn">🏠 Affordability</div>
+        <div class="dt"><div class="dmed"></div><div class="df" style="width:53%;background:#1a7ff0;"></div></div>
+        <div class="dv">53<small>/100</small> · <span style="color:#0b57c2;">ABOVE AVG</span></div>
+      </div>
+      <div class="dimrow">
+        <div class="dn">💼 Economy</div>
+        <div class="dt"><div class="dmed"></div><div class="df" style="width:40%;background:#16a34a;"></div></div>
+        <div class="dv">40<small>/100</small> · <span style="color:#b45309;">BELOW AVG</span></div>
+      </div>
+      <div class="dimrow">
+        <div class="dn">🛡️ Safety & Place</div>
+        <div class="dt"><div class="dmed"></div><div class="df" style="width:48%;background:#8b5cf6;"></div></div>
+        <div class="dv">48<small>/100</small> · <span style="color:#b45309;">BELOW AVG</span></div>
+      </div>
+      <div class="dimrow">
+        <div class="dn">📈 Growth</div>
+        <div class="dt"><div class="dmed"></div><div class="df" style="width:66%;background:#f59e0b;"></div></div>
+        <div class="dv">66<small>/100</small> · <span style="color:#16a34a;">TOP 24%</span></div>
+      </div>
+      <div class="dimrow">
+        <div class="dn">🎓 Schools</div>
+        <div class="dt"><div class="dmed"></div><div class="df" style="width:96%;background:#0d9488;"></div></div>
+        <div class="dv">96<small>/100</small> · <span style="color:#16a34a;">TOP 4%</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="tcap">Dimension caps: Affordability 25 · Economy 24 · Safety &amp; Place 22 · Growth 15 · Schools 14 pts.
+      The dashed line marks the national median. Town-resolved metrics (crime, income, growth, scale, schools)
+      drive ~58% of the score; the rest is inherited from Houghton County.</div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">🧭</span> How Houghton city Compares</div>
+    <div class="posbar">
+      <div class="pl"><span>Among all US towns</span><span><b>#2,751</b> of 10,267 · top 27%</span></div>
+      <div class="postrack"><div class="posmark" style="left:73%;"></div></div>
+      <div class="posends"><span>Caution</span><span>National median</span><span>Strong Buy</span></div>
+    </div>
+    <div class="posbar" style="margin-bottom:0;">
+      <div class="pl"><span>Within Houghton County</span><span><b>#1</b> of 4 — ahead of 3 of 3 peer towns</span></div>
+      <div class="postrack"><div class="posmark" style="left:100%;"></div></div>
+      <div class="posends"><span>Lowest in county</span><span></span><span>Highest in county</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
+    <div id="locmap" data-lat="47.1118" data-lon="-88.5672" data-col="#0b57c2"></div>
+    <div class="tcap">Houghton city, MI · 8,560 residents.
+      Scroll to zoom; drag to pan.</div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
+    <div class="g3">
+      <div class="sb"><div class="sb-val">$78,678</div><div class="sb-lbl">Town income / return (IRS ZIP)</div></div>
+      <div class="sb"><div class="sb-val">15%</div><div class="sb-lbl">Rent burden (2BR FMR ÷ income)</div></div>
+      <div class="sb"><div class="sb-val">+9.9%</div><div class="sb-lbl">3yr appreciation (FHFA)</div></div>
+      <div class="sb"><div class="sb-val">$45,880</div><div class="sb-lbl">Avg annual wage (BLS QCEW)</div></div>
+      <div class="sb"><div class="sb-val">210</div><div class="sb-lbl">Violent crime / 100k (NIBRS)</div></div>
+      <div class="sb"><div class="sb-val">1414</div><div class="sb-lbl">Property crime / 100k (NIBRS)</div></div>
+      <div class="sb"><div class="sb-val">+2.3%</div><div class="sb-lbl">Town pop growth, 5yr (Census)</div></div>
+      <div class="sb"><div class="sb-val">+5.0%</div><div class="sb-lbl">Town income growth (IRS ZIP)</div></div>
+      <div class="sb"><div class="sb-val">+4.1</div><div class="sb-lbl">County net migration / 1k (Census)</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">🏘️</span> Towns in the Same County</div>
+    <a class="peer me" href="2639360.html"><span class="peer-rk">#1</span><span class="peer-nm">Houghton city</span><span class="peer-sc" style="background:#0b57c2;">57</span></a><a class="peer" href="2636300.html"><span class="peer-rk">#2</span><span class="peer-nm">Hancock city</span><span class="peer-sc" style="background:#0b57c2;">53</span></a><a class="peer" href="2646360.html"><span class="peer-rk">#3</span><span class="peer-nm">Laurium village</span><span class="peer-sc" style="background:#f59e0b;">45</span></a><a class="peer" href="2644780.html"><span class="peer-rk">#4</span><span class="peer-nm">Lake Linden village</span><span class="peer-sc" style="background:#dc2626;">43</span></a>
+    <div class="tcap">Ranked by town-resolved fundamentals within the county. Houghton city is highlighted.</div>
+  </div>
+  <details class="howto">
+    <summary>How we scored this</summary>
+    <div class="howto-body">
+      The Civica Score blends five dimensions into a single 0–100 number, percentile-ranked
+      across 10,267 US towns. Roughly <strong>58% is town-resolved</strong>
+      — crime (FBI NIBRS, mapped from reporting agencies to places), income (IRS SOI ZIP-code AGI
+      allocated to places), population growth/scale (Census sub-county estimates), and schools
+      (US Dept. of Ed EDFacts proficiency, ranked within state). The other
+      <strong>~42% is inherited from Houghton County</strong> — wages, sector mix, home-price
+      appreciation, climate risk, migration, and permits — because those genuinely operate at a
+      regional scale and faking them per-town would be dishonest.
+      <br><br>
+      <strong>Honest caveats:</strong> town income is a ZIP→place address-share approximation, not
+      a survey median. Crime is mapped via agency name; county sheriffs cover unincorporated area,
+      and towns with no matched reporting agency inherit the county/RUCC-tier rate (flagged, never
+      penalized). There is no home-value level — affordability is rent-vs-income plus appreciation
+      quality. The universe is incorporated places ≥ 1,000 people (CDPs excluded for now).
+      Every input is now a <strong>federal</strong> source.
+    </div>
+  </details>
+  <div class="card">
+    <div class="card-title"><span class="ct-icon">🎓</span> Schools</div>
+    <div class="g3">
+      <div class="sb"><div class="sb-val">89</div><div class="sb-lbl">Proficiency percentile within MI</div></div>
+      <div class="sb"><div class="sb-val">96<span style="font-size:13px;color:#94a3b8;">/100</span></div><div class="sb-lbl">Schools dimension score</div></div>
+      <div class="sb"><div class="sb-val" style="color:#16a34a;">TOP 4%</div><div class="sb-lbl">vs. all US towns</div></div>
+    </div>
+    <div class="tcap">Public-school math + reading proficiency (US Dept. of Education EDFacts, SY2017–18,
+      accessed via the Urban Institute mirror), ranked <strong>within the state</strong> because state
+      tests aren't comparable across states, then enrollment-weighted to the town. Schools are 14 of
+      100 points — one of five dimensions, not the whole score.</div>
+  </div>
+  <div class="footer">
+  100% federal data: FBI NIBRS 2024 · IRS SOI (ZIP AGI + migration) · Census Population Estimates
+  (sub-county) · BLS QCEW · BEA · FHFA HPI · HUD FMR FY2026 · Census CBP/BPS · FEMA NFIP ·
+  NOAA Storm Events · USFS Wildfire · USDA RUCC.<br>
+  ~49% of each town's score is county-inherited (wages, appreciation, climate, migration, permits) —
+  regional by nature. Town income is a ZIP→place approximation; crime→town mapping is approximate.
+  Civica scores are informational only — not financial, investment, or real estate advice.<br><br>
+  <strong>civi<em style="font-style:normal;color:#1a7ff0;">ca</em></strong> — research-grade town intelligence for homebuyers
+</div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('locmap');
+  if(!el||typeof L==='undefined')return;
+  var lat=parseFloat(el.dataset.lat),lon=parseFloat(el.dataset.lon),col=el.dataset.col;
+  var m=L.map('locmap',{zoomControl:true,scrollWheelZoom:false,attributionControl:false}).setView([lat,lon],11);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:17}).addTo(m);
+  L.circleMarker([lat,lon],{radius:9,color:'#fff',weight:2,fillColor:col,fillOpacity:.9}).addTo(m);
+})();
+</script>
+</body>
+</html>

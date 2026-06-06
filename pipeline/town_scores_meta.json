@@ -1,0 +1,25 @@
+{
+  "town_count": 10267,
+  "town_resolved_share": 0.582,
+  "t_points": 58.2,
+  "c_points": 41.8,
+  "labels": [
+    [
+      62,
+      "Strong Buy"
+    ],
+    [
+      52,
+      "Buy"
+    ],
+    [
+      44,
+      "Hold"
+    ],
+    [
+      0,
+      "Caution"
+    ]
+  ],
+  "income_growth_available": true
+}

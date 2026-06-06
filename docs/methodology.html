@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How the Civica Score Works — Methodology</title>
+<meta name="description" content="How Civica scores 10,267 US towns in plain English: 5 dimensions, 17 measures, 18 federal datasets, no surveys, no listings, no ads. ~58% of every score is resolved at the town level.">
+<meta property="og:title" content="How the Civica Score Works">
+<meta property="og:image" content="https://civica.app/og_image.png">
+<link rel="canonical" href="https://civica.app/methodology.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="clean.css">
+<style>
+/* dimension accent colors — a restrained blue family + the schools teal already used in reports */
+:root{ --d1:#0d2d52; --d2:#0b57c2; --d3:#1a7ff0; --d4:#5aa8ff; --d5:#0d9488; }
+
+/* ── at-a-glance: 3 steps ── */
+.lead{ font-size:17px; color:var(--muted); max-width:64ch; line-height:1.7; }
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s2); margin-top:var(--s3); }
+.step{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); }
+.step-n{ width:30px; height:30px; border-radius:50%; background:var(--primary-strong); color:#fff;
+  font-family:'Poppins'; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.step h3{ font-size:16px; margin-bottom:6px; }
+.step p{ font-size:14px; color:var(--muted); line-height:1.6; }
+.step p b{ color:var(--text); }
+
+/* ── the formula: stacked bar + dimension cards ── */
+.fbar{ display:flex; height:46px; border-radius:var(--r-sm); overflow:hidden; border:1px solid var(--border); margin:var(--s3) 0 6px; }
+.fseg{ display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Inconsolata'; font-weight:700;
+  font-size:13px; white-space:nowrap; min-width:0; }
+.fseg span{ overflow:hidden; text-overflow:ellipsis; padding:0 4px; }
+.fbar-key{ font-size:12px; color:var(--muted); text-align:center; margin-bottom:var(--s3); }
+.fbar-key b{ color:var(--text); }
+
+.dims{ display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:var(--s2); }
+.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); border-top:3px solid var(--dc,var(--primary)); }
+.dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
+.dim-name{ font-family:'Poppins'; font-weight:700; font-size:16px; color:var(--ink); display:flex; align-items:center; gap:8px; }
+.dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:18px; color:var(--dc,var(--primary-strong)); }
+.dim-pts small{ font-size:11px; color:var(--muted); font-weight:500; }
+.dim p{ font-size:14px; color:var(--muted); line-height:1.6; margin:6px 0 10px; }
+.dim-tag{ font-size:11px; font-weight:700; letter-spacing:.02em; padding:3px 9px; border-radius:var(--r-pill);
+  background:var(--surface-soft); color:var(--primary-strong); border:1px solid var(--border); }
+.dim-tag.county{ color:var(--muted); }
+
+/* ── verdicts ── */
+.verdicts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--s2); }
+.verdict{ border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); border-left:4px solid var(--vc); }
+.verdict .vh{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+.vbadge2{ display:inline-flex; font-size:11px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:#fff; padding:4px 11px; border-radius:var(--r-pill); background:var(--vc); }
+.verdict .thr{ font-family:'Inconsolata'; font-weight:700; font-size:13px; color:var(--muted); }
+.verdict p{ font-size:14px; color:var(--muted); line-height:1.55; }
+.verdict .ct{ font-size:12px; color:var(--text); font-weight:600; margin-top:8px; }
+
+/* ── deep-dive accordions ── */
+.acc{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); overflow:hidden; }
+.acc + .acc{ margin-top:var(--s2); }
+.acc-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; text-align:left;
+  padding:var(--s3); cursor:pointer; background:none; border:none; font:inherit; min-height:44px; }
+.acc-head:hover{ background:var(--surface-soft); }
+.acc-head .t{ font-family:'Poppins'; font-weight:700; font-size:16px; color:var(--ink); display:flex; align-items:center; gap:10px; }
+.acc-chev{ color:var(--muted); transition:transform .25s; flex-shrink:0; }
+.acc.open .acc-chev{ transform:rotate(180deg); }
+.acc-body{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .28s ease; }
+.acc.open .acc-body{ grid-template-rows:1fr; }
+.acc-inner{ overflow:hidden; }
+.acc-content{ border-top:1px solid var(--border); padding:var(--s3); display:flex; flex-direction:column; gap:var(--s3); }
+.acc-intro{ font-size:15px; color:var(--muted); line-height:1.7; }
+
+.mblock{ border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); }
+.mblock h4{ font-size:15px; color:var(--ink); margin-bottom:10px; }
+.mblock .ml{ font-size:13px; color:var(--muted); line-height:1.6; }
+.mblock .ml + .ml{ margin-top:8px; }
+.mblock .ml b{ color:var(--text); }
+.pill-t{ display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:var(--r-pill); background:#e7f0fe; color:#0b57c2; margin-left:2px; }
+.pill-c{ display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:var(--r-pill); background:var(--surface-sunken); color:var(--muted); margin-left:2px; }
+
+.srctbl{ width:100%; border-collapse:collapse; font-size:13px; }
+.srctbl th{ text-align:left; font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); padding:0 10px 10px; border-bottom:1px solid var(--border); }
+.srctbl td{ padding:10px; border-bottom:1px solid var(--border); vertical-align:top; }
+.srctbl .sn{ font-weight:700; color:var(--ink); }
+.srctbl .ss{ font-size:11px; color:var(--muted); margin-top:2px; }
+.fed{ font-size:10px; font-weight:700; color:#0b57c2; background:#e7f0fe; padding:2px 7px; border-radius:var(--r-pill); white-space:nowrap; }
+
+.faq{ padding:14px 0; border-bottom:1px solid var(--border); }
+.faq:last-child{ border-bottom:none; }
+.faq h4{ font-size:15px; color:var(--ink); margin-bottom:6px; }
+.faq p{ font-size:14px; color:var(--muted); line-height:1.7; }
+
+.note{ font-size:13px; color:var(--muted); line-height:1.7; padding:14px 16px; background:var(--surface-soft); border:1px solid var(--border); border-radius:var(--r); }
+.note b{ color:var(--text); }
+
+.cta-row{ display:flex; gap:var(--s2); flex-wrap:wrap; margin:var(--s5) 0; }
+
+@media(max-width:680px){
+  .steps{ grid-template-columns:1fr; }
+  .fseg span{ font-size:11px; }
+}
+@media print{ .acc-body{ grid-template-rows:1fr !important; } .hdr{ display:none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="index.html" aria-label="Civica Towns home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="map.html">Map</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a class="opt" href="compare.html">Compare</a>
+      <a href="methodology.html" aria-current="page">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="page-hero" aria-labelledby="h">
+    <span class="eyebrow">Methodology</span>
+    <h1 id="h">How the Civica Score works</h1>
+    <p class="lead">Every town gets one number from 0 to 100. It’s built from <b>17 measures</b> drawn from <b>18 federal government datasets</b> — and nothing else. No surveys, no listings, no opinions, no advertising. Here’s exactly how it’s made.</p>
+  </section>
+
+  <!-- ── THE SCORE IN 30 SECONDS ── -->
+  <section class="section" aria-labelledby="s30">
+    <h2 id="s30" class="section-title">The score in 30 seconds</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h3>Measure</h3>
+        <p>For every town we pull <b>hard federal numbers</b> — rent, wages, jobs, crime, school test results, population growth, and more. All public, all replicable.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h3>Rank</h3>
+        <p>Each number becomes a <b>0–100 ranking</b> — how this town compares to all 10,267 others. Where lower is better (crime, rent burden), we flip it so higher always means better.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h3>Add it up</h3>
+        <p>The rankings roll into <b>five dimensions</b>, each capped so none can take over. Add the five and you get the <b>Civica Score</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT'S IN THE SCORE (the formula) ── -->
+  <section class="section" aria-labelledby="sf">
+    <h2 id="sf" class="section-title">What’s in the score</h2>
+    <p class="lead">Five dimensions add up to 100 points. The wider the bar, the more it counts.</p>
+
+    <div class="fbar" role="img" aria-label="Score is 25% Affordability, 24% Economy, 22% Safety and Place, 15% Growth, 14% Schools">
+      <div class="fseg" style="width:25%;background:var(--d1)"><span>Afford. 25</span></div>
+      <div class="fseg" style="width:24%;background:var(--d2)"><span>Economy 24</span></div>
+      <div class="fseg" style="width:22%;background:var(--d3)"><span>Safety 22</span></div>
+      <div class="fseg" style="width:15%;background:var(--d4)"><span>Growth 15</span></div>
+      <div class="fseg" style="width:14%;background:var(--d5)"><span>Schools 14</span></div>
+    </div>
+    <div class="fbar-key">Affordability <b>25</b> · Economy <b>24</b> · Safety &amp; Place <b>22</b> · Growth <b>15</b> · Schools <b>14</b> &nbsp;=&nbsp; <b>100</b></div>
+
+    <div class="dims">
+      <div class="dim" style="--dc:var(--d1)">
+        <div class="dim-top"><div class="dim-name">🏠 Affordability</div><div class="dim-pts">25<small>/100</small></div></div>
+        <p>Can local paychecks cover local rents — and are home prices rising at a healthy, steady pace?</p>
+        <span class="dim-tag">Mostly town data</span>
+      </div>
+      <div class="dim" style="--dc:var(--d2)">
+        <div class="dim-top"><div class="dim-name">💼 Economy</div><div class="dim-pts">24<small>/100</small></div></div>
+        <p>Are there good-paying, varied jobs nearby — and are local incomes actually growing?</p>
+        <span class="dim-tag county">Mostly county data</span>
+      </div>
+      <div class="dim" style="--dc:var(--d3)">
+        <div class="dim-top"><div class="dim-name">🛡️ Safety &amp; Place</div><div class="dim-pts">22<small>/100</small></div></div>
+        <p>How low is crime, how many shops and services are within reach, and how exposed is it to floods, storms, and wildfire?</p>
+        <span class="dim-tag">Mostly town data</span>
+      </div>
+      <div class="dim" style="--dc:var(--d4)">
+        <div class="dim-top"><div class="dim-name">📈 Growth</div><div class="dim-pts">15<small>/100</small></div></div>
+        <p>Is the town adding people and drawing higher earners — without overbuilding?</p>
+        <span class="dim-tag">Mostly town data</span>
+      </div>
+      <div class="dim" style="--dc:var(--d5)">
+        <div class="dim-top"><div class="dim-name">🎓 Schools</div><div class="dim-pts">14<small>/100</small></div></div>
+        <p>How well do local public-school students test, compared with other schools in the same state?</p>
+        <span class="dim-tag">Town data</span>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:var(--s3);">
+      <b>About 58% of every score is resolved at the town level</b> (crime, income, growth, town size, schools). The other ~42% is inherited from the town’s parent county (wages, home-price appreciation, climate risk, migration, permits) — because those genuinely operate at a regional scale, and faking them per-town would be dishonest. Every town report shows the split.
+    </div>
+  </section>
+
+  <!-- ── VERDICTS ── -->
+  <section class="section" aria-labelledby="sv">
+    <h2 id="sv" class="section-title">What each verdict means</h2>
+    <p class="lead">The 0–100 score is turned into one plain-English verdict — where the town sits versus the rest of the country right now.</p>
+    <div class="verdicts" style="margin-top:var(--s3);">
+      <div class="verdict" style="--vc:#16a34a">
+        <div class="vh"><span class="vbadge2">Strong Buy</span><span class="thr">≥ 62</span></div>
+        <p>Fundamentals lead both the county and most of the country.</p>
+        <div class="ct">1,493 towns · 14.5%</div>
+      </div>
+      <div class="verdict" style="--vc:#0b57c2">
+        <div class="vh"><span class="vbadge2">Buy</span><span class="thr">52–61</span></div>
+        <p>Solid all around, with one softer dimension worth a look.</p>
+        <div class="ct">2,768 towns · 27.0%</div>
+      </div>
+      <div class="verdict" style="--vc:#f59e0b">
+        <div class="vh"><span class="vbadge2">Hold</span><span class="thr">44–51</span></div>
+        <p>A balanced, middle-of-the-pack market — buy for fit, not for outperformance.</p>
+        <div class="ct">2,859 towns · 27.8%</div>
+      </div>
+      <div class="verdict" style="--vc:#dc2626">
+        <div class="vh"><span class="vbadge2">Caution</span><span class="thr">&lt; 44</span></div>
+        <p>Several fundamentals trail national peers — understand the trade-offs first.</p>
+        <div class="ct">3,147 towns · 30.7%</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:var(--s3);">
+      <b>Why these cutoffs hold steady:</b> ranking every town as a percentile fixes the national average at ~50 and the spread (std) near 11 on every run, so the fixed thresholds (62 / 52 / 44) stay meaningful. Scores span <b>16.8 to 86.9</b>. The verdict comes from the total score only — there’s no hidden “direction” adjustment.
+    </div>
+  </section>
+
+  <hr class="rule" style="margin:var(--s4) 0;">
+  <h2 class="section-title" style="margin-bottom:var(--s2);">Go deeper</h2>
+  <p class="lead" style="margin-bottom:var(--s3);">Everything above, with the exact metrics, formulas, and sources. Tap any section to open it.</p>
+
+  <!-- ── DEEP DIVE 1: every metric ── -->
+  <div class="acc" id="acc-metrics">
+    <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+      <span class="t">📐 Every metric, by dimension</span>
+      <svg class="acc-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <p class="acc-intro">Each metric is scored as a national percentile, so a town is always compared to all 10,267 others. <span class="pill-t">T</span> = resolved at the town level; <span class="pill-c">C</span> = inherited from the parent county. The percentage is the metric’s share of its dimension.</p>
+
+      <div class="mblock">
+        <h4>🏠 Affordability — 25 points</h4>
+        <p class="ml"><b>Rent burden</b> · 60% <span class="pill-t">T</span> — HUD 2-bedroom Fair Market Rent × 12 ÷ ZIP-allocated town income. Lower is better. The core question: does local income cover local rent?</p>
+        <p class="ml"><b>Appreciation quality</b> · 40% <span class="pill-c">C</span> — FHFA 3-year average home-price change. A healthy 3–7% pace scores best; too hot or falling is penalized. (No home-value level in the model — that left with Zillow.)</p>
+      </div>
+
+      <div class="mblock">
+        <h4>💼 Economy — 24 points</h4>
+        <p class="ml"><b>Wage level</b> · 35% <span class="pill-c">C</span> — BLS average annual wage. Higher wages, stronger labor market.</p>
+        <p class="ml"><b>Sector quality</b> · 25% <span class="pill-c">C</span> — BLS employment weighted by industry. Professional and finance score higher; retail and legacy manufacturing lower.</p>
+        <p class="ml"><b>Job diversity</b> · 20% <span class="pill-c">C</span> — how spread-out employment is across industries (HHI). More diversified = more resilient.</p>
+        <p class="ml"><b>Town income growth</b> · 20% <span class="pill-t">T</span> — change in IRS ZIP-allocated town income between two filing years.</p>
+      </div>
+
+      <div class="mblock">
+        <h4>🛡️ Safety &amp; Place — 22 points</h4>
+        <p class="ml"><b>Violent crime / 100k</b> · 30% <span class="pill-t">T</span> — FBI NIBRS, reporting agencies matched to places by name. Towns with no matched agency inherit the county/peer-tier rate — flagged, never penalized.</p>
+        <p class="ml"><b>Property crime / 100k</b> · 20% <span class="pill-t">T</span> — FBI NIBRS burglary, larceny, vehicle theft, arson.</p>
+        <p class="ml"><b>Town scale</b> · 20% <span class="pill-t">T</span> — population percentile, a proxy for how built-up and serviced a place is.</p>
+        <p class="ml"><b>Amenity density</b> · 15% <span class="pill-c">C</span> — Census County Business Patterns establishments per 1,000 residents.</p>
+        <p class="ml"><b>Physical risk</b> · 15% <span class="pill-c">C</span> — FEMA flood (40%) + NOAA storm (35%) + USFS wildfire (25%), inverted so lower risk scores higher.</p>
+      </div>
+
+      <div class="mblock">
+        <h4>📈 Growth — 15 points</h4>
+        <p class="ml"><b>5-year population growth</b> · 35% <span class="pill-t">T</span> — Census sub-county estimates, 2020→2025.</p>
+        <p class="ml"><b>Growth vs. county + momentum</b> · 25% <span class="pill-t">T</span> — the town’s growth above or below its county, plus its most recent 1-year trend — its pure growth “alpha.”</p>
+        <p class="ml"><b>Net migration</b> · 20% <span class="pill-c">C</span> — county net moves per 1,000 residents (Census).</p>
+        <p class="ml"><b>In-mover income quality</b> · 10% <span class="pill-c">C</span> — IRS income of people moving in vs. moving out.</p>
+        <p class="ml"><b>Permit pipeline</b> · 10% <span class="pill-c">C</span> — Census new housing units permitted.</p>
+      </div>
+
+      <div class="mblock">
+        <h4>🎓 Schools — 14 points</h4>
+        <p class="ml"><b>Proficiency</b> · 100% <span class="pill-t">T</span> — public-school math + reading proficiency from the US Dept. of Education’s EDFacts (school year 2017–18). State tests aren’t comparable across states, so each school is ranked <b>within its own state</b>, then enrollment-weighted to the town by school ZIP code. About 4 in 5 towns get their own school data; the rest inherit a county/peer-tier estimate (flagged). Capped at 14 points so a strong-schools town can’t run away with the score.</p>
+      </div>
+    </div></div></div>
+  </div>
+
+  <!-- ── DEEP DIVE 2: derived metrics ── -->
+  <div class="acc" id="acc-derived">
+    <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+      <span class="t">🔬 The numbers you won’t find on Zillow</span>
+      <svg class="acc-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <p class="acc-intro">A few signals are built by combining two or more federal sources and pushing them below the county line. None of these appear on consumer real-estate sites.</p>
+
+      <div class="mblock">
+        <h4>Town income (ZIP-allocated)</h4>
+        <p class="ml"><b>How:</b> IRS ZIP-code total income ÷ returns, allocated to each town through the Census ZCTA→place file, weighted by land-area overlap.</p>
+        <p class="ml"><b>Why:</b> No federal source publishes a survey-grade town median income. This address-share estimate varies town-to-town for real — it’s how Civica resolves income below the county line. It’s labeled an approximation everywhere it appears, and falls back to county income for the ~1% of towns with no ZIP match.</p>
+      </div>
+      <div class="mblock">
+        <h4>Rent burden</h4>
+        <p class="ml"><b>How:</b> HUD 2-bedroom Fair Market Rent × 12 ÷ ZIP-allocated town income.</p>
+        <p class="ml"><b>Why:</b> This is the core affordability signal. Under 25% means incomes comfortably carry rents; 25–35% is stretched; over 35% means affordability is a real constraint — regardless of list prices.</p>
+      </div>
+      <div class="mblock">
+        <h4>Sector quality</h4>
+        <p class="ml"><b>How:</b> employment share × an industry quality weight, summed across BLS supersectors (professional/finance 1.30×, healthcare/education 1.00×, retail and legacy manufacturing 0.60×).</p>
+        <p class="ml"><b>Why:</b> Two places can have the same number of jobs but very different economic quality. A town built on professional services is structurally more resilient than one built on retail.</p>
+      </div>
+      <div class="mblock">
+        <h4>Physical-risk index</h4>
+        <p class="ml"><b>How:</b> FEMA flood claims per person (40%) + NOAA storm damage per person (35%) + USFS wildfire rank (25%), all flipped so lower risk scores higher.</p>
+        <p class="ml"><b>Why:</b> Insurance costs are climbing fastest in high-risk areas. This uses <b>actual realized losses</b> — the same hazard data FEMA uses for its National Risk Index — not modeled guesses.</p>
+      </div>
+    </div></div></div>
+  </div>
+
+  <!-- ── DEEP DIVE 3: data sources ── -->
+  <div class="acc" id="acc-sources">
+    <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+      <span class="t">🗂️ Where the data comes from</span>
+      <svg class="acc-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <p class="acc-intro"><b>100% federal.</b> Every number in Civica can be rebuilt from free US government data. Four town-level inputs (Census sub-county estimates, IRS ZIP income, the ZCTA→place crosswalk, and EDFacts school proficiency) push the model below the county line.</p>
+      <div style="overflow-x:auto;">
+        <table class="srctbl">
+          <thead><tr><th>Dataset</th><th>Agency</th><th>Used for</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="sn">FBI NIBRS National Master File</div><div class="ss">2024 · ~21,900 agencies</div></td><td>FBI</td><td>Town violent &amp; property crime, agencies matched to places</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">IRS SOI ZIP-code income</div><div class="ss">2021 + 2022 filing years</div></td><td>IRS</td><td>Town income level &amp; growth, ZIP-allocated to places</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">EDFacts state-test proficiency</div><div class="ss">Dept. of Education · SY2017–18 (Urban Institute mirror)</div></td><td>ED</td><td>School math + reading proficiency, ranked within state</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">NCES EDGE school geocodes</div><div class="ss">2022–23</div></td><td>NCES</td><td>School locations — maps schools to towns by ZIP</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">Census Sub-County Population Estimates</div><div class="ss">2020–2025 vintage</div></td><td>Census</td><td>Town universe, growth, scale, place→county crosswalk</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">Census ZCTA→Place Relationship</div><div class="ss">2020, land-area overlap</div></td><td>Census</td><td>Allocates IRS ZIP income to towns</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">HUD Fair Market Rents</div><div class="ss">FY2026 · 2-bedroom</div></td><td>HUD</td><td>Rent-burden numerator</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">FHFA House Price Index — County</div><div class="ss">Annual, through Q4 2025</div></td><td>FHFA</td><td>Appreciation quality</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">BLS Quarterly Census of Employment &amp; Wages</div><div class="ss">2023 annual</div></td><td>BLS</td><td>Wage level, sector quality, job diversity</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">BEA Local Area Personal Income</div><div class="ss">CAINC1</div></td><td>BEA</td><td>County income fallback where ZIP allocation is missing</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">Census County Business Patterns</div><div class="ss">2023</div></td><td>Census</td><td>Establishments per 1,000 — amenity density</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">FEMA NFIP Paid Claims</div><div class="ss">10-year window</div></td><td>FEMA</td><td>Insured flood loss per person</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">NOAA Storm Events Database</div><div class="ss">2020–2024</div></td><td>NOAA</td><td>Storm property damage per person</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">USFS Wildfire Risk to Communities</div><div class="ss">2024 release</div></td><td>USFS</td><td>Wildfire exposure</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">USDA Rural-Urban Continuum Codes</div><div class="ss">2023</div></td><td>USDA</td><td>Peer-tier fallback for non-reporting towns</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">Census Building Permits Survey</div><div class="ss">2025 annual</div></td><td>Census</td><td>New units permitted — supply pipeline</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">IRS SOI County Migration</div><div class="ss">2022–2023 flows</div></td><td>IRS</td><td>In-mover income quality</td><td><span class="fed">Federal</span></td></tr>
+            <tr><td><div class="sn">Census Population Estimates — County</div><div class="ss">2025 vintage</div></td><td>Census</td><td>County denominators, net migration rate</td><td><span class="fed">Federal</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <b>Honest approximations:</b> town income is a ZIP→place address-share estimate, not a survey median. Crime is matched from reporting agencies to places by name; county sheriffs (who cover unincorporated land) stay in the county pool, and towns with no matched agency inherit the county/peer-tier rate (flagged, never penalized). School proficiency is EDFacts SY2017–18 (the latest complete year available) and is ranked within state because state tests aren’t comparable nationally. ~42% of each score is county-inherited. Civica covers official, self-governing towns and cities (Census “incorporated places”) with at least 1,000 residents — about 10,267 nationwide. Unincorporated communities and New England’s town-style townships aren’t included yet. Finally, the 58% “town-resolved” figure is a structural maximum: rent burden uses HUD Fair Market Rents, which are set at the metro/county level (only the income side varies by town), and where a town’s schools or crime fall back to a county estimate, those points are effectively county-inherited even though the model counts them toward the town total.
+      </div>
+    </div></div></div>
+  </div>
+
+  <!-- ── DEEP DIVE 4: FAQ ── -->
+  <div class="acc" id="acc-faq">
+    <button class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+      <span class="t">❓ Common questions</span>
+      <svg class="acc-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <div class="faq">
+        <h4>What counts as a “town,” and why 10,267?</h4>
+        <p>A town here is a US Census <b>incorporated place</b> with at least 1,000 residents — 10,267 of them nationwide. Below 1,000 people, town income, crime, and growth get too sparse to score honestly. Census Designated Places (unincorporated communities) are excluded for now because the annual growth data doesn’t cover them.</p>
+      </div>
+      <div class="faq">
+        <h4>Why is ~42% of the score inherited from the county?</h4>
+        <p>Some things genuinely operate at a regional scale — average wages, home-price appreciation, climate risk, migration, and permits are county-or-metro phenomena, not town ones. Faking them per-town would be dishonest. So Civica resolves what it credibly can at the town level (crime, income, growth, scale, schools ≈ 58%) and clearly labels the rest as county-inherited. Every town report shows the split.</p>
+      </div>
+      <div class="faq">
+        <h4>How accurate is town-level income and crime?</h4>
+        <p>Both are real federal data, approximately <em>placed</em>. Town income is IRS ZIP-code income allocated to places by land-area overlap — it varies town-to-town for real, but it’s an address-share estimate, not a survey median. Crime is FBI NIBRS matched from each reporting agency to a place; county sheriffs (who cover unincorporated land) stay in the county pool, and towns with no matched agency inherit the county/peer-tier rate — flagged, never penalized for not reporting.</p>
+      </div>
+      <div class="faq">
+        <h4>Why is there no home price or “price-to-rent”?</h4>
+        <p>Dropping Zillow — the only non-federal source — removed the home-value level. Rather than fake it, affordability is rebuilt on what federal data supports at the town level: rent burden (HUD rent vs. town income) plus FHFA appreciation quality. The result: Civica is now 100% federal data.</p>
+      </div>
+      <div class="faq">
+        <h4>Why are schools only 14 points?</h4>
+        <p>Schools matter, but this isn’t a school-rating site — it’s a whole-town read. Capping schools at 14 keeps strong-schools suburbs from dominating the score while still rewarding them. And because state tests aren’t comparable across states, school scores are ranked within each state, not nationally.</p>
+      </div>
+      <div class="faq">
+        <h4>How often are scores updated?</h4>
+        <p>Scores are recalculated as new federal data releases. Current scores reflect FBI NIBRS 2024, IRS income 2021–2022, Census sub-county estimates 2020–2025, HUD rents FY2026, and EDFacts SY2017–18.</p>
+      </div>
+      <div class="faq">
+        <h4>Is this financial advice?</h4>
+        <p>No. Civica scores are for information and research only — not financial, investment, or real-estate advice. Real-estate decisions involve local factors and personal circumstances no model fully captures. Always consult a qualified professional before buying.</p>
+      </div>
+    </div></div></div>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="index.html">Search a town →</a>
+    <a class="btn btn-ghost" href="leaderboard.html">View the leaderboard</a>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap center">
+    <div class="foot-links" style="justify-content:center;"><a href="map.html">Map</a><a href="leaderboard.html">Leaderboard</a><a href="compare.html">Compare</a><a href="disclaimer.html">Disclaimer</a></div>
+    100% federal data · ~58% town-resolved · no ads, no agents, no listings · Civica scores are informational only. &copy; 2026 Civica.
+  </div>
+</footer>
+
+<script>
+function toggleAcc(btn){
+  const acc = btn.closest('.acc');
+  const open = acc.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+</script>
+</body>
+</html>
