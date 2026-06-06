@@ -35,13 +35,15 @@
 .fbar-key{ font-size:12px; color:var(--muted); text-align:center; margin-bottom:var(--s3); }
 .fbar-key b{ color:var(--text); }
 
-.dims{ display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:var(--s2); }
-.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
+.dims{ display:grid; grid-template-columns:repeat(5,1fr); gap:var(--s2); }
+@media(max-width:880px){ .dims{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:520px){ .dims{ grid-template-columns:1fr; } }
+.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s2); border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
 .dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
-.dim-name{ font-family:'Poppins'; font-weight:700; font-size:16px; color:var(--ink); display:flex; align-items:center; gap:8px; }
-.dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:18px; color:var(--dc,var(--primary-strong)); }
+.dim-name{ font-family:'Poppins'; font-weight:700; font-size:14px; color:var(--ink); display:flex; align-items:center; gap:6px; }
+.dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:15px; color:var(--dc,var(--primary-strong)); }
 .dim-pts small{ font-size:11px; color:var(--muted); font-weight:500; }
-.dim p{ font-size:14px; color:var(--muted); line-height:1.6; margin:6px 0 10px; flex:1; }
+.dim p{ font-size:12.5px; color:var(--muted); line-height:1.5; margin:6px 0 10px; flex:1; }
 .dim-tag{ align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.02em; padding:3px 9px; border-radius:var(--r-pill);
   background:var(--surface-soft); color:var(--primary-strong); border:1px solid var(--border); }
 .dim-tag.county{ color:var(--muted); }
@@ -166,27 +168,27 @@
     <div class="dims">
       <div class="dim" style="--dc:var(--d1)">
         <div class="dim-top"><div class="dim-name">🏠 Affordability</div><div class="dim-pts">25<small>/100</small></div></div>
-        <p>Can local paychecks cover local rents — and are home prices rising at a healthy, steady pace?</p>
+        <p>Can local pay cover local rents, and are prices rising at a healthy pace?</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d2)">
         <div class="dim-top"><div class="dim-name">💼 Economy</div><div class="dim-pts">24<small>/100</small></div></div>
-        <p>Are there good-paying, varied jobs nearby — and are local incomes actually growing?</p>
+        <p>Good-paying, varied jobs nearby — and are local incomes growing?</p>
         <span class="dim-tag county">Mostly county data</span>
       </div>
       <div class="dim" style="--dc:var(--d3)">
         <div class="dim-top"><div class="dim-name">🛡️ Safety &amp; Place</div><div class="dim-pts">22<small>/100</small></div></div>
-        <p>How low is crime, how many shops and services are within reach, and how exposed is it to floods, storms, and wildfire?</p>
+        <p>Low crime, nearby amenities, and low flood, storm &amp; wildfire risk.</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d4)">
         <div class="dim-top"><div class="dim-name">📈 Growth</div><div class="dim-pts">15<small>/100</small></div></div>
-        <p>Is the town adding people and drawing higher earners — without overbuilding?</p>
+        <p>Is the town adding people and higher earners, without overbuilding?</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d5)">
         <div class="dim-top"><div class="dim-name">🎓 Schools</div><div class="dim-pts">14<small>/100</small></div></div>
-        <p>How well do local public-school students test, compared with other schools in the same state?</p>
+        <p>How well local public schools test, ranked within the state.</p>
         <span class="dim-tag">Town data</span>
       </div>
     </div>
