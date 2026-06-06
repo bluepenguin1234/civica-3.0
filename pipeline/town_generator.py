@@ -418,29 +418,35 @@ def build_verdict_card(row, place):
 
 
 def build_fundamentals_card(row):
-    crime_note = (' <span class="tcap" style="display:inline;">(county/RUCC-tier rate — no '
-                  'municipal agency matched)</span>') if int(row['crime_imputed']) == 1 else ''
-    inc_note = (' <span class="tcap" style="display:inline;">(county fallback — no ZIP '
-                'allocation)</span>') if int(row['income_imputed']) == 1 else ''
-    sch_note = (' <span class="tcap" style="display:inline;">(county/RUCC-tier estimate)</span>'
-                ) if int(row['schools_imputed']) == 1 else ''
     rb = row['rent_burden'] * 100
+    imp = lambda c: ' <span class="imp">county est.</span>' if int(row[c]) == 1 else ''
+
+    def r(label, val, sub='', flag=''):
+        sub = f' <i>{sub}</i>' if sub else ''
+        return (f'<div class="numrow"><span class="nl">{label}{sub}</span>'
+                f'<span class="nv">{val}{flag}</span></div>')
+
+    money_sec = (r('Typical income', money(row['town_income']), 'per tax return', imp('income_imputed'))
+                 + r('Rent burden', f'{rb:.0f}%', '2-bed rent ÷ income')
+                 + r('Average wage', money(row['avg_annual_wage']))
+                 + r('Home-price growth', f"{row['hpi_3yr_avg']:+.1f}%", '3-year'))
+    growth_sec = (r('Population growth', f"{row['town_growth_5yr']*100:+.1f}%", '5-year')
+                  + r('Income growth', f"{row['town_income_growth']*100:+.1f}%")
+                  + r('Net migration', f"{row['RNETMIG2023']:+.1f}", 'per 1k · county'))
+    safety_sec = (r('Violent crime', f"{row['violent_per100k']:.0f}", 'per 100k', imp('crime_imputed'))
+                  + r('Property crime', f"{row['property_per100k']:.0f}", 'per 100k'))
+    school_sec = r('Proficiency', f"{row['school_score']:.0f}", f"{row['state_abbr']} percentile", imp('schools_imputed'))
+
     return f'''<div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="tcap" style="margin:-10px 0 16px;">The underlying federal figures behind the score.</div>
-    <div class="numgrid">
-      <div class="sb"><div class="sb-val">{money(row['town_income'])}</div><div class="sb-lbl">Town income / return (IRS ZIP){inc_note}</div></div>
-      <div class="sb"><div class="sb-val">{rb:.0f}%</div><div class="sb-lbl">Rent burden (2BR FMR ÷ income)</div></div>
-      <div class="sb"><div class="sb-val">{row['hpi_3yr_avg']:+.1f}%</div><div class="sb-lbl">3yr appreciation (FHFA)</div></div>
-      <div class="sb"><div class="sb-val">{money(row['avg_annual_wage'])}</div><div class="sb-lbl">Avg annual wage (BLS QCEW)</div></div>
-      <div class="sb"><div class="sb-val">{row['school_score']:.0f}</div><div class="sb-lbl">School proficiency, {row['state_abbr']} %ile (EDFacts){sch_note}</div></div>
-      <div class="sb"><div class="sb-val">{row['violent_per100k']:.0f}</div><div class="sb-lbl">Violent crime / 100k (NIBRS){crime_note}</div></div>
-      <div class="sb"><div class="sb-val">{row['property_per100k']:.0f}</div><div class="sb-lbl">Property crime / 100k (NIBRS)</div></div>
-      <div class="sb"><div class="sb-val">{row['town_growth_5yr']*100:+.1f}%</div><div class="sb-lbl">Town pop growth, 5yr (Census)</div></div>
-      <div class="sb"><div class="sb-val">{row['town_income_growth']*100:+.1f}%</div><div class="sb-lbl">Town income growth (IRS ZIP)</div></div>
-      <div class="sb"><div class="sb-val">{row['RNETMIG2023']:+.1f}</div><div class="sb-lbl">County net migration / 1k (Census)</div></div>
+    <div class="tcap" style="margin:-10px 0 16px;">The federal figures behind the score.</div>
+    <div class="numwrap">
+      <div class="numsec"><div class="numsec-h">💵 Money &amp; affordability</div>{money_sec}</div>
+      <div class="numsec"><div class="numsec-h">📈 Growth</div>{growth_sec}</div>
+      <div class="numsec"><div class="numsec-h">🛡️ Safety</div>{safety_sec}</div>
+      <div class="numsec"><div class="numsec-h">🎓 Schools</div>{school_sec}</div>
     </div>
-    <div class="tcap" style="margin-top:14px;">School proficiency is US Dept. of Education EDFacts (SY2017–18, math + reading), ranked <strong>within the state</strong> because state tests aren't comparable nationally, then enrollment-weighted to the town — it counts as 14 of the 100 points. Income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
+    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
   </div>'''
 
 

@@ -225,7 +225,16 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 /* GRIDS */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
-.numgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:12px; }
+.numwrap { column-count:2; column-gap:36px; }
+.numsec { break-inside:avoid; margin-bottom:18px; }
+.numsec-h { font-size:12px; font-weight:700; color:var(--navy); margin-bottom:2px; display:flex; align-items:center; gap:6px; }
+.numrow { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:9px 0; border-bottom:1px solid var(--border); }
+.numsec .numrow:last-child { border-bottom:none; }
+.nl { font-size:13.5px; color:var(--text); }
+.nl i { font-style:normal; color:var(--muted); font-size:11.5px; margin-left:4px; }
+.nv { font-family:'Inconsolata'; font-weight:700; font-size:15px; color:var(--navy); white-space:nowrap; }
+.nv .imp { font-family:'Roboto'; font-weight:600; font-size:10px; color:var(--muted); margin-left:5px; }
+@media(max-width:560px){ .numwrap { column-count:1; } }
 .g4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; }
 @media(max-width:400px) { .g2,.g3,.g4 { grid-template-columns:1fr; } }
 
@@ -546,20 +555,14 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   </div>
   <div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="tcap" style="margin:-10px 0 16px;">The underlying federal figures behind the score.</div>
-    <div class="numgrid">
-      <div class="sb"><div class="sb-val">$78,944</div><div class="sb-lbl">Town income / return (IRS ZIP)</div></div>
-      <div class="sb"><div class="sb-val">14%</div><div class="sb-lbl">Rent burden (2BR FMR ÷ income)</div></div>
-      <div class="sb"><div class="sb-val">+5.2%</div><div class="sb-lbl">3yr appreciation (FHFA)</div></div>
-      <div class="sb"><div class="sb-val">$49,601</div><div class="sb-lbl">Avg annual wage (BLS QCEW)</div></div>
-      <div class="sb"><div class="sb-val">81</div><div class="sb-lbl">School proficiency, IL %ile (EDFacts)</div></div>
-      <div class="sb"><div class="sb-val">135</div><div class="sb-lbl">Violent crime / 100k (NIBRS)</div></div>
-      <div class="sb"><div class="sb-val">0</div><div class="sb-lbl">Property crime / 100k (NIBRS)</div></div>
-      <div class="sb"><div class="sb-val">-2.2%</div><div class="sb-lbl">Town pop growth, 5yr (Census)</div></div>
-      <div class="sb"><div class="sb-val">+7.0%</div><div class="sb-lbl">Town income growth (IRS ZIP)</div></div>
-      <div class="sb"><div class="sb-val">-1.6</div><div class="sb-lbl">County net migration / 1k (Census)</div></div>
+    <div class="tcap" style="margin:-10px 0 16px;">The federal figures behind the score.</div>
+    <div class="numwrap">
+      <div class="numsec"><div class="numsec-h">💵 Money &amp; affordability</div><div class="numrow"><span class="nl">Typical income <i>per tax return</i></span><span class="nv">$78,944</span></div><div class="numrow"><span class="nl">Rent burden <i>2-bed rent ÷ income</i></span><span class="nv">14%</span></div><div class="numrow"><span class="nl">Average wage</span><span class="nv">$49,601</span></div><div class="numrow"><span class="nl">Home-price growth <i>3-year</i></span><span class="nv">+5.2%</span></div></div>
+      <div class="numsec"><div class="numsec-h">📈 Growth</div><div class="numrow"><span class="nl">Population growth <i>5-year</i></span><span class="nv">-2.2%</span></div><div class="numrow"><span class="nl">Income growth</span><span class="nv">+7.0%</span></div><div class="numrow"><span class="nl">Net migration <i>per 1k · county</i></span><span class="nv">-1.6</span></div></div>
+      <div class="numsec"><div class="numsec-h">🛡️ Safety</div><div class="numrow"><span class="nl">Violent crime <i>per 100k</i></span><span class="nv">135</span></div><div class="numrow"><span class="nl">Property crime <i>per 100k</i></span><span class="nv">0</span></div></div>
+      <div class="numsec"><div class="numsec-h">🎓 Schools</div><div class="numrow"><span class="nl">Proficiency <i>IL percentile</i></span><span class="nv">81</span></div></div>
     </div>
-    <div class="tcap" style="margin-top:14px;">School proficiency is US Dept. of Education EDFacts (SY2017–18, math + reading), ranked <strong>within the state</strong> because state tests aren't comparable nationally, then enrollment-weighted to the town — it counts as 14 of the 100 points. Income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
+    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
   </div>
   <div class="card">
     <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
