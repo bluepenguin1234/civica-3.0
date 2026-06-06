@@ -41,6 +41,7 @@
 .dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:20px 18px; border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
 .dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:8px; }
 .dim-name{ font-family:'Poppins'; font-weight:700; font-size:14px; color:var(--ink); display:flex; align-items:center; gap:6px; }
+.dim-ic{ display:inline-block; width:22px; text-align:center; flex-shrink:0; font-size:15px; line-height:1; }
 .dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:15px; color:var(--dc,var(--primary-strong)); }
 .dim-pts small{ font-size:11px; color:var(--muted); font-weight:500; }
 .dim p{ font-size:12.5px; color:var(--muted); line-height:1.6; margin:8px 0 16px; flex:1; }
@@ -167,27 +168,27 @@
 
     <div class="dims">
       <div class="dim" style="--dc:var(--d1)">
-        <div class="dim-top"><div class="dim-name">🏠 Affordability</div><div class="dim-pts">25<small>/100</small></div></div>
+        <div class="dim-top"><div class="dim-name"><span class="dim-ic">🏠</span>Affordability</div><div class="dim-pts">25<small>/100</small></div></div>
         <p>Can local pay cover local rents, and are prices rising at a healthy pace?</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d2)">
-        <div class="dim-top"><div class="dim-name">💼 Economy</div><div class="dim-pts">24<small>/100</small></div></div>
+        <div class="dim-top"><div class="dim-name"><span class="dim-ic">💼</span>Economy</div><div class="dim-pts">24<small>/100</small></div></div>
         <p>Good-paying, varied jobs nearby — and are local incomes growing?</p>
         <span class="dim-tag county">Mostly county data</span>
       </div>
       <div class="dim" style="--dc:var(--d3)">
-        <div class="dim-top"><div class="dim-name">🛡️ Safety &amp; Place</div><div class="dim-pts">22<small>/100</small></div></div>
+        <div class="dim-top"><div class="dim-name"><span class="dim-ic">🛡️</span>Safety &amp; Place</div><div class="dim-pts">22<small>/100</small></div></div>
         <p>Low crime, nearby amenities, and low flood, storm &amp; wildfire risk.</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d4)">
-        <div class="dim-top"><div class="dim-name">📈 Growth</div><div class="dim-pts">15<small>/100</small></div></div>
+        <div class="dim-top"><div class="dim-name"><span class="dim-ic">📈</span>Growth</div><div class="dim-pts">15<small>/100</small></div></div>
         <p>Is the town adding people and higher earners, without overbuilding?</p>
         <span class="dim-tag">Mostly town data</span>
       </div>
       <div class="dim" style="--dc:var(--d5)">
-        <div class="dim-top"><div class="dim-name">🎓 Schools</div><div class="dim-pts">14<small>/100</small></div></div>
+        <div class="dim-top"><div class="dim-name"><span class="dim-ic">🎓</span>Schools</div><div class="dim-pts">14<small>/100</small></div></div>
         <p>How well local public schools test, ranked within the state.</p>
         <span class="dim-tag">Town data</span>
       </div>
