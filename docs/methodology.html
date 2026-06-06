@@ -36,13 +36,13 @@
 .fbar-key b{ color:var(--text); }
 
 .dims{ display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:var(--s2); }
-.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); border-top:3px solid var(--dc,var(--primary)); }
+.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
 .dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
 .dim-name{ font-family:'Poppins'; font-weight:700; font-size:16px; color:var(--ink); display:flex; align-items:center; gap:8px; }
 .dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:18px; color:var(--dc,var(--primary-strong)); }
 .dim-pts small{ font-size:11px; color:var(--muted); font-weight:500; }
-.dim p{ font-size:14px; color:var(--muted); line-height:1.6; margin:6px 0 10px; }
-.dim-tag{ font-size:11px; font-weight:700; letter-spacing:.02em; padding:3px 9px; border-radius:var(--r-pill);
+.dim p{ font-size:14px; color:var(--muted); line-height:1.6; margin:6px 0 10px; flex:1; }
+.dim-tag{ align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.02em; padding:3px 9px; border-radius:var(--r-pill);
   background:var(--surface-soft); color:var(--primary-strong); border:1px solid var(--border); }
 .dim-tag.county{ color:var(--muted); }
 
@@ -125,7 +125,7 @@
   <section class="page-hero" aria-labelledby="h">
     <span class="eyebrow">Methodology</span>
     <h1 id="h">How the Civica Score works</h1>
-    <p class="lead">Every town gets one number from 0 to 100. It’s built from <b>17 measures</b> drawn from <b>18 federal government datasets</b> — and nothing else. No surveys, no listings, no opinions, no advertising. Here’s exactly how it’s made.</p>
+    <p class="lead">Every town gets one number from 0 to 100, built entirely from federal government data. Here’s how, in 30 seconds.</p>
   </section>
 
   <!-- ── THE SCORE IN 30 SECONDS ── -->
