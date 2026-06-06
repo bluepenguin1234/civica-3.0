@@ -35,15 +35,15 @@
 .fbar-key{ font-size:12px; color:var(--muted); text-align:center; margin-bottom:var(--s3); }
 .fbar-key b{ color:var(--text); }
 
-.dims{ display:grid; grid-template-columns:repeat(5,1fr); gap:var(--s2); }
+.dims{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; margin-top:var(--s3); }
 @media(max-width:880px){ .dims{ grid-template-columns:repeat(2,1fr); } }
 @media(max-width:520px){ .dims{ grid-template-columns:1fr; } }
-.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s2); border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
-.dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
+.dim{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:20px 18px; border-top:3px solid var(--dc,var(--primary)); display:flex; flex-direction:column; }
+.dim-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:8px; }
 .dim-name{ font-family:'Poppins'; font-weight:700; font-size:14px; color:var(--ink); display:flex; align-items:center; gap:6px; }
 .dim-pts{ font-family:'Inconsolata'; font-weight:700; font-size:15px; color:var(--dc,var(--primary-strong)); }
 .dim-pts small{ font-size:11px; color:var(--muted); font-weight:500; }
-.dim p{ font-size:12.5px; color:var(--muted); line-height:1.5; margin:6px 0 10px; flex:1; }
+.dim p{ font-size:12.5px; color:var(--muted); line-height:1.6; margin:8px 0 16px; flex:1; }
 .dim-tag{ align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.02em; padding:3px 9px; border-radius:var(--r-pill);
   background:var(--surface-soft); color:var(--primary-strong); border:1px solid var(--border); }
 .dim-tag.county{ color:var(--muted); }
