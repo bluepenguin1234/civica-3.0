@@ -40,6 +40,11 @@
 .lg{ display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text); }
 .lg .d{ width:10px; height:10px; border-radius:50%; flex-shrink:0; }
 .lg .th{ font-family:'Inconsolata'; color:var(--muted); }
+.browse{ display:flex; flex-wrap:wrap; gap:var(--s1); align-items:center; justify-content:center; margin-top:var(--s5); }
+.browse-cap{ font-size:14px; color:var(--muted); width:100%; text-align:center; margin-bottom:4px; }
+.chip{ display:inline-flex; align-items:center; min-height:40px; padding:0 16px; border-radius:var(--r-pill);
+  border:1px solid var(--border); background:var(--surface); color:var(--primary-strong); font-weight:600; font-size:14px; transition:background .15s; }
+.chip:hover{ background:var(--surface-soft); text-decoration:none; }
 .closer{ text-align:center; padding:var(--s6) 0; }
 .closer h2{ font-size:24px; }
 .closer .row{ justify-content:center; margin-top:var(--s3); }
@@ -104,6 +109,14 @@
           <span class="lg"><span class="d" style="background:var(--primary-strong)"></span><b>Buy</b> <span class="th">≥52</span></span>
           <span class="lg"><span class="d" style="background:var(--success)"></span><b>Strong Buy</b> <span class="th">≥62</span></span>
         </div>
+      </div>
+      <div class="browse">
+        <span class="browse-cap">Or browse by category:</span>
+        <a class="chip" href="leaderboard.html?view=strongbuy">🟢 Strong Buy towns</a>
+        <a class="chip" href="leaderboard.html?view=affordable">💵 Most affordable</a>
+        <a class="chip" href="leaderboard.html?view=safest">🛡️ Safest</a>
+        <a class="chip" href="leaderboard.html?view=caution">🔴 Use caution</a>
+        <a class="chip" href="leaderboard.html">🏆 Top 100</a>
       </div>
     </div>
   </section>

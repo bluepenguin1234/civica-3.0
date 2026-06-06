@@ -56,11 +56,11 @@
   <hr class="rule">
   <section class="section">
     <div class="tabs" role="tablist" aria-label="Ranking views">
-      <button class="tab" role="tab" aria-selected="true"  onclick="setView('top100',this)">Top 100</button>
-      <button class="tab" role="tab" aria-selected="false" onclick="setView('strongbuy',this)">Strong Buy</button>
-      <button class="tab" role="tab" aria-selected="false" onclick="setView('affordable',this)">Most affordable</button>
-      <button class="tab" role="tab" aria-selected="false" onclick="setView('safest',this)">Safest</button>
-      <button class="tab" role="tab" aria-selected="false" onclick="setView('caution',this)">Use caution</button>
+      <button class="tab" role="tab" data-view="top100"    aria-selected="true"  onclick="setView('top100',this)">Top 100</button>
+      <button class="tab" role="tab" data-view="strongbuy" aria-selected="false" onclick="setView('strongbuy',this)">Strong Buy</button>
+      <button class="tab" role="tab" data-view="affordable" aria-selected="false" onclick="setView('affordable',this)">Most affordable</button>
+      <button class="tab" role="tab" data-view="safest"    aria-selected="false" onclick="setView('safest',this)">Safest</button>
+      <button class="tab" role="tab" data-view="caution"   aria-selected="false" onclick="setView('caution',this)">Use caution</button>
     </div>
     <p class="view-desc" id="viewDesc"></p>
 
@@ -98,7 +98,8 @@ const body=document.getElementById('body'), moreBtn=document.getElementById('mor
 if(location.protocol==='file:'){
   body.innerHTML='<tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">Open via a local server to load data.</td></tr>';
 }else{
-  fetch('output/town_index.json').then(r=>r.json()).then(d=>{ ALL=d; stats(); render(); })
+  fetch('output/town_index.json').then(r=>r.json()).then(d=>{ ALL=d; stats();
+     const qv=new URLSearchParams(location.search).get('view'); setView(VIEW[qv]?qv:'top100', null); })
    .catch(()=>{ body.innerHTML='<tr><td colspan="7" class="muted" style="padding:var(--s5);text-align:center;">Could not load town data.</td></tr>'; });
 }
 function stats(){
@@ -108,7 +109,9 @@ function stats(){
   document.getElementById('statline').textContent=`Median score ${med} · ${sb.toLocaleString()} Strong Buy towns`;
 }
 function setView(v,btn){ view=v; visible=50;
-  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false')); btn.setAttribute('aria-selected','true'); render(); }
+  btn=btn||document.querySelector('.tab[data-view="'+v+'"]');
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
+  if(btn)btn.setAttribute('aria-selected','true'); render(); }
 function render(){
   const rows=VIEW[view].fn(ALL); document.getElementById('viewDesc').textContent=VIEW[view].d;
   const shown=rows.slice(0,visible);
