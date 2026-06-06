@@ -38,7 +38,7 @@ for the full model writeup.
   `POINTS` in `town_scoring_engine.py` and is asserted by `validate_town.py`.
 - **Verdicts:** Strong Buy ≥ 62 · Buy ≥ 52 · Hold ≥ 44 · Caution < 44 (≈ 15 / 27 / 28 / 31 %).
 - Percentile normalization fixes the distribution at mean ≈ 50 / std ≈ 11 every run, so the
-  fixed thresholds are stable. Score range ≈ 17–85.
+  fixed thresholds are stable. Score range ≈ 17–87.
 
 ## Pipeline (order matters)
 
@@ -54,13 +54,14 @@ Pages source = `main` `/docs`). Build code is **`pipeline/`**. Raw data is the g
 
 | Step | Script | Output | Needs `civica_data/`? |
 |---|---|---|:--:|
-| 1 | `download_town_data.py` | Census sub-est, IRS ZIP AGI ×2, ZCTA→place crosswalk | writes into it |
+| 1 | `download_town_data.py` | Census sub-est, IRS ZIP AGI ×2, ZCTA→place + ZCTA→cousub crosswalks | writes into it |
 | 2 | `town_scoring_engine.py` | `town_scores.csv` + `town_scores_meta.json` | **yes** |
 | 3 | `build_town_geo.py` | `output/towns_geo.json` (town lat/lon, Census Gazetteer) | no* |
 | 4 | `town_generator.py` | `output/towns/`, `output/states/`, `town_index.json`, `sitemap.xml` | **no** |
 | 5 | `validate_town.py` | the gate — must print ALL GREEN | no |
 
-\* `build_town_geo.py` downloads the gazetteer over the network but doesn't read `civica_data/`.
+\* `build_town_geo.py` downloads the place + county-subdivision gazetteers (the latter for New
+England town coordinates) over the network but doesn't read `civica_data/`.
 
 - `county_loaders.py` — the federal county-dataset loaders the engine reuses (BEA, QCEW, FHFA,
   CBP, BPS, IRS migration, NFIP, NOAA, USFS, RUCC, HUD FMR) + `pct`/`pct_inv` helpers.
@@ -80,7 +81,8 @@ Pages source = `main` `/docs`). Build code is **`pipeline/`**. Raw data is the g
   EDFacts via the Urban Institute mirror — ED.gov removed the direct files); property-tax fields
   are already in the IRS ZIP files; the 5.8 GB FBI NIBRS file is a manual download.
 - **Static site:** lives in `docs/` (GitHub Pages source = `/docs`, `.nojekyll` included).
-  Town pages are at `docs/output/towns/<7-digit place FIPS>.html`.
+  Town pages are at `docs/output/towns/<FIPS>.html` — 7-digit for incorporated places,
+  10-digit state+county+cousub GEOID for New England MCD towns (`is_mcd=1`).
 - **Design system** is shared: `town_template.html` for generated town pages; the other pages
   carry their own inline `<style>` but use the same palette (navy `#0d2d52`, blue `#1a7ff0`)
   and the `civi`+blue-`ca` logo.

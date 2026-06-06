@@ -1,13 +1,17 @@
 """
 Civica Town-Level Data Downloader
 =================================
-Fetches the THREE new datasets required for the town-level restructure (Level B).
+Fetches the town-specific datasets required for the town-level model.
 Everything else (BEA, QCEW, FHFA, CBP, BPS, IRS migration, NFIP, NOAA, USFS, RUCC,
 county population, NIBRS) is already on disk and is reused — Zillow is dropped.
 
-  1. Census sub-est        → town population + town→county crosswalk + town growth
-  2. IRS SOI ZIP AGI (x2)  → town income level + town income growth
-  3. Census ZCTA→Place rel → allocate ZIP AGI to places
+  1. Census sub-est         → town population + town→county crosswalk + town growth
+  2. IRS SOI ZIP AGI (x2)   → town income level + town income growth
+  3. Census ZCTA→Place rel  → allocate ZIP AGI to incorporated places
+  4. Census ZCTA→CouSub rel → allocate ZIP AGI to New England MCD towns
+
+(The county-subdivisions gazetteer — New England town coordinates — is fetched
+automatically by build_town_geo.py, so it isn't downloaded here.)
 
 Run (locally, where civica_data/ lives):  python download_town_data.py
 
@@ -86,7 +90,7 @@ def try_urls(urls, dest, label):
 
 # ── 1. Census sub-est (town population) ──────────────────────────────────────────
 def get_subest():
-    section("1/3  Census sub-est — town population + crosswalk")
+    section("1/4  Census sub-est — town population + crosswalk")
     dest = BASE / 'census_population' / 'sub-est.csv'
     base = 'https://www2.census.gov/programs-surveys/popest/datasets'
     # Try newest vintage first, then fall back one year.
@@ -103,7 +107,7 @@ def get_subest():
 
 # ── 2. IRS SOI ZIP AGI (town income, two years for growth) ───────────────────────
 def get_irs_zip():
-    section("2/3  IRS SOI ZIP AGI — town income (need 2 years for growth)")
+    section("2/4  IRS SOI ZIP AGI — town income (need 2 years for growth)")
     folder = BASE / 'irs_zip'
     got = []
     # IRS publishes YYzpallagi.csv; grab the two most recent that exist.
@@ -127,7 +131,7 @@ def get_irs_zip():
 
 # ── 3. Census ZCTA→Place relationship (crosswalk) ────────────────────────────────
 def get_crosswalk():
-    section("3/3  Census ZCTA→Place relationship file (crosswalk)")
+    section("3/4  Census ZCTA→Place relationship file (crosswalk)")
     dest = BASE / 'crosswalks' / 'zcta_place_rel_2020.txt'
     base = 'https://www2.census.gov/geo/docs/maps-data/data/rel2020'
     candidates = [
@@ -142,15 +146,33 @@ def get_crosswalk():
     return ok
 
 
+# ── 4. Census ZCTA→County-Subdivision relationship (New England MCD town income) ──
+def get_cousub_crosswalk():
+    section("4/4  Census ZCTA→County-Subdivision relationship (New England towns)")
+    dest = BASE / 'crosswalks' / 'zcta_cousub_rel_2020.txt'
+    base = 'https://www2.census.gov/geo/docs/maps-data/data/rel2020'
+    candidates = [
+        f'{base}/zcta520/tab20_zcta520_cousub20_natl.txt',
+        f'{base}/zcta20/tab20_zcta20_cousub20_natl.txt',
+    ]
+    ok = try_urls(candidates, dest, 'ZCTA→CouSub 2020 relationship')
+    if not ok:
+        print("  !! Cousub crosswalk missing — New England MCD towns lose town income\n"
+              "     (they fall back to county per-capita). Find it via: census.gov →\n"
+              "     Geographies → Relationship Files → 2020 → ZCTA to County Subdivision.")
+    return ok
+
+
 def main():
     print("Civica Town Data Downloader")
     print("Target:", BASE.resolve())
     BASE.mkdir(parents=True, exist_ok=True)
 
     results = {
-        'sub-est (REQUIRED)': get_subest(),
-        'IRS ZIP AGI':        get_irs_zip(),
-        'ZCTA→Place crosswalk': get_crosswalk(),
+        'sub-est (REQUIRED)':    get_subest(),
+        'IRS ZIP AGI':           get_irs_zip(),
+        'ZCTA→Place crosswalk':  get_crosswalk(),
+        'ZCTA→CouSub crosswalk': get_cousub_crosswalk(),
     }
 
     section("Summary")
@@ -161,7 +183,7 @@ def main():
               "this in a LOCAL session. If a URL 404s, the vintage/year may have moved "
               "— check the source site and update the candidate URLs above.")
         sys.exit(1)
-    print("\nAll three datasets present. Next: run town_scoring_engine.py "
+    print("\nAll town datasets present. Next: run town_scoring_engine.py "
           "(see TOWN_HANDOFF.md).")
 
 
