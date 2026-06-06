@@ -440,6 +440,7 @@ def build_fundamentals_card(row):
       <div class="sb"><div class="sb-val">{row['town_income_growth']*100:+.1f}%</div><div class="sb-lbl">Town income growth (IRS ZIP)</div></div>
       <div class="sb"><div class="sb-val">{row['RNETMIG2023']:+.1f}</div><div class="sb-lbl">County net migration / 1k (Census)</div></div>
     </div>
+    <div class="tcap" style="margin-top:14px;">School proficiency is US Dept. of Education EDFacts (SY2017–18, math + reading), ranked <strong>within the state</strong> because state tests aren't comparable nationally, then enrollment-weighted to the town — it counts as 14 of the 100 points. Income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
   </div>'''
 
 
@@ -592,7 +593,6 @@ def generate_page(row, style, geo, siblings):
   {build_location_card(row, lat, lon)}
   {build_peers_card(siblings, fips, place)}
   {build_howto(row)}
-  {build_schools_card(row)}
   <div style="text-align:center;margin:4px 0 8px;">
     <a href="../../compare.html?c={fips}" style="display:inline-block;padding:12px 28px;background:#0b57c2;color:#fff;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">⚖️ Compare {place} with another town →</a>
   </div>
