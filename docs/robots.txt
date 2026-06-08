@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://civica.app/sitemap.xml
+Sitemap: https://bluepenguin1234.github.io/civica-3.0/sitemap.xml

@@ -33,7 +33,11 @@ OUT_DIR = os.path.join(SITE, 'output', 'towns')
 STATE_DIR = os.path.join(SITE, 'output', 'states')
 OUT_INDEX = os.path.join(SITE, 'output', 'town_index.json')
 PROGRESS = os.path.join(OUT_DIR, '_progress.json')
-SITE_URL = 'https://civica.app'
+# Absolute base for canonical/OG/sitemap/JSON-LD URLs. MUST match the live host or Google
+# will treat pages as canonicalising to a non-existent site and refuse to index them.
+# Live host today = GitHub Pages project page. Flip this one line to 'https://civica.app'
+# the day that custom domain is purchased and pointed at Pages.
+SITE_URL = 'https://bluepenguin1234.github.io/civica-3.0'
 TOWN_URL_BASE = f'{SITE_URL}/output/towns'
 STATE_URL_BASE = f'{SITE_URL}/output/states'
 GA4_ID = ''
