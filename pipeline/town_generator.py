@@ -48,6 +48,10 @@ DIM_MAX = {'dim1': 25, 'dim2': 24, 'dim3': 22, 'dim4': 15, 'dim5': 14}
 # from the full dataframe and read by build_fundamentals_card. Same compute-once pattern as
 # the pctl_* columns.
 MEDIANS = {}
+
+# FIPS that have a per-town OG share card (output/og/<fips>.png); loaded in main() from the
+# build_og_images.py manifest. Towns not in the set fall back to the generic og_image.png.
+OG_CARDS = set()
 DIM_NAMES = [
     ('dim1', 'Affordability', '🏠'),
     ('dim2', 'Economy', '💼'),
@@ -141,6 +145,7 @@ def build_head(row, place, state, county, score, label, fips, style):
         f"towns in {county}. Town-level crime, income, and growth on 100% federal data."
     )
     url = f'{TOWN_URL_BASE}/{fips}.html'
+    og_img = f'{SITE_URL}/output/og/{fips}.png' if fips in OG_CARDS else f'{SITE_URL}/og_image.png'
     ld = json.dumps({
         "@context": "https://schema.org", "@type": "Dataset",
         "name": f"{place}, {state} Housing Market Analysis", "description": desc, "url": url,
@@ -169,9 +174,11 @@ def build_head(row, place, state, county, score, label, fips, style):
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
 <meta property="og:type" content="article">
-<meta property="og:image" content="{SITE_URL}/og_image.png">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{SITE_URL}/og_image.png">
+<meta name="twitter:image" content="{og_img}">
 <link rel="canonical" href="{url}">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
 <script type="application/ld+json">{ld}</script>
@@ -945,6 +952,13 @@ def main():
     MEDIANS = {c: float(df[c].median()) for c in (
         'town_income', 'rent_burden', 'avg_annual_wage', 'hpi_3yr_avg', 'town_growth_5yr',
         'town_income_growth', 'RNETMIG2023', 'violent_per100k', 'property_per100k', 'school_score')}
+
+    # Which towns have a per-town OG share card (built by build_og_images.py --top N).
+    global OG_CARDS
+    cards_manifest = os.path.join(SITE, 'output', 'og', '_cards.json')
+    if os.path.exists(cards_manifest):
+        OG_CARDS = set(json.load(open(cards_manifest, encoding='utf-8')))
+        print(f'  OG cards: {len(OG_CARDS)} towns have a custom share image')
 
     # Town coordinates for the per-page location map (if built).
     geo = {}
