@@ -225,16 +225,23 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 /* GRIDS */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .g3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
-.numwrap { column-count:2; column-gap:36px; }
-.numsec { break-inside:avoid; margin-bottom:18px; }
-.numsec-h { font-size:12px; font-weight:700; color:var(--navy); margin-bottom:2px; display:flex; align-items:center; gap:6px; }
-.numrow { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:9px 0; border-bottom:1px solid var(--border); }
-.numsec .numrow:last-child { border-bottom:none; }
-.nl { font-size:13.5px; color:var(--text); }
-.nl i { font-style:normal; color:var(--muted); font-size:11.5px; margin-left:4px; }
-.nv { font-family:'Inconsolata'; font-weight:700; font-size:15px; color:var(--navy); white-space:nowrap; }
-.nv .imp { font-family:'Roboto'; font-weight:600; font-size:10px; color:var(--muted); margin-left:5px; }
-@media(max-width:560px){ .numwrap { column-count:1; } }
+/* "The Numbers" — value vs the typical US town (dot at national percentile, median tick) */
+.numgroup-h { font-size:12px; font-weight:700; color:var(--navy); margin:18px 0 2px; display:flex; align-items:center; gap:6px; }
+.numgroup:first-child .numgroup-h { margin-top:2px; }
+.nrow { display:grid; grid-template-columns:1fr 92px 168px; gap:18px; align-items:center; padding:11px 0; border-bottom:1px solid var(--border); }
+.numgroup .nrow:last-child { border-bottom:none; }
+.nlbl { font-size:13.5px; color:var(--text); }
+.nlbl i { font-style:normal; color:var(--muted); font-size:11.5px; margin-left:4px; }
+.nval { font-family:'Inconsolata'; font-weight:700; font-size:16px; color:var(--navy); text-align:right; white-space:nowrap; }
+.nflag { font-family:'Roboto'; font-weight:600; font-size:10px; color:var(--muted); margin-left:5px; white-space:nowrap; }
+.nbar { position:relative; height:7px; background:#eef1f6; border-radius:4px; }
+.ntick { position:absolute; left:50%; top:-2px; bottom:-2px; width:1px; background:#c2c8d4; }
+.ndot { position:absolute; top:50%; width:11px; height:11px; border-radius:50%; border:2px solid #fff; transform:translate(-50%,-50%); }
+.ncmp { font-size:10.5px; color:var(--muted); margin-top:5px; }
+@media(max-width:560px){
+  .nrow { grid-template-columns:1fr auto; gap:4px 14px; }
+  .nbar-wrap { grid-column:1 / -1; margin-top:2px; }
+}
 .g4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; }
 @media(max-width:400px) { .g2,.g3,.g4 { grid-template-columns:1fr; } }
 
@@ -411,6 +418,65 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 .peer-nm { flex:1; font-size:13px; font-weight:600; color:#0d2d52; }
 .peer-sc { width:30px; height:30px; border-radius:50%; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0; }
 @media (max-width:640px) { .glance { grid-template-columns:repeat(2,1fr); } }
+/* Save-as-PDF button (screen only; hidden in print) */
+.hero { position:relative; }
+.pdf-btn { position:absolute; top:16px; right:18px; display:inline-flex; align-items:center; gap:6px;
+  font-family:'Roboto',sans-serif; font-size:12px; font-weight:700; color:#fff; cursor:pointer;
+  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); border-radius:100px;
+  padding:7px 14px; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .15s; }
+.pdf-btn:hover { background:rgba(255,255,255,.22); }
+/* print-only header / footer (hidden on screen, revealed in @media print) */
+.print-only { display:none; }
+.print-head { align-items:center; justify-content:space-between; padding:0 0 12px; border-bottom:2px solid #0d2d52; margin-bottom:16px; }
+.ph-brand { display:flex; align-items:center; gap:8px; }
+.ph-logo { font-size:16px; font-weight:800; color:#0d2d52; }
+.ph-tag { font-size:10px; font-weight:700; letter-spacing:.06em; color:#5b6170; text-transform:uppercase; margin-left:6px; }
+.ph-meta { text-align:right; font-size:10px; color:#5b6170; line-height:1.5; }
+.print-foot { border-top:1px solid #e6e8ee; margin-top:8px; padding-top:12px; font-size:9.5px; color:#5b6170; line-height:1.6; }
+@media print {
+  @page { margin:9mm; }
+  * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  html, body { background:#fff !important; }
+  /* one-pager: hero · At a Glance · 5-dim · How it Compares · The Numbers */
+  .nav, .loc-card, .compare-cta, .howto, .footer, .pdf-btn,
+  .signal, .peers-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow { display:none !important; }
+  .print-head { display:flex !important; }
+  .print-foot { display:block !important; }
+  .page { max-width:none !important; margin:0 auto !important; padding:0 !important; zoom:0.78; }
+  .card, .hero { box-shadow:none !important; break-inside:avoid; }
+  .card { padding:8px 12px !important; margin-bottom:5px !important; border-radius:8px !important; }
+  .card-title { margin-bottom:6px !important; }
+  /* hero */
+  .hero { border-radius:0; padding:11px 16px !important; margin-bottom:6px !important; }
+  .hero h1 { font-size:19px !important; }
+  .hero-sub { font-size:11px !important; margin-top:2px !important; }
+  .rank-line { font-size:10.5px !important; margin-top:6px !important; }
+  .sh-ring { transform:scale(.72); margin:-12px 0; }
+  .sh-grade { font-size:11px !important; }
+  /* At a Glance tiles */
+  .glance { gap:6px !important; }
+  .gtile { padding:6px 9px !important; border-radius:8px !important; }
+  .gt-top { margin-bottom:4px !important; }
+  .gt-val { font-size:16px !important; }
+  .gt-lbl { font-size:9px !important; margin:1px 0 5px !important; }
+  /* 5-dimension breakdown */
+  .radar-wrap { gap:12px !important; }
+  .radar-wrap svg { max-height:108px !important; max-width:108px !important; }
+  .dimrow { margin-bottom:4px !important; }
+  /* How it Compares */
+  .posbar { margin-bottom:7px !important; }
+  /* The Numbers — collapse each row to a single line (benchmark inline beside the bar) */
+  .numgroup-h { margin:5px 0 0 !important; }
+  .nrow { padding:3px 0 !important; grid-template-columns:1fr 86px 196px !important; }
+  .nlbl { font-size:12px !important; }
+  .nval { font-size:13px !important; }
+  .nbar-wrap { display:flex !important; align-items:center; gap:8px; }
+  .nbar { flex:1; }
+  .ncmp { margin-top:0 !important; white-space:nowrap; }
+  /* compact print chrome */
+  .print-head { padding:0 0 5px !important; margin-bottom:6px !important; }
+  .print-foot { margin-top:5px !important; padding-top:5px !important; font-size:8px !important; }
+}
 </style>
 </head>
 <body>
@@ -430,7 +496,12 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   </div>
 </nav>
 <div class="page">
+  <div class="print-only print-head">
+    <div class="ph-brand"><svg width='24' height='24' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='#0d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg><span class="ph-logo">civi<span style="color:#1a7ff0;">ca</span></span><span class="ph-tag">Town Report</span></div>
+    <div class="ph-meta">civica.app/output/towns/1302928.html<br>Generated Jun 8, 2026</div>
+  </div>
   <div class="hero">
+  <button class="pdf-btn" onclick="window.print()" title="Save or print this report as a PDF">⬇ Save as PDF</button>
   <div class="hero-id">
     <div class="hero-eyebrow">Town Report · 2026</div>
     <h1>Arlington city, GA</h1>
@@ -464,7 +535,7 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   </div>
   <div class="card">
     <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
-    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 12,192 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
+    <div class="print-hide" style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 12,192 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
     <div class="glance">
       <div class="gtile">
         <div class="gt-top"><span class="gt-icon">🎯</span><span class="gt-tag" style="color:#b91c1c;background:#fee2e2;">BOTTOM 1%</span></div>
@@ -555,22 +626,88 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   </div>
   <div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="tcap" style="margin:-10px 0 16px;">The federal figures behind the score.</div>
-    <div class="numwrap">
-      <div class="numsec"><div class="numsec-h">💵 Money &amp; affordability</div><div class="numrow"><span class="nl">Typical income <i>per tax return</i></span><span class="nv">$44,053</span></div><div class="numrow"><span class="nl">Rent burden <i>2-bed rent ÷ income</i></span><span class="nv">26%</span></div><div class="numrow"><span class="nl">Average wage</span><span class="nv">$46,218</span></div><div class="numrow"><span class="nl">Home-price growth <i>3-year</i></span><span class="nv">+6.2%</span></div></div>
-      <div class="numsec"><div class="numsec-h">📈 Growth</div><div class="numrow"><span class="nl">Population growth <i>5-year</i></span><span class="nv">-6.6%</span></div><div class="numrow"><span class="nl">Income growth</span><span class="nv">+1.2%</span></div><div class="numrow"><span class="nl">Net migration <i>per 1k · county</i></span><span class="nv">-2.6</span></div></div>
-      <div class="numsec"><div class="numsec-h">🛡️ Safety</div><div class="numrow"><span class="nl">Violent crime <i>per 100k</i></span><span class="nv">710</span></div><div class="numrow"><span class="nl">Property crime <i>per 100k</i></span><span class="nv">1865</span></div></div>
-      <div class="numsec"><div class="numsec-h">🎓 Schools</div><div class="numrow"><span class="nl">Proficiency <i>GA percentile</i></span><span class="nv">27 <span class="imp">county est.</span></span></div></div>
-    </div>
-    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
+    <div class="tcap" style="margin:-10px 0 14px;">Every federal figure behind the score, and how it compares to the typical US town.
+      The dot marks where Arlington city ranks among all 12,192 towns; the line is the national median (greener/right = stronger for a buyer).</div>
+    <div class="numgroup"><div class="numgroup-h">💵 Money &amp; affordability</div><div class="nrow">
+      <div class="nlbl">Typical income <i>per tax return</i></div>
+      <div class="nval">$44,053</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:3%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: $71,343</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Rent burden <i>2-bed rent ÷ income</i></div>
+      <div class="nval">26%</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:21%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: 21%</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Average wage <i>annual</i></div>
+      <div class="nval">$46,218</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:15%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: $54,293</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Home-price growth <i>3-year · context</i></div>
+      <div class="nval">+6.2%</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:50%;background:var(--muted);box-shadow:0 0 0 1px var(--muted);"></div></div>
+        <div class="ncmp">US typical: +6.2%</div>
+      </div>
+    </div></div><div class="numgroup"><div class="numgroup-h">📈 Growth</div><div class="nrow">
+      <div class="nlbl">Population growth <i>5-year</i></div>
+      <div class="nval">-6.6%</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:3%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: +0.8%</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Income growth <i>annual</i></div>
+      <div class="nval">+1.2%</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:26%;background:#b45309;box-shadow:0 0 0 1px #b45309;"></div></div>
+        <div class="ncmp">US typical: +4.2%</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Net migration <i>per 1k · county</i></div>
+      <div class="nval">-2.6</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:12%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: +3.1</div>
+      </div>
+    </div></div><div class="numgroup"><div class="numgroup-h">🛡️ Safety</div><div class="nrow">
+      <div class="nlbl">Violent crime <i>per 100k</i></div>
+      <div class="nval">710</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:10%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: 163</div>
+      </div>
+    </div><div class="nrow">
+      <div class="nlbl">Property crime <i>per 100k</i></div>
+      <div class="nval">1865</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:26%;background:#b45309;box-shadow:0 0 0 1px #b45309;"></div></div>
+        <div class="ncmp">US typical: 955</div>
+      </div>
+    </div></div><div class="numgroup"><div class="numgroup-h">🎓 Schools</div><div class="nrow">
+      <div class="nlbl">Proficiency <i>GA percentile</i></div>
+      <div class="nval">27 <span class="nflag">county est.</span></div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:10%;background:#b91c1c;box-shadow:0 0 0 1px #b91c1c;"></div></div>
+        <div class="ncmp">US typical: 53</div>
+      </div>
+    </div></div>
+    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places. Home-price growth is shown for context, not scored as "higher is better."</div>
   </div>
-  <div class="card">
+  <div class="card loc-card">
     <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
     <div id="locmap" data-lat="31.4375" data-lon="-84.7292" data-col="#dc2626"></div>
     <div class="tcap">Arlington city, GA · 1,126 residents.
       Scroll to zoom; drag to pan.</div>
   </div>
-  <div class="card">
+  <div class="card peers-card">
     <div class="card-title"><span class="ct-icon">🏘️</span> Towns in the Same County</div>
     <a class="peer" href="1352696.html"><span class="peer-rk">#1</span><span class="peer-nm">Morgan city</span><span class="peer-sc" style="background:#dc2626;">42</span></a><a class="peer" href="1326448.html"><span class="peer-rk">#2</span><span class="peer-nm">Edison city</span><span class="peer-sc" style="background:#dc2626;">27</span></a><a class="peer me" href="1302928.html"><span class="peer-rk">#3</span><span class="peer-nm">Arlington city</span><span class="peer-sc" style="background:#dc2626;">20</span></a>
     <div class="tcap">Ranked by town-resolved fundamentals within the county. Arlington city is highlighted.</div>
@@ -595,9 +732,10 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
       Every input is now a <strong>federal</strong> source.
     </div>
   </details>
-  <div style="text-align:center;margin:4px 0 8px;">
+  <div class="compare-cta" style="text-align:center;margin:4px 0 8px;">
     <a href="../../compare.html?c=1302928" style="display:inline-block;padding:12px 28px;background:#0b57c2;color:#fff;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">⚖️ Compare Arlington city with another town →</a>
   </div>
+  <div class="print-only print-foot">100% federal data: FBI NIBRS · IRS SOI · US Census · BLS QCEW · BEA · FHFA · HUD · FEMA · US Dept. of Education. ~42% of each score is county-inherited. Civica scores are informational only — not financial, investment, or real-estate advice. © Civica · civica.app</div>
   <div class="footer">
   100% federal data: FBI NIBRS 2024 · IRS SOI (ZIP AGI + migration) · Census Population Estimates
   (sub-county) · BLS QCEW · BEA · FHFA HPI · HUD FMR FY2026 · Census CBP/BPS · FEMA NFIP ·

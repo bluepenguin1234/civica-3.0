@@ -18,6 +18,7 @@ import os
 import sys
 import json
 import argparse
+import datetime
 
 import pandas as pd
 
@@ -38,6 +39,11 @@ STATE_URL_BASE = f'{SITE_URL}/output/states'
 GA4_ID = ''
 
 DIM_MAX = {'dim1': 25, 'dim2': 24, 'dim3': 22, 'dim4': 15, 'dim5': 14}
+
+# National medians per displayed metric ("the typical US town"), populated once in main()
+# from the full dataframe and read by build_fundamentals_card. Same compute-once pattern as
+# the pctl_* columns.
+MEDIANS = {}
 DIM_NAMES = [
     ('dim1', 'Affordability', '🏠'),
     ('dim2', 'Economy', '💼'),
@@ -224,6 +230,65 @@ def build_head(row, place, state, county, score, label, fips, style):
 .peer-nm {{ flex:1; font-size:13px; font-weight:600; color:#0d2d52; }}
 .peer-sc {{ width:30px; height:30px; border-radius:50%; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0; }}
 @media (max-width:640px) {{ .glance {{ grid-template-columns:repeat(2,1fr); }} }}
+/* Save-as-PDF button (screen only; hidden in print) */
+.hero {{ position:relative; }}
+.pdf-btn {{ position:absolute; top:16px; right:18px; display:inline-flex; align-items:center; gap:6px;
+  font-family:'Roboto',sans-serif; font-size:12px; font-weight:700; color:#fff; cursor:pointer;
+  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); border-radius:100px;
+  padding:7px 14px; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .15s; }}
+.pdf-btn:hover {{ background:rgba(255,255,255,.22); }}
+/* print-only header / footer (hidden on screen, revealed in @media print) */
+.print-only {{ display:none; }}
+.print-head {{ align-items:center; justify-content:space-between; padding:0 0 12px; border-bottom:2px solid #0d2d52; margin-bottom:16px; }}
+.ph-brand {{ display:flex; align-items:center; gap:8px; }}
+.ph-logo {{ font-size:16px; font-weight:800; color:#0d2d52; }}
+.ph-tag {{ font-size:10px; font-weight:700; letter-spacing:.06em; color:#5b6170; text-transform:uppercase; margin-left:6px; }}
+.ph-meta {{ text-align:right; font-size:10px; color:#5b6170; line-height:1.5; }}
+.print-foot {{ border-top:1px solid #e6e8ee; margin-top:8px; padding-top:12px; font-size:9.5px; color:#5b6170; line-height:1.6; }}
+@media print {{
+  @page {{ margin:9mm; }}
+  * {{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }}
+  html, body {{ background:#fff !important; }}
+  /* one-pager: hero · At a Glance · 5-dim · How it Compares · The Numbers */
+  .nav, .loc-card, .compare-cta, .howto, .footer, .pdf-btn,
+  .signal, .peers-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow {{ display:none !important; }}
+  .print-head {{ display:flex !important; }}
+  .print-foot {{ display:block !important; }}
+  .page {{ max-width:none !important; margin:0 auto !important; padding:0 !important; zoom:0.78; }}
+  .card, .hero {{ box-shadow:none !important; break-inside:avoid; }}
+  .card {{ padding:8px 12px !important; margin-bottom:5px !important; border-radius:8px !important; }}
+  .card-title {{ margin-bottom:6px !important; }}
+  /* hero */
+  .hero {{ border-radius:0; padding:11px 16px !important; margin-bottom:6px !important; }}
+  .hero h1 {{ font-size:19px !important; }}
+  .hero-sub {{ font-size:11px !important; margin-top:2px !important; }}
+  .rank-line {{ font-size:10.5px !important; margin-top:6px !important; }}
+  .sh-ring {{ transform:scale(.72); margin:-12px 0; }}
+  .sh-grade {{ font-size:11px !important; }}
+  /* At a Glance tiles */
+  .glance {{ gap:6px !important; }}
+  .gtile {{ padding:6px 9px !important; border-radius:8px !important; }}
+  .gt-top {{ margin-bottom:4px !important; }}
+  .gt-val {{ font-size:16px !important; }}
+  .gt-lbl {{ font-size:9px !important; margin:1px 0 5px !important; }}
+  /* 5-dimension breakdown */
+  .radar-wrap {{ gap:12px !important; }}
+  .radar-wrap svg {{ max-height:108px !important; max-width:108px !important; }}
+  .dimrow {{ margin-bottom:4px !important; }}
+  /* How it Compares */
+  .posbar {{ margin-bottom:7px !important; }}
+  /* The Numbers — collapse each row to a single line (benchmark inline beside the bar) */
+  .numgroup-h {{ margin:5px 0 0 !important; }}
+  .nrow {{ padding:3px 0 !important; grid-template-columns:1fr 86px 196px !important; }}
+  .nlbl {{ font-size:12px !important; }}
+  .nval {{ font-size:13px !important; }}
+  .nbar-wrap {{ display:flex !important; align-items:center; gap:8px; }}
+  .nbar {{ flex:1; }}
+  .ncmp {{ margin-top:0 !important; white-space:nowrap; }}
+  /* compact print chrome */
+  .print-head {{ padding:0 0 5px !important; margin-bottom:6px !important; }}
+  .print-foot {{ margin-top:5px !important; padding-top:5px !important; font-size:8px !important; }}
+}}
 </style>
 </head>'''
 
@@ -261,6 +326,7 @@ def build_hero(row, place, state, county):
                'Town government (MCD)</span>') if mcd else ''
 
     return f'''<div class="hero">
+  <button class="pdf-btn" onclick="window.print()" title="Save or print this report as a PDF">⬇ Save as PDF</button>
   <div class="hero-id">
     <div class="hero-eyebrow">Town Report · 2026</div>
     <h1>{place}, {state}</h1>
@@ -359,7 +425,7 @@ def build_glance(row):
       </div>'''
     return f'''<div class="card">
     <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
-    <div style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 12,192 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
+    <div class="print-hide" style="font-size:13px;color:var(--subtext);line-height:1.6;margin-bottom:18px;">The headline numbers for this town. The tag and bar on each show how it ranks against all 12,192 US towns &mdash; a fuller, greener bar means it ranks higher. (Schools are ranked within their own state.)</div>
     <div class="glance">{cells}
     </div>
   </div>'''
@@ -417,36 +483,56 @@ def build_verdict_card(row, place):
   </div>'''
 
 
+def num_row(label, sub, val, med, p, neutral=False, flag=''):
+    """One 'The Numbers' row: value + a dot at national percentile p over a median-tick track.
+    neutral=True (home-price growth) → muted dot, no good/bad verdict."""
+    col = 'var(--muted)' if neutral else pctl_tag(p)[1]
+    pos = max(3.0, min(97.0, p))
+    sub = f' <i>{sub}</i>' if sub else ''
+    return f'''<div class="nrow">
+      <div class="nlbl">{label}{sub}</div>
+      <div class="nval">{val}{flag}</div>
+      <div class="nbar-wrap">
+        <div class="nbar"><div class="ntick"></div><div class="ndot" style="left:{pos:.0f}%;background:{col};box-shadow:0 0 0 1px {col};"></div></div>
+        <div class="ncmp">US typical: {med}</div>
+      </div>
+    </div>'''
+
+
 def build_fundamentals_card(row):
-    rb = row['rent_burden'] * 100
-    imp = lambda c: ' <span class="imp">county est.</span>' if int(row[c]) == 1 else ''
+    M = MEDIANS
+    pct = lambda v: f'{v*100:+.1f}%'           # fraction → +x.x%
+    imp = lambda c: ' <span class="nflag">county est.</span>' if int(row[c]) == 1 else ''
 
-    def r(label, val, sub='', flag=''):
-        sub = f' <i>{sub}</i>' if sub else ''
-        return (f'<div class="numrow"><span class="nl">{label}{sub}</span>'
-                f'<span class="nv">{val}{flag}</span></div>')
-
-    money_sec = (r('Typical income', money(row['town_income']), 'per tax return', imp('income_imputed'))
-                 + r('Rent burden', f'{rb:.0f}%', '2-bed rent ÷ income')
-                 + r('Average wage', money(row['avg_annual_wage']))
-                 + r('Home-price growth', f"{row['hpi_3yr_avg']:+.1f}%", '3-year'))
-    growth_sec = (r('Population growth', f"{row['town_growth_5yr']*100:+.1f}%", '5-year')
-                  + r('Income growth', f"{row['town_income_growth']*100:+.1f}%")
-                  + r('Net migration', f"{row['RNETMIG2023']:+.1f}", 'per 1k · county'))
-    safety_sec = (r('Violent crime', f"{row['violent_per100k']:.0f}", 'per 100k', imp('crime_imputed'))
-                  + r('Property crime', f"{row['property_per100k']:.0f}", 'per 100k'))
-    school_sec = r('Proficiency', f"{row['school_score']:.0f}", f"{row['state_abbr']} percentile", imp('schools_imputed'))
+    groups = [
+        ('💵 Money &amp; affordability', [
+            num_row('Typical income', 'per tax return', money(row['town_income']), money(M['town_income']), row['pctl_income'], flag=imp('income_imputed')),
+            num_row('Rent burden', '2-bed rent ÷ income', f"{row['rent_burden']*100:.0f}%", f"{M['rent_burden']*100:.0f}%", row['pctl_rentburden']),
+            num_row('Average wage', 'annual', money(row['avg_annual_wage']), money(M['avg_annual_wage']), row['pctl_wage']),
+            num_row('Home-price growth', '3-year · context', f"{row['hpi_3yr_avg']:+.1f}%", f"{M['hpi_3yr_avg']:+.1f}%", row['pctl_hpi_raw'], neutral=True),
+        ]),
+        ('📈 Growth', [
+            num_row('Population growth', '5-year', pct(row['town_growth_5yr']), pct(M['town_growth_5yr']), row['pctl_growth']),
+            num_row('Income growth', 'annual', pct(row['town_income_growth']), pct(M['town_income_growth']), row['pctl_incgrowth']),
+            num_row('Net migration', 'per 1k · county', f"{row['RNETMIG2023']:+.1f}", f"{M['RNETMIG2023']:+.1f}", row['pctl_netmig']),
+        ]),
+        ('🛡️ Safety', [
+            num_row('Violent crime', 'per 100k', f"{row['violent_per100k']:.0f}", f"{M['violent_per100k']:.0f}", row['pctl_crime'], flag=imp('crime_imputed')),
+            num_row('Property crime', 'per 100k', f"{row['property_per100k']:.0f}", f"{M['property_per100k']:.0f}", row['pctl_property']),
+        ]),
+        ('🎓 Schools', [
+            num_row('Proficiency', f"{row['state_abbr']} percentile", f"{row['school_score']:.0f}", f"{M['school_score']:.0f}", row['pctl_schools'], flag=imp('schools_imputed')),
+        ]),
+    ]
+    body = ''.join(f'<div class="numgroup"><div class="numgroup-h">{h}</div>{"".join(rows)}</div>'
+                   for h, rows in groups)
 
     return f'''<div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>
-    <div class="tcap" style="margin:-10px 0 16px;">The federal figures behind the score.</div>
-    <div class="numwrap">
-      <div class="numsec"><div class="numsec-h">💵 Money &amp; affordability</div>{money_sec}</div>
-      <div class="numsec"><div class="numsec-h">📈 Growth</div>{growth_sec}</div>
-      <div class="numsec"><div class="numsec-h">🛡️ Safety</div>{safety_sec}</div>
-      <div class="numsec"><div class="numsec-h">🎓 Schools</div>{school_sec}</div>
-    </div>
-    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places.</div>
+    <div class="tcap" style="margin:-10px 0 14px;">Every federal figure behind the score, and how it compares to the typical US town.
+      The dot marks where {str(row['place_name'])} ranks among all 12,192 towns; the line is the national median (greener/right = stronger for a buyer).</div>
+    {body}
+    <div class="tcap" style="margin-top:16px;">All figures from federal sources (IRS, HUD, FHFA, BLS, FBI NIBRS, US Census, US Dept. of Education). School proficiency is EDFacts (SY2017–18), ranked <strong>within the state</strong> since state tests aren't comparable nationally. Town income is a ZIP→place approximation; crime is mapped from reporting agencies to places. Home-price growth is shown for context, not scored as "higher is better."</div>
   </div>'''
 
 
@@ -479,7 +565,7 @@ def build_location_card(row, lat, lon):
         return ''
     col = {'Strong Buy': '#16a34a', 'Buy': '#0b57c2',
            'Hold': '#f59e0b', 'Caution': '#dc2626'}.get(row['market_label'], '#0b57c2')
-    return f'''<div class="card">
+    return f'''<div class="card loc-card">
     <div class="card-title"><span class="ct-icon">📍</span> Where It Is</div>
     <div id="locmap" data-lat="{lat}" data-lon="{lon}" data-col="{col}"></div>
     <div class="tcap">{str(row['place_name'])}, {str(row['state_abbr'])} · {row['POPESTIMATE2025']:,} residents.
@@ -502,7 +588,7 @@ def build_peers_card(sib, fips, place):
                  f'<span class="peer-rk">#{int(r["rank_in_county"])}</span>'
                  f'<span class="peer-nm">{r["place_name"]}</span>'
                  f'<span class="peer-sc" style="background:{col};">{r["civica_score"]:.0f}</span></a>')
-    return f'''<div class="card">
+    return f'''<div class="card peers-card">
     <div class="card-title"><span class="ct-icon">🏘️</span> Towns in the Same County</div>
     {rows}
     <div class="tcap">Ranked by town-resolved fundamentals within the county. {place} is highlighted.</div>
@@ -578,6 +664,27 @@ LOC_SCRIPT = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></
 </script>'''
 
 
+PRINT_LOGO_SVG = ("<svg width='24' height='24' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='#0d2d52'/>"
+                  "<rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/>"
+                  "<rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/>"
+                  "<rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>")
+
+
+def build_print_header(fips):
+    d = datetime.date.today()
+    date_str = f'{d:%b} {d.day}, {d.year}'
+    return f'''<div class="print-only print-head">
+    <div class="ph-brand">{PRINT_LOGO_SVG}<span class="ph-logo">civi<span style="color:#1a7ff0;">ca</span></span><span class="ph-tag">Town Report</span></div>
+    <div class="ph-meta">civica.app/output/towns/{fips}.html<br>Generated {date_str}</div>
+  </div>'''
+
+
+PRINT_FOOTER = ('<div class="print-only print-foot">100% federal data: FBI NIBRS · IRS SOI · US Census · '
+                'BLS QCEW · BEA · FHFA · HUD · FEMA · US Dept. of Education. ~42% of each score is '
+                'county-inherited. Civica scores are informational only — not financial, investment, or '
+                'real-estate advice. © Civica · civica.app</div>')
+
+
 def generate_page(row, style, geo, siblings):
     place = str(row['place_name'])
     state = str(row['state_abbr'])
@@ -590,6 +697,7 @@ def generate_page(row, style, geo, siblings):
 <body>
 {build_nav()}
 <div class="page">
+  {build_print_header(fips)}
   {build_hero(row, place, state, county)}
   {build_verdict_card(row, place)}
   {build_glance(row)}
@@ -599,9 +707,10 @@ def generate_page(row, style, geo, siblings):
   {build_location_card(row, lat, lon)}
   {build_peers_card(siblings, fips, place)}
   {build_howto(row)}
-  <div style="text-align:center;margin:4px 0 8px;">
+  <div class="compare-cta" style="text-align:center;margin:4px 0 8px;">
     <a href="../../compare.html?c={fips}" style="display:inline-block;padding:12px 28px;background:#0b57c2;color:#fff;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">⚖️ Compare {place} with another town →</a>
   </div>
+  {PRINT_FOOTER}
   {FOOTER}
 </div>
 {LOC_SCRIPT}
@@ -819,6 +928,19 @@ def main():
     df['pctl_crime'] = (1 - df['violent_per100k'].rank(pct=True)) * 100
     df['pctl_appr'] = (1 - (df['hpi_3yr_avg'] - 5).abs().rank(pct=True)) * 100
     df['pctl_schools'] = df['school_score'].rank(pct=True) * 100
+    # Extra raw-magnitude percentiles for "The Numbers" comparison dots (value-vs-all-towns,
+    # not the scoring percentiles): property crime (lower better, inverted), income growth,
+    # net migration, and a plain home-price-growth rank (neutral — faster isn't simply better).
+    df['pctl_property'] = (1 - df['property_per100k'].rank(pct=True)) * 100
+    df['pctl_incgrowth'] = df['town_income_growth'].rank(pct=True) * 100
+    df['pctl_netmig'] = df['RNETMIG2023'].rank(pct=True) * 100
+    df['pctl_hpi_raw'] = df['hpi_3yr_avg'].rank(pct=True) * 100
+
+    # National medians ("the typical US town") for the comparison captions.
+    global MEDIANS
+    MEDIANS = {c: float(df[c].median()) for c in (
+        'town_income', 'rent_burden', 'avg_annual_wage', 'hpi_3yr_avg', 'town_growth_5yr',
+        'town_income_growth', 'RNETMIG2023', 'violent_per100k', 'property_per100k', 'school_score')}
 
     # Town coordinates for the per-page location map (if built).
     geo = {}
