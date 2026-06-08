@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civica for Agents — Buyer intelligence + automation for real estate teams</title>
+<meta name="description" content="Civica helps relocation-focused real estate teams capture more buyers and close faster: lead qualification, follow-up, and onboarding automation, powered by the Civica town-data engine.">
+<meta property="og:title" content="Civica for Agents — Buyer intelligence + automation">
+<meta property="og:description" content="Lead qualification, follow-up, and onboarding automation for real estate teams — powered by Civica's town-data engine.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://bluepenguin1234.github.io/civica-3.0/og_image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="clean.css">
+<style>
+/* agents-page-only */
+.b2b-hero{ text-align:center; padding:var(--s7) 0 var(--s5); }
+.b2b-hero .eyebrow{ font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--primary-strong); }
+.b2b-hero h1{ font-size:clamp(32px,5.5vw,50px); font-weight:800; line-height:1.07; margin:var(--s2) auto var(--s3); max-width:18ch; }
+.b2b-hero h1 .ac{ color:var(--primary-strong); }
+.b2b-hero .lead{ font-size:20px; color:var(--muted); max-width:60ch; margin:0 auto var(--s4); }
+.b2b-hero .row{ justify-content:center; }
+.problems{ background:var(--surface-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.problems .inner{ padding:var(--s6) 0; }
+.grid3{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--s2); }
+.feat{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); }
+.feat .ic{ font-size:24px; } .feat h3{ font-size:17px; margin:10px 0 4px; }
+.feat p{ font-size:14px; color:var(--muted); line-height:1.6; }
+.edge{ display:grid; grid-template-columns:1.1fr 1fr; gap:var(--s5); align-items:center; }
+.edge .stat{ font-family:'Inconsolata'; font-weight:700; color:var(--primary-strong); font-size:15px; }
+.ladder{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--s2); }
+.tier{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s4); display:flex; flex-direction:column; }
+.tier.featured{ border-color:var(--primary); box-shadow:var(--shadow); }
+.tier .tag{ font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--primary-strong); }
+.tier h3{ font-size:20px; margin:6px 0; }
+.tier .price{ font-family:'Inconsolata'; font-weight:700; font-size:26px; color:var(--ink); margin:var(--s1) 0 var(--s2); }
+.tier .price small{ font-size:14px; color:var(--muted); font-weight:500; }
+.tier ul{ list-style:none; margin:var(--s2) 0 var(--s3); padding:0; }
+.tier li{ font-size:14px; color:var(--text); padding:7px 0 7px 26px; position:relative; line-height:1.5; }
+.tier li::before{ content:"✓"; position:absolute; left:0; color:var(--success); font-weight:700; }
+.tier .btn{ margin-top:auto; }
+.closer{ text-align:center; padding:var(--s6) 0; }
+.closer h2{ font-size:28px; }
+.closer p{ color:var(--muted); max-width:50ch; margin:var(--s1) auto var(--s3); }
+@media(max-width:680px){ .edge{ grid-template-columns:1fr; gap:var(--s3); } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="index.html" aria-label="Civica Towns home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="map.html">Map</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a class="opt" href="compare.html">Compare</a>
+      <a class="opt" href="methodology.html">Methodology</a>
+      <a href="agents.html" aria-current="page">For Agents</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="b2b-hero wrap" aria-labelledby="b2b-h">
+    <span class="eyebrow">For relocation-focused real estate teams</span>
+    <h1 id="b2b-h">Capture more buyers. <span class="ac">Close faster.</span></h1>
+    <p class="lead">Civica turns the buyer-research traffic behind 12,192 town reports into qualified leads for your team — then automates the follow-up and onboarding so no deal slips through the cracks.</p>
+    <div class="row"><a class="btn btn-primary" href="#book">Book a free Civica audit</a><a class="btn btn-ghost" href="#how">See how it works</a></div>
+  </section>
+
+  <section class="problems" aria-labelledby="gap-h">
+    <div class="wrap-narrow inner">
+      <h2 id="gap-h" class="center section-title" style="margin-bottom:var(--s2)">Where teams lose deals</h2>
+      <p class="center muted" style="max-width:54ch;margin:0 auto var(--s5)">Most leads don't fail because of the agent — they fail in the gaps between the first click and the first conversation.</p>
+      <div class="grid3">
+        <div class="feat"><div class="ic" aria-hidden="true">⏱️</div><h3>Slow first response</h3><p>Leads that wait more than five minutes go cold. Manual triage can't keep up with inbound.</p></div>
+        <div class="feat"><div class="ic" aria-hidden="true">📭</div><h3>Follow-up that stops</h3><p>The "not ready yet" buyers — most of them — get a few emails and then silence.</p></div>
+        <div class="feat"><div class="ic" aria-hidden="true">📋</div><h3>Onboarding by hand</h3><p>Intake, docs, scheduling, and status updates eat hours that should go to selling.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="how" aria-labelledby="do-h">
+    <h2 id="do-h" class="section-title center">What we automate</h2>
+    <div class="grid3">
+      <div class="card"><div class="feat" style="border:none;padding:0"><div class="ic" aria-hidden="true">🎯</div><h3>Qualify</h3><p>Inbound leads scored and routed to the right agent in under five minutes — enriched with the <strong>Civica score &amp; verdict of the town they were researching</strong>, so you know their target market before you call.</p></div></div>
+      <div class="card"><div class="feat" style="border:none;padding:0"><div class="ic" aria-hidden="true">💬</div><h3>Follow-up</h3><p>Multi-touch SMS + email nurture, missed-call text-back, and long-term drip for the buyers who aren't ready yet — automatically, on every lead.</p></div></div>
+      <div class="card"><div class="feat" style="border:none;padding:0"><div class="ic" aria-hidden="true">✅</div><h3>Onboard</h3><p>Buyer and seller intake, document collection, e-sign, scheduling, and automated status updates — a clean handoff with zero manual chasing.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="edge-h">
+    <div class="card" style="padding:var(--s5)">
+      <div class="edge">
+        <div>
+          <span class="eyebrow" style="color:var(--primary-strong);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">The Civica edge</span>
+          <h2 style="font-size:26px;margin:var(--s1) 0 var(--s2)">Data nobody else can put on the table</h2>
+          <p class="muted">Civica scores every US town on affordability, economy, safety &amp; place, growth, and schools — from 100% federal data. That same engine becomes your unfair advantage:</p>
+          <ul style="list-style:none;padding:0;margin:var(--s3) 0 0">
+            <li style="padding:6px 0"><span class="stat">→</span> Open conversations with the buyer search demand in <em>your</em> farm area.</li>
+            <li style="padding:6px 0"><span class="stat">→</span> Send buyers co-branded Civica relocation reports — a lead magnet with your logo.</li>
+            <li style="padding:6px 0"><span class="stat">→</span> Every lead arrives tagged with the town's Civica verdict.</li>
+          </ul>
+        </div>
+        <div class="center">
+          <div class="card" style="background:var(--surface-soft);padding:var(--s5)">
+            <div class="mono" style="font-size:44px;color:var(--primary-strong)">12,192</div>
+            <div class="muted" style="font-size:14px">towns scored · ranked inside every county</div>
+            <hr class="rule" style="margin:var(--s3) 0">
+            <div class="row center" style="justify-content:center"><span class="vbadge v-sbuy">Strong Buy</span><span class="vbadge v-buy">Buy</span><span class="vbadge v-hold">Hold</span><span class="vbadge v-caut">Caution</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap-narrow" aria-labelledby="price-h">
+    <h2 id="price-h" class="section-title center">Start small, scale when it works</h2>
+    <div class="ladder">
+      <div class="tier">
+        <span class="tag">Start here</span>
+        <h3>Speed-to-Lead Audit + Fix</h3>
+        <div class="price">$750–1,500 <small>one-time</small></div>
+        <p class="muted" style="font-size:14px">We audit your inbound response and follow-up, then install missed-call text-back and &lt;5-minute lead routing. Proof before commitment.</p>
+        <ul>
+          <li>Full lead-response audit</li>
+          <li>Missed-call text-back live</li>
+          <li>&lt;5-min routing installed</li>
+        </ul>
+        <a class="btn btn-ghost" href="#book">Book the audit</a>
+      </div>
+      <div class="tier featured">
+        <span class="tag">Most teams</span>
+        <h3>Buyer-Intelligence Retainer</h3>
+        <div class="price">$2.5–3k <small>/mo + setup</small></div>
+        <p class="muted" style="font-size:14px">The full system — Qualify, Follow-up, and Onboard — managed and optimized monthly, with the Civica lead feed and co-branded reports.</p>
+        <ul>
+          <li>All three automation modules</li>
+          <li>Civica lead enrichment + reports</li>
+          <li>Monthly optimization + reporting</li>
+        </ul>
+        <a class="btn btn-primary" href="#book">Book a free audit</a>
+      </div>
+    </div>
+    <p class="center muted" style="font-size:13px;margin-top:var(--s3)">One extra closing typically covers a year of the retainer.</p>
+  </section>
+
+  <section class="closer wrap" id="book" aria-labelledby="book-h">
+    <h2 id="book-h">Book your free Civica audit</h2>
+    <p>15 minutes. We'll show you the buyer search demand in your market and exactly where deals are leaking — no pitch, no obligation.</p>
+    <!-- TODO: replace href with your Calendly / booking link -->
+    <div class="row" style="justify-content:center"><a class="btn btn-primary" href="https://calendly.com/REPLACE-ME">Pick a time</a></div>
+    <p class="muted" style="font-size:13px;margin-top:var(--s3)">Prefer email? Reach us at <a href="mailto:REPLACE@yourdomain.com">REPLACE@yourdomain.com</a>.</p>
+  </section>
+</main>
+
+<footer class="foot center">
+  <div class="wrap">
+    Civica for Agents is a service built on the Civica town-scoring engine —
+    100% federal data: FBI NIBRS 2024 · IRS SOI · Census · BLS QCEW · BEA · FHFA HPI · FEMA · NOAA · USFS · USDA · HUD.<br>
+    Civica scores are informational only — not financial, investment, or real estate advice. &copy; 2026 Civica.
+  </div>
+</footer>
+</body>
+</html>
