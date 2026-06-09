@@ -435,13 +435,15 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 .ph-tag { font-size:10px; font-weight:700; letter-spacing:.06em; color:#5b6170; text-transform:uppercase; margin-left:6px; }
 .ph-meta { text-align:right; font-size:10px; color:#5b6170; line-height:1.5; }
 .print-foot { border-top:1px solid #e6e8ee; margin-top:8px; padding-top:12px; font-size:9.5px; color:#5b6170; line-height:1.6; }
+.rk-chip { display:inline-flex; align-items:center; min-height:36px; padding:0 14px; border-radius:100px; border:1px solid var(--border); background:#fff; color:#0b57c2; font-weight:600; font-size:13px; text-decoration:none; }
+.rk-chip:hover { background:#f5f8ff; }
 @media print {
   @page { margin:9mm; }
   * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
   html, body { background:#fff !important; }
   /* one-pager: hero · At a Glance · 5-dim · How it Compares · The Numbers */
   .nav, .loc-card, .compare-cta, .howto, .footer, .pdf-btn,
-  .signal, .peers-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow { display:none !important; }
+  .signal, .peers-card, .rankings-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow { display:none !important; }
   .print-head { display:flex !important; }
   .print-foot { display:block !important; }
   .page { max-width:none !important; margin:0 auto !important; padding:0 !important; zoom:0.78; }
@@ -494,6 +496,7 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   </a>
   <div class="nav-right">
     <span class="nav-tag" style="margin-right:8px;">Town Report</span>
+    <a class="nav-back" href="../rankings/index.html" style="margin-right:14px;">Rankings</a>
     <a class="nav-back" href="../../index.html">← All Towns</a>
   </div>
 </nav>
@@ -625,6 +628,10 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
       <div class="postrack"><div class="posmark" style="left:57%;"></div></div>
       <div class="posends"><span>Lowest in county</span><span></span><span>Highest in county</span></div>
     </div>
+  </div>
+  <div class="card rankings-card">
+    <div class="card-title"><span class="ct-icon">🏅</span> Featured in Rankings</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;"><a class="rk-chip" href="../states/FL.html">📋 Best Towns in Florida</a></div>
   </div>
   <div class="card">
     <div class="card-title"><span class="ct-icon">📋</span> The Numbers</div>

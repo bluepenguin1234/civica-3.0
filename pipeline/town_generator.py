@@ -31,6 +31,7 @@ TEMPLATE = os.path.join(BASE, 'town_template.html')
 SCORES = os.path.join(BASE, 'town_scores.csv')
 OUT_DIR = os.path.join(SITE, 'output', 'towns')
 STATE_DIR = os.path.join(SITE, 'output', 'states')
+RANK_DIR = os.path.join(SITE, 'output', 'rankings')
 OUT_INDEX = os.path.join(SITE, 'output', 'town_index.json')
 PROGRESS = os.path.join(OUT_DIR, '_progress.json')
 # Absolute base for canonical/OG/sitemap/JSON-LD URLs. MUST match the live host or Google
@@ -40,6 +41,7 @@ PROGRESS = os.path.join(OUT_DIR, '_progress.json')
 SITE_URL = 'https://bluepenguin1234.github.io/civica-3.0'
 TOWN_URL_BASE = f'{SITE_URL}/output/towns'
 STATE_URL_BASE = f'{SITE_URL}/output/states'
+RANK_URL_BASE = f'{SITE_URL}/output/rankings'
 GA4_ID = ''
 
 DIM_MAX = {'dim1': 25, 'dim2': 24, 'dim3': 22, 'dim4': 15, 'dim5': 14}
@@ -256,13 +258,15 @@ def build_head(row, place, state, county, score, label, fips, style):
 .ph-tag {{ font-size:10px; font-weight:700; letter-spacing:.06em; color:#5b6170; text-transform:uppercase; margin-left:6px; }}
 .ph-meta {{ text-align:right; font-size:10px; color:#5b6170; line-height:1.5; }}
 .print-foot {{ border-top:1px solid #e6e8ee; margin-top:8px; padding-top:12px; font-size:9.5px; color:#5b6170; line-height:1.6; }}
+.rk-chip {{ display:inline-flex; align-items:center; min-height:36px; padding:0 14px; border-radius:100px; border:1px solid var(--border); background:#fff; color:#0b57c2; font-weight:600; font-size:13px; text-decoration:none; }}
+.rk-chip:hover {{ background:#f5f8ff; }}
 @media print {{
   @page {{ margin:9mm; }}
   * {{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }}
   html, body {{ background:#fff !important; }}
   /* one-pager: hero · At a Glance · 5-dim · How it Compares · The Numbers */
   .nav, .loc-card, .compare-cta, .howto, .footer, .pdf-btn,
-  .signal, .peers-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow {{ display:none !important; }}
+  .signal, .peers-card, .rankings-card, .tcap, .print-hide, .dc-chip, .hero-eyebrow {{ display:none !important; }}
   .print-head {{ display:flex !important; }}
   .print-foot {{ display:block !important; }}
   .page {{ max-width:none !important; margin:0 auto !important; padding:0 !important; zoom:0.78; }}
@@ -317,6 +321,7 @@ def build_nav():
   </a>
   <div class="nav-right">
     <span class="nav-tag" style="margin-right:8px;">Town Report</span>
+    <a class="nav-back" href="../rankings/index.html" style="margin-right:14px;">Rankings</a>
     <a class="nav-back" href="../../index.html">← All Towns</a>
   </div>
 </nav>'''
@@ -714,6 +719,7 @@ def generate_page(row, style, geo, siblings):
   {build_glance(row)}
   {build_dimension_card(row)}
   {build_position_card(row)}
+  {build_rankings_chips(row)}
   {build_fundamentals_card(row)}
   {build_location_card(row, lat, lon)}
   {build_peers_card(siblings, fips, place)}
@@ -832,6 +838,239 @@ tbody tr:hover td{{background:#f5f5f7;}}
 </div></body></html>'''
 
 
+# ── Category ranking pages (output/rankings/<cat>/<scope>.html) ───────────────────
+
+LIST_PAGE_CSS = '''<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#ffffff;color:#111827;}
+h1,h2{font-family:'Poppins',sans-serif;letter-spacing:-.01em;}
+a{color:inherit;}
+.nav{background:rgba(255,255,255,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-text{font-size:18px;font-weight:800;color:#0d2d52;}.logo-text em{font-style:normal;color:#1a7ff0;}
+.nav .back{font-size:13px;color:#6e6e73;text-decoration:none;font-weight:500;}
+.hero{background:linear-gradient(160deg,#060f1e,#091f3a 45%,#0d2d52);padding:38px 20px 42px;}
+.hero-in{max-width:960px;margin:0 auto;}
+.hero h1{font-size:32px;font-weight:900;color:#fff;margin:8px 0 10px;}
+.hero p{color:rgba(255,255,255,.7);font-size:14px;max-width:78ch;line-height:1.6;}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.page{max-width:960px;margin:0 auto;padding:24px 16px 48px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.chip{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:100px;border:1px solid rgba(0,0,0,.1);background:#fff;color:#0b57c2;font-weight:600;font-size:13px;text-decoration:none;}
+.chip:hover{background:#f5f8ff;}
+.chip[aria-current="true"]{background:#0b57c2;color:#fff;border-color:#0b57c2;}
+.card{background:#fff;border-radius:16px;border:1px solid rgba(0,0,0,.08);padding:18px;}
+.card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#98989d;margin-bottom:14px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#98989d;padding:0 12px 12px;border-bottom:2px solid rgba(0,0,0,.08);white-space:nowrap;}
+th.r{text-align:right;}
+td{padding:11px 12px;border-bottom:1px solid rgba(0,0,0,.06);}
+tbody tr:hover td{background:#f5f5f7;}
+.t-name{font-size:14px;font-weight:700;color:#0d2d52;text-decoration:none;}
+.t-sub{font-size:11px;color:#98989d;}
+.lbadge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;white-space:nowrap;}
+.lb-sbuy{background:#dcfce7;color:#15803d;}.lb-buy{background:#dbeafe;color:#1d4ed8;}
+.lb-watch{background:#fef3c7;color:#92400e;}.lb-caut{background:#fee2e2;color:#b91c1c;}
+.footer{font-size:11px;color:#98989d;text-align:center;padding:24px 16px;line-height:1.7;}
+@media(max-width:640px){.hero h1{font-size:24px;}}
+</style>'''
+
+
+RANK_CATS = [
+    {'key': 'safest', 'word': 'Safest', 'sort': 'dim3', 'col': 'Violent /100k',
+     'fmt': lambda r: f"{r['violent_per100k']:.0f}", 'imp': 'crime_imputed',
+     'blurb': 'ranked by the Safety &amp; Place dimension — town violent and property crime, scale, amenities, and physical risk.'},
+    {'key': 'best-schools', 'word': 'Best School', 'sort': 'dim5', 'col': 'School %ile',
+     'fmt': lambda r: f"{r['school_score']:.0f}", 'imp': 'schools_imputed',
+     'blurb': 'ranked by the Schools dimension — public-school proficiency (US Dept. of Education EDFacts), ranked within the state.'},
+    {'key': 'most-affordable', 'word': 'Most Affordable', 'sort': 'dim1', 'col': 'Rent burden',
+     'fmt': lambda r: f"{r['rent_burden'] * 100:.0f}%", 'imp': None,
+     'blurb': 'ranked by the Affordability dimension — rent burden vs. town income plus appreciation quality (there is no home-price level in the model).'},
+    {'key': 'fastest-growing', 'word': 'Fastest-Growing', 'sort': 'dim4', 'col': 'Growth 5yr',
+     'fmt': lambda r: f"{r['town_growth_5yr'] * 100:+.1f}%", 'imp': None,
+     'blurb': 'ranked by the Growth dimension — town population growth, net migration, and building permits.'},
+]
+RANK_ICON = {'safest': '🛡️', 'best-schools': '🎓', 'most-affordable': '💵', 'fastest-growing': '📈'}
+
+
+def _rank_nav(cat_key, state, root):
+    """Chip row: the other categories at the same scope + the Overall list."""
+    sf = 'index' if state is None else state
+    chips = [f'<a class="chip"{" aria-current=\"true\"" if c["key"] == cat_key else ""} '
+             f'href="{root}output/rankings/{c["key"]}/{sf}.html">{c["word"]}</a>' for c in RANK_CATS]
+    if state is None:
+        chips.append(f'<a class="chip" href="{root}leaderboard.html">🏆 Overall Top 100</a>')
+    else:
+        chips.append(f'<a class="chip" href="{root}output/states/{state}.html">🏆 Overall in {STATE_NAMES.get(state, state)}</a>')
+    return '<div class="chips">' + ''.join(chips) + '</div>'
+
+
+def _rank_jsonld(towns, canonical, h1):
+    items = [{"@type": "ListItem", "position": i,
+              "url": f"{TOWN_URL_BASE}/{str(r['fips']).zfill(7)}.html",
+              "name": f"{r['place_name']}, {r['state_abbr']}"}
+             for i, (_, r) in enumerate(towns.iterrows(), 1)]
+    data = {"@context": "https://schema.org", "@type": "ItemList", "name": h1,
+            "url": canonical, "numberOfItems": len(items), "itemListElement": items}
+    return f'<script type="application/ld+json">{json.dumps(data, separators=(",", ":"))}</script>'
+
+
+def build_ranking_page(cat, state, towns, root):
+    national = state is None
+    scope = 'America' if national else STATE_NAMES.get(state, state)
+    n = len(towns)
+    word = cat['word']
+    where = 'in America' if national else f'in {scope}'
+    h1 = f'{word} Towns {where} — 2026'
+    title = f'{word} Towns {("in the US" if national else "in " + scope)} (2026) — Civica'
+    desc = (f'The {n} {word.lower().replace("-", " ")} towns to buy a home {where} for 2026, '
+            f'{cat["blurb"]} 100% federal data, each town ranked inside its county.')
+    canonical = f'{RANK_URL_BASE}/{cat["key"]}/{("index" if national else state)}.html'
+    rows = ''
+    for i, (_, r) in enumerate(towns.iterrows(), 1):
+        fips = str(r['fips']).zfill(7)
+        sc = r['civica_score']
+        sc_bg = '#16a34a' if sc >= 62 else ('#0b57c2' if sc >= 52 else ('#f59e0b' if sc >= 44 else '#dc2626'))
+        est = (' <span class="t-sub">· est.</span>'
+               if cat.get('imp') and int(r.get(cat['imp'], 0) or 0) == 1 else '')
+        href = f'{root}output/towns/{fips}.html'
+        rows += f'''<tr onclick="window.location='{href}'" style="cursor:pointer;">
+          <td><span style="font-weight:700;color:#c7c7cc;">{i}</span></td>
+          <td><a class="t-name" href="{href}">{r['place_name']}</a><div class="t-sub">{r['county_name']}, {r['state_abbr']}</div></td>
+          <td><div style="width:30px;height:30px;border-radius:50%;background:{sc_bg};color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;">{sc:.0f}</div></td>
+          <td><span class="lbadge {LABEL_LB.get(r['market_label'], 'lb-watch')}">{r['market_label']}</span></td>
+          <td class="r" style="font-weight:700;color:#0d2d52;">{cat['fmt'](r)}{est}</td>
+        </tr>'''
+    other = (f'See the same ranking for every state on the <a href="{root}output/rankings/index.html" style="color:#0b57c2;font-weight:600;">rankings hub</a>.'
+             if national else
+             f'<a href="{root}output/rankings/{cat["key"]}/index.html" style="color:#0b57c2;font-weight:600;">See the national {word} Towns list →</a>')
+    return f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta property="og:title" content="{h1}"><meta property="og:description" content="{desc}">
+<meta property="og:image" content="{SITE_URL}/og_image.png">
+<link rel="canonical" href="{canonical}">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+{LIST_PAGE_CSS}
+{_rank_jsonld(towns, canonical, h1)}
+</head><body>
+<nav class="nav">
+  <a class="logo" href="{root}index.html"><svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg><span class="logo-text">civi<em>ca</em></span></a>
+  <a class="back" href="{root}output/rankings/index.html">← All rankings</a>
+</nav>
+<div class="hero"><div class="hero-in">
+  <div class="eyebrow">{'National' if national else scope} Rankings · 2026</div>
+  <h1>{h1}</h1>
+  <p>{n} towns, {cat['blurb']} Each town is also ranked inside its own county.</p>
+</div></div>
+<div class="page">
+  {_rank_nav(cat['key'], state, root)}
+  <div class="card">
+    <div class="card-title">📊 {h1}</div>
+    <div style="overflow-x:auto;"><table>
+      <thead><tr><th style="width:36px;">#</th><th>Town</th><th>Score</th><th>Verdict</th><th class="r">{cat['col']}</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table></div>
+  </div>
+  <p style="text-align:center;margin-top:16px;font-size:14px;color:#475569;">{other}</p>
+  <div class="footer">100% federal data · Civica scores are informational only, not financial or real estate advice. &copy; 2026 Civica.</div>
+</div></body></html>'''
+
+
+def build_rankings_hub(states):
+    root = '../../'
+    cards = ''
+    for c in RANK_CATS:
+        sc = ''.join(f'<a class="chip" href="{c["key"]}/{s}.html">{STATE_NAMES.get(s, s)}</a>' for s in states)
+        cards += f'''<div class="card" style="margin-bottom:16px;">
+      <h2 style="font-size:19px;color:#0d2d52;margin-bottom:4px;">{RANK_ICON[c['key']]} {c['word']} Towns</h2>
+      <p class="t-sub" style="font-size:13px;margin-bottom:12px;">{c['blurb']}</p>
+      <div class="chips"><a class="chip" aria-current="true" href="{c['key']}/index.html">🇺🇸 National Top 100</a></div>
+      <div class="chips">{sc}</div>
+    </div>'''
+    overall = ''.join(f'<a class="chip" href="{root}output/states/{s}.html">{STATE_NAMES.get(s, s)}</a>' for s in states)
+    desc = "Civica's town rankings: the safest towns, best school towns, most affordable towns, and fastest-growing towns to buy a home in 2026 — nationally and for every US state, on 100% federal data."
+    return f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Town Rankings 2026 — Safest, Best Schools, Most Affordable, Fastest-Growing — Civica</title>
+<meta name="description" content="{desc}">
+<meta property="og:title" content="US Town Rankings 2026 — Civica"><meta property="og:description" content="{desc}">
+<meta property="og:image" content="{SITE_URL}/og_image.png">
+<link rel="canonical" href="{RANK_URL_BASE}/index.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+{LIST_PAGE_CSS}
+</head><body>
+<nav class="nav">
+  <a class="logo" href="{root}index.html"><svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg><span class="logo-text">civi<em>ca</em></span></a>
+  <a class="back" href="{root}index.html">← Home</a>
+</nav>
+<div class="hero"><div class="hero-in">
+  <div class="eyebrow">Rankings · 2026</div>
+  <h1>US Town Rankings</h1>
+  <p>The best towns to buy a home in 2026 — by safety, schools, affordability, and growth — nationally and for every state. 100% federal data, each town ranked inside its county.</p>
+</div></div>
+<div class="page">
+  {cards}
+  <div class="card">
+    <h2 style="font-size:19px;color:#0d2d52;margin-bottom:4px;">🏆 Overall Best Towns</h2>
+    <p class="t-sub" style="font-size:13px;margin-bottom:12px;">By total Civica Score across all five dimensions.</p>
+    <div class="chips"><a class="chip" aria-current="true" href="{root}leaderboard.html">🇺🇸 National Top 100</a></div>
+    <div class="chips">{overall}</div>
+  </div>
+  <div class="footer">100% federal data · Civica scores are informational only, not financial or real estate advice. &copy; 2026 Civica.</div>
+</div></body></html>'''
+
+
+def build_rankings_chips(row):
+    """Town-page card: links up to the state Overall page + any state ranking the town lands in."""
+    st = str(row['state_abbr'])
+    sn = STATE_NAMES.get(st, st)
+    chips = [f'<a class="rk-chip" href="../states/{st}.html">📋 Best Towns in {sn}</a>']
+    for c in RANK_CATS:
+        sr = row.get(f'srank_{c["key"]}')
+        if sr is not None and not pd.isna(sr) and int(sr) <= 25:
+            chips.append(f'<a class="rk-chip" href="../rankings/{c["key"]}/{st}.html">'
+                         f'{RANK_ICON[c["key"]]} #{int(sr)} {c["word"]} in {st}</a>')
+    return f'''<div class="card rankings-card">
+    <div class="card-title"><span class="ct-icon">🏅</span> Featured in Rankings</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">{''.join(chips)}</div>
+  </div>'''
+
+
+def generate_rankings(df):
+    """Static category ranking pages: national Top 100 + per-state Top 25 for each category, + hub."""
+    os.makedirs(RANK_DIR, exist_ok=True)
+    states = sorted(df['state_abbr'].dropna().unique().tolist())
+    root = '../../../'
+    urls = []
+    for c in RANK_CATS:
+        cdir = os.path.join(RANK_DIR, c['key'])
+        os.makedirs(cdir, exist_ok=True)
+        nat = df.sort_values(c['sort'], ascending=False).head(100)
+        with open(os.path.join(cdir, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(build_ranking_page(c, None, nat, root))
+        urls.append(f'{RANK_URL_BASE}/{c["key"]}/index.html')
+        for s in states:
+            sdf = df[df['state_abbr'] == s].sort_values(c['sort'], ascending=False).head(25)
+            if sdf.empty:
+                continue
+            with open(os.path.join(cdir, f'{s}.html'), 'w', encoding='utf-8') as f:
+                f.write(build_ranking_page(c, s, sdf, root))
+            urls.append(f'{RANK_URL_BASE}/{c["key"]}/{s}.html')
+    with open(os.path.join(RANK_DIR, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(build_rankings_hub(states))
+    urls.append(f'{RANK_URL_BASE}/index.html')
+    print(f'  rankings: {len(urls)} pages -> output/rankings/ ({len(RANK_CATS)} categories × national + {len(states)} states)')
+    return urls
+
+
 # ── Index + progress ledger ──────────────────────────────────────────────────────
 
 def load_index():
@@ -865,11 +1104,13 @@ def write_progress(p):
     json.dump(p, open(PROGRESS, 'w', encoding='utf-8'), indent=2)
 
 
-def write_sitemap(index_map):
-    """Regenerate sitemap.xml from town URLs + the core static pages."""
+def write_sitemap(index_map, extra_urls=None):
+    """Regenerate sitemap.xml from town URLs + the core static pages + ranking pages."""
     static = ['', 'map.html', 'leaderboard.html', 'compare.html', 'methodology.html',
-              'disclaimer.html', 'privacy.html', 'terms.html']
+              'agents.html', 'disclaimer.html', 'privacy.html', 'terms.html']
     urls = [f'  <url><loc>{SITE_URL}/{p}</loc></url>' for p in static]
+    for u in (extra_urls or []):
+        urls.append(f'  <url><loc>{u}</loc></url>')
     states = sorted({rec['state'] for rec in index_map.values()})
     for st in states:
         urls.append(f'  <url><loc>{STATE_URL_BASE}/{st}.html</loc></url>')
@@ -1006,6 +1247,10 @@ def main():
         'town_income', 'rent_burden', 'avg_annual_wage', 'hpi_3yr_avg', 'town_growth_5yr',
         'town_income_growth', 'RNETMIG2023', 'violent_per100k', 'property_per100k', 'school_score')}
 
+    # Per-state rank within each ranking category (drives the town-page "Featured in" chips).
+    for _c in RANK_CATS:
+        df[f'srank_{_c["key"]}'] = df.groupby('state_abbr')[_c['sort']].rank(ascending=False, method='min')
+
     # Which towns have a per-town OG share card (built by build_og_images.py --top N).
     global OG_CARDS
     cards_manifest = os.path.join(SITE, 'output', 'og', '_cards.json')
@@ -1049,9 +1294,11 @@ def main():
     remaining = [s for s in all_states if s not in progress['done']]
     # Bake crawlable content into the JS-driven landing + leaderboard.
     inject_ssr(sorted(index_map.values(), key=lambda x: x['score'], reverse=True))
+    # Category ranking pages (safest / schools / affordable / growth — national + per-state).
+    rank_urls = generate_rankings(df)
     # Regenerate the sitemap once everything is built (idempotent).
     if not remaining:
-        n_urls = write_sitemap(index_map)
+        n_urls = write_sitemap(index_map, rank_urls)
         print(f'  sitemap.xml regenerated: {n_urls:,} URLs')
     print(f'\nDone. town_index.json: {total:,} towns. '
           f'States done: {len(progress["done"])}/{len(all_states)}. '
