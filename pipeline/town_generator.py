@@ -917,6 +917,59 @@ def generate_state(state_df, style, index_map, geo, sib_cols):
     return len(state_df)
 
 
+def _inject_between(html, start, end, content):
+    """Replace everything between two marker comments (markers kept), so the bake is re-runnable."""
+    i, j = html.find(start), html.find(end)
+    if i == -1 or j == -1:
+        return html
+    return html[:i + len(start)] + content + html[j:]
+
+
+VCLS = {'Strong Buy': 'v-sbuy', 'Buy': 'v-buy', 'Hold': 'v-hold', 'Caution': 'v-caut'}
+
+
+def inject_ssr(records):
+    """Bake crawlable content into the JS-driven landing + leaderboard (records: score-desc dicts).
+    Googlebot and no-JS clients see real town/state links instead of an empty 'Loading…' shell."""
+    # Leaderboard: top-100 rows with real anchor links (the JS still re-renders for users).
+    rows = []
+    for i, c in enumerate(records[:100], 1):
+        fips = str(c['fips']).zfill(7)
+        g = c['town_growth_5yr'] * 100
+        rows.append(
+            f'<tr>'
+            f'<td><span class="rk {"top3" if i <= 3 else ""}">{i}</span></td>'
+            f'<td><a class="t-name" style="text-decoration:none" href="output/towns/{fips}.html">{c["name"]}</a>'
+            f'<div class="t-sub">{c["county"]}, {c["state"]} · #{c["rank_in_county"]} in county</div></td>'
+            f'<td><span class="sc">{round(c["score"])}</span></td>'
+            f'<td><span class="vbadge {VCLS.get(c["label"], "")}">{c["label"]}</span></td>'
+            f'<td class="r col-opt mono">${round(c["town_income"] / 1000)}k</td>'
+            f'<td class="r col-opt mono {"pos" if g >= 0 else "neg"}">{"+" if g >= 0 else ""}{g:.1f}%</td>'
+            f'<td class="r mono">{round(c["violent_per100k"])}</td>'
+            f'</tr>')
+    top100 = ''.join(rows)
+
+    # Landing: top-12 town chips + a link to every state ranking page.
+    toptowns = ''.join(
+        f'<a class="chip" href="output/towns/{str(c["fips"]).zfill(7)}.html">{c["name"]}, {c["state"]}</a>'
+        for c in records[:12])
+    states = sorted({c['state'] for c in records})
+    statelinks = ''.join(
+        f'<a class="chip" href="output/states/{s}.html">{STATE_NAMES.get(s, s)}</a>' for s in states)
+
+    lb = os.path.join(SITE, 'leaderboard.html')
+    html = open(lb, encoding='utf-8').read()
+    html = _inject_between(html, '<!--SSR_TOP100_START-->', '<!--SSR_TOP100_END-->', top100)
+    open(lb, 'w', encoding='utf-8').write(html)
+
+    ix = os.path.join(SITE, 'index.html')
+    html = open(ix, encoding='utf-8').read()
+    html = _inject_between(html, '<!--SSR_TOPTOWNS_START-->', '<!--SSR_TOPTOWNS_END-->', toptowns)
+    html = _inject_between(html, '<!--SSR_STATES_START-->', '<!--SSR_STATES_END-->', statelinks)
+    open(ix, 'w', encoding='utf-8').write(html)
+    print(f'  SSR: baked top-100 into leaderboard.html; {len(states)} state links + top towns into index.html')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--state', help='2-letter state to generate (default: all states)')
@@ -994,6 +1047,8 @@ def main():
 
     total = write_index(index_map)
     remaining = [s for s in all_states if s not in progress['done']]
+    # Bake crawlable content into the JS-driven landing + leaderboard.
+    inject_ssr(sorted(index_map.values(), key=lambda x: x['score'], reverse=True))
     # Regenerate the sitemap once everything is built (idempotent).
     if not remaining:
         n_urls = write_sitemap(index_map)

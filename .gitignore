@@ -2,6 +2,9 @@
 # Not in the repo; lives next to the scripts as civica_data/.
 civica_data/
 
+# Internal agency playbook (pricing, scripts, SOPs) — never publish.
+for-agents/
+
 # Python
 __pycache__/
 *.py[cod]
