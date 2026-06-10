@@ -1107,7 +1107,7 @@ def write_progress(p):
 def write_sitemap(index_map, extra_urls=None):
     """Regenerate sitemap.xml from town URLs + the core static pages + ranking pages."""
     static = ['', 'map.html', 'leaderboard.html', 'compare.html', 'methodology.html',
-              'agents.html', 'disclaimer.html', 'privacy.html', 'terms.html']
+              'disclaimer.html', 'privacy.html', 'terms.html']
     urls = [f'  <url><loc>{SITE_URL}/{p}</loc></url>' for p in static]
     for u in (extra_urls or []):
         urls.append(f'  <url><loc>{u}</loc></url>')
