@@ -48,6 +48,11 @@
 .closer{ text-align:center; padding:var(--s6) 0; }
 .closer h2{ font-size:24px; }
 .closer .row{ justify-content:center; margin-top:var(--s3); }
+/* mobile: extra side breathing room for text (header keeps --s3 so the nav fits) */
+@media(max-width:480px){
+  .hero.wrap, .closer.wrap, .explain .wrap-narrow, .foot .wrap{
+    padding-left:var(--s4); padding-right:var(--s4); }
+}
 </style>
 </head>
 <body>
