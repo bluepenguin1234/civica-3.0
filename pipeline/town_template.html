@@ -343,4 +343,19 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 .lb-watch { background:#f59e0b; color:#fff; }
 .lb-caut  { background:#dc2626; color:#fff; }
 .lb-avoid { background:#dc2626; color:#fff; }
+
+/* WATCH (email capture strip) */
+.watch { background:var(--card); border:1px solid var(--border); border-radius:var(--r-sm); padding:20px 24px; margin-bottom:16px; }
+.watch-t { font-size:15px; font-weight:700; color:var(--navy); }
+.watch-s { font-size:13px; color:var(--subtext); margin:3px 0 12px; }
+.watch-form { display:flex; gap:8px; flex-wrap:wrap; }
+.watch-in { flex:1 1 180px; min-height:44px; padding:0 14px; font:inherit; font-size:14px; color:var(--text); background:var(--bg); border:1.5px solid var(--border); border-radius:var(--r-sm); }
+.watch-in:focus { outline:none; border-color:var(--blue-lt); box-shadow:0 0 0 3px rgba(26,127,240,.15); }
+.watch-btn { min-height:44px; padding:0 20px; border:none; border-radius:var(--r-sm); background:var(--purple); color:#fff; font:inherit; font-size:14px; font-weight:700; cursor:pointer; }
+.watch-btn:hover { background:#094aa3; }
+.watch-btn:disabled { opacity:.6; cursor:default; }
+.watch-ok { display:none; font-size:14px; font-weight:700; color:var(--green); }
+.watch-fine { font-size:11px; color:var(--muted); margin-top:10px; }
+.watch-hp { display:none; }
+@media print { .watch { display:none; } }
 </style>

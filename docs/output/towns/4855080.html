@@ -367,6 +367,21 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 .lb-watch { background:#f59e0b; color:#fff; }
 .lb-caut  { background:#dc2626; color:#fff; }
 .lb-avoid { background:#dc2626; color:#fff; }
+
+/* WATCH (email capture strip) */
+.watch { background:var(--card); border:1px solid var(--border); border-radius:var(--r-sm); padding:20px 24px; margin-bottom:16px; }
+.watch-t { font-size:15px; font-weight:700; color:var(--navy); }
+.watch-s { font-size:13px; color:var(--subtext); margin:3px 0 12px; }
+.watch-form { display:flex; gap:8px; flex-wrap:wrap; }
+.watch-in { flex:1 1 180px; min-height:44px; padding:0 14px; font:inherit; font-size:14px; color:var(--text); background:var(--bg); border:1.5px solid var(--border); border-radius:var(--r-sm); }
+.watch-in:focus { outline:none; border-color:var(--blue-lt); box-shadow:0 0 0 3px rgba(26,127,240,.15); }
+.watch-btn { min-height:44px; padding:0 20px; border:none; border-radius:var(--r-sm); background:var(--purple); color:#fff; font:inherit; font-size:14px; font-weight:700; cursor:pointer; }
+.watch-btn:hover { background:#094aa3; }
+.watch-btn:disabled { opacity:.6; cursor:default; }
+.watch-ok { display:none; font-size:14px; font-weight:700; color:var(--green); }
+.watch-fine { font-size:11px; color:var(--muted); margin-top:10px; }
+.watch-hp { display:none; }
+@media print { .watch { display:none; } }
 </style>
 <style>
 .dc-chip { display:inline-flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:11px; color:rgba(255,255,255,.6); background:rgba(0,0,0,.2); border:1px solid rgba(255,255,255,.12); border-radius:100px; padding:6px 14px; margin-top:14px; }
@@ -503,7 +518,7 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
 <div class="page">
   <div class="print-only print-head">
     <div class="ph-brand"><svg width='24' height='24' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='#0d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg><span class="ph-logo">civi<span style="color:#1a7ff0;">ca</span></span><span class="ph-tag">Town Report</span></div>
-    <div class="ph-meta">civica.app/output/towns/4855080.html<br>Generated Jun 8, 2026</div>
+    <div class="ph-meta">civica.app/output/towns/4855080.html<br>Generated Jun 10, 2026</div>
   </div>
   <div class="hero">
   <button class="pdf-btn" onclick="window.print()" title="Save or print this report as a PDF">⬇ Save as PDF</button>
@@ -537,6 +552,22 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   <div class="signal sig-yellow" style="margin:0 0 16px;">
     <div class="icon">👀</div>
     <div class="body" style="font-size:14px;"><strong>Civica Verdict:</strong> Paris city is a <strong>Hold</strong> — a balanced, middle-of-the-pack market. Affordability (61/100) is the bright spot; Safety & Place (35/100) lags.</div>
+  </div>
+  <div class="watch">
+    <div class="watch-t">🔔 Watch Paris city</div>
+    <div class="watch-s">Civica re-scores every town as new federal data lands. Get an email if Paris city moves.</div>
+    <form class="watch-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="12783af0-203e-4eb6-9629-e8ac64ad41aa">
+      <input type="hidden" name="subject" value="New town watcher: Paris city, TX">
+      <input type="hidden" name="from_name" value="Civica Towns">
+      <input type="hidden" name="town" value="Paris city, TX">
+      <input type="hidden" name="fips" value="4855080">
+      <input type="checkbox" name="botcheck" class="watch-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input class="watch-in" type="email" name="email" required placeholder="you@email.com" aria-label="Your email address">
+      <button class="watch-btn" type="submit">Watch this town</button>
+    </form>
+    <div class="watch-ok">✓ Watching Paris city, TX — you'll get the next score update.</div>
+    <div class="watch-fine">Free · score alerts only, no spam · unsubscribe anytime.</div>
   </div>
   <div class="card">
     <div class="card-title" style="margin-bottom:8px;"><span class="ct-icon">⚡</span> At a Glance</div>
@@ -764,6 +795,35 @@ h1, h2, h3, .acc-title, .sh-num, .sb-val, .gt-val { font-family: 'Poppins', sans
   var m=L.map('locmap',{zoomControl:true,scrollWheelZoom:false,attributionControl:false}).setView([lat,lon],11);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:17}).addTo(m);
   L.circleMarker([lat,lon],{radius:9,color:'#fff',weight:2,fillColor:col,fillOpacity:.9}).addTo(m);
+})();
+</script>
+<script>
+(function () {
+  var f = document.querySelector('.watch-form');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = f.querySelector('.watch-btn');
+    btn.disabled = true; btn.textContent = 'Adding…';
+    var data = {};
+    new FormData(f).forEach(function (v, k) { data[k] = v; });
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (res.success) {
+        f.style.display = 'none';
+        document.querySelector('.watch-ok').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Watch this town';
+        alert('Something went wrong — please try again.');
+      }
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = 'Watch this town';
+      f.submit();
+    });
+  });
 })();
 </script>
 </body>

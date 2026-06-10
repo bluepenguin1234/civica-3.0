@@ -475,6 +475,62 @@ def build_dimension_card(row):
   </div>'''
 
 
+WEB3FORMS_KEY = '12783af0-203e-4eb6-9629-e8ac64ad41aa'  # web3forms.com relay — signups land in the owner inbox
+
+
+def build_watch_card(place, state, fips):
+    """Email-capture strip ('watch this town'). Posts to Web3Forms — no backend needed;
+    every signup is tagged with the town + FIPS so alerts can be segmented later."""
+    town = f'{place}, {state}'
+    return f'''<div class="watch">
+    <div class="watch-t">🔔 Watch {place}</div>
+    <div class="watch-s">Civica re-scores every town as new federal data lands. Get an email if {place} moves.</div>
+    <form class="watch-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
+      <input type="hidden" name="subject" value="New town watcher: {town}">
+      <input type="hidden" name="from_name" value="Civica Towns">
+      <input type="hidden" name="town" value="{town}">
+      <input type="hidden" name="fips" value="{fips}">
+      <input type="checkbox" name="botcheck" class="watch-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input class="watch-in" type="email" name="email" required placeholder="you@email.com" aria-label="Your email address">
+      <button class="watch-btn" type="submit">Watch this town</button>
+    </form>
+    <div class="watch-ok">✓ Watching {town} — you'll get the next score update.</div>
+    <div class="watch-fine">Free · score alerts only, no spam · unsubscribe anytime.</div>
+  </div>'''
+
+
+WATCH_SCRIPT = '''<script>
+(function () {
+  var f = document.querySelector('.watch-form');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = f.querySelector('.watch-btn');
+    btn.disabled = true; btn.textContent = 'Adding…';
+    var data = {};
+    new FormData(f).forEach(function (v, k) { data[k] = v; });
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (res.success) {
+        f.style.display = 'none';
+        document.querySelector('.watch-ok').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Watch this town';
+        alert('Something went wrong — please try again.');
+      }
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = 'Watch this town';
+      f.submit();
+    });
+  });
+})();
+</script>'''
+
+
 def build_verdict_card(row, place):
     label = row['market_label']
     sig_cls, icon = LABEL_SIG.get(label, ('sig-yellow', '👀'))
@@ -716,6 +772,7 @@ def generate_page(row, style, geo, siblings):
   {build_print_header(fips)}
   {build_hero(row, place, state, county)}
   {build_verdict_card(row, place)}
+  {build_watch_card(place, state, fips)}
   {build_glance(row)}
   {build_dimension_card(row)}
   {build_position_card(row)}
@@ -731,6 +788,7 @@ def generate_page(row, style, geo, siblings):
   {FOOTER}
 </div>
 {LOC_SCRIPT}
+{WATCH_SCRIPT}
 </body>
 </html>'''
 
