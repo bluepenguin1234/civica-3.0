@@ -1170,8 +1170,8 @@ VCLS = {'Strong Buy': 'v-sbuy', 'Buy': 'v-buy', 'Hold': 'v-hold', 'Caution': 'v-
 
 
 def inject_ssr(records):
-    """Bake crawlable content into the JS-driven landing + leaderboard (records: score-desc dicts).
-    Googlebot and no-JS clients see real town/state links instead of an empty 'Loading…' shell."""
+    """Bake crawlable content into the JS-driven leaderboard (records: score-desc dicts).
+    Googlebot and no-JS clients see real town links instead of an empty 'Loading…' shell."""
     # Leaderboard: top-100 rows with real anchor links (the JS still re-renders for users).
     rows = []
     for i, c in enumerate(records[:100], 1):
@@ -1190,25 +1190,11 @@ def inject_ssr(records):
             f'</tr>')
     top100 = ''.join(rows)
 
-    # Landing: top-12 town chips + a link to every state ranking page.
-    toptowns = ''.join(
-        f'<a class="chip" href="output/towns/{str(c["fips"]).zfill(7)}.html">{c["name"]}, {c["state"]}</a>'
-        for c in records[:12])
-    states = sorted({c['state'] for c in records})
-    statelinks = ''.join(
-        f'<a class="chip" href="output/states/{s}.html">{STATE_NAMES.get(s, s)}</a>' for s in states)
-
     lb = os.path.join(SITE, 'leaderboard.html')
     html = open(lb, encoding='utf-8').read()
     html = _inject_between(html, '<!--SSR_TOP100_START-->', '<!--SSR_TOP100_END-->', top100)
     open(lb, 'w', encoding='utf-8').write(html)
-
-    ix = os.path.join(SITE, 'index.html')
-    html = open(ix, encoding='utf-8').read()
-    html = _inject_between(html, '<!--SSR_TOPTOWNS_START-->', '<!--SSR_TOPTOWNS_END-->', toptowns)
-    html = _inject_between(html, '<!--SSR_STATES_START-->', '<!--SSR_STATES_END-->', statelinks)
-    open(ix, 'w', encoding='utf-8').write(html)
-    print(f'  SSR: baked top-100 into leaderboard.html; {len(states)} state links + top towns into index.html')
+    print('  SSR: baked top-100 into leaderboard.html')
 
 
 def main():
