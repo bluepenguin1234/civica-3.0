@@ -55,6 +55,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 .nav a:hover{ color:var(--text); background:var(--surface-soft); text-decoration:none; }
 .nav a[aria-current="page"]{ color:var(--ink); font-weight:700; }
 @media(max-width:680px){ .nav a.opt{ display:none; } }
+@media(max-width:480px){
+  .hdr-in{ height:56px; }
+  .logo b{ font-size:18px; }
+  .nav{ gap:0; }
+  .nav a{ font-size:13px; padding:10px 8px; }
+}
 
 /* ── Buttons ── */
 .btn{ font:inherit; font-weight:700; font-size:15px; min-height:44px; padding:0 22px; border-radius:10px;
@@ -116,6 +122,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 .tbl tbody tr{ cursor:pointer; }
 .tbl tbody tr:hover td{ background:var(--surface-soft); }
 .tbl .r{ text-align:right; }
+@media(max-width:480px){
+  .tbl{ font-size:13px; }
+  .tbl td{ padding:10px var(--s1); }
+  .tbl th{ padding:0 var(--s1) 12px; }
+}
 
 /* ── Footer ── */
 .foot{ border-top:1px solid var(--border); padding:var(--s5) 0; color:var(--muted); font-size:13px; line-height:1.8; }
