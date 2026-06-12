@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — Civica Signals</title>
+<meta name="description" content="Sign in to Civica Signals — development projects, rezonings, and public work moving through North Shore Massachusetts town halls.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../clean.css">
+<style>
+body{ background:var(--surface-soft); min-height:100vh; }
+.gate{ max-width:440px; margin:0 auto; padding:var(--s5) var(--s3) var(--s6); }
+.gate-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); box-shadow:var(--shadow); padding:var(--s4); text-align:center; }
+.gate-logo{ display:inline-flex; align-items:center; gap:10px; margin-bottom:var(--s2); }
+.gate-logo b{ font-family:'Poppins'; font-size:22px; font-weight:800; color:var(--ink); }
+.gate-logo b i{ font-style:normal; color:var(--primary-strong); }
+.gate h1{ font-size:22px; font-weight:800; margin-bottom:6px; }
+.gate p.sub{ font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:var(--s3); }
+.gate .btn{ width:100%; justify-content:center; font-size:16px; min-height:48px; }
+.gate-note{ font-size:12.5px; color:var(--muted); margin-top:var(--s2); line-height:1.6; }
+.founding{ margin-top:var(--s3); padding-top:var(--s2); border-top:1px solid var(--border); font-size:13px; color:var(--text); line-height:1.65; }
+.founding b{ color:var(--ink); }
+.gate-points{ text-align:left; margin:var(--s3) 0; display:grid; gap:10px; }
+.gate-points div{ font-size:13.5px; color:var(--text); line-height:1.55; padding-left:22px; position:relative; }
+.gate-points div::before{ content:"✓"; position:absolute; left:0; color:var(--success); font-weight:700; }
+.back-home{ display:block; text-align:center; margin-top:var(--s2); font-size:13px; }
+</style>
+</head>
+<body>
+<main class="gate">
+  <div class="gate-card">
+    <span class="gate-logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </span>
+    <h1>Civica Signals</h1>
+    <p class="sub">Every development project, rezoning, and public job moving through
+    North Shore town halls — extracted from official agendas and minutes, with a
+    source link on every item.</p>
+
+    <div class="gate-points">
+      <div>Project stories tracked across boards and months</div>
+      <div>Applicants, engineers, and procurement contacts as named in the record</div>
+      <div>Upcoming hearings before they happen — agendas are the early signal</div>
+    </div>
+
+    <button class="btn btn-primary" id="signinBtn" type="button">Sign in</button>
+    <p class="gate-note">Free preview — no account needed yet. Member accounts are
+    coming soon; for now, sign in takes you straight to the dashboard.</p>
+
+    <div class="founding"><b>Founding member rate:</b> $149/mo locked for life for
+    the first 15 subscribers — join the waitlist on the dashboard.</div>
+  </div>
+  <a class="back-home" href="../index.html">← Back to Civica town scores</a>
+</main>
+
+<script>
+"use strict";
+/* Pass-through gate: real authentication (Supabase) arrives in Phase 5B and
+ * replaces this handler + checkAccess() in signals.js. Nothing else changes. */
+document.getElementById("signinBtn").addEventListener("click", function () {
+  localStorage.setItem("civica_signals_session",
+    JSON.stringify({ tier: "free_preview", signed_in_at: new Date().toISOString() }));
+  location.replace("./");
+});
+</script>
+</body>
+</html>

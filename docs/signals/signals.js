@@ -11,9 +11,22 @@
 const DATA_BASE_URL = "../output/signals";   // future: https://api.<host>/signals
 const WAITLIST_EMAIL = "TODO-waitlist@example.com"; // placeholder until Formspree/ConvertKit is configured
 
-/* The gating seam. ALL data access flows through here. */
+/* The gating seam. ALL data access flows through here.
+ * Today: a pass-through session set by login.html's Sign in button.
+ * Phase 5B: read the real Supabase session + profile tier here instead. */
+const SESSION_KEY = "civica_signals_session";
+
 function checkAccess() {
-  return { authorized: true, tier: "free_preview" };
+  try {
+    const session = JSON.parse(localStorage.getItem(SESSION_KEY));
+    if (session && session.tier) return { authorized: true, tier: session.tier };
+  } catch (_) { /* corrupt session -> sign in again */ }
+  return { authorized: false, tier: null };
+}
+
+function signOut() {
+  localStorage.removeItem(SESSION_KEY);
+  location.replace("login.html");
 }
 
 const TYPE_LABELS = {
@@ -320,8 +333,10 @@ function showError(msg) {
 
 async function boot() {
   const access = checkAccess();          // the future 401 path lives here
+  if (!access.authorized) { location.replace("login.html"); return; }
   setupBanner(access);
-  if (!access.authorized) { showError("Sign-in required."); return; }
+  const signoutLink = document.getElementById("signoutLink");
+  if (signoutLink) signoutLink.addEventListener("click", (e) => { e.preventDefault(); signOut(); });
   try {
     const resp = await fetch(`${DATA_BASE_URL}/feed.json`, { cache: "no-cache" });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
