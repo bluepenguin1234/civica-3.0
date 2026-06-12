@@ -42,19 +42,24 @@ button{ font:inherit; cursor:pointer; }
 .hdr .town{ font-size:13px; color:var(--muted); }
 .hdr .town b{ color:var(--ink); }
 
-/* slim hero */
-.hero{ padding:var(--s3) 0 var(--s2); }
+/* slim hero + audience switch */
+.hero{ padding:var(--s3) 0 var(--s2); display:flex; align-items:flex-end;
+  justify-content:space-between; gap:12px; flex-wrap:wrap; }
 .hero h1{ font-size:24px; font-weight:800; }
 .hero .sub{ font-size:13.5px; color:var(--muted); margin-top:2px; }
+.modesw{ display:flex; background:var(--surface-sunken); border-radius:var(--r-pill); padding:3px; }
+.modesw button{ border:none; background:transparent; border-radius:var(--r-pill);
+  font-size:13px; font-weight:700; color:var(--muted); padding:0 16px; min-height:40px; }
+.modesw button[aria-pressed="true"]{ background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
 
-/* ── Control row 1: the 3-view switch ── */
+/* ── Control row 1: the 3-view switch (one per mode) ── */
 .views{ display:flex; gap:0; background:var(--surface-sunken); border-radius:var(--r-pill);
   padding:4px; margin:var(--s2) 0 10px; }
 .views button{ flex:1; min-height:42px; border:none; background:transparent; border-radius:var(--r-pill);
   font-size:14px; font-weight:700; color:var(--muted); }
 .views button[aria-pressed="true"]{ background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
 
-/* ── Control row 2: trade chips (scroll row) + one Filters button ── */
+/* ── Control row 2: chips (scroll row) + one Filters button ── */
 .controls{ display:flex; align-items:center; gap:10px; margin-bottom:var(--s2); }
 .chips{ display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; flex:1; padding:2px; }
 .chips::-webkit-scrollbar{ display:none; }
@@ -90,7 +95,7 @@ button{ font:inherit; cursor:pointer; }
 
 /* ── Card v2 — four lines, 2-second scan ── */
 .scard{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r);
-  padding:var(--s2) ; margin-bottom:10px; box-shadow:var(--shadow); display:block; width:100%;
+  padding:var(--s2); margin-bottom:10px; box-shadow:var(--shadow); display:block; width:100%;
   text-align:left; transition:border-color .15s; }
 .scard:hover{ border-color:var(--primary); }
 .l1{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
@@ -101,6 +106,7 @@ button{ font:inherit; cursor:pointer; }
 .sbadge::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--c,var(--muted)); }
 .sg-open{ --c:var(--success); } .sg-approved{ --c:var(--success); }
 .sg-hearing{ --c:var(--warning); } .sg-funded{ --c:var(--primary); }
+.sg-proposed{ --c:var(--primary); } .sg-denied{ --c:var(--danger); }
 .datepill{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--primary-strong);
   background:var(--surface-soft); border:1px solid var(--border); border-radius:var(--r-pill);
   padding:3px 10px; white-space:nowrap; }
@@ -148,7 +154,7 @@ button{ font:inherit; cursor:pointer; }
 .srcs{ display:flex; gap:14px; flex-wrap:wrap; font-size:13px; }
 
 .empty{ background:var(--surface-soft); border:1px dashed var(--border); border-radius:var(--r);
-  padding:var(--s3); text-align:center; color:var(--muted); font-size:14px; }
+  padding:var(--s3); text-align:center; color:var(--muted); font-size:14px; display:none; }
 .foot{ border-top:1px solid var(--border); margin-top:var(--s5); padding:var(--s3) 0 var(--s5);
   font-size:12.5px; color:var(--muted); }
 </style>
@@ -169,147 +175,275 @@ button{ font:inherit; cursor:pointer; }
   <!-- ════════ FEED ════════ -->
   <div id="feed">
     <div class="hero">
-      <h1>Signals</h1>
-      <p class="sub">Work moving through town hall — from the public record.</p>
-    </div>
-
-    <!-- Control row 1: the ONLY top-level navigation. 3 plain-word views. -->
-    <div class="views" role="tablist" aria-label="View">
-      <button role="tab" aria-pressed="true" data-view="open">Open jobs</button>
-      <button role="tab" aria-pressed="false" data-view="coming">Coming up</button>
-      <button role="tab" aria-pressed="false" data-view="all">Everything</button>
-    </div>
-
-    <!-- Control row 2: trade chips + ONE Filters button. Nothing else at rest. -->
-    <div class="controls">
-      <div class="chips" aria-label="Filter by trade">
-        <button class="chip" aria-pressed="false" data-trade="roofing">Roofing</button>
-        <button class="chip" aria-pressed="false" data-trade="electrical">Electrical</button>
-        <button class="chip" aria-pressed="false" data-trade="hvac">HVAC</button>
-        <button class="chip" aria-pressed="false" data-trade="plumbing">Plumbing</button>
-        <button class="chip" aria-pressed="false" data-trade="sitework">Site work</button>
-        <button class="chip" aria-pressed="false" data-trade="paving">Paving</button>
-        <button class="chip" aria-pressed="false" data-trade="landscaping">Landscaping</button>
-        <button class="chip" aria-pressed="false" data-trade="solar">Solar</button>
+      <div>
+        <h1>Signals</h1>
+        <p class="sub">Work moving through town hall — from the public record.</p>
       </div>
-      <button class="clear-btn" id="clearBtn">clear</button>
-      <button class="filters-btn" id="filtersBtn" aria-expanded="false">Filters
-        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 3h8M3.5 6h5M5 9h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-
-    <!-- Everything else hides in the one sheet -->
-    <div class="sheet" id="sheet">
-      <div class="row">
-        <label class="full">Search
-          <input type="text" placeholder="Project, street, or company name…"></label>
-        <label>From <input type="date"></label>
-        <label>To <input type="date"></label>
-        <label>Stage
-          <select><option>any</option><option>hearing</option><option>approved</option><option>permitted</option></select></label>
-        <label class="toggle"><input type="checkbox"> Has contact info</label>
+      <!-- The one-time audience switch (D0). Remembered; changeable any time. -->
+      <div class="modesw" role="tablist" aria-label="Audience">
+        <button aria-pressed="true" data-mode="modeC">Contractors</button>
+        <button aria-pressed="false" data-mode="modeR">Realtors</button>
       </div>
     </div>
 
-    <!-- ── View: OPEN JOBS (default) ── -->
-    <section data-pane="open">
-      <h2 class="sec">Open bids <span class="count">2</span></h2>
+    <!-- ══════════════ CONTRACTOR MODE ══════════════ -->
+    <div class="mode-pane" id="modeC">
 
-      <button class="scard" data-trades="roofing" onclick="openDetail()">
-        <div class="l1"><h3>Roof replacement — Riverside Elementary School</h3>
-          <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jun 26</span></div>
-        <p class="l2">Town invites sealed bids for full tear-off and re-roof of the 1998 wing, ±18,000 sq ft, EPDM. Pre-bid walkthrough Jun 18.</p>
-        <div class="l3"><span class="tchip">Roofing</span></div>
-        <p class="l4"><b>Purchasing:</b> J. Doe, Town Hall — <span class="link">jdoe@example.gov</span> · <span class="link">(555) 010-0123</span></p>
-      </button>
+      <div class="views" role="tablist" aria-label="View">
+        <button role="tab" aria-pressed="true" data-view="open">Open jobs</button>
+        <button role="tab" aria-pressed="false" data-view="coming">Coming up</button>
+        <button role="tab" aria-pressed="false" data-view="all">Everything</button>
+      </div>
 
-      <button class="scard" data-trades="paving sitework" onclick="openDetail()">
-        <div class="l1"><h3>FY27 pavement program — various streets</h3>
-          <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jul 2</span></div>
-        <p class="l2">Annual mill-and-overlay contract, ±5 lane-miles plus ADA ramp upgrades at 14 intersections. $480,000 appropriated.</p>
-        <div class="l3"><span class="tchip">Paving</span><span class="tchip">Site work</span></div>
-        <p class="l4"><b>DPW:</b> Engineering office — <span class="link">dpw@example.gov</span></p>
-      </button>
+      <div class="controls">
+        <div class="chips" aria-label="Filter by trade">
+          <button class="chip" aria-pressed="false" data-tag="roofing">Roofing</button>
+          <button class="chip" aria-pressed="false" data-tag="electrical">Electrical</button>
+          <button class="chip" aria-pressed="false" data-tag="hvac">HVAC</button>
+          <button class="chip" aria-pressed="false" data-tag="plumbing">Plumbing</button>
+          <button class="chip" aria-pressed="false" data-tag="sitework">Site work</button>
+          <button class="chip" aria-pressed="false" data-tag="paving">Paving</button>
+          <button class="chip" aria-pressed="false" data-tag="landscaping">Landscaping</button>
+          <button class="chip" aria-pressed="false" data-tag="solar">Solar</button>
+        </div>
+        <button class="clear-btn">clear</button>
+        <button class="filters-btn" aria-expanded="false">Filters
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 3h8M3.5 6h5M5 9h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
 
-      <h2 class="sec">Just approved <span class="count">2</span></h2>
+      <div class="sheet">
+        <div class="row">
+          <label class="full">Search
+            <input type="text" placeholder="Project, street, or company name…"></label>
+          <label>From <input type="date"></label>
+          <label>To <input type="date"></label>
+          <label>Stage
+            <select><option>any</option><option>hearing</option><option>approved</option><option>permitted</option></select></label>
+          <label class="toggle"><input type="checkbox"> Has contact info</label>
+        </div>
+      </div>
 
-      <button class="scard" data-trades="sitework electrical plumbing hvac roofing landscaping" onclick="openDetail()">
-        <div class="l1"><h3>36-unit apartments — 12 Demo Street</h3>
-          <span class="sbadge sg-approved">approved</span><span class="datepill">Jun 8</span></div>
-        <p class="l2">Special permit granted for a 36-unit apartment building with ground-floor retail; construction documents now in progress.</p>
-        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span><span class="tchip">Roofing</span><span class="tchip">+2</span></div>
-        <p class="l4"><b>Developer:</b> Sample Development LLC — <span class="link">View contacts (4)</span></p>
-      </button>
+      <!-- View: OPEN JOBS (default) -->
+      <section data-pane="open">
+        <h2 class="sec">Open bids <span class="count">2</span></h2>
 
-      <button class="scard" data-trades="solar electrical" onclick="openDetail()">
-        <div class="l1"><h3>Rooftop solar — Hillside Business Park</h3>
-          <span class="sbadge sg-approved">permitted</span><span class="datepill">Jun 3</span></div>
-        <p class="l2">650 kW rooftop array across three warehouse buildings cleared its final electrical permit; installer not yet named.</p>
-        <div class="l3"><span class="tchip">Solar</span><span class="tchip">Electrical</span></div>
-        <p class="l4"><b>Owner:</b> Example Properties Trust — <span class="link">website ↗</span></p>
-      </button>
+        <button class="scard" data-tags="roofing" onclick="openDetail()">
+          <div class="l1"><h3>Roof replacement — Riverside Elementary School</h3>
+            <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jun 26</span></div>
+          <p class="l2">Town invites sealed bids for full tear-off and re-roof of the 1998 wing, ±18,000 sq ft, EPDM. Pre-bid walkthrough Jun 18.</p>
+          <div class="l3"><span class="tchip">Roofing</span></div>
+          <p class="l4"><b>Purchasing:</b> J. Doe, Town Hall — <span class="link">jdoe@example.gov</span> · <span class="link">(555) 010-0123</span></p>
+        </button>
 
-      <h2 class="sec">Funded public work <span class="count">1</span></h2>
+        <button class="scard" data-tags="paving sitework" onclick="openDetail()">
+          <div class="l1"><h3>FY27 pavement program — various streets</h3>
+            <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jul 2</span></div>
+          <p class="l2">Annual mill-and-overlay contract, ±5 lane-miles plus ADA ramp upgrades at 14 intersections. $480,000 appropriated.</p>
+          <div class="l3"><span class="tchip">Paving</span><span class="tchip">Site work</span></div>
+          <p class="l4"><b>DPW:</b> Engineering office — <span class="link">dpw@example.gov</span></p>
+        </button>
 
-      <button class="scard" data-trades="sitework landscaping" onclick="openDetail()">
-        <div class="l1"><h3>Town common improvements (Article 12)</h3>
-          <span class="sbadge sg-funded">funded</span><span class="datepill">$310,000</span></div>
-        <p class="l2">Town Meeting appropriated $310,000 for walkway reconstruction, drainage, and plantings; bid expected this fall.</p>
-        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
-        <p class="l4"><b>Contact:</b> Parks Dept. — <span class="link">parks@example.gov</span></p>
-      </button>
+        <h2 class="sec">Just approved <span class="count">2</span></h2>
 
-      <div class="empty" id="emptyOpen" style="display:none">No open jobs match that trade. <a href="#" onclick="clearChips();return false;">Clear filter</a></div>
-    </section>
+        <button class="scard" data-tags="sitework electrical plumbing hvac roofing landscaping" onclick="openDetail()">
+          <div class="l1"><h3>36-unit apartments — 12 Demo Street</h3>
+            <span class="sbadge sg-approved">approved</span><span class="datepill">Jun 8</span></div>
+          <p class="l2">Special permit granted for a 36-unit apartment building with ground-floor retail; construction documents now in progress.</p>
+          <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span><span class="tchip">Roofing</span><span class="tchip">+2</span></div>
+          <p class="l4"><b>Developer:</b> Sample Development LLC — <span class="link">View contacts (4)</span></p>
+        </button>
 
-    <!-- ── View: COMING UP ── -->
-    <section data-pane="coming" hidden>
-      <h2 class="sec">Next hearings <span class="count">3</span></h2>
+        <button class="scard" data-tags="solar electrical" onclick="openDetail()">
+          <div class="l1"><h3>Rooftop solar — Hillside Business Park</h3>
+            <span class="sbadge sg-approved">permitted</span><span class="datepill">Jun 3</span></div>
+          <p class="l2">650 kW rooftop array across three warehouse buildings cleared its final electrical permit; installer not yet named.</p>
+          <div class="l3"><span class="tchip">Solar</span><span class="tchip">Electrical</span></div>
+          <p class="l4"><b>Owner:</b> Example Properties Trust — <span class="link">website ↗</span></p>
+        </button>
 
-      <button class="scard" data-trades="sitework electrical plumbing hvac" onclick="openDetail()">
-        <div class="l1"><h3>Mixed-use redevelopment — 4–8 Example Ave</h3>
-          <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jun 23</span></div>
-        <p class="l2">24 condos over two retail bays; decision on special permits expected at the June 23 Planning Board meeting.</p>
-        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span></div>
-        <p class="l4"><b>Engineer:</b> Placeholder Engineering Co. — <span class="link">website ↗</span></p>
-      </button>
+        <h2 class="sec">Funded public work <span class="count">1</span></h2>
 
-      <button class="scard" data-trades="sitework paving" onclick="openDetail()">
-        <div class="l1"><h3>Self-storage facility — 200 Sample Rd</h3>
-          <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jul 7</span></div>
-        <p class="l2">Site plan review for a 3-story, 92,000 sq ft self-storage building with 40-space lot; first hearing in July.</p>
-        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Paving</span></div>
-        <p class="l4"><b>Developer:</b> Demo Storage Partners — <span class="link">View contacts (2)</span></p>
-      </button>
+        <button class="scard" data-tags="sitework landscaping" onclick="openDetail()">
+          <div class="l1"><h3>Town common improvements (Article 12)</h3>
+            <span class="sbadge sg-funded">funded</span><span class="datepill">$310,000</span></div>
+          <p class="l2">Town Meeting appropriated $310,000 for walkway reconstruction, drainage, and plantings; bid expected this fall.</p>
+          <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
+          <p class="l4"><b>Contact:</b> Parks Dept. — <span class="link">parks@example.gov</span></p>
+        </button>
 
-      <button class="scard" data-trades="sitework landscaping" onclick="openDetail()">
-        <div class="l1"><h3>14-lot subdivision — Maple Hill</h3>
-          <span class="sbadge sg-hearing">continued</span><span class="datepill">Hearing Jul 14</span></div>
-        <p class="l2">Definitive subdivision plan continued pending revised drainage design; road and utility scope still open.</p>
-        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
-        <p class="l4"><b>Applicant:</b> Fictional Homes Inc. — <span class="link">View contacts (3)</span></p>
-      </button>
-    </section>
+        <div class="empty">No open jobs match that filter. Tap a chip again to turn it off.</div>
+      </section>
 
-    <!-- ── View: EVERYTHING (audit feed, today's extractive cards) ── -->
-    <section data-pane="all" hidden>
-      <h2 class="sec">All activity <span class="count">chronological</span></h2>
-      <button class="scard" onclick="openDetail()">
-        <div class="l1"><h3>Planning Board — Jun 9</h3><span class="sbadge sg-hearing">hearing</span></div>
-        <p class="l2">Continued hearing on the 12 Demo Street special permit; applicant presented revised parking layout. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
-      </button>
-      <button class="scard" onclick="openDetail()">
-        <div class="l1"><h3>Select Board — Jun 2</h3><span class="sbadge sg-funded">informational</span></div>
-        <p class="l2">Utility pole replacement petition approved for Sample Street near #395. <a href="#" onclick="event.stopPropagation()">Source (agenda) ↗</a></p>
-      </button>
-      <button class="scard" onclick="openDetail()">
-        <div class="l1"><h3>Conservation Commission — May 28</h3><span class="sbadge sg-approved">approved</span></div>
-        <p class="l2">Order of Conditions issued for stormwater work at the Hillside Business Park array. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
-      </button>
-    </section>
+      <!-- View: COMING UP -->
+      <section data-pane="coming" hidden>
+        <h2 class="sec">Next hearings <span class="count">3</span></h2>
+
+        <button class="scard" data-tags="sitework electrical plumbing hvac" onclick="openDetail()">
+          <div class="l1"><h3>Mixed-use redevelopment — 4–8 Example Ave</h3>
+            <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jun 23</span></div>
+          <p class="l2">24 condos over two retail bays; decision on special permits expected at the June 23 Planning Board meeting.</p>
+          <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span></div>
+          <p class="l4"><b>Engineer:</b> Placeholder Engineering Co. — <span class="link">website ↗</span></p>
+        </button>
+
+        <button class="scard" data-tags="sitework paving" onclick="openDetail()">
+          <div class="l1"><h3>Self-storage facility — 200 Sample Rd</h3>
+            <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jul 7</span></div>
+          <p class="l2">Site plan review for a 3-story, 92,000 sq ft self-storage building with 40-space lot; first hearing in July.</p>
+          <div class="l3"><span class="tchip">Site work</span><span class="tchip">Paving</span></div>
+          <p class="l4"><b>Developer:</b> Demo Storage Partners — <span class="link">View contacts (2)</span></p>
+        </button>
+
+        <button class="scard" data-tags="sitework landscaping" onclick="openDetail()">
+          <div class="l1"><h3>14-lot subdivision — Maple Hill</h3>
+            <span class="sbadge sg-hearing">continued</span><span class="datepill">Hearing Jul 14</span></div>
+          <p class="l2">Definitive subdivision plan continued pending revised drainage design; road and utility scope still open.</p>
+          <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
+          <p class="l4"><b>Applicant:</b> Fictional Homes Inc. — <span class="link">View contacts (3)</span></p>
+        </button>
+
+        <div class="empty">Nothing coming up matches that filter.</div>
+      </section>
+
+      <!-- View: EVERYTHING (audit feed) -->
+      <section data-pane="all" hidden>
+        <h2 class="sec">All activity <span class="count">chronological</span></h2>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Planning Board — Jun 9</h3><span class="sbadge sg-hearing">hearing</span></div>
+          <p class="l2">Continued hearing on the 12 Demo Street special permit; applicant presented revised parking layout. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+        </button>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Select Board — Jun 2</h3><span class="sbadge sg-funded">informational</span></div>
+          <p class="l2">Utility pole replacement petition approved for Sample Street near #395. <a href="#" onclick="event.stopPropagation()">Source (agenda) ↗</a></p>
+        </button>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Conservation Commission — May 28</h3><span class="sbadge sg-approved">approved</span></div>
+          <p class="l2">Order of Conditions issued for stormwater work at the Hillside Business Park array. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+        </button>
+      </section>
+    </div>
+
+    <!-- ══════════════ REALTOR MODE ══════════════ -->
+    <div class="mode-pane" id="modeR" hidden>
+
+      <div class="views" role="tablist" aria-label="View">
+        <button role="tab" aria-pressed="true" data-view="housing">New housing</button>
+        <button role="tab" aria-pressed="false" data-view="works">In the works</button>
+        <button role="tab" aria-pressed="false" data-view="all">Everything</button>
+      </div>
+
+      <div class="controls">
+        <div class="chips" aria-label="Filter by housing type">
+          <button class="chip" aria-pressed="false" data-tag="apts">Apartments</button>
+          <button class="chip" aria-pressed="false" data-tag="condos">Condos &amp; townhomes</button>
+          <button class="chip" aria-pressed="false" data-tag="sf">Single-family</button>
+          <button class="chip" aria-pressed="false" data-tag="40b">40B / affordable</button>
+          <button class="chip" aria-pressed="false" data-tag="zoning">Zoning changes</button>
+        </div>
+        <button class="clear-btn">clear</button>
+        <button class="filters-btn" aria-expanded="false">Filters
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 3h8M3.5 6h5M5 9h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="sheet">
+        <div class="row">
+          <label class="full">Search
+            <input type="text" placeholder="Project, street, or developer name…"></label>
+          <label>From <input type="date"></label>
+          <label>To <input type="date"></label>
+          <label>Stage
+            <select><option>any</option><option>proposed</option><option>hearing</option><option>approved</option><option>denied</option></select></label>
+          <label class="toggle"><input type="checkbox"> Has developer contact</label>
+        </div>
+      </div>
+
+      <!-- View: NEW HOUSING (default) — future inventory -->
+      <section data-pane="housing">
+        <h2 class="sec">Approved &amp; permitted — future inventory <span class="count">3</span></h2>
+
+        <button class="scard" data-tags="apts" onclick="openDetail()">
+          <div class="l1"><h3>36-unit apartments — 12 Demo Street</h3>
+            <span class="sbadge sg-approved">approved</span><span class="datepill">36 units · rental</span></div>
+          <p class="l2">Four-story building with 36 rental units over two retail bays approved Jun 8. Leasing likely 2027 — 36 future renter households downtown.</p>
+          <p class="l4"><b>Developer:</b> Sample Development LLC — <span class="link">View contacts (4)</span></p>
+        </button>
+
+        <button class="scard" data-tags="sf" onclick="openDetail()">
+          <div class="l1"><h3>Maple Hill — 14 single-family lots</h3>
+            <span class="sbadge sg-approved">approved</span><span class="datepill">14 lots</span></div>
+          <p class="l2">Definitive subdivision approved; builder expects first homes on the market late 2027. New comp territory for the north side.</p>
+          <p class="l4"><b>Developer:</b> Fictional Homes Inc. — <span class="link">View contacts (3)</span></p>
+        </button>
+
+        <button class="scard" data-tags="condos" onclick="openDetail()">
+          <div class="l1"><h3>Duplex conversion — 41 Demo Ave</h3>
+            <span class="sbadge sg-approved">permitted</span><span class="datepill">2 units · ownership</span></div>
+          <p class="l2">Circa-1900 single-family converted to two condo units; both likely listed within the year.</p>
+          <p class="l4"><b>Owner:</b> J. Example — <span class="link">View contact</span></p>
+        </button>
+
+        <h2 class="sec">Recently denied or stalled <span class="count">1</span></h2>
+
+        <button class="scard" data-tags="sf" onclick="openDetail()">
+          <div class="l1"><h3>Hillside cottages — 9-unit cluster</h3>
+            <span class="sbadge sg-denied">denied</span><span class="datepill">May 20</span></div>
+          <p class="l2">Cottage cluster denied over septic capacity; owner signaled the site may return as a 4-lot conventional plan.</p>
+          <p class="l4"><b>Owner:</b> Demo Land Trust — <span class="link">View contact</span></p>
+        </button>
+
+        <div class="empty">No new housing matches that filter. Tap a chip again to turn it off.</div>
+      </section>
+
+      <!-- View: IN THE WORKS — early intel -->
+      <section data-pane="works" hidden>
+        <h2 class="sec">Next hearings <span class="count">3</span></h2>
+
+        <button class="scard" data-tags="condos" onclick="openDetail()">
+          <div class="l1"><h3>24 condos over retail — 4–8 Example Ave</h3>
+            <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jun 23</span></div>
+          <p class="l2">Decision expected June 23. If approved, 24 ownership units two blocks from the train — first downtown condo product since 2023.</p>
+          <p class="l4"><b>Developer:</b> Demo Urban Partners — <span class="link">View contacts (2)</span></p>
+        </button>
+
+        <button class="scard" data-tags="apts 40b" onclick="openDetail()">
+          <div class="l1"><h3>40B — 96 affordable apartments, Route 1</h3>
+            <span class="sbadge sg-proposed">proposed</span><span class="datepill">96 units</span></div>
+          <p class="l2">Comprehensive permit application filed; 25% affordable. Long review likely — early signal for the Route 1 corridor.</p>
+          <p class="l4"><b>Developer:</b> Affordable Example LLC — <span class="link">View contacts (2)</span></p>
+        </button>
+
+        <button class="scard" data-tags="zoning" onclick="openDetail()">
+          <div class="l1"><h3>Zoning change — downtown overlay expansion</h3>
+            <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jul 1</span></div>
+          <p class="l2">Would allow 4-story mixed-use by right on six downtown blocks — a value change for every parcel inside the new line.</p>
+          <p class="l4"><b>Contact:</b> Planning office — <span class="link">planning@example.gov</span></p>
+        </button>
+
+        <div class="empty">Nothing in the works matches that filter.</div>
+      </section>
+
+      <!-- View: EVERYTHING (same shared audit feed) -->
+      <section data-pane="all" hidden>
+        <h2 class="sec">All activity <span class="count">chronological</span></h2>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Planning Board — Jun 9</h3><span class="sbadge sg-hearing">hearing</span></div>
+          <p class="l2">Continued hearing on the 12 Demo Street special permit; applicant presented revised parking layout. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+        </button>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Select Board — Jun 2</h3><span class="sbadge sg-funded">informational</span></div>
+          <p class="l2">Utility pole replacement petition approved for Sample Street near #395. <a href="#" onclick="event.stopPropagation()">Source (agenda) ↗</a></p>
+        </button>
+        <button class="scard" onclick="openDetail()">
+          <div class="l1"><h3>Conservation Commission — May 28</h3><span class="sbadge sg-approved">approved</span></div>
+          <p class="l2">Order of Conditions issued for stormwater work at the Hillside Business Park array. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+        </button>
+      </section>
+    </div>
   </div>
 
-  <!-- ════════ STORY DETAIL — everything heavy lives here, one tap away ════════ -->
+  <!-- ════════ STORY DETAIL — shared by both modes, one tap away ════════ -->
   <div id="detail">
     <button class="back" onclick="closeDetail()">← Back</button>
     <div class="dhead">
@@ -324,13 +458,13 @@ button{ font:inherit; cursor:pointer; }
       36 apartments over two ground-floor retail bays and a 52-space rear lot. Demolition
       of the existing vacant garage is included in the approved plan.</p>
       <div class="outlook"><b>Outlook — projection, not from the record</b>
-        If permits follow the usual pace, site work could begin spring 2027. The general
-        contractor has not been named in any public document.</div>
+        If permits follow the usual pace, site work could begin spring 2027 with leasing
+        in 2028. The general contractor has not been named in any public document.</div>
     </div>
 
     <div class="dblock">
       <h3>Numbers (from the record)</h3>
-      <div class="facts"><span>36 units</span><span>6,400 sq ft retail</span><span>52 parking</span><span>$0 stated value</span></div>
+      <div class="facts"><span>36 units · rental</span><span>6,400 sq ft retail</span><span>52 parking</span><span>$0 stated value</span></div>
     </div>
 
     <div class="dblock">
@@ -370,54 +504,64 @@ button{ font:inherit; cursor:pointer; }
   <footer class="foot">
     <p>Extracted weekly from public municipal records; may lag the source. Items marked
     <b>projection</b> are estimates, not facts from the record. Verify against the linked
-    source before bidding. · Signals methodology · Disclaimer</p>
+    source before bidding or advising a client. · Signals methodology · Disclaimer</p>
   </footer>
 </main>
 
 <script>
-/* Demo-only interactions: view switching, trade-chip filtering, sheet toggle, detail page. */
+/* Demo-only interactions: audience switch, view switching, chip filtering,
+   sheet toggle, detail page. All scoped per mode-pane so the two modes never
+   interfere — mirroring the D0 "one feed, presentation-only modes" rule. */
 "use strict";
-const $$ = (s) => document.querySelectorAll(s);
+const $$ = (s, el) => (el || document).querySelectorAll(s);
 
-$$(".views button").forEach((b) => b.addEventListener("click", () => {
-  $$(".views button").forEach((x) => x.setAttribute("aria-pressed", x === b));
-  $$("[data-pane]").forEach((p) => p.hidden = p.dataset.pane !== b.dataset.view);
-  applyChips();
+/* Audience switch */
+$$(".modesw button").forEach((b) => b.addEventListener("click", () => {
+  $$(".modesw button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+  $$(".mode-pane").forEach((p) => p.hidden = p.id !== b.dataset.mode);
 }));
 
-function activeTrades() {
-  return [...$$(".chip[aria-pressed='true']")].map((c) => c.dataset.trade);
-}
-function applyChips() {
-  const on = activeTrades();
-  document.getElementById("clearBtn").classList.toggle("show", on.length > 0);
+/* View switch (per mode) */
+$$(".views button").forEach((b) => b.addEventListener("click", () => {
+  const scope = b.closest(".mode-pane");
+  $$(".views button", scope).forEach((x) => x.setAttribute("aria-pressed", x === b));
+  $$("[data-pane]", scope).forEach((p) => p.hidden = p.dataset.pane !== b.dataset.view);
+  applyChips(scope);
+}));
+
+/* Chip filtering (per mode) */
+function applyChips(scope) {
+  const on = [...$$(".chip[aria-pressed='true']", scope)].map((c) => c.dataset.tag);
+  scope.querySelector(".clear-btn").classList.toggle("show", on.length > 0);
+  const pane = scope.querySelector("[data-pane]:not([hidden])");
   let visible = 0;
-  $$("[data-pane]:not([hidden]) .scard").forEach((card) => {
-    const trades = (card.dataset.trades || "").split(" ");
-    const show = !on.length || !card.dataset.trades || on.some((t) => trades.includes(t));
+  $$(".scard", pane).forEach((card) => {
+    const tags = (card.dataset.tags || "").split(" ");
+    const show = !on.length || !card.dataset.tags || on.some((t) => tags.includes(t));
     card.style.display = show ? "" : "none";
     if (show) visible++;
   });
-  const empty = document.getElementById("emptyOpen");
-  if (empty) empty.style.display =
-    (!document.querySelector("[data-pane='open']").hidden && visible === 0) ? "" : "none";
+  const empty = pane.querySelector(".empty");
+  if (empty) empty.style.display = visible === 0 ? "block" : "none";
 }
 $$(".chip").forEach((c) => c.addEventListener("click", () => {
   c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true");
-  applyChips();
+  applyChips(c.closest(".mode-pane"));
 }));
-function clearChips() {
-  $$(".chip").forEach((c) => c.setAttribute("aria-pressed", "false"));
-  applyChips();
-}
-document.getElementById("clearBtn").addEventListener("click", clearChips);
+$$(".clear-btn").forEach((btn) => btn.addEventListener("click", () => {
+  const scope = btn.closest(".mode-pane");
+  $$(".chip", scope).forEach((c) => c.setAttribute("aria-pressed", "false"));
+  applyChips(scope);
+}));
 
-document.getElementById("filtersBtn").addEventListener("click", function () {
-  const sheet = document.getElementById("sheet");
+/* The one Filters sheet (per mode) */
+$$(".filters-btn").forEach((btn) => btn.addEventListener("click", () => {
+  const sheet = btn.closest(".mode-pane").querySelector(".sheet");
   sheet.classList.toggle("open");
-  this.setAttribute("aria-expanded", sheet.classList.contains("open"));
-});
+  btn.setAttribute("aria-expanded", sheet.classList.contains("open"));
+}));
 
+/* Story detail (shared) */
 function openDetail() {
   document.getElementById("feed").style.display = "none";
   document.getElementById("detail").classList.add("open");

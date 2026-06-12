@@ -21,12 +21,14 @@ The dashboard today is a *meeting-record news feed*: 88 events / 49 stories for 
 4. **Filters use the regulator's taxonomy** (event types, procedural stages), not the
    contractor's (trade, actionability, has-a-contact).
 
-Four product asks drive this plan: **(a)** easier/cleaner filters, **(b)** contact
+Five product asks drive this plan: **(a)** easier/cleaner filters, **(b)** contact
 intelligence (developer / owner / engineer / architect / GC + website / phone / LinkedIn),
 **(c)** AI summaries written for contractors instead of raw hearing language, **(d)**
-trade-specific filters (HVAC / electrical / roofing / sitework / solar / plumbing …).
+trade-specific filters (HVAC / electrical / roofing / sitework / solar / plumbing …),
+**(e)** a **realtor mode** — the same public record serves a second paying audience:
+future housing inventory, zoning changes, and developer contacts.
 
-Each maps to a phase below: (d)→A3+B, (c)→B, (b)→C, (a)→D.
+Each maps to a phase below: (d)→A3+B, (c)→B, (b)→C, (a)+(e)→D.
 
 ---
 
@@ -47,6 +49,7 @@ migration framework needed):
 | `next_date` | TEXT (ISO) | continuation / next-hearing / bid-due date **explicitly stated** in the document. Today these sit unstructured inside summaries ("continued to June 23, 2026") — pure waste |
 | `trades` | TEXT (JSON array) | controlled vocabulary, see A3 |
 | `is_public_work` | INTEGER | 1 when the buyer is the town/district (appropriations, DPW work, municipal buildings) — drives the Opportunities split |
+| `tenure` | TEXT | `rental \| ownership \| unknown` — only when the document states it (apartments vs. condos matters to realtor mode; never guessed) |
 
 Keep the never-infer rule for all factual fields. `next_date` and `owner` must appear
 verbatim in the document; `trades` is the one judgment field (below).
@@ -251,7 +254,29 @@ All inside `docs/signals/` (template + JS); clean.css tokens only, no new colors
 > - **Plain words over jargon** in all labels ("Open jobs," not "RFP feed";
 >   "Coming up," not "Pre-decision pipeline").
 
-### D1. Views instead of one feed
+### D0. Two modes, one product (ask (e))
+
+A small audience switch in the header — **Contractors | Realtors** — chosen once,
+remembered (localStorage), changeable any time. Each mode keeps the exact same
+simplicity contract: its own three plain-word views and its own single chip row, and
+no screen ever shows both audiences' controls at once. Underneath there is **one feed
+and one pipeline** — modes are pure presentation, so this costs UI work only, not new
+data stages.
+
+Contractor mode is D1–D3 below. **Realtor mode** mirrors it:
+
+- **Views:** **New housing** (default — approved/permitted residential, mixed-use, and
+  subdivisions: future inventory with unit counts, plus recently denied/stalled
+  projects) · **In the works** (pre-decision housing, 40B applications, and zoning
+  changes, soonest hearing first) · **Everything** (the same shared audit feed).
+- **Chip row:** housing type instead of trades — Apartments · Condos & townhomes ·
+  Single-family · 40B / affordable · Zoning changes. Mapped from existing
+  `event_type` + unit counts + `tenure` (A1); no new tagging stage needed.
+- **Card:** the units pill replaces the trade chips as the scan anchor, and line 4
+  prefers the **developer/owner** contact (the realtor's call target) over the
+  engineer or purchasing office.
+
+### D1. Views instead of one feed (contractor mode)
 
 A single row of **3 plain-labeled views** (segmented control, not a nav bar). Three,
 not four — fewer is the point; the Directory is reached by tapping any contact name,
@@ -329,12 +354,12 @@ underneath. Build D1/D2 skeleton early, wire fields as phases land.
 | 1 | A1 prompt+schema v2, re-extract Danvers | S–M | — |
 | 2 | A4 agenda/minutes merge | S | A1 re-run |
 | 3 | A2.1 Bids module crawl+extract | M | A1 |
-| 4 | D1/D2 dashboard skeleton (views, search, cleaner filters) | M | — (parallel) |
+| 4 | D0–D2 dashboard skeleton (mode switch, both modes' views, search, cleaner filters) | M | — (parallel) |
 | 5 | B story briefs + rollups | M | A1, A4 |
 | 6 | A2.2 agenda packets | M | A1 (verify CivicPlus packet URLs first) |
 | 7 | C1 entity resolution + Directory view | M | A1 |
 | 8 | C2 enrichment + review gate, C3 publish + gating decision | L | C1 |
-| 9 | D3 card v2 final wiring | S | B, C |
+| 9 | D3 card v2 final wiring, both modes | M | B, C |
 | 10 | E towns 2–5, digest | M+ | all stable |
 
 Sizes: S ≤ half a day · M ≈ 1–2 days · L ≈ 3+ days. Steps 1–5 are the MVP that visibly
@@ -351,6 +376,8 @@ transforms the dashboard; 6–9 deliver the contact-intelligence promise; 10 sca
 - **Packet size blowups** → page cap + skip-with-flag.
 - **Public JSON vs. paid moat** → decide C3 option (recommend gated `contacts.json`)
   before enrichment ships.
+- **Two modes doubling the UI surface** → modes are presentation-only over one feed
+  (D0 rule); any feature that needs a mode-specific pipeline stage is out of scope.
 - **Crawl politeness** at 5 new sources/towns → existing delay floor stays; real contact
   email before expansion.
 
