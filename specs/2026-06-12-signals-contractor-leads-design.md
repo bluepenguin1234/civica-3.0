@@ -236,41 +236,70 @@ profile links only; entity merge produced no cross-town merges.
 
 All inside `docs/signals/` (template + JS); clean.css tokens only, no new colors.
 
+> **Design principle — radical simplicity (overrides every D-phase decision).**
+> A roofer opens this on a phone between jobs. The screen must answer "is there
+> work for me here?" in **one glance, with zero configuration**. Every control we
+> add is a tax on that glance. Rules we hold ourselves to:
+> - **One screen, one job.** Each view is a single scannable list, top-down,
+>   newest/soonest first. No dashboards-of-dashboards, no dense grids, no charts.
+> - **At most two controls visible at rest** (the view switch + trade chips).
+>   Everything else hides behind one "Filters" button.
+> - **A card is readable in ~2 seconds:** title, one-line what, a date, a contact.
+>   Detail is a tap away, never crammed onto the card.
+> - **Mobile-first, single column** at every width; tap targets ≥ 40px (already a
+>   token convention here). If it isn't obvious without a tutorial, it's wrong.
+> - **Plain words over jargon** in all labels ("Open jobs," not "RFP feed";
+>   "Coming up," not "Pre-decision pipeline").
+
 ### D1. Views instead of one feed
 
-Top-level segmented tabs (replaces nothing — reorganizes what exists):
+A single row of **3 plain-labeled views** (segmented control, not a nav bar). Three,
+not four — fewer is the point; the Directory is reached by tapping any contact name,
+not a top-level tab.
 
-- **Opportunities** (new default): open bids sorted by due date · approved/permitted
-  private projects from the last 60 days · public items with money attached
-  (`dollar_value` + `is_public_work`). This is the "what can I win *now*" screen.
-- **Pipeline**: active stories pre-decision, sorted by `next_date` (soonest hearing
-  first) — the relationship-building window where GCs actually get picked. Uses the
-  already-published-but-unused `upcoming` data.
-- **All activity**: today's chronological feed (kept — it's the trust/audit view).
-- **Directory**: entities ranked by active-project count — developers, engineering
-  firms, architects, attorneys with their projects, websites, phones. Built from C1
-  even before C2 enrichment lands.
+- **Open jobs** (default, zero-config): open bids by due date · just-approved/permitted
+  private projects (last 60 days) · funded public work (`dollar_value` +
+  `is_public_work`). The "what can I win now" screen — this is what loads first.
+- **Coming up**: active projects still pre-decision, soonest hearing (`next_date`)
+  first — the window to get known before the GC is picked. Uses the already-published
+  `upcoming` data.
+- **Everything**: today's chronological feed, kept verbatim as the trust/audit view.
+
+**Directory** is not a tab — tapping any firm/person name anywhere opens that entity's
+page (their projects + contact card). Discoverable, never in the way.
 
 ### D2. Filters, easier and cleaner (ask (a))
 
-- **Row 1:** the four view tabs above (most filtering intent collapses into the view).
-- **Row 2:** **trade chips** (ask (d)) — the ~15 vocabulary entries, multi-select,
-  rendered only for trades present in the data (same pattern as today's type chips);
-  plus a town select (hidden while only one town) and a free-text search box
-  (name/address/applicant substring — trivial client-side).
-- **"More filters" disclosure:** today's event-type chips, stage select, and date range
-  move behind it. They stay for power users; they stop being the first thing a roofer
-  sees. A **"has contacts"** toggle lives here too.
-- Filter state stays URL-persisted (keep `readFilters`/`writeFilters`, extend keys:
-  `view`, `trades`, `q`, `contacts`).
+The whole filter story is **two things at rest, the rest one tap away**:
 
-### D3. Card v2
+- **Visible always:** the 3-view switch + a single horizontal scroll row of **trade
+  chips** (ask (d)) — only trades present in the data, multi-select, tap to toggle.
+  A roofer taps "Roofing" once and is done; no other interaction required.
+- **Behind one "Filters" button** (a sheet/disclosure): free-text search, town select
+  (auto-hidden while one town), date range, stage, event-type, and a "has contacts"
+  toggle. These exist for power users and never crowd the first glance.
+- A small **"clear"** appears only when a filter is active. Filter state stays
+  URL-persisted (keep `readFilters`/`writeFilters`; add keys `view`, `trades`, `q`).
 
-Story card, top to bottom: name + stage badge + **next-date pill** ("Hearing Jun 23") ·
-brief `what`/`status` (Phase B) · `outlook` line styled as projection · numeric facts
-(existing) · **contact block** (role-labeled, provenance-marked, linkified) · trade
-chips · sources (agenda + minutes pair from A4) · timeline (existing). Event cards in
-All-activity keep today's extractive rendering.
+This is strictly fewer visible controls than today (today shows type chips + stage +
+two date inputs + clear, all at once) — simpler, not just rearranged.
+
+### D3. Card v2 (two-second scan, detail one tap away)
+
+The card carries only what answers "is this for me?" — four lines, nothing more:
+
+1. **Title** + stage badge + **next-date pill** ("Hearing Jun 23").
+2. **One-line `what`** (Phase B brief) — the plain-language summary.
+3. **Trade chips** (the matched trades, so the scan confirms the filter hit).
+4. **One primary contact** (most relevant role, linkified) — or "View contacts" if
+   several.
+
+Everything else — `status`/`outlook`, numeric facts, full contact list with
+provenance marks, the agenda+minutes sources, and the timeline — lives on the
+**story detail page** (today's `#story/<id>` route, already built), reached by tapping
+the card. The card never shows all of it at once. Event cards in **Everything** keep
+today's extractive rendering. `outlook` is always rendered as a labeled projection
+(per Phase B), only on the detail page.
 
 ### D4. Sequencing note
 
