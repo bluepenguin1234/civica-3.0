@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civica Signals — Dashboard v2 layout demo (sample data)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Self-contained demo: clean.css tokens inlined verbatim so this file opens anywhere.
+   The real build links ../clean.css instead. NO new colors. */
+:root{
+  --surface:#ffffff; --surface-soft:#f6f9fd; --surface-sunken:#eef2f7;
+  --primary:#1a7ff0; --primary-strong:#0b57c2; --primary-hover:#094aa3;
+  --ink:#0d2d52; --text:#111827; --muted:#5b6170; --border:#e6e8ee; --ring:#1a7ff0;
+  --success:#16a34a; --warning:#f59e0b; --danger:#dc2626;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px;
+  --r:12px; --r-sm:8px; --r-pill:100px;
+  --shadow:0 1px 2px rgba(13,45,82,.05), 0 10px 30px rgba(13,45,82,.07);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:'Roboto',-apple-system,'Segoe UI',Arial,sans-serif; background:var(--surface);
+  color:var(--text); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+h1,h2,h3{ font-family:'Poppins',sans-serif; letter-spacing:-.01em; color:var(--ink); font-weight:700; }
+.mono{ font-family:'Inconsolata',ui-monospace,monospace; font-weight:700; }
+a{ color:var(--primary-strong); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+button{ font:inherit; cursor:pointer; }
+.wrap{ max-width:760px; margin:0 auto; padding:0 var(--s2); }  /* single column, mobile-first */
+
+/* demo ribbon */
+.demo-note{ background:var(--surface-sunken); border-bottom:1px solid var(--border);
+  font-size:12.5px; color:var(--muted); text-align:center; padding:7px 12px; }
+.demo-note b{ color:var(--ink); }
+
+/* header */
+.hdr{ border-bottom:1px solid var(--border); background:var(--surface); }
+.hdr-in{ height:60px; display:flex; align-items:center; justify-content:space-between; }
+.logo{ display:flex; align-items:center; gap:10px; color:var(--ink); }
+.logo b{ font-family:'Poppins'; font-size:19px; font-weight:700; }
+.logo b i{ font-style:normal; color:var(--primary-strong); }
+.hdr .town{ font-size:13px; color:var(--muted); }
+.hdr .town b{ color:var(--ink); }
+
+/* slim hero */
+.hero{ padding:var(--s3) 0 var(--s2); }
+.hero h1{ font-size:24px; font-weight:800; }
+.hero .sub{ font-size:13.5px; color:var(--muted); margin-top:2px; }
+
+/* ── Control row 1: the 3-view switch ── */
+.views{ display:flex; gap:0; background:var(--surface-sunken); border-radius:var(--r-pill);
+  padding:4px; margin:var(--s2) 0 10px; }
+.views button{ flex:1; min-height:42px; border:none; background:transparent; border-radius:var(--r-pill);
+  font-size:14px; font-weight:700; color:var(--muted); }
+.views button[aria-pressed="true"]{ background:var(--surface); color:var(--ink); box-shadow:var(--shadow); }
+
+/* ── Control row 2: trade chips (scroll row) + one Filters button ── */
+.controls{ display:flex; align-items:center; gap:10px; margin-bottom:var(--s2); }
+.chips{ display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; flex:1; padding:2px; }
+.chips::-webkit-scrollbar{ display:none; }
+.chip{ font-size:13px; font-weight:600; color:var(--muted); background:var(--surface);
+  border:1px solid var(--border); border-radius:var(--r-pill); padding:0 14px; min-height:40px;
+  white-space:nowrap; display:inline-flex; align-items:center; }
+.chip[aria-pressed="true"]{ color:#fff; background:var(--primary-strong); border-color:var(--primary-strong); }
+.filters-btn{ font-size:13px; font-weight:700; color:var(--ink); background:var(--surface);
+  border:1px solid var(--border); border-radius:var(--r-pill); padding:0 16px; min-height:40px;
+  display:inline-flex; align-items:center; gap:6px; flex-shrink:0; }
+.clear-btn{ font-size:12.5px; font-weight:700; color:var(--primary-strong); background:none;
+  border:none; min-height:40px; flex-shrink:0; display:none; }
+.clear-btn.show{ display:inline-flex; align-items:center; }
+
+/* the one Filters sheet (everything else lives here) */
+.sheet{ background:var(--surface-soft); border:1px solid var(--border); border-radius:var(--r);
+  padding:var(--s2); margin-bottom:var(--s2); display:none; }
+.sheet.open{ display:block; }
+.sheet .row{ display:flex; flex-wrap:wrap; gap:10px; }
+.sheet label{ font-size:12px; font-weight:700; color:var(--muted); display:flex;
+  flex-direction:column; gap:4px; }
+.sheet input,.sheet select{ font:inherit; font-size:14px; padding:9px 12px; min-height:42px;
+  border:1px solid var(--border); border-radius:var(--r-sm); background:var(--surface); color:var(--text); }
+.sheet input[type=text]{ width:100%; }
+.sheet .full{ flex:1 1 100%; }
+.sheet .toggle{ flex-direction:row; align-items:center; gap:8px; font-size:13.5px; color:var(--text);
+  font-weight:500; padding-top:18px; }
+
+/* section headings */
+.sec{ font-size:16px; font-weight:800; margin:var(--s3) 0 10px; display:flex; align-items:baseline; gap:8px; }
+.sec .count{ font-family:'Inconsolata'; font-size:13px; color:var(--muted); }
+.sec:first-of-type{ margin-top:var(--s1); }
+
+/* ── Card v2 — four lines, 2-second scan ── */
+.scard{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r);
+  padding:var(--s2) ; margin-bottom:10px; box-shadow:var(--shadow); display:block; width:100%;
+  text-align:left; transition:border-color .15s; }
+.scard:hover{ border-color:var(--primary); }
+.l1{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.l1 h3{ font-size:15.5px; font-weight:700; flex:1 1 auto; min-width:0; }
+.sbadge{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700;
+  border-radius:var(--r-pill); padding:3px 10px; background:var(--surface-sunken);
+  color:var(--ink); white-space:nowrap; }
+.sbadge::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--c,var(--muted)); }
+.sg-open{ --c:var(--success); } .sg-approved{ --c:var(--success); }
+.sg-hearing{ --c:var(--warning); } .sg-funded{ --c:var(--primary); }
+.datepill{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--primary-strong);
+  background:var(--surface-soft); border:1px solid var(--border); border-radius:var(--r-pill);
+  padding:3px 10px; white-space:nowrap; }
+.datepill.due{ color:var(--danger); }
+.l2{ font-size:14px; line-height:1.55; color:var(--text); margin-top:6px; }
+.l3{ display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.tchip{ font-size:11px; font-weight:700; color:var(--muted); background:var(--surface-sunken);
+  border-radius:var(--r-pill); padding:2px 9px; }
+.l4{ font-size:13px; color:var(--muted); margin-top:8px; }
+.l4 b{ color:var(--text); font-weight:700; }
+.l4 .link{ color:var(--primary-strong); font-weight:600; }
+
+/* ── Story detail (one tap away — everything heavy lives here) ── */
+#detail{ display:none; }
+#detail.open{ display:block; }
+.back{ font-size:13.5px; font-weight:700; display:inline-flex; align-items:center; gap:6px;
+  background:none; border:none; color:var(--primary-strong); min-height:44px; }
+.dhead h2{ font-size:21px; font-weight:800; }
+.dmeta{ font-size:13px; color:var(--muted); margin:4px 0 10px; }
+.dblock{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r);
+  padding:var(--s2); margin-bottom:12px; box-shadow:var(--shadow); }
+.dblock h3{ font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--muted); margin-bottom:8px; }
+.dblock p{ font-size:14.5px; }
+.outlook{ border-left:3px solid var(--warning); background:var(--surface-soft); border-radius:var(--r-sm);
+  padding:10px 12px; margin-top:10px; font-size:13.5px; color:var(--muted); }
+.outlook b{ color:var(--ink); font-size:11px; text-transform:uppercase; letter-spacing:.06em; display:block; }
+.facts{ display:flex; flex-wrap:wrap; gap:10px; }
+.facts span{ font-family:'Inconsolata'; font-weight:700; font-size:13px; color:var(--ink);
+  background:var(--surface-sunken); border-radius:var(--r-sm); padding:4px 10px; }
+.contact{ display:flex; justify-content:space-between; gap:10px; padding:10px 0;
+  border-bottom:1px solid var(--border); font-size:14px; flex-wrap:wrap; }
+.contact:last-child{ border-bottom:none; }
+.contact .who b{ display:block; }
+.contact .who span{ font-size:12.5px; color:var(--muted); }
+.contact .links{ display:flex; gap:12px; align-items:center; font-size:13px; font-weight:600; }
+.prov{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+  border-radius:var(--r-pill); padding:2px 8px; background:var(--surface-sunken); color:var(--muted); }
+.prov.rec{ color:var(--primary-strong); }
+.tl{ border-left:2px solid var(--border); padding-left:16px; display:grid; gap:12px; }
+.tl-item{ position:relative; font-size:13.5px; }
+.tl-item::before{ content:""; position:absolute; left:-22px; top:6px; width:9px; height:9px;
+  border-radius:50%; background:var(--c,var(--primary)); border:2px solid var(--surface); }
+.tl-date{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--muted); }
+.srcs{ display:flex; gap:14px; flex-wrap:wrap; font-size:13px; }
+
+.empty{ background:var(--surface-soft); border:1px dashed var(--border); border-radius:var(--r);
+  padding:var(--s3); text-align:center; color:var(--muted); font-size:14px; }
+.foot{ border-top:1px solid var(--border); margin-top:var(--s5); padding:var(--s3) 0 var(--s5);
+  font-size:12.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="demo-note"><b>Layout demo</b> — all projects, names, and contacts below are invented sample data.</div>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#"><svg width="24" height="24" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg><b>civi<i>ca</i></b></a>
+    <span class="town"><b>Danvers, MA</b> · updated Jun 12</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ════════ FEED ════════ -->
+  <div id="feed">
+    <div class="hero">
+      <h1>Signals</h1>
+      <p class="sub">Work moving through town hall — from the public record.</p>
+    </div>
+
+    <!-- Control row 1: the ONLY top-level navigation. 3 plain-word views. -->
+    <div class="views" role="tablist" aria-label="View">
+      <button role="tab" aria-pressed="true" data-view="open">Open jobs</button>
+      <button role="tab" aria-pressed="false" data-view="coming">Coming up</button>
+      <button role="tab" aria-pressed="false" data-view="all">Everything</button>
+    </div>
+
+    <!-- Control row 2: trade chips + ONE Filters button. Nothing else at rest. -->
+    <div class="controls">
+      <div class="chips" aria-label="Filter by trade">
+        <button class="chip" aria-pressed="false" data-trade="roofing">Roofing</button>
+        <button class="chip" aria-pressed="false" data-trade="electrical">Electrical</button>
+        <button class="chip" aria-pressed="false" data-trade="hvac">HVAC</button>
+        <button class="chip" aria-pressed="false" data-trade="plumbing">Plumbing</button>
+        <button class="chip" aria-pressed="false" data-trade="sitework">Site work</button>
+        <button class="chip" aria-pressed="false" data-trade="paving">Paving</button>
+        <button class="chip" aria-pressed="false" data-trade="landscaping">Landscaping</button>
+        <button class="chip" aria-pressed="false" data-trade="solar">Solar</button>
+      </div>
+      <button class="clear-btn" id="clearBtn">clear</button>
+      <button class="filters-btn" id="filtersBtn" aria-expanded="false">Filters
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 3h8M3.5 6h5M5 9h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <!-- Everything else hides in the one sheet -->
+    <div class="sheet" id="sheet">
+      <div class="row">
+        <label class="full">Search
+          <input type="text" placeholder="Project, street, or company name…"></label>
+        <label>From <input type="date"></label>
+        <label>To <input type="date"></label>
+        <label>Stage
+          <select><option>any</option><option>hearing</option><option>approved</option><option>permitted</option></select></label>
+        <label class="toggle"><input type="checkbox"> Has contact info</label>
+      </div>
+    </div>
+
+    <!-- ── View: OPEN JOBS (default) ── -->
+    <section data-pane="open">
+      <h2 class="sec">Open bids <span class="count">2</span></h2>
+
+      <button class="scard" data-trades="roofing" onclick="openDetail()">
+        <div class="l1"><h3>Roof replacement — Riverside Elementary School</h3>
+          <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jun 26</span></div>
+        <p class="l2">Town invites sealed bids for full tear-off and re-roof of the 1998 wing, ±18,000 sq ft, EPDM. Pre-bid walkthrough Jun 18.</p>
+        <div class="l3"><span class="tchip">Roofing</span></div>
+        <p class="l4"><b>Purchasing:</b> J. Doe, Town Hall — <span class="link">jdoe@example.gov</span> · <span class="link">(555) 010-0123</span></p>
+      </button>
+
+      <button class="scard" data-trades="paving sitework" onclick="openDetail()">
+        <div class="l1"><h3>FY27 pavement program — various streets</h3>
+          <span class="sbadge sg-open">bid open</span><span class="datepill due">Due Jul 2</span></div>
+        <p class="l2">Annual mill-and-overlay contract, ±5 lane-miles plus ADA ramp upgrades at 14 intersections. $480,000 appropriated.</p>
+        <div class="l3"><span class="tchip">Paving</span><span class="tchip">Site work</span></div>
+        <p class="l4"><b>DPW:</b> Engineering office — <span class="link">dpw@example.gov</span></p>
+      </button>
+
+      <h2 class="sec">Just approved <span class="count">2</span></h2>
+
+      <button class="scard" data-trades="sitework electrical plumbing hvac roofing landscaping" onclick="openDetail()">
+        <div class="l1"><h3>36-unit apartments — 12 Demo Street</h3>
+          <span class="sbadge sg-approved">approved</span><span class="datepill">Jun 8</span></div>
+        <p class="l2">Special permit granted for a 36-unit apartment building with ground-floor retail; construction documents now in progress.</p>
+        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span><span class="tchip">Roofing</span><span class="tchip">+2</span></div>
+        <p class="l4"><b>Developer:</b> Sample Development LLC — <span class="link">View contacts (4)</span></p>
+      </button>
+
+      <button class="scard" data-trades="solar electrical" onclick="openDetail()">
+        <div class="l1"><h3>Rooftop solar — Hillside Business Park</h3>
+          <span class="sbadge sg-approved">permitted</span><span class="datepill">Jun 3</span></div>
+        <p class="l2">650 kW rooftop array across three warehouse buildings cleared its final electrical permit; installer not yet named.</p>
+        <div class="l3"><span class="tchip">Solar</span><span class="tchip">Electrical</span></div>
+        <p class="l4"><b>Owner:</b> Example Properties Trust — <span class="link">website ↗</span></p>
+      </button>
+
+      <h2 class="sec">Funded public work <span class="count">1</span></h2>
+
+      <button class="scard" data-trades="sitework landscaping" onclick="openDetail()">
+        <div class="l1"><h3>Town common improvements (Article 12)</h3>
+          <span class="sbadge sg-funded">funded</span><span class="datepill">$310,000</span></div>
+        <p class="l2">Town Meeting appropriated $310,000 for walkway reconstruction, drainage, and plantings; bid expected this fall.</p>
+        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
+        <p class="l4"><b>Contact:</b> Parks Dept. — <span class="link">parks@example.gov</span></p>
+      </button>
+
+      <div class="empty" id="emptyOpen" style="display:none">No open jobs match that trade. <a href="#" onclick="clearChips();return false;">Clear filter</a></div>
+    </section>
+
+    <!-- ── View: COMING UP ── -->
+    <section data-pane="coming" hidden>
+      <h2 class="sec">Next hearings <span class="count">3</span></h2>
+
+      <button class="scard" data-trades="sitework electrical plumbing hvac" onclick="openDetail()">
+        <div class="l1"><h3>Mixed-use redevelopment — 4–8 Example Ave</h3>
+          <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jun 23</span></div>
+        <p class="l2">24 condos over two retail bays; decision on special permits expected at the June 23 Planning Board meeting.</p>
+        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span></div>
+        <p class="l4"><b>Engineer:</b> Placeholder Engineering Co. — <span class="link">website ↗</span></p>
+      </button>
+
+      <button class="scard" data-trades="sitework paving" onclick="openDetail()">
+        <div class="l1"><h3>Self-storage facility — 200 Sample Rd</h3>
+          <span class="sbadge sg-hearing">hearing</span><span class="datepill">Hearing Jul 7</span></div>
+        <p class="l2">Site plan review for a 3-story, 92,000 sq ft self-storage building with 40-space lot; first hearing in July.</p>
+        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Paving</span></div>
+        <p class="l4"><b>Developer:</b> Demo Storage Partners — <span class="link">View contacts (2)</span></p>
+      </button>
+
+      <button class="scard" data-trades="sitework landscaping" onclick="openDetail()">
+        <div class="l1"><h3>14-lot subdivision — Maple Hill</h3>
+          <span class="sbadge sg-hearing">continued</span><span class="datepill">Hearing Jul 14</span></div>
+        <p class="l2">Definitive subdivision plan continued pending revised drainage design; road and utility scope still open.</p>
+        <div class="l3"><span class="tchip">Site work</span><span class="tchip">Landscaping</span></div>
+        <p class="l4"><b>Applicant:</b> Fictional Homes Inc. — <span class="link">View contacts (3)</span></p>
+      </button>
+    </section>
+
+    <!-- ── View: EVERYTHING (audit feed, today's extractive cards) ── -->
+    <section data-pane="all" hidden>
+      <h2 class="sec">All activity <span class="count">chronological</span></h2>
+      <button class="scard" onclick="openDetail()">
+        <div class="l1"><h3>Planning Board — Jun 9</h3><span class="sbadge sg-hearing">hearing</span></div>
+        <p class="l2">Continued hearing on the 12 Demo Street special permit; applicant presented revised parking layout. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+      </button>
+      <button class="scard" onclick="openDetail()">
+        <div class="l1"><h3>Select Board — Jun 2</h3><span class="sbadge sg-funded">informational</span></div>
+        <p class="l2">Utility pole replacement petition approved for Sample Street near #395. <a href="#" onclick="event.stopPropagation()">Source (agenda) ↗</a></p>
+      </button>
+      <button class="scard" onclick="openDetail()">
+        <div class="l1"><h3>Conservation Commission — May 28</h3><span class="sbadge sg-approved">approved</span></div>
+        <p class="l2">Order of Conditions issued for stormwater work at the Hillside Business Park array. <a href="#" onclick="event.stopPropagation()">Source (minutes) ↗</a></p>
+      </button>
+    </section>
+  </div>
+
+  <!-- ════════ STORY DETAIL — everything heavy lives here, one tap away ════════ -->
+  <div id="detail">
+    <button class="back" onclick="closeDetail()">← Back</button>
+    <div class="dhead">
+      <h2>36-unit apartments — 12 Demo Street</h2>
+      <p class="dmeta">Danvers, MA · first seen Feb 10 → latest Jun 8 · 5 meetings ·
+        <span class="sbadge sg-approved">approved</span></p>
+    </div>
+
+    <div class="dblock">
+      <h3>The project</h3>
+      <p>Sample Development LLC won special-permit approval for a four-story building with
+      36 apartments over two ground-floor retail bays and a 52-space rear lot. Demolition
+      of the existing vacant garage is included in the approved plan.</p>
+      <div class="outlook"><b>Outlook — projection, not from the record</b>
+        If permits follow the usual pace, site work could begin spring 2027. The general
+        contractor has not been named in any public document.</div>
+    </div>
+
+    <div class="dblock">
+      <h3>Numbers (from the record)</h3>
+      <div class="facts"><span>36 units</span><span>6,400 sq ft retail</span><span>52 parking</span><span>$0 stated value</span></div>
+    </div>
+
+    <div class="dblock">
+      <h3>Contacts</h3>
+      <div class="contact"><div class="who"><b>Sample Development LLC</b><span>Developer · applicant of record</span></div>
+        <div class="links"><span class="prov rec">public record</span><a href="#">website</a><a href="#">(555) 010-0456</a></div></div>
+      <div class="contact"><div class="who"><b>A. Example, PE — Placeholder Engineering Co.</b><span>Civil engineer · presented for applicant</span></div>
+        <div class="links"><span class="prov rec">public record</span><a href="#">website</a><a href="#">LinkedIn search</a></div></div>
+      <div class="contact"><div class="who"><b>Demo &amp; Partners Architects</b><span>Architect</span></div>
+        <div class="links"><span class="prov">enriched</span><a href="#">website</a><a href="#">(555) 010-0789</a></div></div>
+      <div class="contact"><div class="who"><b>General contractor</b><span>Not yet named in the public record</span></div>
+        <div class="links"><span class="prov">—</span></div></div>
+    </div>
+
+    <div class="dblock">
+      <h3>Trades implicated</h3>
+      <div class="l3"><span class="tchip">Site work</span><span class="tchip">Demolition</span><span class="tchip">Concrete</span><span class="tchip">Framing</span><span class="tchip">Electrical</span><span class="tchip">Plumbing</span><span class="tchip">HVAC</span><span class="tchip">Roofing</span><span class="tchip">Landscaping</span></div>
+    </div>
+
+    <div class="dblock">
+      <h3>History</h3>
+      <div class="tl">
+        <div class="tl-item" style="--c:var(--success)"><div class="tl-date">Jun 8 · Planning Board · approved</div>
+          Special permit granted 4–1 with 12 conditions. <a href="#">minutes ↗</a> · <a href="#">agenda ↗</a></div>
+        <div class="tl-item" style="--c:var(--warning)"><div class="tl-date">May 12 · Planning Board · continued</div>
+          Revised parking and landscaping plans presented; continued to June. <a href="#">minutes ↗</a></div>
+        <div class="tl-item" style="--c:var(--warning)"><div class="tl-date">Apr 14 · Planning Board · hearing</div>
+          Traffic study reviewed; abutters raised queuing concerns. <a href="#">minutes ↗</a></div>
+        <div class="tl-item" style="--c:var(--primary)"><div class="tl-date">Mar 10 · Conservation Commission · hearing</div>
+          Drainage within 100-ft buffer reviewed; negative determination issued. <a href="#">minutes ↗</a></div>
+        <div class="tl-item" style="--c:var(--primary)"><div class="tl-date">Feb 10 · Planning Board · proposed</div>
+          Application filed for special permit and site plan review. <a href="#">agenda ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p>Extracted weekly from public municipal records; may lag the source. Items marked
+    <b>projection</b> are estimates, not facts from the record. Verify against the linked
+    source before bidding. · Signals methodology · Disclaimer</p>
+  </footer>
+</main>
+
+<script>
+/* Demo-only interactions: view switching, trade-chip filtering, sheet toggle, detail page. */
+"use strict";
+const $$ = (s) => document.querySelectorAll(s);
+
+$$(".views button").forEach((b) => b.addEventListener("click", () => {
+  $$(".views button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+  $$("[data-pane]").forEach((p) => p.hidden = p.dataset.pane !== b.dataset.view);
+  applyChips();
+}));
+
+function activeTrades() {
+  return [...$$(".chip[aria-pressed='true']")].map((c) => c.dataset.trade);
+}
+function applyChips() {
+  const on = activeTrades();
+  document.getElementById("clearBtn").classList.toggle("show", on.length > 0);
+  let visible = 0;
+  $$("[data-pane]:not([hidden]) .scard").forEach((card) => {
+    const trades = (card.dataset.trades || "").split(" ");
+    const show = !on.length || !card.dataset.trades || on.some((t) => trades.includes(t));
+    card.style.display = show ? "" : "none";
+    if (show) visible++;
+  });
+  const empty = document.getElementById("emptyOpen");
+  if (empty) empty.style.display =
+    (!document.querySelector("[data-pane='open']").hidden && visible === 0) ? "" : "none";
+}
+$$(".chip").forEach((c) => c.addEventListener("click", () => {
+  c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true");
+  applyChips();
+}));
+function clearChips() {
+  $$(".chip").forEach((c) => c.setAttribute("aria-pressed", "false"));
+  applyChips();
+}
+document.getElementById("clearBtn").addEventListener("click", clearChips);
+
+document.getElementById("filtersBtn").addEventListener("click", function () {
+  const sheet = document.getElementById("sheet");
+  sheet.classList.toggle("open");
+  this.setAttribute("aria-expanded", sheet.classList.contains("open"));
+});
+
+function openDetail() {
+  document.getElementById("feed").style.display = "none";
+  document.getElementById("detail").classList.add("open");
+  window.scrollTo(0, 0);
+}
+function closeDetail() {
+  document.getElementById("detail").classList.remove("open");
+  document.getElementById("feed").style.display = "";
+}
+</script>
+</body>
+</html>
