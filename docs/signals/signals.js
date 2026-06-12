@@ -9,7 +9,6 @@
 "use strict";
 
 const DATA_BASE_URL = "../output/signals";   // future: https://api.<host>/signals
-const WAITLIST_EMAIL = "TODO-waitlist@example.com"; // placeholder until Formspree/ConvertKit is configured
 
 /* The gating seam. ALL data access flows through here.
  * Today: a pass-through session set by login.html's Sign in button.
@@ -310,21 +309,6 @@ function route() {
   if (m) window.scrollTo(0, 0);
 }
 
-function setupBanner(access) {
-  const banner = $("previewBanner");
-  if (access.tier === "free_preview") {
-    $("tierLabel").textContent = "Free preview";
-    banner.hidden = false;
-    $("waitlistForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const email = $("waitlistEmail").value.trim();
-      // Placeholder channel until Formspree/ConvertKit is configured (see TODO.md):
-      location.href = `mailto:${WAITLIST_EMAIL}?subject=${encodeURIComponent("Civica Signals founding waitlist")}` +
-        `&body=${encodeURIComponent(`Add me to the founding-member waitlist: ${email}`)}`;
-    });
-  }
-}
-
 function showError(msg) {
   $("stateCard").hidden = false;
   $("stateCard").innerHTML = `<b>Signals data unavailable.</b><br>${esc(msg)}<br>
@@ -334,7 +318,6 @@ function showError(msg) {
 async function boot() {
   const access = checkAccess();          // the future 401 path lives here
   if (!access.authorized) { location.replace("login.html"); return; }
-  setupBanner(access);
   const signoutLink = document.getElementById("signoutLink");
   if (signoutLink) signoutLink.addEventListener("click", (e) => { e.preventDefault(); signOut(); });
   try {
