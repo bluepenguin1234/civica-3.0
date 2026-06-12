@@ -321,6 +321,7 @@ def build_nav():
   </a>
   <div class="nav-right">
     <span class="nav-tag" style="margin-right:8px;">Town Report</span>
+    <a class="nav-back" href="../../signals/" style="margin-right:14px;">Signals</a>
     <a class="nav-back" href="../rankings/index.html" style="margin-right:14px;">Rankings</a>
     <a class="nav-back" href="../../index.html">← All Towns</a>
   </div>
@@ -869,7 +870,7 @@ tbody tr:hover td{{background:#f5f5f7;}}
     <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg>
     <span class="logo-text">civi<em>ca</em></span>
   </a>
-  <a class="back" href="../../index.html">← All Towns</a>
+  <span><a class="back" href="../../signals/" style="margin-right:14px;">Signals</a><a class="back" href="../../index.html">← All Towns</a></span>
 </nav>
 <div class="hero"><div class="hero-in">
   <div class="eyebrow">State Town Report · 2026</div>
@@ -1018,7 +1019,7 @@ def build_ranking_page(cat, state, towns, root):
 </head><body>
 <nav class="nav">
   <a class="logo" href="{root}index.html"><svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg><span class="logo-text">civi<em>ca</em></span></a>
-  <a class="back" href="{root}output/rankings/index.html">← All rankings</a>
+  <span><a class="back" href="{root}signals/" style="margin-right:14px;">Signals</a><a class="back" href="{root}output/rankings/index.html">← All rankings</a></span>
 </nav>
 <div class="hero"><div class="hero-in">
   <div class="eyebrow">{'National' if national else scope} Rankings · 2026</div>
@@ -1067,7 +1068,7 @@ def build_rankings_hub(states):
 </head><body>
 <nav class="nav">
   <a class="logo" href="{root}index.html"><svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg><span class="logo-text">civi<em>ca</em></span></a>
-  <a class="back" href="{root}index.html">← Home</a>
+  <span><a class="back" href="{root}signals/" style="margin-right:14px;">Signals</a><a class="back" href="{root}index.html">← Home</a></span>
 </nav>
 <div class="hero"><div class="hero-in">
   <div class="eyebrow">Rankings · 2026</div>
@@ -1165,7 +1166,8 @@ def write_progress(p):
 def write_sitemap(index_map, extra_urls=None):
     """Regenerate sitemap.xml from town URLs + the core static pages + ranking pages."""
     static = ['', 'map.html', 'leaderboard.html', 'compare.html', 'methodology.html',
-              'disclaimer.html', 'privacy.html', 'terms.html']
+              'disclaimer.html', 'privacy.html', 'terms.html',
+              'signals/', 'methodology-signals.html']
     urls = [f'  <url><loc>{SITE_URL}/{p}</loc></url>' for p in static]
     for u in (extra_urls or []):
         urls.append(f'  <url><loc>{u}</loc></url>')

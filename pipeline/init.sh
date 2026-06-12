@@ -16,4 +16,23 @@ fi
 
 echo "[init] validating"
 python validate_town.py
+
+# ── Civica Signals (separate subsystem; see ../signals/README.md) ──
+# crawl -> extract -> link -> validate -> publish. Extraction runs through the
+# Claude Code CLI on the operator's subscription (claude must be on PATH).
+cd ..
+echo "[init] signals: crawl"
+python -m signals.crawl.crawl
+echo "[init] signals: ocr (scanned docs)"
+python -m signals.extract.ocr
+echo "[init] signals: extract"
+python -m signals.extract.extract
+echo "[init] signals: link stories"
+python -m signals.link.link_stories
+echo "[init] signals: validate"
+python -m signals.validate_signals
+echo "[init] signals: publish feed"
+python -m signals.publish.build_signals_json
+cd pipeline
+
 echo "[init] done"

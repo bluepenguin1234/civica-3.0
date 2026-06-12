@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signals Methodology — Civica</title>
+<meta name="description" content="How Civica Signals works: the public municipal documents it reads, how events are extracted and verified, update cadence, and honest limitations.">
+<link rel="canonical" href="https://bluepenguin1234.github.io/civica-3.0/methodology-signals.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Roboto',-apple-system,sans-serif; background:#f6f9fd; color:#111827; }
+.nav { background:rgba(255,255,255,.92); backdrop-filter:blur(20px); height:56px; padding:0 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:300; border-bottom:1px solid #e6e8ee; }
+.logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.logo-text { font-family:'Poppins'; font-size:18px; font-weight:800; color:#0d2d52; }
+.logo-text em { font-style:normal; color:#1a7ff0; }
+.nav-back { font-size:13px; color:#5b6170; text-decoration:none; font-weight:500; }
+.nav-back:hover { color:#0d2d52; }
+.wrap { max-width:760px; margin:0 auto; padding:52px 28px; }
+.page-title { font-family:'Poppins'; font-size:34px; font-weight:800; color:#0d2d52; letter-spacing:-.01em; margin-bottom:8px; }
+.page-date { font-size:13px; color:#9ca3af; margin-bottom:42px; }
+.alert { background:#fef3c7; border:1px solid #fcd34d; border-radius:12px; padding:18px 22px; margin-bottom:32px; font-size:14px; color:#78350f; line-height:1.7; }
+h2 { font-family:'Poppins'; font-size:18px; font-weight:700; color:#0d2d52; margin:32px 0 10px; letter-spacing:-.01em; }
+p, li { font-size:15px; color:#374151; line-height:1.75; }
+ul, ol { padding-left:22px; margin-top:8px; }
+li { margin-bottom:6px; }
+a { color:#0b57c2; }
+.footer { background:#0d2d52; padding:36px 28px; text-align:center; margin-top:64px; }
+.footer p { font-size:11px; color:rgba(255,255,255,.35); }
+.footer a { color:rgba(255,255,255,.5); }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html">
+    <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="white" opacity="0.65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="white"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="white" opacity="0.8"/></svg>
+    <span class="logo-text">civi<em>ca</em></span>
+  </a>
+  <span><a class="nav-back" href="signals/" style="margin-right:14px;">Signals</a><a class="nav-back" href="index.html">← Home</a></span>
+</nav>
+
+<div class="wrap">
+  <h1 class="page-title">How Civica Signals Works</h1>
+  <p class="page-date">Last updated: June 2026</p>
+
+  <div class="alert">
+    <strong>Important:</strong> Signals is derived from public municipal records and may contain
+    extraction errors or lag the source documents. It is not legal, investment, or bidding advice.
+    Every item links to the official source document — verify against it before acting.
+  </div>
+
+  <h2>What it reads</h2>
+  <p>Civica Signals monitors the public meeting documents that Massachusetts towns publish on
+  their own websites — the agendas and minutes of the four boards where development decisions
+  actually happen: the <strong>Planning Board</strong>, <strong>Zoning Board of Appeals</strong>,
+  <strong>Select Board / City Council</strong>, and <strong>Conservation Commission</strong>.
+  No private feeds, no scraped listings — the same PDFs any resident can download.</p>
+
+  <h2>How events are extracted</h2>
+  <ol>
+    <li><strong>Collection.</strong> New agenda and minutes PDFs are fetched from each town's
+      website on a weekly cadence and archived. Every document's source URL is kept.</li>
+    <li><strong>Extraction.</strong> An AI model reads each document and pulls out qualifying
+      items — development projects, zoning changes, 40B filings, subdivisions, infrastructure
+      work, municipal property moves — with the applicant, representatives, scale, and stage
+      <em>only as stated in the document</em>. Numbers and names are never inferred; if the
+      document doesn't say, the field stays empty.</li>
+    <li><strong>Verification.</strong> Each extracted event carries a confidence score and is
+      checked against the source text before publication. Low-confidence items are held for
+      human review. Routine administrative business (minutes approvals, licenses, appointments)
+      is excluded.</li>
+    <li><strong>Story linking.</strong> The same project appears across many meetings over
+      months. Events at the same address (or matching project names) are grouped into one
+      project story with a stage timeline — proposed → hearing → approved.</li>
+  </ol>
+
+  <h2>Update cadence — and an honest note on latency</h2>
+  <p>Documents are collected weekly. Signals is <strong>weekly monitoring of public records,
+  not a real-time feed</strong>: agendas appear days before a meeting (your earliest signal),
+  while minutes are often posted weeks after the meeting they describe. The date shown on every
+  event is the meeting date, not the date we found it.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li><strong>Extraction can be wrong.</strong> Stages, types, and summaries are machine-read
+      from messy documents. The source link is on every item for a reason.</li>
+    <li><strong>Scanned documents are deferred.</strong> Some towns post image-only PDFs
+      (no machine-readable text). Those are archived but not yet extracted — for some towns
+      that means agendas are thin while minutes are rich, or vice versa.</li>
+    <li><strong>Coverage follows the registry.</strong> A town's data is only as fresh as its
+      website. Per-town freshness is shown in the dashboard's coverage strip, and stale towns
+      are flagged in our own validation before every publish.</li>
+    <li><strong>Public documents only.</strong> Pre-application conversations, private deals,
+      and anything not yet on a posted agenda are invisible to Signals by design.</li>
+  </ul>
+
+  <h2>What Signals is not</h2>
+  <p>Signals never feeds into Civica's town scores — the scores remain 100% federal data and
+  cannot be influenced by development activity, advertisers, or anyone else. Signals is a
+  separate research layer for professionals who need to know what's moving through town halls.</p>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 Civica. &nbsp;·&nbsp; <a href="signals/">Signals dashboard</a> &nbsp;·&nbsp;
+  <a href="methodology.html">Score methodology</a> &nbsp;·&nbsp; <a href="disclaimer.html">Disclaimer</a></p>
+</footer>
+</body>
+</html>

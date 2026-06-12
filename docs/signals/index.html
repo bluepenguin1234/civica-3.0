@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civica Signals — North Shore Municipal Development Intelligence</title>
+<meta name="description" content="Every development project, zoning change, and infrastructure job moving through North Shore Massachusetts town halls — extracted weekly from public agendas and minutes, with source links.">
+<link rel="canonical" href="https://bluepenguin1234.github.io/civica-3.0/signals/">
+<meta property="og:title" content="Civica Signals — municipal development intelligence">
+<meta property="og:description" content="Projects, rezonings, and public work moving through North Shore MA town halls — from the public record, updated weekly.">
+<meta property="og:image" content="https://bluepenguin1234.github.io/civica-3.0/og_image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../clean.css">
+<style>
+/* Signals-only layout; all colors/typography come from clean.css tokens. */
+.hero-band{ background:linear-gradient(180deg,var(--surface-soft),var(--surface)); border-bottom:1px solid var(--border); padding:var(--s4) 0 var(--s3); }
+.hero-band h1{ font-size:30px; font-weight:800; }
+.hero-band .sub{ color:var(--muted); font-size:15px; margin-top:6px; max-width:640px; }
+.preview-banner{ display:flex; flex-wrap:wrap; gap:var(--s2); align-items:center; justify-content:space-between;
+  background:var(--surface-soft); border:1px solid var(--border); border-radius:var(--r); padding:14px 18px; margin:var(--s3) 0 0; }
+.preview-banner p{ font-size:14px; color:var(--text); }
+.preview-banner .tier{ font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--primary-strong);
+  border:1px solid var(--primary); border-radius:var(--r-pill); padding:3px 10px; background:#fff; }
+.coverage{ display:flex; flex-wrap:wrap; gap:8px; margin-top:var(--s2); }
+.cov-chip{ font-size:12px; font-weight:500; color:var(--muted); background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r-pill); padding:5px 12px; }
+.cov-chip b{ color:var(--ink); font-weight:700; }
+.cov-chip .fresh{ font-family:'Inconsolata'; font-weight:700; }
+.filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:var(--s3) 0 var(--s2); }
+.filters label{ font-size:12px; font-weight:700; color:var(--muted); }
+.filters select,.filters input[type=date]{ font:inherit; font-size:13px; padding:8px 10px; border:1px solid var(--border);
+  border-radius:var(--r-sm); background:var(--surface); color:var(--text); min-height:40px; }
+.chiprow{ display:flex; flex-wrap:wrap; gap:6px; }
+.chip{ font:inherit; font-size:12px; font-weight:600; color:var(--muted); background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r-pill); padding:6px 12px; cursor:pointer; min-height:32px; }
+.chip[aria-pressed="true"]{ color:#fff; background:var(--primary-strong); border-color:var(--primary-strong); }
+.section-h{ font-size:18px; font-weight:800; margin:var(--s4) 0 var(--s2); display:flex; align-items:center; gap:10px; }
+.section-h .count{ font-family:'Inconsolata'; font-size:13px; color:var(--muted); font-weight:700; }
+.scard{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); margin-bottom:var(--s2); box-shadow:var(--shadow); }
+.scard-top{ display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; justify-content:space-between; }
+.scard h3{ font-size:16px; font-weight:700; }
+.scard h3 a{ color:var(--ink); }
+.meta{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+.meta .mono{ font-size:12px; }
+.badges{ display:flex; flex-wrap:wrap; gap:6px; }
+.sbadge{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; border-radius:var(--r-pill);
+  padding:3px 10px; background:var(--surface-sunken); color:var(--ink); white-space:nowrap; }
+.sbadge::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--c,var(--muted)); }
+.sg-approved,.sg-permitted{ --c:var(--success); }
+.sg-hearing,.sg-continued{ --c:var(--warning); }
+.sg-proposed,.sg-under_construction{ --c:var(--primary); }
+.sg-denied,.sg-withdrawn{ --c:var(--danger); }
+.sg-informational{ --c:var(--muted); }
+.tbadge{ font-size:11px; font-weight:700; color:var(--primary-strong); background:var(--surface-soft);
+  border:1px solid var(--border); border-radius:var(--r-pill); padding:3px 10px; white-space:nowrap; }
+.summary{ font-size:14.5px; line-height:1.65; margin-top:10px; }
+.contacts{ font-size:13px; color:var(--muted); margin-top:8px; line-height:1.6; }
+.contacts b{ color:var(--text); }
+.timeline{ margin-top:var(--s2); border-left:2px solid var(--border); padding-left:18px; display:grid; gap:14px; }
+.tl-item{ position:relative; }
+.tl-item::before{ content:""; position:absolute; left:-24px; top:5px; width:10px; height:10px; border-radius:50%;
+  background:var(--c,var(--primary)); border:2px solid var(--surface); }
+.tl-date{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--muted); }
+.tl-body{ font-size:13.5px; line-height:1.6; }
+.srclinks{ margin-top:10px; font-size:13px; display:flex; flex-wrap:wrap; gap:14px; }
+.numfacts{ display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
+.numfacts span{ font-family:'Inconsolata'; font-weight:700; font-size:13px; color:var(--ink);
+  background:var(--surface-sunken); border-radius:var(--r-sm); padding:3px 9px; }
+.state-card{ background:var(--surface-soft); border:1px dashed var(--border); border-radius:var(--r);
+  padding:var(--s4); text-align:center; color:var(--muted); font-size:14.5px; margin:var(--s3) 0; }
+.waitlist{ display:flex; gap:8px; flex-wrap:wrap; }
+.waitlist input[type=email]{ font:inherit; font-size:14px; padding:0 12px; min-height:44px; border:1px solid var(--border);
+  border-radius:10px; min-width:220px; }
+.backlink{ font-size:13.5px; font-weight:600; display:inline-block; margin-bottom:var(--s2); }
+.foot{ border-top:1px solid var(--border); margin-top:var(--s6); padding:var(--s3) 0 var(--s5); font-size:12.5px; color:var(--muted); line-height:1.7; }
+@media(max-width:680px){
+  .hero-band h1{ font-size:24px; }
+  .scard{ padding:var(--s2); }
+  .filters{ gap:8px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="../index.html" aria-label="Civica home">
+      <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
+      <b>civi<i>ca</i></b>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../map.html">Map</a>
+      <a href="./" aria-current="page">Signals</a>
+      <a href="../leaderboard.html">Leaderboard</a>
+      <a href="../output/rankings/index.html">Rankings</a>
+      <a class="opt" href="../compare.html">Compare</a>
+      <a class="opt" href="../methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-band">
+  <div class="wrap">
+    <h1>Civica Signals</h1>
+    <p class="sub">North Shore municipal development intelligence — every project, rezoning, and
+    public job moving through town halls, extracted weekly from official agendas and minutes.
+    Every item links to its source document.</p>
+    <div class="preview-banner" id="previewBanner" hidden>
+      <p><span class="tier" id="tierLabel">Free preview</span>&nbsp;&nbsp;Founding subscriptions coming soon —
+      <b>$149/mo locked for life</b> for the first 15 members.</p>
+      <form class="waitlist" id="waitlistForm" aria-label="Join the waitlist">
+        <input type="email" id="waitlistEmail" placeholder="you@company.com" required aria-label="Email address">
+        <button class="btn btn-primary" type="submit">Get notified</button>
+      </form>
+    </div>
+    <div class="coverage" id="coverage" aria-label="Town coverage and data freshness"></div>
+  </div>
+</div>
+
+<main id="main" class="wrap">
+  <div id="detailView" hidden></div>
+
+  <div id="feedView">
+    <div class="filters" id="filters" hidden>
+      <div class="chiprow" id="typeChips" aria-label="Filter by event type"></div>
+      <label>Stage
+        <select id="stageSel"><option value="">all</option></select>
+      </label>
+      <label>From <input type="date" id="fromDate"></label>
+      <label>To <input type="date" id="toDate"></label>
+      <button class="chip" id="clearBtn" type="button">clear filters</button>
+    </div>
+
+    <div id="thisWeek"></div>
+    <div id="stories"></div>
+    <div id="standalone"></div>
+    <div id="stateCard" class="state-card" hidden></div>
+  </div>
+
+  <footer class="foot">
+    <p><b>How this works:</b> data is extracted from public municipal records on a weekly cadence and
+    may contain errors or lag the source — it is not legal, investment, or bidding advice. Verify
+    against the linked source document before acting.
+    <a href="../methodology-signals.html">Signals methodology &amp; limitations</a> ·
+    <a href="../disclaimer.html">Disclaimer</a> ·
+    <a href="../index.html">Civica town scores</a></p>
+  </footer>
+</main>
+
+<script src="signals.js"></script>
+</body>
+</html>

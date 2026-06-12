@@ -1,0 +1,51 @@
+# Civica Signals — town registry
+# ============================================================================
+# One entry per town. This file is the heart of the crawler; most ongoing
+# maintenance is editing it. For each board, fill agenda_url / minutes_url, set
+# the CMS `platform`, then date-stamp `last_verified`. Flip `status` to "active"
+# once a town's URLs are filled and verified.
+#
+# MVP coverage — the 30 North Shore (Essex County core + immediate ring) towns
+# this registry will eventually cover:
+#   Danvers, Beverly, Salem, Peabody, Marblehead, Swampscott, Lynn, Lynnfield,
+#   Saugus, Wakefield, Reading, North Reading, Middleton, Topsfield, Boxford,
+#   Hamilton, Wenham, Ipswich, Rowley, Newburyport, Newbury, Amesbury,
+#   Salisbury, Georgetown, Gloucester, Rockport, Essex, Manchester-by-the-Sea,
+#   Andover, North Andover.
+#
+# platform: civicplus | civicclerk | granicus | generic_html | manual
+#   (view source to confirm: CivicPlus pages contain "civicplus"/"AgendaCenter";
+#    CivicClerk URLs contain "civicclerk"; Granicus contains "granicus"/"legistar")
+# status:   active | broken | pending
+# Boards in priority order: Planning Board, Zoning Board of Appeals,
+#   Select Board / City Council, Conservation Commission.
+# ============================================================================
+
+- town_id: "danvers_ma"
+  name: "Danvers"
+  state: "MA"
+  place_fips: "2500916250"       # join key to the Civica town page (10-digit MCD GEOID — MA towns are MCDs, not 7-digit places)
+  county: "Essex"
+  platform: "civicplus"          # confirmed: danversma.gov runs CivicPlus/CivicEngage (AgendaCenter)
+  boards:
+    # CivicPlus AgendaCenter serves a board's agendas AND minutes from one
+    # category page, so agenda_url and minutes_url are identical per board.
+    - board_id: "planning"
+      name: "Planning Board"
+      agenda_url: "https://www.danversma.gov/AgendaCenter/Planning-Board-11"
+      minutes_url: "https://www.danversma.gov/AgendaCenter/Planning-Board-11"
+    - board_id: "zba"
+      name: "Zoning Board of Appeals"
+      agenda_url: "https://www.danversma.gov/AgendaCenter/Zoning-Board-of-Appeals-18"
+      minutes_url: "https://www.danversma.gov/AgendaCenter/Zoning-Board-of-Appeals-18"
+    - board_id: "select"
+      name: "Select Board"
+      agenda_url: "https://www.danversma.gov/AgendaCenter/Select-Board-16"
+      minutes_url: "https://www.danversma.gov/AgendaCenter/Select-Board-16"
+    - board_id: "concom"
+      name: "Conservation Commission"
+      agenda_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
+      minutes_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
+  notes: "CivicPlus AgendaCenter; agendas + minutes share one category page per board. All 4 boards verified live with recent 2026 postings on 2026-06-11."
+  status: "active"               # URLs filled & verified 2026-06-11
+  last_verified: "2026-06-11"

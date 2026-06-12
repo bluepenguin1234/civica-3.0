@@ -25,3 +25,13 @@ Thumbs.db
 desktop.ini
 .idea/
 .vscode/
+
+# Civica Signals — local-only data (PDF archive + SQLite store + WAL sidecars).
+# The schema is code (signals/db.py); the data is rebuildable from raw PDFs.
+signals/raw/
+signals/signals.db
+signals/signals.db-wal
+signals/signals.db-shm
+
+# The "_*.py" scratch rule above also matches __init__.py — keep package markers.
+!signals/**/__init__.py
