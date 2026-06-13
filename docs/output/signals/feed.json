@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T21:52:34",
+ "generated_at": "2026-06-12T22:24:32",
  "coverage": [
   {
    "town_id": "danvers_ma",
@@ -21,6 +21,7 @@
    "first_seen": "2026-06-17",
    "last_activity": "2026-06-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "ef347c1d-dc47-4094-b507-9b7cb433c544",
@@ -51,6 +52,25 @@
    "first_seen": "2026-03-26",
    "last_activity": "2026-06-09",
    "status": "active",
+   "brief": {
+    "what": "Abiomed, Inc. is seeking to expand its R&D campus at 54 Cherry Hill Drive in Danvers, MA, proposing a roughly 23,000 sq ft building addition to replace approximately 8,000–9,000 sq ft of existing structure, along with a parking lot expansion to roughly 267 spaces, EV charging, ADA improvements, and landscaping on a 10.4-acre Industrial II-zoned property. The project adds approximately 9,180 sq ft of net new impervious area within the 100-foot wetland buffer.",
+    "status": "The project is simultaneously in Site Plan Review before the Planning Board and under a Notice of Intent (DEP File No. 14-1452) before the Conservation Commission; the most recent event is a Planning Board hearing on June 9, 2026, with no continuance date stated.",
+    "whats_next": "No next step or continuance date is stated in the record following the June 9, 2026 Planning Board hearing.",
+    "outlook": "The project has moved steadily through both permitting tracks over roughly three months without apparent opposition to the core scope, suggesting meaningful forward momentum; the Conservation Commission's wetland reclassification issue introduced a procedural delay but did not alter the approved design, which points toward eventual approval rather than a fundamental roadblock.",
+    "trades": [
+     "demolition",
+     "site_excavation",
+     "electrical",
+     "paving_asphalt",
+     "landscaping",
+     "stormwater_septic",
+     "concrete_foundation",
+     "framing_carpentry"
+    ],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:23:08"
+   },
    "events": [
     {
      "event_id": "e79481ff-2e74-4e97-8743-9742132916a1",
@@ -183,6 +203,19 @@
    "first_seen": "2026-04-06",
    "last_activity": "2026-06-09",
    "status": "active",
+   "brief": {
+    "what": "PMZ Realty Trust (Peter M. Zagorski, Trustee) is seeking special permits, waivers, and site plan review to redevelop two abutting parcels at 156 and 158 Maple Street in Danvers, MA within the Maple Street Traditional Neighborhood Development Overlay District (Limited Mixed Use Sub-District). The proposal calls for a mixed-use building with 18 residential units and 12 townhouse units, plus retention of an existing single-family house, across parcels with underlying I-1 and R-1 zoning.",
+    "status": "The public hearing before the Planning Board has been continued three times since it opened on April 6, 2026; the applicant most recently requested a continuance to the June 23, 2026 Planning Board meeting.",
+    "whats_next": "The hearing is scheduled to resume at the June 23, 2026 Planning Board meeting.",
+    "outlook": "Three consecutive applicant-requested continuances over roughly two months suggest ongoing revisions or unresolved board questions rather than straightforward progress; until the hearing substantively advances, approval timing remains uncertain.",
+    "trades": [
+     "site_excavation",
+     "landscaping"
+    ],
+    "est_value": null,
+    "next_date": "2026-06-23",
+    "generated_at": "2026-06-12T22:23:24"
+   },
    "events": [
     {
      "event_id": "294bd863-433c-4760-9b61-a5a6eb50871c",
@@ -258,6 +291,7 @@
    "first_seen": "2026-06-09",
    "last_activity": "2026-06-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "42a4931f-705b-4696-b2e5-a9efd177162a",
@@ -288,6 +322,7 @@
    "first_seen": "2026-06-09",
    "last_activity": "2026-06-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "7803d9ad-d3db-480a-9e28-df4965fd47de",
@@ -318,6 +353,16 @@
    "first_seen": "2026-05-11",
    "last_activity": "2026-06-08",
    "status": "active",
+   "brief": {
+    "what": "New England Home for the Deaf and Winn Development Company are seeking to modify Condition 5 of Special Permit #23-5012 for a rental housing development at 154 and 170 Water Street in Danvers, MA. The modification would replace a permanent Danvers-resident leasing preference with one limited to the initial lease-up period, subject to HLC approval and in conformance with Fair Housing guidelines.",
+    "status": "The Zoning Board of Appeals continued the hearing on June 8, 2026, with no decision recorded.",
+    "whats_next": "A further continued hearing before the Zoning Board of Appeals is the next step, pending HLC approval and Fair Housing conformance review.",
+    "outlook": "The case has been continued once, suggesting the Board has not yet resolved its questions. The applicants' Fair Housing compliance framing and HLC approval requirement may indicate the modification is likely to advance, but the record shows no signals of imminent approval or denial.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:23:54"
+   },
    "events": [
     {
      "event_id": "b46159b2-8e0b-48a1-b230-f5efc9239b3a",
@@ -363,6 +408,7 @@
    "first_seen": "2026-06-08",
    "last_activity": "2026-06-08",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "835860ba-f5ab-4beb-bafc-3af64c5e3952",
@@ -393,6 +439,7 @@
    "first_seen": "2026-06-08",
    "last_activity": "2026-06-08",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "e3451053-73bd-4cb5-b718-552e8fb391dd",
@@ -423,6 +470,7 @@
    "first_seen": "2026-06-04",
    "last_activity": "2026-06-04",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "7f18df35-0054-4f94-affe-e2c54b339ea9",
@@ -453,6 +501,7 @@
    "first_seen": "2026-06-04",
    "last_activity": "2026-06-04",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "ef88dc96-74cc-4fd7-9313-59590acf762a",
@@ -483,6 +532,7 @@
    "first_seen": "2026-06-04",
    "last_activity": "2026-06-04",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "c2987ff4-2d2d-4e36-b072-cfdf796e98fd",
@@ -513,6 +563,7 @@
    "first_seen": "2026-06-02",
    "last_activity": "2026-06-02",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "6eac3cb1-0171-4f17-9a56-8e1c1d081d76",
@@ -543,6 +594,21 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-05-28",
    "status": "active",
+   "brief": {
+    "what": "Residential construction at 86 Elliott Street in Danvers, MA involving a 900 sq ft two-bedroom ADU above a garage, filed under Notice of Intent DEP File No. 14-1450 with the Conservation Commission by Majlinda and Spartak Vaka.",
+    "status": "The hearing remained open as of May 28, 2026, with a Conservation Commission Enforcement Order also on that agenda; the structure encroaches into both the 35-ft no-disturb and 50-ft no-build buffer zones of an intermittent stream, and the applicant had agreed at the prior hearing to revise plans to shift the building and driveway further from the stream.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "The project faces significant regulatory headwinds: work began without the required Conservation permit, the as-built footprint breaches two protective buffer zones, and an enforcement order was pending as of the last record. The trajectory suggests the applicant will need to demonstrate meaningful plan revisions before the Commission is likely to issue an Order of Conditions, and formal enforcement action remains a live possibility.",
+    "trades": [
+     "site_excavation",
+     "concrete_foundation",
+     "paving_asphalt",
+     "stormwater_septic"
+    ],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:23:40"
+   },
    "events": [
     {
      "event_id": "2cf98fe0-6c1d-467d-aa15-6f0e7b95a69b",
@@ -649,6 +715,7 @@
    "first_seen": "2026-05-28",
    "last_activity": "2026-05-28",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "35862f91-5fec-4aaf-9d56-aae6a5a2ca0d",
@@ -679,6 +746,7 @@
    "first_seen": "2026-05-28",
    "last_activity": "2026-05-28",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "e6f31856-7288-4db1-bb5b-6ab7ff5ea417",
@@ -709,6 +777,7 @@
    "first_seen": "2026-05-28",
    "last_activity": "2026-05-28",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "4845de4e-252f-4e15-850b-e0881f35f8bf",
@@ -739,6 +808,7 @@
    "first_seen": "2026-05-26",
    "last_activity": "2026-05-26",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "ef29ab99-5ae5-43fd-b7e5-7aea1b9cc1e2",
@@ -769,6 +839,7 @@
    "first_seen": "2026-05-21",
    "last_activity": "2026-05-21",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "d580e896-9203-4f8b-a0b4-fca2248653b0",
@@ -799,6 +870,7 @@
    "first_seen": "2026-05-19",
    "last_activity": "2026-05-19",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "bac88e00-4587-437f-b4c7-c59fb054cb68",
@@ -829,6 +901,23 @@
    "first_seen": "2026-05-12",
    "last_activity": "2026-05-14",
    "status": "active",
+   "brief": {
+    "what": "Forest River Realty, LLC is seeking to convert an existing two-family residence at 13 Popes Lane in Danvers, MA into a contractor's yard, involving demolition of the older portion of the house, retention of the addition as an office, 15 crushed-stone parking spaces, a bulk storage area, a dumpster pad, and a small retaining wall in the Highway Corridor Zone.",
+    "status": "The Conservation Commission issued an order of conditions approving the plan on May 14, 2026, with a three-year limit; the Planning Board Special Permit and Site Plan Review hearing was held May 12, 2026, but no decision from that board appears in the record.",
+    "whats_next": "Two parking spaces must be relocated out of the no-disturb zone and an updated plan submitted to the Conservation Commission before the order is formally filed.",
+    "outlook": "Conservation Commission approval with conditions suggests the project has cleared a significant regulatory hurdle, and the minor relocation requirement is a defined, bounded task rather than a substantive redesign — both indicators of forward momentum. Final status depends on the Planning Board's Special Permit decision, which the record does not yet show.",
+    "trades": [
+     "site_excavation",
+     "landscaping",
+     "demolition",
+     "paving_asphalt",
+     "masonry",
+     "stormwater_septic"
+    ],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:24:13"
+   },
    "events": [
     {
      "event_id": "d6bc8574-aaff-46d0-a5bc-797e06890508",
@@ -878,6 +967,7 @@
    "first_seen": "2026-05-14",
    "last_activity": "2026-05-14",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "023dfbbd-aad3-4d74-9eaf-d67272017d07",
@@ -908,6 +998,7 @@
    "first_seen": "2026-05-14",
    "last_activity": "2026-05-14",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "abd3c980-b9c9-459a-b4ce-a77d237e994f",
@@ -938,6 +1029,7 @@
    "first_seen": "2026-05-14",
    "last_activity": "2026-05-14",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "8246b905-0584-44bd-b307-940c77f12c41",
@@ -968,6 +1060,7 @@
    "first_seen": "2026-05-11",
    "last_activity": "2026-05-11",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "5d5ceb9c-7b99-4ad7-a783-22c2064a3602",
@@ -998,6 +1091,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "167ee046-5e57-4155-8a69-2ce4ca3b3932",
@@ -1028,6 +1122,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "2eb0037f-2ce7-419a-a46b-065598aa5c7d",
@@ -1058,6 +1153,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "c6ba2bbd-353a-432a-b7bd-d5cfd8c8887e",
@@ -1088,6 +1184,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "fdd0f7f9-6331-4e29-b0ef-62e6adc0732b",
@@ -1118,6 +1215,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "71144adf-2d5e-4023-aaae-4382585ec987",
@@ -1148,6 +1246,7 @@
    "first_seen": "2026-05-07",
    "last_activity": "2026-05-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "7316d7aa-0323-46fe-8fd5-61de3c3a4fc1",
@@ -1178,6 +1277,7 @@
    "first_seen": "2026-04-23",
    "last_activity": "2026-04-23",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "78fb6504-41d4-424c-a646-53f0371da279",
@@ -1212,6 +1312,7 @@
    "first_seen": "2026-04-19",
    "last_activity": "2026-04-19",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "8936252a-7174-43fa-83c9-9fd3f0ff39e9",
@@ -1242,6 +1343,7 @@
    "first_seen": "2026-04-13",
    "last_activity": "2026-04-13",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "3ab62399-30a0-4607-a56b-a4f6af13f538",
@@ -1276,6 +1378,7 @@
    "first_seen": "2026-04-13",
    "last_activity": "2026-04-13",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "1cadce29-d4f5-4b49-88d0-8d58da3fb26c",
@@ -1310,6 +1413,23 @@
    "first_seen": "2026-03-26",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": {
+    "what": "Mobile home park expansion at 96–98 Newbury Street, Danvers, MA, proposed by Steven Tedesco of Temar Properties, LLC. The project involves new mobile homes, stormwater improvements (detention basins, forebays, manholes), and pavement within the 100-foot wetland buffer zone, with ZBA and Planning Board approvals already secured before the Conservation Commission proceedings.",
+    "status": "The Conservation Commission issued an Order of Conditions on April 9, 2026 approving two new mobile homes and expanded pavement (DEP #14-1449), with a waiver granted for 280 square feet of pavement within the 50-foot no-build zone, conditioned on a $2,500 debris-cleanup bond and installation of a stone infiltration trench; one commissioner dissented.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "All three local permitting bodies have now approved the project, suggesting the applicant is positioned to proceed to construction; the single dissenting vote and bonded conditions are minor friction, not apparent blockers, though the reduction in approved scope from the originally proposed ~24 units to two reflects some negotiation with regulators.",
+    "trades": [
+     "site_excavation",
+     "stormwater_septic",
+     "utilities",
+     "paving_asphalt",
+     "electrical",
+     "plumbing"
+    ],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:22:48"
+   },
    "events": [
     {
      "event_id": "80ce602c-fc32-42ae-a40e-07857f4920c6",
@@ -1363,6 +1483,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "c5e5460a-530b-49a6-b5f5-2b16f9b4fec5",
@@ -1393,6 +1514,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "46f026c0-4861-480b-a4d0-d9e40acfc631",
@@ -1423,6 +1545,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "b2d42096-457c-4d14-9a1e-272bf8c83117",
@@ -1453,6 +1576,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "a0ababdd-d916-49fe-848c-5e293f747867",
@@ -1483,6 +1607,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "f32347e0-52ca-4f46-9ced-ed7850ae0d9b",
@@ -1513,6 +1638,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "41e8b357-d0fd-4f98-9037-07dce4a8c392",
@@ -1543,6 +1669,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "68bae6a4-b9ab-4d84-8b78-8c0318194914",
@@ -1573,6 +1700,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "78525c4d-ec78-436a-9703-a609274e65b3",
@@ -1603,6 +1731,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "7c47ec4f-4e6e-4f7a-bd4b-670c496a0278",
@@ -1633,6 +1762,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "44186e3d-44f6-4613-894e-bad4e52f9b98",
@@ -1663,6 +1793,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "b9f65e35-06b9-410b-aec5-bc85fc2a0cf2",
@@ -1693,6 +1824,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "e3d55865-06ca-491d-95f7-0ac637af7337",
@@ -1723,6 +1855,7 @@
    "first_seen": "2026-04-09",
    "last_activity": "2026-04-09",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "0107c2a5-60d0-4cbc-a619-db2d05aac158",
@@ -1753,6 +1886,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "8f2fef72-1f03-472d-982b-3c7efe30a8c8",
@@ -1783,6 +1917,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "154fecb3-22c9-4a99-928b-ea5b8fd3f1a5",
@@ -1813,6 +1948,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "8da72294-eea4-47bd-9244-ceae3eec6592",
@@ -1843,6 +1979,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "9f137921-aa2c-450b-803b-15678ba86b29",
@@ -1873,6 +2010,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "afc798a4-4233-4a32-a849-419fca7cc316",
@@ -1903,6 +2041,7 @@
    "first_seen": "2026-04-07",
    "last_activity": "2026-04-07",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "4f8b65e2-b6b2-49c1-945b-fdd52e848974",
@@ -1933,6 +2072,16 @@
    "first_seen": "2026-03-24",
    "last_activity": "2026-04-06",
    "status": "active",
+   "brief": {
+    "what": "Bay State RE Holdings, LLC is seeking to rezone 249 Andover Street (Map 047, Parcel 015A) in Danvers, MA from Residential III (R-3) to the Highway Corridor Zone (HCZ) to allow construction of a community ice skating rink with a single sheet of ice, approximately 50 parking spaces, lobby, concessions, and locker rooms, with site access requiring a 70-foot bridge crossing wetlands.",
+    "status": "The Danvers Planning Board held a public hearing on the citizen's petition on April 6, 2026, following a continuance from the March 24 hearing where the board raised unresolved questions about abutter outreach, traffic, environmental constraints, potential future HCZ uses if the rink fails, and whether a ZBA nonconforming-use substitution would be a preferable pathway.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "The volume of concerns the Planning Board surfaced at the first hearing — wetland crossing, traffic, open-ended HCZ exposure, and an alternative ZBA pathway — suggests the petition faces meaningful scrutiny; approval is not a foregone conclusion and further continuances or a redirect to the ZBA seem plausible.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:21:58"
+   },
    "events": [
     {
      "event_id": "e5feb3c0-4a41-4fb6-addc-d7d344b087bf",
@@ -1982,6 +2131,16 @@
    "first_seen": "2026-03-24",
    "last_activity": "2026-04-06",
    "status": "active",
+   "brief": {
+    "what": "A citizens' petition filed by Melissa Nardone seeks to amend the Danvers Zoning Bylaw Table of Allowable Uses to reclassify commercial kennel, boarding, and in-home dog training uses from prohibited to allowable by ZBA special permit in R-1, R-2, and R-3 residential districts, applying bylaw-wide with no site-specific address.",
+    "status": "The Planning Board held a public hearing on April 6, 2026; the petition had been continued from a March 24 hearing pending Town Counsel review of permissible amendments, clarification of petition language, and development of zone-specific operational standards.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "The board's conditions at the March continuance — Town Counsel review and zone-specific standards — point to meaningful scrutiny before any recommendation; the petition reaching a second hearing suggests it remains active, but the unresolved drafting questions make the outcome uncertain.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-12T22:22:21"
+   },
    "events": [
     {
      "event_id": "cb0e257d-b98c-4988-816a-572c86abce34",
@@ -2031,6 +2190,7 @@
    "first_seen": "2026-03-26",
    "last_activity": "2026-03-26",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "fcd6ed54-bf27-4086-98c8-71c912caba58",
@@ -2065,6 +2225,7 @@
    "first_seen": "2026-03-24",
    "last_activity": "2026-03-24",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "49277a11-bb74-496d-8fa8-e94ad2d96997",
@@ -2095,6 +2256,7 @@
    "first_seen": "2026-03-17",
    "last_activity": "2026-03-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "9f3be615-2a70-4831-a949-6b211c4ab1b7",
@@ -2125,6 +2287,7 @@
    "first_seen": "2026-03-17",
    "last_activity": "2026-03-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "d350edc3-3e23-4931-9a42-39f2eb3ed0c5",
@@ -2155,6 +2318,7 @@
    "first_seen": "2026-03-17",
    "last_activity": "2026-03-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "10bbd18e-5a01-410a-bdc9-76765241cc40",
@@ -2185,6 +2349,7 @@
    "first_seen": "2026-03-17",
    "last_activity": "2026-03-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "7ca9260c-2428-4b27-b0c2-13144b854190",
@@ -2215,6 +2380,7 @@
    "first_seen": "2026-03-17",
    "last_activity": "2026-03-17",
    "status": "active",
+   "brief": null,
    "events": [
     {
      "event_id": "1f3bf2e8-9f9e-4916-ac8b-dc902bae866d",

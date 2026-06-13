@@ -13,6 +13,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import re
 import sys
 
 import yaml
@@ -194,6 +195,60 @@ def main():
     warn(not unlinked,
          f"every approved event is linked to a story ({len(unlinked)} unlinked — "
          f"ambiguous cases awaiting review are acceptable)")
+
+    print("\n=== STORY BRIEFS (Step 5) ===")
+    DOLLAR_RE = re.compile(r"\$\s?\d")  # same "$ amount" gate build_briefs enforces
+    BRIEF_KEYS = {"what", "status", "whats_next", "outlook",
+                  "trades", "est_value", "next_date", "generated_at"}
+    pub_by_story = {}
+    for e in events:
+        if (e["review_status"] in ("auto_approved", "human_approved")
+                and not e["superseded_by"] and e["story_id"]):
+            pub_by_story.setdefault(e["story_id"], []).append(e)
+    missing_brief, bad_json, missing_keys = [], [], []
+    dollar_leak, brief_bad_trades, bad_est, bad_bnext = [], [], [], []
+    for s in stories:
+        members = pub_by_story.get(s["story_id"], [])
+        has_dollar = any(m["dollar_value"] is not None for m in members)
+        if len(members) >= 2 and s["status"] == "active" and not s["brief"]:
+            missing_brief.append(s["story_id"])
+        if not s["brief"]:
+            continue
+        try:
+            b = json.loads(s["brief"])
+        except (json.JSONDecodeError, TypeError):
+            bad_json.append(s["story_id"])
+            continue
+        if not isinstance(b, dict) or not BRIEF_KEYS <= set(b):
+            missing_keys.append(s["story_id"])
+            continue
+        if not has_dollar:
+            for f in ("what", "outlook"):
+                if DOLLAR_RE.search(str(b.get(f) or "")):
+                    dollar_leak.append((s["story_id"], f))
+        tr = b.get("trades") or []
+        if not isinstance(tr, list) or any(t not in TRADES for t in tr):
+            brief_bad_trades.append(s["story_id"])
+        if b.get("est_value") is not None and not has_dollar:
+            bad_est.append(s["story_id"])
+        if b.get("next_date"):
+            try:
+                dt.date.fromisoformat(str(b["next_date"]))
+            except (ValueError, TypeError):
+                bad_bnext.append(s["story_id"])
+    check(not missing_brief,
+          f"every active multi-event story has a brief ({len(missing_brief)} missing — "
+          f"run signals/synthesize/build_briefs.py)")
+    check(not bad_json, f"every stored brief is valid JSON ({len(bad_json)} bad)")
+    check(not missing_keys, f"every brief carries the required keys ({len(missing_keys)} bad)")
+    check(not dollar_leak,
+          f"no $ amount in brief what/outlook unless an event stated a dollar_value "
+          f"({len(dollar_leak)} leak(s))")
+    check(not brief_bad_trades,
+          f"brief trades within the closed vocabulary ({len(brief_bad_trades)} bad)")
+    check(not bad_est,
+          f"brief est_value null unless an event stated a dollar_value ({len(bad_est)} bad)")
+    check(not bad_bnext, f"brief next_date parses as ISO when present ({len(bad_bnext)} bad)")
 
     print("\n=== REGISTRY vs town_scores.csv ===")
     if os.path.exists(TOWN_SCORES):

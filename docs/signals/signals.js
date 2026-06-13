@@ -388,6 +388,18 @@ function collectContacts(evs) {
   }
   return out;
 }
+function briefBlock(b) {  // Step 5 synthesis; "outlook" is the only projected field
+  if (!b || !b.what) return "";
+  const row = (label, val) => val
+    ? `<div><dt>${esc(label)}</dt><dd>${esc(val)}</dd></div>` : "";
+  return `<div class="brief">
+    <p class="brief-what">${esc(b.what)}</p>
+    <dl class="brief-dl">${row("Status", b.status)}${row("What's next", b.whats_next)}</dl>
+    ${b.outlook ? `<div class="outlook">
+      <div class="outlook-tag">Outlook — projection, not from the record</div>
+      <p>${esc(b.outlook)}</p></div>` : ""}
+  </div>`;
+}
 function renderDetail(storyId) {
   const story = storyById(storyId);
   if (!story) {
@@ -427,6 +439,7 @@ function renderDetail(storyId) {
     </div>
     <div class="numbers">${numbers.map((n) =>
       `<div><div class="k">${esc(n.k)}</div><div class="v">${esc(n.v)}</div></div>`).join("")}</div>
+    ${briefBlock(story.brief)}
     ${trades.length ? `<div class="l3">${trades.map((t) =>
       `<span class="tag">${esc(TRADE_LABELS[t] || t)}</span>`).join("")}</div>` : ""}
     ${contacts.length ? `<h3 class="section-h" style="font-size:15px">Who's involved

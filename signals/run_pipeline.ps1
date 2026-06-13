@@ -29,10 +29,11 @@ function Run-Step($name, $module) {
 
 # Collection steps: a failure here is logged but doesn't block publishing
 # whatever DID land (per-town/per-doc errors are already isolated inside).
-Run-Step 'crawl'   'signals.crawl.crawl'        | Out-Null
-Run-Step 'ocr'     'signals.extract.ocr'        | Out-Null
-Run-Step 'extract' 'signals.extract.extract'    | Out-Null
-Run-Step 'link'    'signals.link.link_stories'  | Out-Null
+Run-Step 'crawl'     'signals.crawl.crawl'             | Out-Null
+Run-Step 'ocr'       'signals.extract.ocr'             | Out-Null
+Run-Step 'extract'   'signals.extract.extract'         | Out-Null
+Run-Step 'link'      'signals.link.link_stories'       | Out-Null
+Run-Step 'briefs'    'signals.synthesize.build_briefs' | Out-Null
 
 # The gate: red means STOP — do not publish, site keeps the last good data.
 if (-not (Run-Step 'validate' 'signals.validate_signals')) {

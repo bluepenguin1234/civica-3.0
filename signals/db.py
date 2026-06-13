@@ -48,7 +48,9 @@ CREATE TABLE IF NOT EXISTS project_stories (
     first_seen        TEXT,
     last_activity     TEXT,
     total_units       INTEGER,
-    status            TEXT NOT NULL DEFAULT 'active'     -- active | dormant | completed | dead
+    status            TEXT NOT NULL DEFAULT 'active',    -- active | dormant | completed | dead
+    brief             TEXT,                              -- JSON synthesis (Step 5): {what,status,whats_next,outlook,trades,est_value,next_date,generated_at}; outlook is the ONLY projected field
+    brief_last_activity TEXT                             -- last_activity the brief was built for; brief is dirty (regenerate) when this != last_activity
 );
 
 CREATE TABLE IF NOT EXISTS events (
@@ -106,17 +108,23 @@ _EVENT_MIGRATIONS = (
     ("tenure", "TEXT"),
     ("superseded_by", "TEXT"),
 )
+_STORY_MIGRATIONS = (
+    ("brief", "TEXT"),
+    ("brief_last_activity", "TEXT"),
+)
 
 
 def init_db():
     """Create the schema if needed (idempotent) and return an open connection."""
     conn = connect()
     conn.executescript(SCHEMA)
-    for col, typ in _EVENT_MIGRATIONS:
-        try:
-            conn.execute(f"ALTER TABLE events ADD COLUMN {col} {typ}")
-        except sqlite3.OperationalError:
-            pass  # column already exists
+    for table, migrations in (("events", _EVENT_MIGRATIONS),
+                              ("project_stories", _STORY_MIGRATIONS)):
+        for col, typ in migrations:
+            try:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
+            except sqlite3.OperationalError:
+                pass  # column already exists
     conn.commit()
     return conn
 

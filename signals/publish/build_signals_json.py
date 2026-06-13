@@ -129,6 +129,7 @@ def main():
             "first_seen": s["first_seen"],
             "last_activity": s["last_activity"],
             "status": s["status"],
+            "brief": _j(s["brief"]),
             "events": [{"event_id": ev["event_id"], "date": ev["date"],
                         "board": ev["board"], "event_type": ev["event_type"],
                         "stage": ev["stage"], "summary": ev["summary"],

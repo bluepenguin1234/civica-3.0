@@ -29,6 +29,8 @@ echo "[init] signals: extract"
 python -m signals.extract.extract
 echo "[init] signals: link stories"
 python -m signals.link.link_stories
+echo "[init] signals: synthesize story briefs"
+python -m signals.synthesize.build_briefs
 echo "[init] signals: validate"
 python -m signals.validate_signals
 echo "[init] signals: publish feed"
