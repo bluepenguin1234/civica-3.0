@@ -34,6 +34,7 @@ Run-Step 'ocr'       'signals.extract.ocr'             | Out-Null
 Run-Step 'extract'   'signals.extract.extract'         | Out-Null
 Run-Step 'link'      'signals.link.link_stories'       | Out-Null
 Run-Step 'briefs'    'signals.synthesize.build_briefs' | Out-Null
+Run-Step 'entities'  'signals.enrich.resolve_entities' | Out-Null
 
 # The gate: red means STOP — do not publish, site keeps the last good data.
 if (-not (Run-Step 'validate' 'signals.validate_signals')) {

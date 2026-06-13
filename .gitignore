@@ -33,8 +33,9 @@ signals/signals.db
 signals/signals.db-wal
 signals/signals.db-shm
 signals/pipeline_run.log
-# regenerated each link run (human-review scratch)
+# regenerated each link/resolve run (human-review scratch)
 signals/link/ambiguous_links.txt
+signals/enrich/ambiguous_entities.txt
 
 # The "_*.py" scratch rule above also matches __init__.py — keep package markers.
 !signals/**/__init__.py

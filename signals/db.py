@@ -86,6 +86,30 @@ CREATE TABLE IF NOT EXISTS events (
 
 CREATE INDEX IF NOT EXISTS idx_events_town_date ON events(town_id, meeting_date);
 CREATE INDEX IF NOT EXISTS idx_events_story     ON events(story_id);
+
+CREATE TABLE IF NOT EXISTS entities (
+    entity_id         TEXT PRIMARY KEY,                  -- deterministic id (sha1 of town|kind|seed)
+    kind              TEXT,                              -- person | firm | public_office
+    canonical_name    TEXT,
+    town_scope        TEXT,                              -- town_id the entity was resolved within
+    website           TEXT,                              -- web-lookup enrichment (Step 8; null now)
+    phone             TEXT,                              -- Step 8 enrichment
+    linkedin_url      TEXT,                              -- Step 8 enrichment
+    enrich_source     TEXT,                              -- Step 8 enrichment
+    enrich_confidence REAL,                              -- Step 8 enrichment
+    last_verified     TEXT,                              -- Step 8 enrichment
+    review_status     TEXT NOT NULL DEFAULT 'auto_resolved'  -- auto_resolved | human_verified | needs_review
+);
+
+CREATE TABLE IF NOT EXISTS event_entities (
+    event_id   TEXT NOT NULL,
+    entity_id  TEXT NOT NULL,
+    role       TEXT,                                     -- developer|owner|engineer|architect|attorney|surveyor|gc|public_contact|representative
+    source     TEXT,                                     -- applicant | owner | applicant_reps | job_contact
+    PRIMARY KEY (event_id, entity_id, role, source)
+);
+CREATE INDEX IF NOT EXISTS idx_event_entities_entity ON event_entities(entity_id);
+CREATE INDEX IF NOT EXISTS idx_event_entities_event  ON event_entities(event_id);
 """
 
 

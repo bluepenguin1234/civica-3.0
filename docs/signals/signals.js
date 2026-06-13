@@ -59,6 +59,13 @@ const VIEWS = {
   contractor: [["open", "Open jobs"], ["coming", "Coming up"], ["all", "Everything"]],
   realtor: [["new", "New housing"], ["works", "In the works"], ["all", "Everything"]],
 };
+const ROLE_LABELS = {  // event_entities.role (Step 7)
+  developer: "Developer", owner: "Owner", engineer: "Engineer", architect: "Architect",
+  attorney: "Attorney", surveyor: "Surveyor", gc: "General contractor",
+  public_contact: "Public contact", representative: "Representative",
+};
+const KIND_LABELS = { person: "Person", firm: "Firm", public_office: "Public office" };
+const roleList = (roles) => (roles || []).map((r) => ROLE_LABELS[r] || r).join(" · ");
 
 let FEED = null;
 const $ = (id) => document.getElementById(id);
@@ -104,6 +111,7 @@ let STATE = null;
 
 /* ── Feed lookups ─────────────────────────────────────────────────────── */
 const storyById = (id) => FEED.stories.find((s) => s.story_id === id);
+const entityById = (id) => (FEED.entities || []).find((e) => e.entity_id === id);
 const fullEventById = (id) => FEED.events.find((e) => e.event_id === id);
 function storyFullEvents(story) {
   return story.events.map((se) => fullEventById(se.event_id)).filter(Boolean);
@@ -182,6 +190,16 @@ function firstSentence(text) {
   const m = String(text || "").match(/^.*?[.!?](?:\s|$)/);
   return m ? m[0].trim() : String(text || "");
 }
+function entityHref(name, contacts) {  // resolve a displayed name to its entity page
+  if (!name || !contacts) return null;
+  const c = contacts.find((c) => c.name === name) ||
+            contacts.find((c) => c.name && (c.name.includes(name) || name.includes(c.name)));
+  return c ? `#entity/${encodeURIComponent(c.entity_id)}` : null;
+}
+function nameTag(name, contacts) {
+  const href = entityHref(name, contacts);
+  return href ? `<a href="${href}"><b>${esc(name)}</b></a>` : `<b>${esc(name)}</b>`;
+}
 function contactLine(ev) {
   if (ev.event_type === "bid_rfp" && ev.job_contact) {
     const j = ev.job_contact;
@@ -189,7 +207,7 @@ function contactLine(ev) {
     if (who) return `Contact: <b>${esc(who)}</b>${j.contact_info ? " — " + esc(j.contact_info) : ""}`;
   }
   const who = ev.applicant || ev.owner;
-  if (who) return `${ev.owner && !ev.applicant ? "Owner" : "Applicant"}: <b>${esc(who)}</b>`;
+  if (who) return `${ev.owner && !ev.applicant ? "Owner" : "Applicant"}: ${nameTag(who, ev.contacts)}`;
   if (ev.job_contact && (ev.job_contact.name || ev.job_contact.role)) {
     const j = ev.job_contact;
     return `Contact: <b>${esc([j.role, j.name, j.org].filter(Boolean).join(", "))}</b>`;
@@ -420,7 +438,9 @@ function renderDetail(storyId) {
     next && { k: "Next date", v: fmtDate(next) },
   ].filter(Boolean);
   const trades = [...storyTrades(story)];
-  const contacts = collectContacts(evs);
+  const contacts = (story.contacts && story.contacts.length)
+    ? story.contacts.map((c) => ({ entity_id: c.entity_id, name: c.name, role: roleList(c.roles) }))
+    : collectContacts(evs);  // fallback for a pre-Step-7 feed
   const timeline = evs.map((e) => `
     <div class="tl-item sg-${esc(e.stage || "informational")}">
       <div class="tl-date">${esc(fmtDate(e.date))} · ${esc(e.board || "")} ${stageBadge(e.stage)}</div>
@@ -445,13 +465,51 @@ function renderDetail(storyId) {
     ${contacts.length ? `<h3 class="section-h" style="font-size:15px">Who's involved
       <span class="count">${contacts.length}</span></h3>
     <div class="contact-list">${contacts.map((c) => `<div class="c">
-      <span class="role">${esc(c.role)}</span><br><b>${esc(c.name)}</b>${c.extra ? " — " + esc(c.extra) : ""}
+      <span class="role">${esc(c.role)}</span><br>${c.entity_id
+        ? `<a href="#entity/${esc(c.entity_id)}"><b>${esc(c.name)}</b></a>`
+        : `<b>${esc(c.name)}</b>`}${c.extra ? " — " + esc(c.extra) : ""}
       <span style="float:right;font-size:11px;color:var(--muted)">public record</span></div>`).join("")}</div>` : ""}
     <h3 class="section-h" style="font-size:15px">Timeline
       <span class="count">${evs.length} meeting(s)</span></h3>
     <div class="timeline">${timeline}</div>
     ${story.place_fips ? `<p style="margin-top:18px;font-size:13.5px">
       <a href="../output/towns/${esc(story.place_fips)}.html">Civica town report for ${esc(story.town)} →</a></p>` : ""}`;
+}
+
+/* ── Entity route (#entity/<id>) — the directory, reached by tapping names ─ */
+function renderEntity(entityId) {
+  const ent = entityById(entityId);
+  if (!ent) {
+    $("detailView").innerHTML = `<div class="state-card">Contact not found.
+      <a href="#" onclick="location.hash='';return false;">Back to the feed</a></div>`;
+    return;
+  }
+  const stories = (ent.story_ids || []).map(storyById).filter(Boolean)
+    .sort((a, b) => (b.last_activity || "").localeCompare(a.last_activity || ""));
+  const enrich = [];  // Step 8 fills these; from the public record otherwise
+  if (ent.website) enrich.push(`<a href="${esc(ent.website)}" rel="noopener">Website ↗</a>`);
+  if (ent.phone) enrich.push(`<a href="tel:${esc(ent.phone)}">${esc(ent.phone)}</a>`);
+  if (ent.linkedin_url) enrich.push(`<a href="${esc(ent.linkedin_url)}" rel="noopener">LinkedIn ↗</a>`);
+
+  $("detailView").innerHTML = `
+    <a class="backlink" href="#" onclick="location.hash='';return false;">← All signals</a>
+    <h2 class="section-h" style="margin-top:0">${esc(ent.name)}</h2>
+    <div class="l1" style="margin-bottom:4px">
+      <span class="tag">${esc(KIND_LABELS[ent.kind] || ent.kind)}</span>
+      ${(ent.roles || []).map((r) => `<span class="tag">${esc(ROLE_LABELS[r] || r)}</span>`).join("")}
+      <span class="date-pill">${esc(ent.town)}, MA</span>
+    </div>
+    <div class="brief">
+      ${enrich.length
+        ? `<p class="brief-what">${enrich.join(" &nbsp;·&nbsp; ")}</p>`
+        : `<p class="brief-what" style="font-weight:500;color:var(--muted)">No direct contact details
+           on the public record yet — names and roles below are drawn from the meeting documents.</p>`}
+      <div style="font-size:11px;color:var(--muted);margin-top:6px">Sourced from public municipal records.</div>
+    </div>
+    <h3 class="section-h" style="font-size:15px">Projects
+      <span class="count">${stories.length}</span></h3>
+    ${stories.length ? stories.map((s) => storyCard(s, { nextPill: false })).join("")
+                     : emptyCard("No published projects for this contact.")}`;
 }
 
 /* ── Controls (mode switch, tabs, chips, filters panel) ───────────────── */
@@ -552,11 +610,14 @@ function renderCoverage() {
     + `<span class="cov-chip">expanding across the North Shore — 30 towns planned</span>`;
 }
 function route() {
-  const m = location.hash.match(/^#story\/(.+)$/);
-  $("detailView").hidden = !m;
-  $("feedView").hidden = !!m;
-  if (m && FEED) renderDetail(decodeURIComponent(m[1]));
-  if (m) window.scrollTo(0, 0);
+  const sm = location.hash.match(/^#story\/(.+)$/);
+  const em = location.hash.match(/^#entity\/(.+)$/);
+  const detail = sm || em;
+  $("detailView").hidden = !detail;
+  $("feedView").hidden = !!detail;
+  if (FEED && sm) renderDetail(decodeURIComponent(sm[1]));
+  else if (FEED && em) renderEntity(decodeURIComponent(em[1]));
+  if (detail) window.scrollTo(0, 0);
 }
 function showError(msg) {
   $("stateCard").hidden = false;

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T22:24:32",
+ "generated_at": "2026-06-12T22:45:50",
  "coverage": [
   {
    "town_id": "danvers_ma",
@@ -22,6 +22,19 @@
    "last_activity": "2026-06-17",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "936e32a0915dcb28",
+     "name": "Kim Lundgren Associates",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "ef347c1d-dc47-4094-b507-9b7cb433c544",
@@ -71,6 +84,67 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:23:08"
    },
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8e408d270401a0ad",
+     "name": "Danell Baptiste",
+     "kind": "person",
+     "roles": [
+      "engineer",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "faadc8df028f88d7",
+     "name": "High Point Engineering",
+     "kind": "firm",
+     "roles": [
+      "engineer",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "7eaeba4ba6d854ae",
+     "name": "Cindy Murphy",
+     "kind": "person",
+     "roles": [
+      "architect",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "1dca37b489f42d47",
+     "name": "Genesis AEC",
+     "kind": "firm",
+     "roles": [
+      "architect",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "e79481ff-2e74-4e97-8743-9742132916a1",
@@ -216,6 +290,19 @@
     "next_date": "2026-06-23",
     "generated_at": "2026-06-12T22:23:24"
    },
+   "contacts": [
+    {
+     "entity_id": "5717181bb207c8c3",
+     "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "294bd863-433c-4760-9b61-a5a6eb50871c",
@@ -292,6 +379,7 @@
    "last_activity": "2026-06-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "42a4931f-705b-4696-b2e5-a9efd177162a",
@@ -323,6 +411,19 @@
    "last_activity": "2026-06-09",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "3df6e4dee17fd452",
+     "name": "T.A.K.J., LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "7803d9ad-d3db-480a-9e28-df4965fd47de",
@@ -363,6 +464,19 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:23:54"
    },
+   "contacts": [
+    {
+     "entity_id": "cc9b7f1bc10a43e9",
+     "name": "New England Home for the Deaf / Winn Development Company",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "b46159b2-8e0b-48a1-b230-f5efc9239b3a",
@@ -409,6 +523,30 @@
    "last_activity": "2026-06-08",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "7e80f0cf06be8dae",
+     "name": "8 Fairview Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "32e93bd942200341",
+     "name": "Jason A. Panos",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "835860ba-f5ab-4beb-bafc-3af64c5e3952",
@@ -440,6 +578,19 @@
    "last_activity": "2026-06-08",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d53d9daf9937fe39",
+     "name": "Keith Oakley",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "e3451053-73bd-4cb5-b718-552e8fb391dd",
@@ -471,6 +622,7 @@
    "last_activity": "2026-06-04",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "7f18df35-0054-4f94-affe-e2c54b339ea9",
@@ -502,6 +654,7 @@
    "last_activity": "2026-06-04",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "ef88dc96-74cc-4fd7-9313-59590acf762a",
@@ -533,6 +686,7 @@
    "last_activity": "2026-06-04",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "c2987ff4-2d2d-4e36-b072-cfdf796e98fd",
@@ -564,6 +718,19 @@
    "last_activity": "2026-06-02",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "22bab6fdc4d196aa",
+     "name": "Danvers Electric and Verizon",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "6eac3cb1-0171-4f17-9a56-8e1c1d081d76",
@@ -609,6 +776,32 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:23:40"
    },
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "developer",
+      "owner"
+     ],
+     "sources": [
+      "applicant",
+      "owner"
+     ]
+    },
+    {
+     "entity_id": "52336e6f1569476a",
+     "name": "Adel Shahin",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "2cf98fe0-6c1d-467d-aa15-6f0e7b95a69b",
@@ -716,6 +909,19 @@
    "last_activity": "2026-05-28",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "4dbe835259af290a",
+     "name": "Adimir Toska",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "35862f91-5fec-4aaf-9d56-aae6a5a2ca0d",
@@ -747,6 +953,19 @@
    "last_activity": "2026-05-28",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "b77bedf58c0d6794",
+     "name": "John Lacroix",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "e6f31856-7288-4db1-bb5b-6ab7ff5ea417",
@@ -778,6 +997,19 @@
    "last_activity": "2026-05-28",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "a4abe175e8f4113c",
+     "name": "Greg Maynard",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "4845de4e-252f-4e15-850b-e0881f35f8bf",
@@ -809,6 +1041,19 @@
    "last_activity": "2026-05-26",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "86df8eba77121f15",
+     "name": "B. Dupont-Raesly, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "ef29ab99-5ae5-43fd-b7e5-7aea1b9cc1e2",
@@ -840,6 +1085,7 @@
    "last_activity": "2026-05-21",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "d580e896-9203-4f8b-a0b4-fca2248653b0",
@@ -871,6 +1117,30 @@
    "last_activity": "2026-05-19",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "9be3dab20001dbd6",
+     "name": "Stephen King",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "bac88e00-4587-437f-b4c7-c59fb054cb68",
@@ -918,6 +1188,41 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:24:13"
    },
+   "contacts": [
+    {
+     "entity_id": "01e28454e7a3ed1e",
+     "name": "Forest River Realty, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "34fa911e21ff24ba",
+     "name": "Jay Polakiewicz",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "887bba2e1249f239",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "d6bc8574-aaff-46d0-a5bc-797e06890508",
@@ -968,6 +1273,30 @@
    "last_activity": "2026-05-14",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "643f9255b3dabaac",
+     "name": "Seaside Legal Solutions",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "54044f3768ef8688",
+     "name": "John Kiley, Jr.",
+     "kind": "person",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "023dfbbd-aad3-4d74-9eaf-d67272017d07",
@@ -999,6 +1328,19 @@
    "last_activity": "2026-05-14",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "abd3c980-b9c9-459a-b4ce-a77d237e994f",
@@ -1030,6 +1372,19 @@
    "last_activity": "2026-05-14",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "8246b905-0584-44bd-b307-940c77f12c41",
@@ -1061,6 +1416,19 @@
    "last_activity": "2026-05-11",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "40027689e9b18bbc",
+     "name": "Sign Design Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "5d5ceb9c-7b99-4ad7-a783-22c2064a3602",
@@ -1092,6 +1460,41 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "ba7a5b384d3730e7",
+     "name": "South Essex Sewerage District",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "923c7390fcfac6c6",
+     "name": "Michael Parsons",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db6d5ca2afc2f5d2",
+     "name": "David Michaelson",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "167ee046-5e57-4155-8a69-2ce4ca3b3932",
@@ -1123,6 +1526,19 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "56b52a63fceea750",
+     "name": "National Grid",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "2eb0037f-2ce7-419a-a46b-065598aa5c7d",
@@ -1154,6 +1570,19 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "95c3a97af3fa9a0f",
+     "name": "Essex Tech",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "c6ba2bbd-353a-432a-b7bd-d5cfd8c8887e",
@@ -1185,6 +1614,7 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "fdd0f7f9-6331-4e29-b0ef-62e6adc0732b",
@@ -1216,6 +1646,7 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "71144adf-2d5e-4023-aaae-4382585ec987",
@@ -1247,6 +1678,7 @@
    "last_activity": "2026-05-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "7316d7aa-0323-46fe-8fd5-61de3c3a4fc1",
@@ -1278,6 +1710,30 @@
    "last_activity": "2026-04-23",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "9eb531ea8a658d2b",
+     "name": "Edward Doherty",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "61b165a892b3e187",
+     "name": "Bob Griffin",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "78fb6504-41d4-424c-a646-53f0371da279",
@@ -1313,6 +1769,7 @@
    "last_activity": "2026-04-19",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "8936252a-7174-43fa-83c9-9fd3f0ff39e9",
@@ -1344,6 +1801,19 @@
    "last_activity": "2026-04-13",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "e1bf768dcf149970",
+     "name": "Mike Becker and Charrissa Vitas",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "3ab62399-30a0-4607-a56b-a4f6af13f538",
@@ -1379,6 +1849,19 @@
    "last_activity": "2026-04-13",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "e05bbcbceeec389a",
+     "name": "20 Water LLC (Chris Blasczak, Manager)",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "1cadce29-d4f5-4b49-88d0-8d58da3fb26c",
@@ -1430,6 +1913,43 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:22:48"
    },
+   "contacts": [
+    {
+     "entity_id": "485bc074a51a562f",
+     "name": "Steven Tedesco, Temar Properties, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "26adfe1e27b1e7f7",
+     "name": "John Morin",
+     "kind": "person",
+     "roles": [
+      "engineer",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "5836af55ee948a88",
+     "name": "Morin-Cameron Group",
+     "kind": "firm",
+     "roles": [
+      "engineer",
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "80ce602c-fc32-42ae-a40e-07857f4920c6",
@@ -1484,6 +2004,19 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "c5e5460a-530b-49a6-b5f5-2b16f9b4fec5",
@@ -1515,6 +2048,19 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "46f026c0-4861-480b-a4d0-d9e40acfc631",
@@ -1546,6 +2092,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "b2d42096-457c-4d14-9a1e-272bf8c83117",
@@ -1577,6 +2124,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "a0ababdd-d916-49fe-848c-5e293f747867",
@@ -1608,6 +2156,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "f32347e0-52ca-4f46-9ced-ed7850ae0d9b",
@@ -1639,6 +2188,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "41e8b357-d0fd-4f98-9037-07dce4a8c392",
@@ -1670,6 +2220,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "68bae6a4-b9ab-4d84-8b78-8c0318194914",
@@ -1701,6 +2252,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "78525c4d-ec78-436a-9703-a609274e65b3",
@@ -1732,6 +2284,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "7c47ec4f-4e6e-4f7a-bd4b-670c496a0278",
@@ -1763,6 +2316,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "44186e3d-44f6-4613-894e-bad4e52f9b98",
@@ -1794,6 +2348,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "b9f65e35-06b9-410b-aec5-bc85fc2a0cf2",
@@ -1825,6 +2380,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "e3d55865-06ca-491d-95f7-0ac637af7337",
@@ -1856,6 +2412,7 @@
    "last_activity": "2026-04-09",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "0107c2a5-60d0-4cbc-a619-db2d05aac158",
@@ -1887,6 +2444,7 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "8f2fef72-1f03-472d-982b-3c7efe30a8c8",
@@ -1918,6 +2476,7 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "154fecb3-22c9-4a99-928b-ea5b8fd3f1a5",
@@ -1949,6 +2508,7 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "8da72294-eea4-47bd-9244-ceae3eec6592",
@@ -1980,6 +2540,19 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "336559eb59f4c488",
+     "name": "Melissa Nardone",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "9f137921-aa2c-450b-803b-15678ba86b29",
@@ -2011,6 +2584,30 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "76d15cb249393973",
+     "name": "Broadway Capital",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "a31cad494a2f2ed8",
+     "name": "Brett Hanley",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "afc798a4-4233-4a32-a849-419fca7cc316",
@@ -2042,6 +2639,7 @@
    "last_activity": "2026-04-07",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "4f8b65e2-b6b2-49c1-945b-fdd52e848974",
@@ -2082,6 +2680,74 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:21:58"
    },
+   "contacts": [
+    {
+     "entity_id": "c7ec59670542b736",
+     "name": "Dana R. MacNamee, Manager of Bay State RE Holdings, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8900b2cc6a3839e4",
+     "name": "Mike Vienneau",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "76d15cb249393973",
+     "name": "Broadway Capital",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "c43f7ce1143a0563",
+     "name": "Peter Vanko",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "9e5034eeef0574db",
+     "name": "Brian DApice",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "613715e48aa02eda",
+     "name": "The Mega Group",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "e5feb3c0-4a41-4fb6-addc-d7d344b087bf",
@@ -2141,6 +2807,19 @@
     "next_date": null,
     "generated_at": "2026-06-12T22:22:21"
    },
+   "contacts": [
+    {
+     "entity_id": "336559eb59f4c488",
+     "name": "Melissa Nardone",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "cb0e257d-b98c-4988-816a-572c86abce34",
@@ -2191,6 +2870,41 @@
    "last_activity": "2026-03-26",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "aa5e31067c99abbc",
+     "name": "St. Johns Preparatory School",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "0efd8d33cb0ce866",
+     "name": "Katie Cruz",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "887bba2e1249f239",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "fcd6ed54-bf27-4086-98c8-71c912caba58",
@@ -2226,6 +2940,7 @@
    "last_activity": "2026-03-24",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "49277a11-bb74-496d-8fa8-e94ad2d96997",
@@ -2257,6 +2972,7 @@
    "last_activity": "2026-03-17",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "9f3be615-2a70-4831-a949-6b211c4ab1b7",
@@ -2288,6 +3004,30 @@
    "last_activity": "2026-03-17",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d3c0f10746f08d4c",
+     "name": "Aaron Henry",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "d350edc3-3e23-4931-9a42-39f2eb3ed0c5",
@@ -2319,6 +3059,7 @@
    "last_activity": "2026-03-17",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "10bbd18e-5a01-410a-bdc9-76765241cc40",
@@ -2350,6 +3091,7 @@
    "last_activity": "2026-03-17",
    "status": "active",
    "brief": null,
+   "contacts": [],
    "events": [
     {
      "event_id": "7ca9260c-2428-4b27-b0c2-13144b854190",
@@ -2381,6 +3123,30 @@
    "last_activity": "2026-03-17",
    "status": "active",
    "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d3c0f10746f08d4c",
+     "name": "Aaron Henry",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
    "events": [
     {
      "event_id": "1f3bf2e8-9f9e-4916-ac8b-dc902bae866d",
@@ -2441,6 +3207,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "936e32a0915dcb28",
+     "name": "Kim Lundgren Associates",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -2477,7 +3256,8 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "9e42065a-372d-44ed-b9cf-8af7d09ef0ba",
@@ -2512,6 +3292,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "5717181bb207c8c3",
+     "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -2548,6 +3341,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3df6e4dee17fd452",
+     "name": "T.A.K.J., LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -2588,6 +3394,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -2623,6 +3442,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "cc9b7f1bc10a43e9",
+     "name": "New England Home for the Deaf / Winn Development Company",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -2666,6 +3498,30 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "7e80f0cf06be8dae",
+     "name": "8 Fairview Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "32e93bd942200341",
+     "name": "Jason A. Panos",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -2701,6 +3557,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d53d9daf9937fe39",
+     "name": "Keith Oakley",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -2740,7 +3609,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=123"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "ef88dc96-74cc-4fd7-9313-59590acf762a",
@@ -2784,7 +3654,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=124"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "7f18df35-0054-4f94-affe-e2c54b339ea9",
@@ -2822,7 +3693,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=125"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "6eac3cb1-0171-4f17-9a56-8e1c1d081d76",
@@ -2861,6 +3733,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "22bab6fdc4d196aa",
+     "name": "Danvers Electric and Verizon",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -2896,6 +3781,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -2933,6 +3831,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
    ]
   },
   {
@@ -2968,6 +3879,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3005,6 +3929,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "4dbe835259af290a",
+     "name": "Adimir Toska",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3040,6 +3977,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "b77bedf58c0d6794",
+     "name": "John Lacroix",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3077,6 +4027,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "a4abe175e8f4113c",
+     "name": "Greg Maynard",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3113,7 +4076,8 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "72ed0307-e4f7-420e-8787-fb3ae10fa96d",
@@ -3148,6 +4112,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "5717181bb207c8c3",
+     "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3184,6 +4161,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "86df8eba77121f15",
+     "name": "B. Dupont-Raesly, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3225,6 +4215,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3263,7 +4266,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=122"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "bac88e00-4587-437f-b4c7-c59fb054cb68",
@@ -3303,6 +4307,30 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9be3dab20001dbd6",
+     "name": "Stephen King",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
     }
    ]
   },
@@ -3344,6 +4372,30 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d3c0f10746f08d4c",
+     "name": "Aaron Henry",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
     }
    ]
   },
@@ -3391,6 +4443,19 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=119"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -3434,6 +4499,19 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=121"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -3469,6 +4547,30 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "643f9255b3dabaac",
+     "name": "Seaside Legal Solutions",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "54044f3768ef8688",
+     "name": "John Kiley, Jr.",
+     "kind": "person",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
     }
    ]
   },
@@ -3524,6 +4626,30 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "52336e6f1569476a",
+     "name": "Adel Shahin",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -3577,6 +4703,41 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "01e28454e7a3ed1e",
+     "name": "Forest River Realty, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "34fa911e21ff24ba",
+     "name": "Jay Polakiewicz",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "887bba2e1249f239",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -3623,6 +4784,41 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8e408d270401a0ad",
+     "name": "Danell Baptiste",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "faadc8df028f88d7",
+     "name": "High Point Engineering",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -3661,6 +4857,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "5717181bb207c8c3",
+     "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3701,6 +4910,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "01e28454e7a3ed1e",
+     "name": "Forest River Realty, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3737,6 +4959,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "40027689e9b18bbc",
+     "name": "Sign Design Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3772,6 +5007,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "cc9b7f1bc10a43e9",
+     "name": "New England Home for the Deaf / Winn Development Company",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3814,7 +5062,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=120"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "167ee046-5e57-4155-8a69-2ce4ca3b3932",
@@ -3861,6 +5110,43 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ba7a5b384d3730e7",
+     "name": "South Essex Sewerage District",
+     "kind": "public_office",
+     "roles": [
+      "developer",
+      "representative"
+     ],
+     "sources": [
+      "applicant",
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "923c7390fcfac6c6",
+     "name": "Michael Parsons",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db6d5ca2afc2f5d2",
+     "name": "David Michaelson",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -3900,6 +5186,19 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "56b52a63fceea750",
+     "name": "National Grid",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -3935,6 +5234,19 @@
     {
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "95c3a97af3fa9a0f",
+     "name": "Essex Tech",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -3972,7 +5284,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "71144adf-2d5e-4023-aaae-4382585ec987",
@@ -4008,7 +5321,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "b777c0ce-421c-4186-96a4-1e8cf6cc2329",
@@ -4049,6 +5363,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -4088,6 +5415,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -4135,6 +5475,30 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9eb531ea8a658d2b",
+     "name": "Edward Doherty",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "61b165a892b3e187",
+     "name": "Bob Griffin",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -4173,7 +5537,8 @@
      "kind": "bid",
      "url": "https://www.danversma.gov/bids.aspx?bidID=117"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "1cadce29-d4f5-4b49-88d0-8d58da3fb26c",
@@ -4212,6 +5577,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "e05bbcbceeec389a",
+     "name": "20 Water LLC (Chris Blasczak, Manager)",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -4252,6 +5630,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "e1bf768dcf149970",
+     "name": "Mike Becker and Charrissa Vitas",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -4296,6 +5687,19 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -4337,6 +5741,19 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -4373,7 +5790,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "a0ababdd-d916-49fe-848c-5e293f747867",
@@ -4411,7 +5829,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "f32347e0-52ca-4f46-9ced-ed7850ae0d9b",
@@ -4450,7 +5869,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "41e8b357-d0fd-4f98-9037-07dce4a8c392",
@@ -4489,7 +5909,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "68bae6a4-b9ab-4d84-8b78-8c0318194914",
@@ -4527,7 +5948,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "78525c4d-ec78-436a-9703-a609274e65b3",
@@ -4563,7 +5985,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "7c47ec4f-4e6e-4f7a-bd4b-670c496a0278",
@@ -4601,7 +6024,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "44186e3d-44f6-4613-894e-bad4e52f9b98",
@@ -4641,7 +6065,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "b9f65e35-06b9-410b-aec5-bc85fc2a0cf2",
@@ -4677,7 +6102,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "e3d55865-06ca-491d-95f7-0ac637af7337",
@@ -4713,7 +6139,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "0107c2a5-60d0-4cbc-a619-db2d05aac158",
@@ -4749,7 +6176,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "63532bfd-d0e3-4bb8-b1be-0d26b8756fde",
@@ -4800,6 +6228,41 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "485bc074a51a562f",
+     "name": "Steven Tedesco, Temar Properties, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "26adfe1e27b1e7f7",
+     "name": "John Morin",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "5836af55ee948a88",
+     "name": "Morin-Cameron Group",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
     }
    ]
   },
@@ -4856,6 +6319,63 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8e408d270401a0ad",
+     "name": "Danell Baptiste",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "faadc8df028f88d7",
+     "name": "High Point Engineering",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "7eaeba4ba6d854ae",
+     "name": "Cindy Murphy",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "1dca37b489f42d47",
+     "name": "Genesis AEC",
+     "kind": "firm",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -4899,6 +6419,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "341194a511513a9e",
+     "name": "Majlinda & Spartak Vaka",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -4935,7 +6468,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "154fecb3-22c9-4a99-928b-ea5b8fd3f1a5",
@@ -4971,7 +6505,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "8da72294-eea4-47bd-9244-ceae3eec6592",
@@ -5007,7 +6542,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "9f137921-aa2c-450b-803b-15678ba86b29",
@@ -5042,6 +6578,19 @@
     {
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "336559eb59f4c488",
+     "name": "Melissa Nardone",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -5085,6 +6634,32 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "76d15cb249393973",
+     "name": "Broadway Capital",
+     "kind": "firm",
+     "roles": [
+      "developer",
+      "representative"
+     ],
+     "sources": [
+      "applicant",
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "a31cad494a2f2ed8",
+     "name": "Brett Hanley",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -5121,7 +6696,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "6743a7e0-d1ca-4450-b094-5518935ebb55",
@@ -5156,6 +6732,21 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "c7ec59670542b736",
+     "name": "Dana R. MacNamee, Manager of Bay State RE Holdings, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer",
+      "owner"
+     ],
+     "sources": [
+      "applicant",
+      "owner"
+     ]
     }
    ]
   },
@@ -5192,6 +6783,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "336559eb59f4c488",
+     "name": "Melissa Nardone",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -5230,6 +6834,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "5717181bb207c8c3",
+     "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
     }
    ]
   },
@@ -5281,6 +6898,41 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "485bc074a51a562f",
+     "name": "Steven Tedesco, Temar Properties, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "26adfe1e27b1e7f7",
+     "name": "John Morin",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "5836af55ee948a88",
+     "name": "Morin-Cameron Group",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
     }
    ]
   },
@@ -5340,6 +6992,63 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "50c684cf16a3b8b4",
+     "name": "Abiomed, Inc.",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8e408d270401a0ad",
+     "name": "Danell Baptiste",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "faadc8df028f88d7",
+     "name": "High Point Engineering",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "7eaeba4ba6d854ae",
+     "name": "Cindy Murphy",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "1dca37b489f42d47",
+     "name": "Genesis AEC",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -5388,6 +7097,41 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "aa5e31067c99abbc",
+     "name": "St. Johns Preparatory School",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "0efd8d33cb0ce866",
+     "name": "Katie Cruz",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "887bba2e1249f239",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
     }
    ]
   },
@@ -5445,6 +7189,74 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "c7ec59670542b736",
+     "name": "Dana R. MacNamee, Manager of Bay State RE Holdings, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "8900b2cc6a3839e4",
+     "name": "Mike Vienneau",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "76d15cb249393973",
+     "name": "Broadway Capital",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "c43f7ce1143a0563",
+     "name": "Peter Vanko",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "9e5034eeef0574db",
+     "name": "Brian DApice",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "613715e48aa02eda",
+     "name": "The Mega Group",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
    ]
   },
   {
@@ -5485,6 +7297,19 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "336559eb59f4c488",
+     "name": "Melissa Nardone",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
    ]
   },
   {
@@ -5521,7 +7346,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "1f3bf2e8-9f9e-4916-ac8b-dc902bae866d",
@@ -5562,6 +7388,30 @@
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d3c0f10746f08d4c",
+     "name": "Aaron Henry",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -5601,7 +7451,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "d350edc3-3e23-4931-9a42-39f2eb3ed0c5",
@@ -5642,6 +7493,30 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
     }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d3c0f10746f08d4c",
+     "name": "Aaron Henry",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "64601ba42426b65d",
+     "name": "Town of Danvers DPW",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
    ]
   },
   {
@@ -5678,7 +7553,8 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
     }
-   ]
+   ],
+   "contacts": []
   },
   {
    "event_id": "7ca9260c-2428-4b27-b0c2-13144b854190",
@@ -5714,7 +7590,980 @@
      "kind": "minutes",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
     }
-   ]
+   ],
+   "contacts": []
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "64601ba42426b65d",
+   "name": "Town of Danvers DPW",
+   "kind": "public_office",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "1e7b31e2-7add-48aa-90a7-a591a83d057b",
+    "53042357-27e7-4daf-b3f6-d896aaa12b3b",
+    "77f8234b-9df3-40e8-b835-4bc0c594ff9f",
+    "7b1a6f0b-2183-4319-bd90-ae8480e365c1",
+    "7cb3e2db-83d3-49d0-840a-c68124f781ae",
+    "ca1a2100-641f-45de-a2b5-2e98713c0c6f",
+    "df2ba112-2654-4c72-a61d-d8834de176f6"
+   ],
+   "n_projects": 7
+  },
+  {
+   "entity_id": "d3c0f10746f08d4c",
+   "name": "Aaron Henry",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "1e7b31e2-7add-48aa-90a7-a591a83d057b",
+    "77f8234b-9df3-40e8-b835-4bc0c594ff9f"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "76d15cb249393973",
+   "name": "Broadway Capital",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "representative"
+   ],
+   "story_ids": [
+    "0882aeba-818a-413e-9b9d-7115d6d5f9d0",
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "887bba2e1249f239",
+   "name": "Hancock Associates",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "018345e8-c8bb-4968-bba2-cc7f73c55e35",
+    "8c484d74-49eb-4f3b-ab7e-c91fe75c8f4f"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "336559eb59f4c488",
+   "name": "Melissa Nardone",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "1f5c1b69-1e1d-4e53-98af-e603bece13e1",
+    "6537910c-b48e-4a86-bf32-e462357e5da1"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "e05bbcbceeec389a",
+   "name": "20 Water LLC (Chris Blasczak, Manager)",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "dbafd3e6-083f-4b0f-86da-a98cfb239025"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7e80f0cf06be8dae",
+   "name": "8 Fairview Street LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "00488bde-494f-4db7-8959-6364168a0d0d"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "50c684cf16a3b8b4",
+   "name": "Abiomed, Inc.",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "2d625b9c-791a-48bf-8fe0-0e3b311f7e52"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "52336e6f1569476a",
+   "name": "Adel Shahin",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "461257d8-e94a-4cee-b50e-ac9c7065c2f7"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "4dbe835259af290a",
+   "name": "Adimir Toska",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "1e948c24-1603-4327-b6bd-a70ae0c6146a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "86df8eba77121f15",
+   "name": "B. Dupont-Raesly, LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "e4e941e9-5b3b-4278-b445-5d446486ca42"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "61b165a892b3e187",
+   "name": "Bob Griffin",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "4bf3180e-fb7c-4561-8714-946a3ba98d19"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "a31cad494a2f2ed8",
+   "name": "Brett Hanley",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "0882aeba-818a-413e-9b9d-7115d6d5f9d0"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "9e5034eeef0574db",
+   "name": "Brian DApice",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7eaeba4ba6d854ae",
+   "name": "Cindy Murphy",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect",
+    "representative"
+   ],
+   "story_ids": [
+    "2d625b9c-791a-48bf-8fe0-0e3b311f7e52"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "c7ec59670542b736",
+   "name": "Dana R. MacNamee, Manager of Bay State RE Holdings, LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "owner"
+   ],
+   "story_ids": [
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "8e408d270401a0ad",
+   "name": "Danell Baptiste",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "representative"
+   ],
+   "story_ids": [
+    "2d625b9c-791a-48bf-8fe0-0e3b311f7e52"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "22bab6fdc4d196aa",
+   "name": "Danvers Electric and Verizon",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "e2a4125b-83ae-4eb9-84d6-c238cc6ba58b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "db6d5ca2afc2f5d2",
+   "name": "David Michaelson",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "4dad9da2-b9ff-4330-9f86-12032fc9152a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "9eb531ea8a658d2b",
+   "name": "Edward Doherty",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "4bf3180e-fb7c-4561-8714-946a3ba98d19"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "95c3a97af3fa9a0f",
+   "name": "Essex Tech",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "30189b80-c569-4487-a90e-1779278b04a4"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "01e28454e7a3ed1e",
+   "name": "Forest River Realty, LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "8c484d74-49eb-4f3b-ab7e-c91fe75c8f4f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "1dca37b489f42d47",
+   "name": "Genesis AEC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect",
+    "representative"
+   ],
+   "story_ids": [
+    "2d625b9c-791a-48bf-8fe0-0e3b311f7e52"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "a4abe175e8f4113c",
+   "name": "Greg Maynard",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "d29b6dd5-6ff8-47d0-993a-8a9136033e33"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "faadc8df028f88d7",
+   "name": "High Point Engineering",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "representative"
+   ],
+   "story_ids": [
+    "2d625b9c-791a-48bf-8fe0-0e3b311f7e52"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "32e93bd942200341",
+   "name": "Jason A. Panos",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "00488bde-494f-4db7-8959-6364168a0d0d"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "34fa911e21ff24ba",
+   "name": "Jay Polakiewicz",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "8c484d74-49eb-4f3b-ab7e-c91fe75c8f4f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "54044f3768ef8688",
+   "name": "John Kiley, Jr.",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "owner"
+   ],
+   "story_ids": [
+    "3991a690-a9c3-496e-b40c-9495225d128b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "b77bedf58c0d6794",
+   "name": "John Lacroix",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "cb50052a-10bf-4515-b927-29bc50e82b68"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "26adfe1e27b1e7f7",
+   "name": "John Morin",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "representative"
+   ],
+   "story_ids": [
+    "d85dfc77-8120-4ff1-b24d-02de893e831c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "0efd8d33cb0ce866",
+   "name": "Katie Cruz",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "018345e8-c8bb-4968-bba2-cc7f73c55e35"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d53d9daf9937fe39",
+   "name": "Keith Oakley",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "c47c55f1-ab3e-4a3d-b245-2dce79ab7918"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "936e32a0915dcb28",
+   "name": "Kim Lundgren Associates",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "39df86ca-1a69-4e1d-b2d3-e56ec96d1777"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "341194a511513a9e",
+   "name": "Majlinda & Spartak Vaka",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "owner"
+   ],
+   "story_ids": [
+    "461257d8-e94a-4cee-b50e-ac9c7065c2f7"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "923c7390fcfac6c6",
+   "name": "Michael Parsons",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "4dad9da2-b9ff-4330-9f86-12032fc9152a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "e1bf768dcf149970",
+   "name": "Mike Becker and Charrissa Vitas",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "a68100c7-a5c0-4b3f-a372-68d22316e9b7"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "8900b2cc6a3839e4",
+   "name": "Mike Vienneau",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "5836af55ee948a88",
+   "name": "Morin-Cameron Group",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "representative"
+   ],
+   "story_ids": [
+    "d85dfc77-8120-4ff1-b24d-02de893e831c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "56b52a63fceea750",
+   "name": "National Grid",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "4b62e154-e765-42fd-b7ff-ba65d0c60f58"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "cc9b7f1bc10a43e9",
+   "name": "New England Home for the Deaf / Winn Development Company",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "d24b5a82-e390-4b45-bb2f-8065a46e286b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "5717181bb207c8c3",
+   "name": "Peter M. Zagorski, Trustee PMZ Realty Trust",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "3f013690-5421-4686-a06e-d563f9d2bbf1"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "c43f7ce1143a0563",
+   "name": "Peter Vanko",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect"
+   ],
+   "story_ids": [
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "643f9255b3dabaac",
+   "name": "Seaside Legal Solutions",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "3991a690-a9c3-496e-b40c-9495225d128b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "40027689e9b18bbc",
+   "name": "Sign Design Inc.",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "a7660960-b110-49b9-91d8-54cdebc8559b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "ba7a5b384d3730e7",
+   "name": "South Essex Sewerage District",
+   "kind": "public_office",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "representative"
+   ],
+   "story_ids": [
+    "4dad9da2-b9ff-4330-9f86-12032fc9152a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "aa5e31067c99abbc",
+   "name": "St. Johns Preparatory School",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "018345e8-c8bb-4968-bba2-cc7f73c55e35"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "9be3dab20001dbd6",
+   "name": "Stephen King",
+   "kind": "person",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "ca1a2100-641f-45de-a2b5-2e98713c0c6f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "485bc074a51a562f",
+   "name": "Steven Tedesco, Temar Properties, LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "d85dfc77-8120-4ff1-b24d-02de893e831c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "3df6e4dee17fd452",
+   "name": "T.A.K.J., LLC",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "fbb989e3-712f-4211-ad46-88468f816b57"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "613715e48aa02eda",
+   "name": "The Mega Group",
+   "kind": "firm",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "website": null,
+   "phone": null,
+   "linkedin_url": null,
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 1
   }
  ],
  "upcoming": [
@@ -5757,6 +8606,19 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "936e32a0915dcb28",
+     "name": "Kim Lundgren Associates",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
     }
    ]
   }

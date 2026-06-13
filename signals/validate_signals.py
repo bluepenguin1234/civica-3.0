@@ -261,6 +261,36 @@ def main():
           f"brief est_value null unless an event stated a dollar_value ({len(bad_est)} bad)")
     check(not bad_bnext, f"brief next_date parses as ISO when present ({len(bad_bnext)} bad)")
 
+    print("\n=== ENTITIES (Step 7) ===")
+    from signals.enrich.resolve_entities import KINDS, ROLES, match_key
+    ents = conn.execute("SELECT * FROM entities").fetchall()
+    ent_ids = {e["entity_id"] for e in ents}
+    links = conn.execute("SELECT * FROM event_entities").fetchall()
+    print(f"  entities = {len(ents)}, event-entity links = {len(links)}")
+    bad_kind = [e["entity_id"] for e in ents if e["kind"] not in KINDS]
+    bad_role = [lk for lk in links if lk["role"] not in ROLES]
+    check(not bad_kind, f"entity kind enum ({len(bad_kind)} bad)")
+    check(not bad_role, f"event_entities role enum ({len(bad_role)} bad)")
+    event_ids_all = {e["event_id"] for e in events}
+    bad_link_ev = [lk for lk in links if lk["event_id"] not in event_ids_all]
+    bad_link_en = [lk for lk in links if lk["entity_id"] not in ent_ids]
+    check(not bad_link_ev, f"every event_entities.event_id is a real event ({len(bad_link_ev)} bad)")
+    check(not bad_link_en, f"every event_entities.entity_id is a real entity ({len(bad_link_en)} bad)")
+    linked_ent = {lk["entity_id"] for lk in links}
+    orphan_ent = [e["entity_id"] for e in ents if e["entity_id"] not in linked_ent]
+    check(not orphan_ent, f"no orphan entity — each has >=1 event link ({len(orphan_ent)} orphan)")
+    # dedup smoke: a shared town+kind+normalized-name key should be ONE entity
+    # (warn, not fail — an intentional ambiguous split can legitimately collide).
+    keymap, dup_keys = {}, []
+    for e in ents:
+        k = (e["town_scope"], e["kind"], match_key(e["canonical_name"] or ""))
+        if k in keymap and keymap[k] != e["entity_id"]:
+            dup_keys.append(k)
+        keymap.setdefault(k, e["entity_id"])
+    warn(not dup_keys,
+         f"no two entities share a town+kind+normalized-name key "
+         f"({len(dup_keys)} collision(s) — check ambiguous_entities.txt)")
+
     print("\n=== REGISTRY vs town_scores.csv ===")
     if os.path.exists(TOWN_SCORES):
         import csv
@@ -303,6 +333,11 @@ def main():
                       if not fe.get("source_url")]
             check(not no_src,
                   f"every feed event has a non-empty source_url ({len(no_src)} missing)")
+            feed_ent_ids = {en.get("entity_id") for en in feed.get("entities", [])}
+            dangling = [c.get("entity_id") for fe in feed_events
+                        for c in fe.get("contacts", []) if c.get("entity_id") not in feed_ent_ids]
+            check(not dangling,
+                  f"every feed event contact references a feed entity ({len(dangling)} dangling)")
         except (json.JSONDecodeError, OSError) as exc:
             check(False, f"feed.json parses ({exc})")
     else:

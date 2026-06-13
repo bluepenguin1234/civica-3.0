@@ -33,6 +33,23 @@ def _j(value):
     return json.loads(value) if value else None
 
 
+def _dedupe_contacts(items):
+    """Collapse an event's mentions to one entry per entity (merge roles/sources)."""
+    out = {}
+    for c in items:
+        e = out.get(c["entity_id"])
+        if e is None:
+            out[c["entity_id"]] = {"entity_id": c["entity_id"], "name": c["name"],
+                                   "kind": c["kind"], "roles": [c["role"]],
+                                   "sources": [c["source"]]}
+        else:
+            if c["role"] not in e["roles"]:
+                e["roles"].append(c["role"])
+            if c["source"] not in e["sources"]:
+                e["sources"].append(c["source"])
+    return list(out.values())
+
+
 def main():
     conn = db.init_db()
     with open(config.REGISTRY_PATH, "r", encoding="utf-8") as fh:
@@ -111,12 +128,57 @@ def main():
             "sources": sources,
         })
 
+    # --- Entities + contacts (Step 7) ---------------------------------------
+    # Resolved parties (signals.enrich.resolve_entities) become a directory: each
+    # event/story carries a deduped contacts[] and the feed carries an entities[]
+    # the dashboard turns into clickable entity pages.
+    pub_ids = {e["event_id"] for e in events}
+    entities_by_id, contacts_by_event = {}, {}
+    for r in conn.execute("SELECT ee.event_id, ee.role, ee.source, en.* "
+                          "FROM event_entities ee JOIN entities en "
+                          "ON en.entity_id = ee.entity_id"):
+        if r["event_id"] not in pub_ids:
+            continue
+        eid = r["entity_id"]
+        contacts_by_event.setdefault(r["event_id"], []).append(
+            {"entity_id": eid, "name": r["canonical_name"], "kind": r["kind"],
+             "role": r["role"], "source": r["source"]})
+        if eid not in entities_by_id:
+            t = towns.get(r["town_scope"], {})
+            entities_by_id[eid] = {
+                "entity_id": eid, "name": r["canonical_name"], "kind": r["kind"],
+                "town_id": r["town_scope"], "town": t.get("name", r["town_scope"]),
+                "place_fips": str(t.get("place_fips", "")),
+                "website": r["website"], "phone": r["phone"],
+                "linkedin_url": r["linkedin_url"], "review_status": r["review_status"],
+                "_roles": set(), "_stories": set(),
+            }
+        entities_by_id[eid]["_roles"].add(r["role"])
+
+    for e in events:  # attach deduped contacts; tally each entity's stories
+        e["contacts"] = _dedupe_contacts(contacts_by_event.get(e["event_id"], []))
+        if e["story_id"]:
+            for c in e["contacts"]:
+                entities_by_id[c["entity_id"]]["_stories"].add(e["story_id"])
+
+    entities = []
+    for ent in entities_by_id.values():
+        ent["roles"] = sorted(ent.pop("_roles"))
+        ent["story_ids"] = sorted(ent.pop("_stories"))
+        ent["n_projects"] = len(ent["story_ids"])
+        entities.append(ent)
+    entities.sort(key=lambda x: (-x["n_projects"], x["name"].lower()))
+
     stories = []
     for s in conn.execute("SELECT * FROM project_stories ORDER BY last_activity DESC"):
         member_events = [ev for ev in events if ev["story_id"] == s["story_id"]]
         if not member_events:
             continue  # stories whose events were all rejected/unpublished
         t = towns.get(s["town_id"], {})
+        story_contacts = _dedupe_contacts(
+            [{"entity_id": c["entity_id"], "name": c["name"], "kind": c["kind"],
+              "role": c["roles"][0], "source": c["sources"][0]}
+             for ev in member_events for c in ev["contacts"]])
         stories.append({
             "story_id": s["story_id"],
             "town_id": s["town_id"],
@@ -130,6 +192,7 @@ def main():
             "last_activity": s["last_activity"],
             "status": s["status"],
             "brief": _j(s["brief"]),
+            "contacts": story_contacts,
             "events": [{"event_id": ev["event_id"], "date": ev["date"],
                         "board": ev["board"], "event_type": ev["event_type"],
                         "stage": ev["stage"], "summary": ev["summary"],
@@ -144,6 +207,7 @@ def main():
         "coverage": coverage,
         "stories": stories,
         "events": events,
+        "entities": entities,
         "upcoming": upcoming,
     }
 
@@ -164,6 +228,7 @@ def main():
             "coverage": [cov],
             "stories": [s for s in stories if s["place_fips"] == fips],
             "events": [e for e in events if e["place_fips"] == fips],
+            "entities": [en for en in entities if en["place_fips"] == fips],
             "upcoming": [e for e in upcoming if e["place_fips"] == fips],
         }
         with open(os.path.join(config.PUBLISH_DIR, f"{fips}.json"), "w",
