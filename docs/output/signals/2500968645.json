@@ -1,0 +1,819 @@
+{
+ "generated_at": "2026-06-13T16:18:54",
+ "coverage": [
+  {
+   "town_id": "swampscott_ma",
+   "name": "Swampscott",
+   "place_fips": "2500968645",
+   "doc_freshness_days": 0
+  }
+ ],
+ "stories": [
+  {
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-24",
+   "last_activity": "2026-06-24",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "a4c02d4b836a8996",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+     "date": "2026-06-24",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "MS4 Stormwater Permit Compliance Zoning Bylaw Amendments",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-04-21",
+   "last_activity": "2026-04-21",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "1922e7941f582807",
+     "name": "Peter Varga",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "b0ee1b5ba0d67c17",
+     "name": "Kleinfelder",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db4c606227cfacd5",
+     "name": "Elyse Thompson",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "5b78db19-600d-40ad-b600-b11ee5d3161a",
+     "date": "2026-04-21",
+     "board": "Zoning Board of Appeals",
+     "event_type": "zoning_amendment",
+     "stage": "informational",
+     "summary": "Kleinfelder consultants, introduced by DPW Assistant Engineer Mark Noonan, presented proposed zoning bylaw amendments to support Swampscott's MS4 stormwater permit compliance: parking reductions via Special Permit where transit or shared parking is nearby, green infrastructure (rain gardens, bioretention) within landscaped parking islands, and updated compact-car stall and permeable-paving standards in the Smart Growth and Glover Multifamily Overlay Districts. No formal action was taken; amendments are expected to proceed through Planning Board review before consideration at the December 2026 Town Meeting.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04212026-667",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04212026-667",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04212026-667",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "b6c9ce41-da7f-41d4-91a1-22c865a61048",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "69 Puritan Road New Single-Family Residence",
+   "address": "69 Puritan Road, Swampscott, MA (Map 21, Lot 18)",
+   "current_stage": "approved",
+   "total_units": 1,
+   "first_seen": "2026-04-13",
+   "last_activity": "2026-04-13",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "693dbd53c7b376e6",
+     "name": "Robert and Lauren Dandreo",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "e7da3a7e8637fdc8",
+     "name": "Kenneth Shutzer",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "1ed72f91-de5f-4ae8-b4f5-5754f972d6b4",
+     "date": "2026-04-13",
+     "board": "Planning Board",
+     "event_type": "variance_special_permit",
+     "stage": "approved",
+     "summary": "The Planning Board unanimously approved a Site Plan Special Permit for demolition of the existing structure at 69 Puritan Road and construction of a new approximately 3,000-square-foot single-family residence with attached garage and in-ground pool in the A-3 Zoning District. The project carries prior approvals from the Conservation and Historical Commissions and is designed to comply with floodplain requirements by elevating the structure above base flood elevation. The Board noted concerns about the extent of paved surfaces and dual curb cuts in the front yard and recommended reducing impervious coverage and enhancing landscaping.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04132026-653",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04132026-653",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "5576d840-dd9a-4eb4-bac1-eca4d3c98dce",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "Zoning Bylaw Amendment – Site Plan Special Permit (Section 5.4.0.0)",
+   "address": null,
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-04-13",
+   "last_activity": "2026-04-13",
+   "status": "active",
+   "brief": null,
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "49f9ba7b-2f86-402d-bcda-cb94b99c2db2",
+     "date": "2026-04-13",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "proposed",
+     "summary": "The Planning Board will discuss proposed amendments to Zoning Bylaw Section 5.4.0.0 (Site Plan Special Permit), including revisions to Sections 5.4.3.0 (Procedures) and 5.4.4.0 (Preparation of Plans) to accommodate online permit applications, and the introduction of new Sections 5.4.10.0–5.4.10.6 establishing an Administrative Site Plan Modification process.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "dc4f7918-c427-47a3-935a-cc46c60e27d3",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "Swampscott Middle School MSBA Statement of Interest",
+   "address": "207 Forest Avenue, Swampscott, MA",
+   "current_stage": "approved",
+   "total_units": null,
+   "first_seen": "2026-04-08",
+   "last_activity": "2026-04-08",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "a4c02d4b836a8996",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "971f1b40-d0ea-4786-8ff3-3ae504c4047d",
+     "date": "2026-04-08",
+     "board": "Select Board",
+     "event_type": "municipal_property",
+     "stage": "approved",
+     "summary": "The Select Board unanimously voted to authorize the Superintendent to submit a Statement of Interest to the Massachusetts School Building Authority for the Swampscott Middle School at 207 Forest Avenue. The SOI cites deficiencies in HVAC, electrical, plumbing, accessibility, fire suppression, building envelope, security, and interior finishes. The MSBA Core Program process timeline extends through approximately 2033.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04082026-665",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04082026-665",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04082026-665",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+   "date": "2026-06-24",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Natalie Swanstrom",
+    "org": "Town of Swampscott – Facilities Dept",
+    "contact_info": "nswanstrom@swampscottma.gov; (781) 596-8860"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-24",
+   "trades": [
+    "demolition",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "a4c02d4b836a8996",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "5b78db19-600d-40ad-b600-b11ee5d3161a",
+   "date": "2026-04-21",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Zoning Board of Appeals",
+   "event_type": "zoning_amendment",
+   "stage": "informational",
+   "project_name": "MS4 Stormwater Permit Compliance Zoning Bylaw Amendments",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": [
+    {
+     "role": "consultant/engineer",
+     "name": "Peter Varga",
+     "firm": "Kleinfelder"
+    },
+    {
+     "role": "consultant/engineer",
+     "name": "Elyse Thompson",
+     "firm": "Kleinfelder"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Kleinfelder consultants, introduced by DPW Assistant Engineer Mark Noonan, presented proposed zoning bylaw amendments to support Swampscott's MS4 stormwater permit compliance: parking reductions via Special Permit where transit or shared parking is nearby, green infrastructure (rain gardens, bioretention) within landscaped parking islands, and updated compact-car stall and permeable-paving standards in the Smart Growth and Glover Multifamily Overlay Districts. No formal action was taken; amendments are expected to proceed through Planning Board review before consideration at the December 2026 Town Meeting.",
+   "story_id": "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04212026-667",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04212026-667",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04212026-667",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "1922e7941f582807",
+     "name": "Peter Varga",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "b0ee1b5ba0d67c17",
+     "name": "Kleinfelder",
+     "kind": "firm",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db4c606227cfacd5",
+     "name": "Elyse Thompson",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "1ed72f91-de5f-4ae8-b4f5-5754f972d6b4",
+   "date": "2026-04-13",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "variance_special_permit",
+   "stage": "approved",
+   "project_name": "69 Puritan Road New Single-Family Residence",
+   "address": "69 Puritan Road, Swampscott, MA",
+   "applicant": "Robert and Lauren Dandreo",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": "Kenneth Shutzer",
+     "firm": null
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board unanimously approved a Site Plan Special Permit for demolition of the existing structure at 69 Puritan Road and construction of a new approximately 3,000-square-foot single-family residence with attached garage and in-ground pool in the A-3 Zoning District. The project carries prior approvals from the Conservation and Historical Commissions and is designed to comply with floodplain requirements by elevating the structure above base flood elevation. The Board noted concerns about the extent of paved surfaces and dual curb cuts in the front yard and recommended reducing impervious coverage and enhancing landscaping.",
+   "story_id": "b6c9ce41-da7f-41d4-91a1-22c865a61048",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04132026-653",
+   "source_page": 2,
+   "confidence": 0.92,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "roofing",
+    "landscaping",
+    "paving_asphalt"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04132026-653",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "693dbd53c7b376e6",
+     "name": "Robert and Lauren Dandreo",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "e7da3a7e8637fdc8",
+     "name": "Kenneth Shutzer",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "49f9ba7b-2f86-402d-bcda-cb94b99c2db2",
+   "date": "2026-04-13",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "proposed",
+   "project_name": "Zoning Bylaw Amendment – Site Plan Special Permit (Section 5.4.0.0)",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board will discuss proposed amendments to Zoning Bylaw Section 5.4.0.0 (Site Plan Special Permit), including revisions to Sections 5.4.3.0 (Procedures) and 5.4.4.0 (Preparation of Plans) to accommodate online permit applications, and the introduction of new Sections 5.4.10.0–5.4.10.6 establishing an Administrative Site Plan Modification process.",
+   "story_id": "5576d840-dd9a-4eb4-bac1-eca4d3c98dce",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04132026-653",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "971f1b40-d0ea-4786-8ff3-3ae504c4047d",
+   "date": "2026-04-08",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Select Board",
+   "event_type": "municipal_property",
+   "stage": "approved",
+   "project_name": "Swampscott Middle School MSBA Statement of Interest",
+   "address": "207 Forest Avenue, Swampscott, MA",
+   "applicant": "Town of Swampscott",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Select Board unanimously voted to authorize the Superintendent to submit a Statement of Interest to the Massachusetts School Building Authority for the Swampscott Middle School at 207 Forest Avenue. The SOI cites deficiencies in HVAC, electrical, plumbing, accessibility, fire suppression, building envelope, security, and interior finishes. The MSBA Core Program process timeline extends through approximately 2033.",
+   "story_id": "dc4f7918-c427-47a3-935a-cc46c60e27d3",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04082026-665",
+   "source_page": 2,
+   "confidence": 0.92,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "hvac",
+    "electrical",
+    "plumbing",
+    "roofing",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_04082026-665",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04082026-665",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "a4c02d4b836a8996",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "a4c02d4b836a8996",
+   "name": "Town of Swampscott – Facilities Dept",
+   "kind": "public_office",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "public_contact"
+   ],
+   "story_ids": [
+    "0bd96f91-ee28-4760-a535-6448807d4c94",
+    "dc4f7918-c427-47a3-935a-cc46c60e27d3"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "db4c606227cfacd5",
+   "name": "Elyse Thompson",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "e7da3a7e8637fdc8",
+   "name": "Kenneth Shutzer",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "b6c9ce41-da7f-41d4-91a1-22c865a61048"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "b0ee1b5ba0d67c17",
+   "name": "Kleinfelder",
+   "kind": "firm",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "3ec8472318bdf2b4",
+   "name": "Natalie Swanstrom",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "0bd96f91-ee28-4760-a535-6448807d4c94"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "1922e7941f582807",
+   "name": "Peter Varga",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "693dbd53c7b376e6",
+   "name": "Robert and Lauren Dandreo",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "b6c9ce41-da7f-41d4-91a1-22c865a61048"
+   ],
+   "n_projects": 1
+  }
+ ],
+ "upcoming": [
+  {
+   "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+   "date": "2026-06-24",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Natalie Swanstrom",
+    "org": "Town of Swampscott – Facilities Dept",
+    "contact_info": "nswanstrom@swampscottma.gov; (781) 596-8860"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-24",
+   "trades": [
+    "demolition",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "a4c02d4b836a8996",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  }
+ ]
+}

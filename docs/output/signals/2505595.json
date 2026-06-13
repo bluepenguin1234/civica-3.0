@@ -1,0 +1,3001 @@
+{
+ "generated_at": "2026-06-13T16:18:54",
+ "coverage": [
+  {
+   "town_id": "beverly_ma",
+   "name": "Beverly",
+   "place_fips": "2505595",
+   "doc_freshness_days": 1
+  }
+ ],
+ "stories": [
+  {
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-25",
+   "last_activity": "2026-06-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+     "date": "2026-06-25",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-25",
+   "last_activity": "2026-06-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+     "date": "2026-06-25",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-22",
+   "last_activity": "2026-06-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+     "date": "2026-06-22",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Glen Urquhart School Building Raze and Rebuild",
+   "address": "206 Greenwood Avenue, Beverly, MA",
+   "current_stage": "continued",
+   "total_units": null,
+   "first_seen": "2026-04-29",
+   "last_activity": "2026-04-29",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "976130e219853c77",
+     "name": "Glen Urquhart School c/o Lindsay Calef",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "b901c41d2ae74b54",
+     "name": "Mike DeRosa",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "ac28d78c138e149c",
+     "name": "DeRosa Environmental",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "582c63a7-354f-4a43-a1d7-27707fe875cc",
+     "date": "2026-04-29",
+     "board": "Conservation Commission",
+     "event_type": "other_notable",
+     "stage": "continued",
+     "summary": "Beverly Conservation Commission opened and continued a Notice of Intent hearing for Glen Urquhart School's proposal to raze an existing building and construct a replacement at 206 Greenwood Avenue. The new building would house two classrooms, an exhibition hall, and administrative/meeting space, with a net reduction of over 1,000 sq ft of impervious surface across all buffer zones and the riverfront area; invasive species removal and native replanting are included as mitigation. A Commission site walk is scheduled for May 2, 2026, and the hearing is continued to May 19, 2026.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "7147a542-77a3-4807-9073-bd348b9c674b",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Kennedy Accessory Dwelling Unit Addition — 7 Hathaway Avenue",
+   "address": "7 Hathaway Avenue, Beverly, MA",
+   "current_stage": "continued",
+   "total_units": 1,
+   "first_seen": "2026-04-29",
+   "last_activity": "2026-04-29",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "256322e4994b01b8",
+     "name": "Peter and Lousie Kennedy",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "d0be6133798d7cf0",
+     "name": "Bob Griffin",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "3b49348c-8a03-4c21-956a-ac8726d7be4e",
+     "date": "2026-04-29",
+     "board": "Conservation Commission",
+     "event_type": "residential_project",
+     "stage": "continued",
+     "summary": "Beverly Conservation Commission opened and continued a Notice of Intent hearing for a 1,000 sq ft accessory dwelling unit addition with breezeway connection at 7 Hathaway Avenue, situated near a perennial stream and bordering vegetated wetland. The project also includes a two-car driveway (~650 sq ft), a 10x19 deck, and two drywells (1,000 and 500 gallons) to manage approximately 1,700 sq ft of new impervious surface; three replacement trees and an upland meadow habitat are proposed as mitigation. Hearing continued to May 19, 2026.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "d8210aa6-68bd-4b2a-8575-be945805c0aa",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "46 Federal Street Townhouses (SPR #170-26 / SP #205-26)",
+   "address": "46 Federal Street, Beverly, MA",
+   "current_stage": "approved",
+   "total_units": 5,
+   "first_seen": "2026-04-28",
+   "last_activity": "2026-04-28",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "5e3f73f2dca6f381",
+     "name": "46 Federal Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "718333989d845994",
+     "name": "Tom Alexander",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "f790c614bec02a64",
+     "name": "George Zambouras",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "9930c2b3-c724-4c5f-8c85-9cd5158ad751",
+     "date": "2026-04-28",
+     "board": "Planning Board",
+     "event_type": "residential_project",
+     "stage": "approved",
+     "summary": "The Beverly Planning Board unanimously approved Site Plan Review #170-26 and Special Permit #205-26 for 46 Federal Street LLC to demolish the existing dwelling and garage and construct five ownership-tenure townhouse units on an 8,000 sf lot with a 2,500 sf building footprint, approximately 37 feet tall. The special permit allows a 20-foot driveway aisle width in lieu of the required 24 feet; the ZBA had previously granted a dimensional variance on January 28, 2026. Approval is conditioned on requirements from the Parking & Traffic Commission, Board of Health, Design Review Board, and Engineering Department, and plans are drawn by Seger Architects.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04282026-2726",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04282026-2726",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04282026-2726",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "d311796d-d356-44c4-b672-837ff65e4e80",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "26 Mason Street, Beverly, MA",
+   "address": "26 Mason Street, Beverly, MA",
+   "current_stage": "continued",
+   "total_units": 1,
+   "first_seen": "2026-03-25",
+   "last_activity": "2026-04-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "ca8a6a591604c59f",
+     "name": "Albert Turner",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "c6bc7fad-5bab-4d1d-9140-8f7daa5aa8be",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "New public hearing on a variance application to construct a new detached single-car garage with an accessory dwelling unit (ADU) on the second floor, pursuant to Sections 300-36 D(6) and D(8) of the Beverly Zoning Ordinance. Property is in the RMD zoning district; no further scope detail is provided in the agenda.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "41caf486-60b9-471c-beae-a2ae5726fef4",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Albert Turner seeks a variance at 26 Mason Street (RMD district) to construct a new detached single-car garage with an accessory dwelling unit (ADU), per Sections 300-36 D(6) and D(8) of the Beverly Zoning Ordinance.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "2479147a-8d8e-4781-9fbc-62f5e17d2b0e",
+     "date": "2026-04-22",
+     "board": "Zoning Board of Appeals",
+     "event_type": "residential_project",
+     "stage": "continued",
+     "summary": "Continued variance hearing for construction of a new detached single-car garage with an Accessory Dwelling Unit above at 26 Mason Street in the RMD district, per Beverly Zoning Ordinance §§300-36 D(6) and D(8).",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "a5a759df-a52a-4bce-aa06-909bbd9d9580",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "21 Bridge Street, Beverly, MA",
+   "address": "21 Bridge Street, Beverly, MA",
+   "current_stage": "continued",
+   "total_units": 1,
+   "first_seen": "2026-03-25",
+   "last_activity": "2026-04-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "9581aeb015399be8",
+     "name": "Jason Irving / 21 Bridge Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "3d823e58-0006-4b79-9fa1-949fd70dc84e",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Continued hearing on a variance application to subdivide the existing lot, retaining the current single-family home and creating a new second lot for construction of an additional single-family home in the R10 district. The applicant represents the new lot and home are consistent with the general character and lot sizes of the surrounding neighborhood.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "ff80c36c-ecde-45cb-90b4-79044b105203",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Jason Irving and 21 Bridge Street LLC seek a variance to subdivide 21 Bridge Street (R10 district) into two lots, retaining the existing single-family home and creating a new lot for the construction of an additional single-family home. The applicant characterizes the proposal as consistent with the neighborhood's general character and surrounding lot sizes. This is a continued public hearing with no new continuation date stated.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "91d81342-cbfd-4d71-a5a1-d46d5642ae03",
+     "date": "2026-04-22",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Continued variance hearing to subdivide the existing lot at 21 Bridge Street, retain the existing single-family home, and create a new second lot for construction of an additional single-family home consistent with neighborhood character in the R10 district.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "5c6d1cb2-4b13-4add-9834-d8e05dcb527e",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Boston Consignment Retail and Storage Use Variance",
+   "address": "32 Dunham Road, Beverly, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-04-22",
+   "last_activity": "2026-04-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "572c5f909e8c620f",
+     "name": "Joseph P. Coughlin, Trustee of Gateway II Trust of 1997",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "13ce3d88-4929-48be-b3cc-5bb5c75babf3",
+     "date": "2026-04-22",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Variance requested to allow approximately 9,000 sq.ft. of an existing 51,158 sq.ft. building for retail use by Boston Consignment (70% of business conducted online) and 12,000 sq.ft. for associated storage and office use in the IR zoning district.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "8b932982-75be-413b-9e9e-9c4506e8065e",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "12 Tozer Road Wireless Communications Facility",
+   "address": "12 Tozer Road, Beverly, MA",
+   "current_stage": "continued",
+   "total_units": null,
+   "first_seen": "2026-04-22",
+   "last_activity": "2026-04-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d23ab14ef64a19ae",
+     "name": "Cellco Partnership d/b/a Verizon Wireless and the Towers, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "d01f6bb4-937e-4667-a11e-208137137009",
+     "date": "2026-04-22",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "continued",
+     "summary": "Continued hearing for a Special Permit under §300-42(C)(1)(p) and height and setback variances under §300-25A to install a wireless communications facility with a 124-foot monopole (including 4-foot lightning rod) at approximately 52-foot setback from the property line in the IR district, Map 68, Parcel 25B.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "2ec939e0-9ded-4284-8c8e-1b9ac9d52f42",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Accessory Dwelling Unit Ordinance Update – Order #119",
+   "address": null,
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-04-07",
+   "last_activity": "2026-04-07",
+   "status": "active",
+   "brief": null,
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "97c59aef-4526-4414-92e7-d3489c7da133",
+     "date": "2026-04-07",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "proposed",
+     "summary": "The Planning Board set a Joint Public Hearing with the Beverly City Council for May 4, 2026 at 7:30 p.m. to consider Order #119, an update to the city's Accessory Dwelling Unit Ordinance. No substantive details of the proposed changes were discussed.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04072026-2702",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "64a289cc-d618-42ba-8e06-0dfe9f0ed98a",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "85-87 Bridge Street Definitive Subdivision Plan",
+   "address": "85-87 Bridge Street, Beverly, MA",
+   "current_stage": "permitted",
+   "total_units": null,
+   "first_seen": "2026-04-07",
+   "last_activity": "2026-04-07",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "1cce2a9cf4bb9253",
+     "name": "Robert Noyes II & Stephanie Marie Noyes",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "c795d17d370c5870",
+     "name": "Thomas J. Alexander",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "26ee84ea-0d33-4627-bd66-6a701dd97389",
+     "date": "2026-04-07",
+     "board": "Planning Board",
+     "event_type": "subdivision",
+     "stage": "permitted",
+     "summary": "The Planning Board endorsed the mylars for the previously approved Definitive Subdivision Plan at 85-87 Bridge Street, a frontage-waiver case for owners Robert Noyes II & Stephanie Marie Noyes. The appeal period has lapsed and the City Clerk confirmed its status; no covenant was required.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04072026-2702",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "e22d56f1-c8bd-4093-a25b-a5c9e76afbd5",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "39 and 41 Woodbury Street ANR Lot Merger",
+   "address": "39 and 41 Woodbury Street, Beverly, MA",
+   "current_stage": "approved",
+   "total_units": null,
+   "first_seen": "2026-04-07",
+   "last_activity": "2026-04-07",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "0e09ae62e2bc86e8",
+     "name": "Wrecking Crew LLC c/o Joe Cunningham",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "d60b0d19-2b32-44fb-bffa-8c3ba7838c62",
+     "date": "2026-04-07",
+     "board": "Planning Board",
+     "event_type": "subdivision",
+     "stage": "approved",
+     "summary": "The Planning Board endorsed an Approval Not Required (ANR) plan to remove the lot line between 39 and 41 Woodbury Street, merging them into a single parcel. The combined lot meets frontage and area requirements for the zoning district; no new construction scope was described.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "f5f805c4-da71-49c9-919e-c3e2d68dff5c",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "6 Greenleaf Drive, Beverly, MA",
+   "address": "6 Greenleaf Drive, Beverly, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-03-25",
+   "last_activity": "2026-03-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "e3c8150670494af8",
+     "name": "David Veritas",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "4239bf2e-05a9-45ac-b2ae-e66a62e1aaed",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "New public hearing on a variance application to construct a detached accessory structure combining a 2-car garage and an accessory dwelling unit (ADU), to be sited in front of the existing single-family home in the R15 district. The proposed structure meets all setbacks and height requirements; variance from Section 300-27B(2) is required solely for the siting in front of the principal dwelling.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "a2b0353e-8d0c-4415-8c97-dd4e024de2b8",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "David Veritas seeks a variance at 6 Greenleaf Drive (R15 district) to construct a new detached accessory structure combining a 2-car garage and an accessory dwelling unit (ADU) in front of the existing single-family home. The proposed structure is stated to meet all setback and height requirements.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "dd46dc40-35af-4f1d-a0a5-6a8af6a9f9b5",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "68 Paine Avenue New Single-Family House and Cabana Conversion",
+   "address": "68 Paine Avenue, Beverly, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-03-25",
+   "last_activity": "2026-03-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "c51744806aa7af78",
+     "name": "Stilt House-Atlantic Overlook LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "cc12a197ad2dac81",
+     "name": "Glovsky & Glovsky",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "17d19a65-9152-41f7-a856-1c11394daf6f",
+     "date": "2026-03-25",
+     "board": "Zoning Board of Appeals",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "Listed as an extension request on the agenda, this application seeks a Finding and Variances to construct a new single-family house with a pile-supported elevated driveway on a beachfront lot in the R90 district, while partially demolishing the existing home and converting it to an accessory beach cabana. Relief requested includes side setback variances for the main residence, driveway court, and driveway ramp, plus a height variance for the converted cabana at its existing approximately 20-foot height.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "3934ed3c-5fbf-458e-925c-bee2f784bd01",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Gillis Park Reconstruction",
+   "address": "28 Porter Street, Beverly, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-03-18",
+   "last_activity": "2026-03-18",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "1fcc11d2-a8b4-4cb5-95aa-ec34e27ad2d2",
+     "date": "2026-03-18",
+     "board": "Conservation Commission",
+     "event_type": "municipal_property",
+     "stage": "hearing",
+     "summary": "City of Beverly has filed a new Notice of Intent for reconstruction of the basketball court and addition of a pavilion and pathway at Gillis Park, 28 Porter Street. The project is subject to Conservation Commission wetlands review.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Boyles Street Sidewalk Project",
+   "address": "90 & 92 Boyles Street, Beverly, MA",
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-03-18",
+   "last_activity": "2026-03-18",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "d7793df8-f5d9-465b-a46a-07dc3676cb7c",
+     "date": "2026-03-18",
+     "board": "Conservation Commission",
+     "event_type": "infrastructure_project",
+     "stage": "informational",
+     "summary": "City of Beverly brings a potential sidewalk construction project at 90 and 92 Boyles Street to the Conservation Commission for discussion, noting the project abuts a vernal pool. No formal filing has been made; the item is listed under Other Business as an informational discussion.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / Purchasing Agent",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [
+    "demolition",
+    "concrete_foundation",
+    "framing_carpentry",
+    "masonry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+   "date": "2026-06-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000; 191 Cabot Street, Beverly, MA 01915"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-22",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "582c63a7-354f-4a43-a1d7-27707fe875cc",
+   "date": "2026-04-29",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "other_notable",
+   "stage": "continued",
+   "project_name": "Glen Urquhart School Building Raze and Rebuild",
+   "address": "206 Greenwood Avenue, Beverly, MA",
+   "applicant": "Glen Urquhart School c/o Lindsay Calef",
+   "applicant_reps": [
+    {
+     "role": "Environmental Consultant",
+     "name": "Mike DeRosa",
+     "firm": "DeRosa Environmental"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Beverly Conservation Commission opened and continued a Notice of Intent hearing for Glen Urquhart School's proposal to raze an existing building and construct a replacement at 206 Greenwood Avenue. The new building would house two classrooms, an exhibition hall, and administrative/meeting space, with a net reduction of over 1,000 sq ft of impervious surface across all buffer zones and the riverfront area; invasive species removal and native replanting are included as mitigation. A Commission site walk is scheduled for May 2, 2026, and the hearing is continued to May 19, 2026.",
+   "story_id": "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+   "source_page": 2,
+   "confidence": 0.87,
+   "owner": null,
+   "next_date": "2026-05-19",
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "landscaping",
+    "stormwater_septic",
+    "utilities"
+   ],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "976130e219853c77",
+     "name": "Glen Urquhart School c/o Lindsay Calef",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "b901c41d2ae74b54",
+     "name": "Mike DeRosa",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "ac28d78c138e149c",
+     "name": "DeRosa Environmental",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "3b49348c-8a03-4c21-956a-ac8726d7be4e",
+   "date": "2026-04-29",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "residential_project",
+   "stage": "continued",
+   "project_name": "Kennedy Accessory Dwelling Unit Addition — 7 Hathaway Avenue",
+   "address": "7 Hathaway Avenue, Beverly, MA",
+   "applicant": "Peter and Lousie Kennedy",
+   "applicant_reps": [
+    {
+     "role": "Representative",
+     "name": "Bob Griffin",
+     "firm": null
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Beverly Conservation Commission opened and continued a Notice of Intent hearing for a 1,000 sq ft accessory dwelling unit addition with breezeway connection at 7 Hathaway Avenue, situated near a perennial stream and bordering vegetated wetland. The project also includes a two-car driveway (~650 sq ft), a 10x19 deck, and two drywells (1,000 and 500 gallons) to manage approximately 1,700 sq ft of new impervious surface; three replacement trees and an upland meadow habitat are proposed as mitigation. Hearing continued to May 19, 2026.",
+   "story_id": "7147a542-77a3-4807-9073-bd348b9c674b",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+   "source_page": 4,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": "2026-05-19",
+   "trades": [
+    "site_excavation",
+    "paving_asphalt",
+    "concrete_foundation",
+    "framing_carpentry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "landscaping",
+    "stormwater_septic"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "256322e4994b01b8",
+     "name": "Peter and Lousie Kennedy",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "d0be6133798d7cf0",
+     "name": "Bob Griffin",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "9930c2b3-c724-4c5f-8c85-9cd5158ad751",
+   "date": "2026-04-28",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Planning Board",
+   "event_type": "residential_project",
+   "stage": "approved",
+   "project_name": "46 Federal Street Townhouses (SPR #170-26 / SP #205-26)",
+   "address": "46 Federal Street, Beverly, MA",
+   "applicant": "46 Federal Street LLC",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": "Tom Alexander",
+     "firm": "Alexander and Femino"
+    },
+    {
+     "role": "civil engineer",
+     "name": "George Zambouras",
+     "firm": null
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 5,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Beverly Planning Board unanimously approved Site Plan Review #170-26 and Special Permit #205-26 for 46 Federal Street LLC to demolish the existing dwelling and garage and construct five ownership-tenure townhouse units on an 8,000 sf lot with a 2,500 sf building footprint, approximately 37 feet tall. The special permit allows a 20-foot driveway aisle width in lieu of the required 24 feet; the ZBA had previously granted a dimensional variance on January 28, 2026. Approval is conditioned on requirements from the Parking & Traffic Commission, Board of Health, Design Review Board, and Engineering Department, and plans are drawn by Seger Architects.",
+   "story_id": "d8210aa6-68bd-4b2a-8575-be945805c0aa",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04282026-2726",
+   "source_page": 1,
+   "confidence": 0.97,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "roofing",
+    "stormwater_septic",
+    "landscaping"
+   ],
+   "is_public_work": false,
+   "tenure": "ownership",
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04282026-2726",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04282026-2726",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "5e3f73f2dca6f381",
+     "name": "46 Federal Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "718333989d845994",
+     "name": "Tom Alexander",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "f790c614bec02a64",
+     "name": "George Zambouras",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "13ce3d88-4929-48be-b3cc-5bb5c75babf3",
+   "date": "2026-04-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": "Boston Consignment Retail and Storage Use Variance",
+   "address": "32 Dunham Road, Beverly, MA",
+   "applicant": "Joseph P. Coughlin, Trustee of Gateway II Trust of 1997",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": null,
+     "firm": "Alexander & Femino"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": 21000,
+   "dollar_value": null,
+   "summary": "Variance requested to allow approximately 9,000 sq.ft. of an existing 51,158 sq.ft. building for retail use by Boston Consignment (70% of business conducted online) and 12,000 sq.ft. for associated storage and office use in the IR zoning district.",
+   "story_id": "5c6d1cb2-4b13-4add-9834-d8e05dcb527e",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+   "source_page": 1,
+   "confidence": 0.82,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "572c5f909e8c620f",
+     "name": "Joseph P. Coughlin, Trustee of Gateway II Trust of 1997",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "2479147a-8d8e-4781-9fbc-62f5e17d2b0e",
+   "date": "2026-04-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "residential_project",
+   "stage": "continued",
+   "project_name": "26 Mason Street ADU Above Garage",
+   "address": "26 Mason Street, Beverly, MA",
+   "applicant": "Albert Turner",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Continued variance hearing for construction of a new detached single-car garage with an Accessory Dwelling Unit above at 26 Mason Street in the RMD district, per Beverly Zoning Ordinance §§300-36 D(6) and D(8).",
+   "story_id": "d311796d-d356-44c4-b672-837ff65e4e80",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ca8a6a591604c59f",
+     "name": "Albert Turner",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "91d81342-cbfd-4d71-a5a1-d46d5642ae03",
+   "date": "2026-04-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "subdivision",
+   "stage": "continued",
+   "project_name": "21 Bridge Street Lot Subdivision",
+   "address": "21 Bridge Street, Beverly, MA",
+   "applicant": "Jason Irving/21 Bridge Street LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Continued variance hearing to subdivide the existing lot at 21 Bridge Street, retain the existing single-family home, and create a new second lot for construction of an additional single-family home consistent with neighborhood character in the R10 district.",
+   "story_id": "a5a759df-a52a-4bce-aa06-909bbd9d9580",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9581aeb015399be8",
+     "name": "Jason Irving / 21 Bridge Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d01f6bb4-937e-4667-a11e-208137137009",
+   "date": "2026-04-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "continued",
+   "project_name": "12 Tozer Road Wireless Communications Facility",
+   "address": "12 Tozer Road, Beverly, MA",
+   "applicant": "Cellco Partnership d/b/a Verizon Wireless and the Towers, LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Continued hearing for a Special Permit under §300-42(C)(1)(p) and height and setback variances under §300-25A to install a wireless communications facility with a 124-foot monopole (including 4-foot lightning rod) at approximately 52-foot setback from the property line in the IR district, Map 68, Parcel 25B.",
+   "story_id": "8b932982-75be-413b-9e9e-9c4506e8065e",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "utilities",
+    "electrical"
+   ],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04222026-2711",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d23ab14ef64a19ae",
+     "name": "Cellco Partnership d/b/a Verizon Wireless and the Towers, LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d60b0d19-2b32-44fb-bffa-8c3ba7838c62",
+   "date": "2026-04-07",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Planning Board",
+   "event_type": "subdivision",
+   "stage": "approved",
+   "project_name": "39 and 41 Woodbury Street ANR Lot Merger",
+   "address": "39 and 41 Woodbury Street, Beverly, MA",
+   "applicant": "Wrecking Crew LLC c/o Joe Cunningham",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board endorsed an Approval Not Required (ANR) plan to remove the lot line between 39 and 41 Woodbury Street, merging them into a single parcel. The combined lot meets frontage and area requirements for the zoning district; no new construction scope was described.",
+   "story_id": "e22d56f1-c8bd-4093-a25b-a5c9e76afbd5",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "0e09ae62e2bc86e8",
+     "name": "Wrecking Crew LLC c/o Joe Cunningham",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "97c59aef-4526-4414-92e7-d3489c7da133",
+   "date": "2026-04-07",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "proposed",
+   "project_name": "Order #119 – Accessory Dwelling Unit Ordinance Update",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board set a Joint Public Hearing with the Beverly City Council for May 4, 2026 at 7:30 p.m. to consider Order #119, an update to the city's Accessory Dwelling Unit Ordinance. No substantive details of the proposed changes were discussed.",
+   "story_id": "2ec939e0-9ded-4284-8c8e-1b9ac9d52f42",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-05-04",
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04072026-2702",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "26ee84ea-0d33-4627-bd66-6a701dd97389",
+   "date": "2026-04-07",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Planning Board",
+   "event_type": "subdivision",
+   "stage": "permitted",
+   "project_name": "85-87 Bridge Street Definitive Subdivision Plan",
+   "address": "85-87 Bridge Street, Beverly, MA",
+   "applicant": "Robert Noyes II & Stephanie Marie Noyes",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": "Thomas J. Alexander",
+     "firm": "Alexander and Femino"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board endorsed the mylars for the previously approved Definitive Subdivision Plan at 85-87 Bridge Street, a frontage-waiver case for owners Robert Noyes II & Stephanie Marie Noyes. The appeal period has lapsed and the City Clerk confirmed its status; no covenant was required.",
+   "story_id": "64a289cc-d618-42ba-8e06-0dfe9f0ed98a",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+   "source_page": 2,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04072026-2702",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_04072026-2702",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "1cce2a9cf4bb9253",
+     "name": "Robert Noyes II & Stephanie Marie Noyes",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "c795d17d370c5870",
+     "name": "Thomas J. Alexander",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "fe13504bd623e0ac",
+     "name": "Alexander and Femino",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "17d19a65-9152-41f7-a856-1c11394daf6f",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "68 Paine Avenue New Single-Family House and Cabana Conversion",
+   "address": "68 Paine Avenue, Beverly, MA",
+   "applicant": "Stilt House-Atlantic Overlook LLC",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": null,
+     "firm": "Glovsky & Glovsky"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Listed as an extension request on the agenda, this application seeks a Finding and Variances to construct a new single-family house with a pile-supported elevated driveway on a beachfront lot in the R90 district, while partially demolishing the existing home and converting it to an accessory beach cabana. Relief requested includes side setback variances for the main residence, driveway court, and driveway ramp, plus a height variance for the converted cabana at its existing approximately 20-foot height.",
+   "story_id": "dd46dc40-35af-4f1d-a0a5-6a8af6a9f9b5",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "c51744806aa7af78",
+     "name": "Stilt House-Atlantic Overlook LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "cc12a197ad2dac81",
+     "name": "Glovsky & Glovsky",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "4239bf2e-05a9-45ac-b2ae-e66a62e1aaed",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "6 Greenleaf Drive Detached Garage with ADU",
+   "address": "6 Greenleaf Drive, Beverly, MA",
+   "applicant": "David Veritas",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "New public hearing on a variance application to construct a detached accessory structure combining a 2-car garage and an accessory dwelling unit (ADU), to be sited in front of the existing single-family home in the R15 district. The proposed structure meets all setbacks and height requirements; variance from Section 300-27B(2) is required solely for the siting in front of the principal dwelling.",
+   "story_id": "f5f805c4-da71-49c9-919e-c3e2d68dff5c",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "e3c8150670494af8",
+     "name": "David Veritas",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "c6bc7fad-5bab-4d1d-9140-8f7daa5aa8be",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "26 Mason Street Detached Garage with ADU Above",
+   "address": "26 Mason Street, Beverly, MA",
+   "applicant": "Albert Turner",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "New public hearing on a variance application to construct a new detached single-car garage with an accessory dwelling unit (ADU) on the second floor, pursuant to Sections 300-36 D(6) and D(8) of the Beverly Zoning Ordinance. Property is in the RMD zoning district; no further scope detail is provided in the agenda.",
+   "story_id": "d311796d-d356-44c4-b672-837ff65e4e80",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ca8a6a591604c59f",
+     "name": "Albert Turner",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "3d823e58-0006-4b79-9fa1-949fd70dc84e",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "subdivision",
+   "stage": "continued",
+   "project_name": "21 Bridge Street Lot Subdivision for New Single-Family Home",
+   "address": "21 Bridge Street, Beverly, MA",
+   "applicant": "Jason Irving / 21 Bridge Street LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Continued hearing on a variance application to subdivide the existing lot, retaining the current single-family home and creating a new second lot for construction of an additional single-family home in the R10 district. The applicant represents the new lot and home are consistent with the general character and lot sizes of the surrounding neighborhood.",
+   "story_id": "a5a759df-a52a-4bce-aa06-909bbd9d9580",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+   "source_page": 2,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2687",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9581aeb015399be8",
+     "name": "Jason Irving / 21 Bridge Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "a2b0353e-8d0c-4415-8c97-dd4e024de2b8",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": null,
+   "address": "6 Greenleaf Drive, Beverly, MA",
+   "applicant": "David Veritas",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "David Veritas seeks a variance at 6 Greenleaf Drive (R15 district) to construct a new detached accessory structure combining a 2-car garage and an accessory dwelling unit (ADU) in front of the existing single-family home. The proposed structure is stated to meet all setback and height requirements.",
+   "story_id": "f5f805c4-da71-49c9-919e-c3e2d68dff5c",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "e3c8150670494af8",
+     "name": "David Veritas",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "41caf486-60b9-471c-beae-a2ae5726fef4",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": null,
+   "address": "26 Mason Street, Beverly, MA",
+   "applicant": "Albert Turner",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Albert Turner seeks a variance at 26 Mason Street (RMD district) to construct a new detached single-car garage with an accessory dwelling unit (ADU), per Sections 300-36 D(6) and D(8) of the Beverly Zoning Ordinance.",
+   "story_id": "d311796d-d356-44c4-b672-837ff65e4e80",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ca8a6a591604c59f",
+     "name": "Albert Turner",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "ff80c36c-ecde-45cb-90b4-79044b105203",
+   "date": "2026-03-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "subdivision",
+   "stage": "continued",
+   "project_name": null,
+   "address": "21 Bridge Street, Beverly, MA",
+   "applicant": "Jason Irving / 21 Bridge Street LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Jason Irving and 21 Bridge Street LLC seek a variance to subdivide 21 Bridge Street (R10 district) into two lots, retaining the existing single-family home and creating a new lot for the construction of an additional single-family home. The applicant characterizes the proposal as consistent with the neighborhood's general character and surrounding lot sizes. This is a continued public hearing with no new continuation date stated.",
+   "story_id": "a5a759df-a52a-4bce-aa06-909bbd9d9580",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+   "source_page": 2,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03252026-2660",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9581aeb015399be8",
+     "name": "Jason Irving / 21 Bridge Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "1fcc11d2-a8b4-4cb5-95aa-ec34e27ad2d2",
+   "date": "2026-03-18",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "municipal_property",
+   "stage": "hearing",
+   "project_name": "Gillis Park Reconstruction",
+   "address": "28 Porter Street, Beverly, MA",
+   "applicant": "City of Beverly",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "City of Beverly has filed a new Notice of Intent for reconstruction of the basketball court and addition of a pavilion and pathway at Gillis Park, 28 Porter Street. The project is subject to Conservation Commission wetlands review.",
+   "story_id": "3934ed3c-5fbf-458e-925c-bee2f784bd01",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "site_excavation",
+    "paving_asphalt",
+    "concrete_foundation",
+    "framing_carpentry",
+    "roofing",
+    "landscaping"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d7793df8-f5d9-465b-a46a-07dc3676cb7c",
+   "date": "2026-03-18",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "infrastructure_project",
+   "stage": "informational",
+   "project_name": "Boyles Street Sidewalk Project",
+   "address": "90 & 92 Boyles Street, Beverly, MA",
+   "applicant": "City of Beverly",
+   "applicant_reps": null,
+   "job_contact": {
+    "role": null,
+    "name": "Lisa Chandler",
+    "org": "City of Beverly",
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "City of Beverly brings a potential sidewalk construction project at 90 and 92 Boyles Street to the Conservation Commission for discussion, noting the project abuts a vernal pool. No formal filing has been made; the item is listed under Other Business as an informational discussion.",
+   "story_id": "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+   "source_page": 2,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "site_excavation",
+    "concrete_foundation",
+    "landscaping"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer",
+      "public_contact"
+     ],
+     "sources": [
+      "applicant",
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "21dbc526ffa07e4e",
+   "name": "City of Beverly",
+   "kind": "public_office",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "public_contact"
+   ],
+   "story_ids": [
+    "3934ed3c-5fbf-458e-925c-bee2f784bd01",
+    "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+    "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c",
+    "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+    "f695eea6-f929-4d7e-99b5-cc16685596c9"
+   ],
+   "n_projects": 5
+  },
+  {
+   "entity_id": "fe13504bd623e0ac",
+   "name": "Alexander and Femino",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "5c6d1cb2-4b13-4add-9834-d8e05dcb527e",
+    "64a289cc-d618-42ba-8e06-0dfe9f0ed98a",
+    "d8210aa6-68bd-4b2a-8575-be945805c0aa"
+   ],
+   "n_projects": 3
+  },
+  {
+   "entity_id": "d1128dfbd400bfc7",
+   "name": "David Gelineau",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+    "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+    "f695eea6-f929-4d7e-99b5-cc16685596c9"
+   ],
+   "n_projects": 3
+  },
+  {
+   "entity_id": "5e3f73f2dca6f381",
+   "name": "46 Federal Street LLC",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "d8210aa6-68bd-4b2a-8575-be945805c0aa"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "ca8a6a591604c59f",
+   "name": "Albert Turner",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "d311796d-d356-44c4-b672-837ff65e4e80"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d0be6133798d7cf0",
+   "name": "Bob Griffin",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "7147a542-77a3-4807-9073-bd348b9c674b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d23ab14ef64a19ae",
+   "name": "Cellco Partnership d/b/a Verizon Wireless and the Towers, LLC",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "8b932982-75be-413b-9e9e-9c4506e8065e"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "e3c8150670494af8",
+   "name": "David Veritas",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "f5f805c4-da71-49c9-919e-c3e2d68dff5c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "ac28d78c138e149c",
+   "name": "DeRosa Environmental",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "f790c614bec02a64",
+   "name": "George Zambouras",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer"
+   ],
+   "story_ids": [
+    "d8210aa6-68bd-4b2a-8575-be945805c0aa"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "976130e219853c77",
+   "name": "Glen Urquhart School c/o Lindsay Calef",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "cc12a197ad2dac81",
+   "name": "Glovsky & Glovsky",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "dd46dc40-35af-4f1d-a0a5-6a8af6a9f9b5"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "9581aeb015399be8",
+   "name": "Jason Irving / 21 Bridge Street LLC",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "a5a759df-a52a-4bce-aa06-909bbd9d9580"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "572c5f909e8c620f",
+   "name": "Joseph P. Coughlin, Trustee of Gateway II Trust of 1997",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "5c6d1cb2-4b13-4add-9834-d8e05dcb527e"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d362633b16b0b9e2",
+   "name": "Lisa Chandler",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "b901c41d2ae74b54",
+   "name": "Mike DeRosa",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "256322e4994b01b8",
+   "name": "Peter and Lousie Kennedy",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "7147a542-77a3-4807-9073-bd348b9c674b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "1cce2a9cf4bb9253",
+   "name": "Robert Noyes II & Stephanie Marie Noyes",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "64a289cc-d618-42ba-8e06-0dfe9f0ed98a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "c51744806aa7af78",
+   "name": "Stilt House-Atlantic Overlook LLC",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "dd46dc40-35af-4f1d-a0a5-6a8af6a9f9b5"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "c795d17d370c5870",
+   "name": "Thomas J. Alexander",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "64a289cc-d618-42ba-8e06-0dfe9f0ed98a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "718333989d845994",
+   "name": "Tom Alexander",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "d8210aa6-68bd-4b2a-8575-be945805c0aa"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "0e09ae62e2bc86e8",
+   "name": "Wrecking Crew LLC c/o Joe Cunningham",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "e22d56f1-c8bd-4093-a25b-a5c9e76afbd5"
+   ],
+   "n_projects": 1
+  }
+ ],
+ "upcoming": [
+  {
+   "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / Purchasing Agent",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [
+    "demolition",
+    "concrete_foundation",
+    "framing_carpentry",
+    "masonry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+   "date": "2026-06-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000; 191 Cabot Street, Beverly, MA 01915"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-22",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  }
+ ]
+}

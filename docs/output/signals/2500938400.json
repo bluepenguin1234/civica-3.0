@@ -1,0 +1,1077 @@
+{
+ "generated_at": "2026-06-13T16:18:54",
+ "coverage": [
+  {
+   "town_id": "marblehead_ma",
+   "name": "Marblehead",
+   "place_fips": "2500938400",
+   "doc_freshness_days": 0
+  }
+ ],
+ "stories": [
+  {
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-23",
+   "last_activity": "2026-06-23",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+     "date": "2026-06-23",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "63bced30-b9a0-40c6-b2f1-1c2dce0355f1",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "1-3 Essex Street Addition",
+   "address": "1-3 Essex Street, Marblehead, MA",
+   "current_stage": "continued",
+   "total_units": null,
+   "first_seen": "2026-04-28",
+   "last_activity": "2026-04-28",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "354d5f5b497c9d61",
+     "name": "Ruthy LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "e52a68aa-a4df-4eb0-90a6-1903d312be1c",
+     "date": "2026-04-28",
+     "board": "Zoning Board of Appeals",
+     "event_type": "mixed_use_project",
+     "stage": "continued",
+     "summary": "Ruthy LLC seeks a Special Permit for a new addition to a pre-existing non-conforming mixed-use building in the B1 District, continued from February 24, 2026 with no evidence yet taken. The proposal would create deficiencies in lot area, open area, and parking, exceed height limits, and exceed the 10% expansion cap for non-conforming buildings.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "c45af2ab-7d90-4438-ac80-d9a0d9eb3c1f",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "237 Washington Street Residential Conversion",
+   "address": "237 Washington Street, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-04-28",
+   "last_activity": "2026-04-28",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "ba7a6c02389eae9d",
+     "name": "237 Washington Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "eb9f7938-7083-4eb9-9e48-960a5dfd1043",
+     "date": "2026-04-28",
+     "board": "Zoning Board of Appeals",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "237 Washington Street LLC seeks a Special Permit to convert two existing commercial units into a converted dwelling with one residential unit on the second floor in the Business Residential District. The proposal would result in deficiencies in lot area, frontage, width, side yard setback, open area, and parking.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "74fa1eb6-172b-497c-b931-174b05aa6fc7",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "116 Pleasant Street Restaurant-to-Mixed-Use Conversion",
+   "address": "116 Pleasant Street, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": 2,
+   "first_seen": "2026-04-28",
+   "last_activity": "2026-04-28",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "7c3ff1536bb0ce36",
+     "name": "Riptide Holdings LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "028562a4-cec3-484a-bb6c-626fccea489b",
+     "date": "2026-04-28",
+     "board": "Zoning Board of Appeals",
+     "event_type": "mixed_use_project",
+     "stage": "hearing",
+     "summary": "Riptide Holdings LLC seeks a Special Permit to convert an existing restaurant to a mixed commercial/residential use, adding two dwelling units on the second floor, in the B1 and Business Residential Districts. The proposal would result in deficiencies in lot area, frontage, width, side yard setback, open area, and parking.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "a1e99bc6-cbf2-4b5e-b0e9-64e528cd6cc6",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "FY27 Budget Override and FY27-29 Financial Management Plan",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-04-08",
+   "last_activity": "2026-04-08",
+   "status": "active",
+   "brief": null,
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "7553c6e5-8670-475c-83ae-6872720a25da",
+     "date": "2026-04-08",
+     "board": "Select Board",
+     "event_type": "tax_override_debt_exclusion",
+     "stage": "informational",
+     "summary": "Select Board is holding a Budget Override Discussion and reviewing a Memorandum of Understanding establishing an FY27 Override Framework and a FY27-29 Financial Management Plan, with a possible vote. No override dollar amount is stated in the agenda.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "c6902cb4-a213-484f-a8d6-5bfa7eb8e1fa",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Village Street Bridge Design and Permitting — Change Order No. 3 (Contract 2023-003)",
+   "address": "Village Street, Marblehead, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-04-08",
+   "last_activity": "2026-04-08",
+   "status": "active",
+   "brief": null,
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "70aa067d-d19b-43de-b9f2-bfb5d6dccc0e",
+     "date": "2026-04-08",
+     "board": "Select Board",
+     "event_type": "infrastructure_project",
+     "stage": "proposed",
+     "summary": "Select Board is scheduled to vote on Change Order No. 3 under Contract 2023-003 for the Village Street Bridge design and permitting engagement. No dollar value or description of the scope change is provided in the agenda.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "437fcebf-dd7b-41ef-a47f-c43486add4a6",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "9 Maple Circle, Marblehead, MA",
+   "address": "9 Maple Circle, Marblehead, MA",
+   "current_stage": "continued",
+   "total_units": 2,
+   "first_seen": "2026-03-24",
+   "last_activity": "2026-03-24",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d239adda9b887eef",
+     "name": "Maple Circle Marblehead LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "47c255e9-caa6-4116-a23e-d6830d79755a",
+     "date": "2026-03-24",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Maple Circle Marblehead LLC seeks a special permit or variance to divide 9 Maple Circle into two building lots in the Single Residence District: Lot 1 retains the existing dwelling (substandard front and side yard setbacks) and Lot 2 would receive a new single-family dwelling (substandard frontage and lot width). The matter was continued from January 27, 2026 with no evidence taken.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "2d418e30-255a-4734-8723-9814de8a2fe3",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "1 & 3 Devereux Street, Marblehead, MA",
+   "address": "1 & 3 Devereux Street, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": 2,
+   "first_seen": "2026-03-24",
+   "last_activity": "2026-03-24",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "fc67cc25f8eb5eaa",
+     "name": "Jennifer Smith and Richard Katz",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "d379cbe5-1477-4299-8383-2650ef5a856b",
+     "date": "2026-03-24",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Jennifer Smith and Richard Katz seek a special permit to unmerge 1 and 3 Devereux Street, restoring them as two separate single-family dwelling lots on pre-existing nonconforming lots in the Single Residence District. Relief is required for a substandard side yard setback at 1 Devereux and substandard lot area and frontage at 3 Devereux.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "9317a137-c420-43b3-b689-fcab47b7fad2",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "21 Preston Beach Road, Marblehead, MA",
+   "address": "21 Preston Beach Road, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-03-24",
+   "last_activity": "2026-03-24",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "64372b6258d6ad9c",
+     "name": "Debbie Williams",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "ab2899b1-c3bc-47b8-9f6e-012eb7e58a50",
+     "date": "2026-03-24",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Debbie Williams seeks a special permit to demolish the existing single-family dwelling at 21 Preston Beach Road and construct a new single-family dwelling on the same pre-existing nonconforming lot in the Single Residence District. The project requires relief from substandard lot area, frontage, lot width, rear and side yard setbacks, and parking.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+   "date": "2026-06-23",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / DPW",
+    "name": "Allison Jenkins",
+    "org": "Town of Marblehead – Department of Public Works",
+    "contact_info": "jenkinsa@marbleheadma.gov; (781) 631-0236 Ext. 4138"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "e52a68aa-a4df-4eb0-90a6-1903d312be1c",
+   "date": "2026-04-28",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "mixed_use_project",
+   "stage": "continued",
+   "project_name": "1-3 Essex Street Addition",
+   "address": "1-3 Essex Street, Marblehead, MA",
+   "applicant": "Ruthy LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Ruthy LLC seeks a Special Permit for a new addition to a pre-existing non-conforming mixed-use building in the B1 District, continued from February 24, 2026 with no evidence yet taken. The proposal would create deficiencies in lot area, open area, and parking, exceed height limits, and exceed the 10% expansion cap for non-conforming buildings.",
+   "story_id": "63bced30-b9a0-40c6-b2f1-1c2dce0355f1",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "354d5f5b497c9d61",
+     "name": "Ruthy LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "eb9f7938-7083-4eb9-9e48-960a5dfd1043",
+   "date": "2026-04-28",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "237 Washington Street Residential Conversion",
+   "address": "237 Washington Street, Marblehead, MA",
+   "applicant": "237 Washington Street LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "237 Washington Street LLC seeks a Special Permit to convert two existing commercial units into a converted dwelling with one residential unit on the second floor in the Business Residential District. The proposal would result in deficiencies in lot area, frontage, width, side yard setback, open area, and parking.",
+   "story_id": "c45af2ab-7d90-4438-ac80-d9a0d9eb3c1f",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.8,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ba7a6c02389eae9d",
+     "name": "237 Washington Street LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "028562a4-cec3-484a-bb6c-626fccea489b",
+   "date": "2026-04-28",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "mixed_use_project",
+   "stage": "hearing",
+   "project_name": "116 Pleasant Street Restaurant-to-Mixed-Use Conversion",
+   "address": "116 Pleasant Street, Marblehead, MA",
+   "applicant": "Riptide Holdings LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 2,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Riptide Holdings LLC seeks a Special Permit to convert an existing restaurant to a mixed commercial/residential use, adding two dwelling units on the second floor, in the B1 and Business Residential Districts. The proposal would result in deficiencies in lot area, frontage, width, side yard setback, open area, and parking.",
+   "story_id": "74fa1eb6-172b-497c-b931-174b05aa6fc7",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-28-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "7c3ff1536bb0ce36",
+     "name": "Riptide Holdings LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "7553c6e5-8670-475c-83ae-6872720a25da",
+   "date": "2026-04-08",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Select Board",
+   "event_type": "tax_override_debt_exclusion",
+   "stage": "informational",
+   "project_name": "FY27 Budget Override and FY27-29 Financial Management Plan",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Select Board is holding a Budget Override Discussion and reviewing a Memorandum of Understanding establishing an FY27 Override Framework and a FY27-29 Financial Management Plan, with a possible vote. No override dollar amount is stated in the agenda.",
+   "story_id": "a1e99bc6-cbf2-4b5e-b0e9-64e528cd6cc6",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+   "source_page": 1,
+   "confidence": 0.78,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "70aa067d-d19b-43de-b9f2-bfb5d6dccc0e",
+   "date": "2026-04-08",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Select Board",
+   "event_type": "infrastructure_project",
+   "stage": "proposed",
+   "project_name": "Village Street Bridge Design and Permitting — Change Order No. 3 (Contract 2023-003)",
+   "address": "Village Street, Marblehead, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Select Board is scheduled to vote on Change Order No. 3 under Contract 2023-003 for the Village Street Bridge design and permitting engagement. No dollar value or description of the scope change is provided in the agenda.",
+   "story_id": "c6902cb4-a213-484f-a8d6-5bfa7eb8e1fa",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+   "source_page": 1,
+   "confidence": 0.82,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "47c255e9-caa6-4116-a23e-d6830d79755a",
+   "date": "2026-03-24",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "subdivision",
+   "stage": "continued",
+   "project_name": null,
+   "address": "9 Maple Circle, Marblehead, MA",
+   "applicant": "Maple Circle Marblehead LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 2,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Maple Circle Marblehead LLC seeks a special permit or variance to divide 9 Maple Circle into two building lots in the Single Residence District: Lot 1 retains the existing dwelling (substandard front and side yard setbacks) and Lot 2 would receive a new single-family dwelling (substandard frontage and lot width). The matter was continued from January 27, 2026 with no evidence taken.",
+   "story_id": "437fcebf-dd7b-41ef-a47f-c43486add4a6",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d239adda9b887eef",
+     "name": "Maple Circle Marblehead LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d379cbe5-1477-4299-8383-2650ef5a856b",
+   "date": "2026-03-24",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": null,
+   "address": "1 & 3 Devereux Street, Marblehead, MA",
+   "applicant": "Jennifer Smith and Richard Katz",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 2,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Jennifer Smith and Richard Katz seek a special permit to unmerge 1 and 3 Devereux Street, restoring them as two separate single-family dwelling lots on pre-existing nonconforming lots in the Single Residence District. Relief is required for a substandard side yard setback at 1 Devereux and substandard lot area and frontage at 3 Devereux.",
+   "story_id": "2d418e30-255a-4734-8723-9814de8a2fe3",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "fc67cc25f8eb5eaa",
+     "name": "Jennifer Smith and Richard Katz",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "ab2899b1-c3bc-47b8-9f6e-012eb7e58a50",
+   "date": "2026-03-24",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": null,
+   "address": "21 Preston Beach Road, Marblehead, MA",
+   "applicant": "Debbie Williams",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Debbie Williams seeks a special permit to demolish the existing single-family dwelling at 21 Preston Beach Road and construct a new single-family dwelling on the same pre-existing nonconforming lot in the Single Residence District. The project requires relief from substandard lot area, frontage, lot width, rear and side yard setbacks, and parking.",
+   "story_id": "9317a137-c420-43b3-b689-fcab47b7fad2",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 2,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "64372b6258d6ad9c",
+     "name": "Debbie Williams",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "ba7a6c02389eae9d",
+   "name": "237 Washington Street LLC",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "c45af2ab-7d90-4438-ac80-d9a0d9eb3c1f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "ec6fdc1b18cfc33e",
+   "name": "Allison Jenkins",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "43de2ffd-37a7-4355-a06f-808bfec11fa8"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "64372b6258d6ad9c",
+   "name": "Debbie Williams",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "9317a137-c420-43b3-b689-fcab47b7fad2"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "fc67cc25f8eb5eaa",
+   "name": "Jennifer Smith and Richard Katz",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "2d418e30-255a-4734-8723-9814de8a2fe3"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d239adda9b887eef",
+   "name": "Maple Circle Marblehead LLC",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "437fcebf-dd7b-41ef-a47f-c43486add4a6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7c3ff1536bb0ce36",
+   "name": "Riptide Holdings LLC",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "74fa1eb6-172b-497c-b931-174b05aa6fc7"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "354d5f5b497c9d61",
+   "name": "Ruthy LLC",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "63bced30-b9a0-40c6-b2f1-1c2dce0355f1"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "0173cb6dce5f34ec",
+   "name": "Town of Marblehead – Department of Public Works",
+   "kind": "public_office",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "43de2ffd-37a7-4355-a06f-808bfec11fa8"
+   ],
+   "n_projects": 1
+  }
+ ],
+ "upcoming": [
+  {
+   "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+   "date": "2026-06-23",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / DPW",
+    "name": "Allison Jenkins",
+    "org": "Town of Marblehead – Department of Public Works",
+    "contact_info": "jenkinsa@marbleheadma.gov; (781) 631-0236 Ext. 4138"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  }
+ ]
+}
