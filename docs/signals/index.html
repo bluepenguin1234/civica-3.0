@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Civica Signals — North Shore Municipal Development Intelligence</title>
-<meta name="description" content="Every development project, zoning change, and infrastructure job moving through North Shore Massachusetts town halls — extracted weekly from public agendas and minutes, with source links.">
+<meta name="description" content="Open bids, approved projects, and new housing moving through North Shore Massachusetts town halls — extracted weekly from public agendas, minutes, and bid postings, with source links.">
 <link rel="canonical" href="https://bluepenguin1234.github.io/civica-3.0/signals/">
 <meta property="og:title" content="Civica Signals — municipal development intelligence">
-<meta property="og:description" content="Projects, rezonings, and public work moving through North Shore MA town halls — from the public record, updated weekly.">
+<meta property="og:description" content="Projects, rezonings, bids, and housing moving through North Shore MA town halls — from the public record, updated weekly.">
 <meta property="og:image" content="https://bluepenguin1234.github.io/civica-3.0/og_image.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><rect width='30' height='30' rx='7' fill='%230d2d52'/><rect x='6' y='16' width='4' height='9' rx='1.5' fill='white' opacity='.65'/><rect x='13' y='8' width='4' height='17' rx='1.5' fill='white'/><rect x='20' y='12' width='4' height='13' rx='1.5' fill='white' opacity='.8'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,31 +15,55 @@
 <link rel="stylesheet" href="../clean.css">
 <style>
 /* Signals-only layout; all colors/typography come from clean.css tokens. */
-.hero-band{ background:linear-gradient(180deg,var(--surface-soft),var(--surface)); border-bottom:1px solid var(--border); padding:var(--s4) 0 var(--s3); }
-.hero-band h1{ font-size:30px; font-weight:800; }
-.hero-band .sub{ color:var(--muted); font-size:15px; margin-top:6px; max-width:640px; }
-.coverage{ display:flex; flex-wrap:wrap; gap:8px; margin-top:var(--s2); }
-.cov-chip{ font-size:12px; font-weight:500; color:var(--muted); background:var(--surface); border:1px solid var(--border);
-  border-radius:var(--r-pill); padding:5px 12px; }
+.hero-band{ background:linear-gradient(180deg,var(--surface-soft),var(--surface)); border-bottom:1px solid var(--border); padding:var(--s3) 0 var(--s2); }
+.hero-band h1{ font-size:26px; font-weight:800; }
+.hero-band .sub{ color:var(--muted); font-size:14px; margin-top:4px; max-width:640px; }
+.coverage{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.cov-chip{ font-size:12px; font-weight:500; color:var(--muted); background:var(--surface); border:1px solid var(--border); border-radius:var(--r-pill); padding:5px 12px; }
 .cov-chip b{ color:var(--ink); font-weight:700; }
 .cov-chip .fresh{ font-family:'Inconsolata'; font-weight:700; }
-.filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:var(--s3) 0 var(--s2); }
-.filters label{ font-size:12px; font-weight:700; color:var(--muted); }
-.filters select,.filters input[type=date]{ font:inherit; font-size:13px; padding:8px 10px; border:1px solid var(--border);
-  border-radius:var(--r-sm); background:var(--surface); color:var(--text); min-height:40px; }
-.chiprow{ display:flex; flex-wrap:wrap; gap:6px; }
-.chip{ font:inherit; font-size:12px; font-weight:600; color:var(--muted); background:var(--surface); border:1px solid var(--border);
-  border-radius:var(--r-pill); padding:6px 12px; cursor:pointer; min-height:32px; }
+
+/* ── Mode switch + view tabs + chip row (the only controls at rest) ── */
+.controls{ position:sticky; top:64px; z-index:30; background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(180%) blur(12px); -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border); padding:10px 0; }
+@media(max-width:480px){ .controls{ top:56px; } }
+.controls-row{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.mode-switch{ display:inline-flex; background:var(--surface-sunken); border-radius:var(--r-pill); padding:3px; }
+.mode-switch button{ font:inherit; font-size:13.5px; font-weight:700; color:var(--muted); background:none; border:0;
+  border-radius:var(--r-pill); padding:0 16px; min-height:40px; cursor:pointer; }
+.mode-switch button[aria-pressed="true"]{ background:var(--ink); color:#fff; }
+.mode-hint{ font-size:12px; color:var(--muted); }
+.view-tabs{ display:flex; gap:4px; flex-wrap:wrap; }
+.view-tabs button{ font:inherit; font-size:13.5px; font-weight:600; color:var(--muted); background:none;
+  border:0; border-bottom:2.5px solid transparent; padding:0 10px; min-height:40px; cursor:pointer; }
+.view-tabs button[aria-selected="true"]{ color:var(--primary-strong); border-bottom-color:var(--primary-strong); font-weight:700; }
+.filters-btn{ margin-left:auto; font:inherit; font-size:13px; font-weight:600; color:var(--muted);
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--r-pill); padding:0 14px; min-height:40px; cursor:pointer; }
+.filters-btn[aria-expanded="true"]{ color:var(--primary-strong); border-color:var(--primary); }
+.chiprow{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.chip{ font:inherit; font-size:12.5px; font-weight:600; color:var(--muted); background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r-pill); padding:0 13px; min-height:40px; display:inline-flex; align-items:center; cursor:pointer; }
 .chip[aria-pressed="true"]{ color:#fff; background:var(--primary-strong); border-color:var(--primary-strong); }
-.section-h{ font-size:18px; font-weight:800; margin:var(--s4) 0 var(--s2); display:flex; align-items:center; gap:10px; }
+
+/* ── Hidden filters panel ── */
+.filters-panel{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 0 4px; }
+.filters-panel[hidden]{ display:none; }
+.filters-panel label{ font-size:12px; font-weight:700; color:var(--muted); }
+.filters-panel select,.filters-panel input{ font:inherit; font-size:13px; padding:8px 10px; border:1px solid var(--border);
+  border-radius:var(--r-sm); background:var(--surface); color:var(--text); min-height:40px; }
+.filters-panel input[type=search]{ min-width:200px; }
+
+/* ── Cards: 4 lines, scannable in ~2 seconds ── */
+.section-h{ font-size:17px; font-weight:800; margin:var(--s3) 0 var(--s2); display:flex; align-items:center; gap:10px; }
 .section-h .count{ font-family:'Inconsolata'; font-size:13px; color:var(--muted); font-weight:700; }
-.scard{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); margin-bottom:var(--s2); box-shadow:var(--shadow); }
-.scard-top{ display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; justify-content:space-between; }
-.scard h3{ font-size:16px; font-weight:700; }
-.scard h3 a{ color:var(--ink); }
-.meta{ font-size:12.5px; color:var(--muted); margin-top:2px; }
-.meta .mono{ font-size:12px; }
-.badges{ display:flex; flex-wrap:wrap; gap:6px; }
+.scard{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; margin-bottom:12px; box-shadow:var(--shadow); }
+.l1{ display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; }
+.l1 h3{ font-size:15.5px; font-weight:700; margin-right:auto; }
+.l1 h3 a{ color:var(--ink); }
+.date-pill{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--muted); white-space:nowrap; }
+.due-pill{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--primary-strong);
+  background:var(--surface-soft); border:1px solid var(--primary); border-radius:var(--r-pill); padding:3px 10px; white-space:nowrap; }
 .sbadge{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; border-radius:var(--r-pill);
   padding:3px 10px; background:var(--surface-sunken); color:var(--ink); white-space:nowrap; }
 .sbadge::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--c,var(--muted)); }
@@ -48,29 +72,40 @@
 .sg-proposed,.sg-under_construction{ --c:var(--primary); }
 .sg-denied,.sg-withdrawn{ --c:var(--danger); }
 .sg-informational{ --c:var(--muted); }
-.tbadge{ font-size:11px; font-weight:700; color:var(--primary-strong); background:var(--surface-soft);
+.l2{ font-size:14px; line-height:1.6; margin-top:7px; color:var(--text); }
+.l3{ display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }
+.tag{ font-size:11px; font-weight:700; color:var(--primary-strong); background:var(--surface-soft);
   border:1px solid var(--border); border-radius:var(--r-pill); padding:3px 10px; white-space:nowrap; }
-.summary{ font-size:14.5px; line-height:1.65; margin-top:10px; }
-.contacts{ font-size:13px; color:var(--muted); margin-top:8px; line-height:1.6; }
-.contacts b{ color:var(--text); }
-.timeline{ margin-top:var(--s2); border-left:2px solid var(--border); padding-left:18px; display:grid; gap:14px; }
+.tag.units{ color:var(--ink); font-family:'Inconsolata'; }
+.l4{ display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:baseline; margin-top:10px; font-size:13px; color:var(--muted); }
+.l4 b{ color:var(--text); font-weight:600; }
+.l4 .links{ display:flex; gap:12px; white-space:nowrap; }
+
+/* ── Detail page ── */
+.backlink{ font-size:13.5px; font-weight:600; display:inline-block; margin:var(--s2) 0; }
+.numbers{ display:flex; flex-wrap:wrap; gap:10px; margin:12px 0; }
+.numbers div{ background:var(--surface-sunken); border-radius:var(--r-sm); padding:8px 14px; }
+.numbers .k{ font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+.numbers .v{ font-family:'Inconsolata'; font-size:16px; font-weight:700; color:var(--ink); }
+.contact-list{ margin:12px 0; display:grid; gap:8px; }
+.contact-list .c{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r-sm); padding:10px 14px; font-size:13.5px; }
+.contact-list .c b{ color:var(--ink); }
+.contact-list .role{ font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+.timeline{ margin-top:var(--s2); border-left:2px solid var(--border); padding-left:18px; display:grid; gap:16px; }
 .tl-item{ position:relative; }
 .tl-item::before{ content:""; position:absolute; left:-24px; top:5px; width:10px; height:10px; border-radius:50%;
   background:var(--c,var(--primary)); border:2px solid var(--surface); }
 .tl-date{ font-family:'Inconsolata'; font-size:12px; font-weight:700; color:var(--muted); }
-.tl-body{ font-size:13.5px; line-height:1.6; }
-.srclinks{ margin-top:10px; font-size:13px; display:flex; flex-wrap:wrap; gap:14px; }
-.numfacts{ display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
-.numfacts span{ font-family:'Inconsolata'; font-weight:700; font-size:13px; color:var(--ink);
-  background:var(--surface-sunken); border-radius:var(--r-sm); padding:3px 9px; }
+.tl-body{ font-size:13.5px; line-height:1.6; margin-top:3px; }
+.tl-src{ font-size:12.5px; margin-top:4px; display:flex; gap:12px; flex-wrap:wrap; }
+
 .state-card{ background:var(--surface-soft); border:1px dashed var(--border); border-radius:var(--r);
-  padding:var(--s4); text-align:center; color:var(--muted); font-size:14.5px; margin:var(--s3) 0; }
-.backlink{ font-size:13.5px; font-weight:600; display:inline-block; margin-bottom:var(--s2); }
+  padding:var(--s3); text-align:center; color:var(--muted); font-size:14px; margin:var(--s3) 0; }
 .foot{ border-top:1px solid var(--border); margin-top:var(--s6); padding:var(--s3) 0 var(--s5); font-size:12.5px; color:var(--muted); line-height:1.7; }
 @media(max-width:680px){
-  .hero-band h1{ font-size:24px; }
-  .scard{ padding:var(--s2); }
-  .filters{ gap:8px; }
+  .hero-band h1{ font-size:22px; }
+  .scard{ padding:13px 14px; }
+  .filters-btn{ margin-left:0; }
 }
 </style>
 </head>
@@ -96,30 +131,38 @@
 <div class="hero-band">
   <div class="wrap">
     <h1>Civica Signals</h1>
-    <p class="sub">North Shore municipal development intelligence — every project, rezoning, and
-    public job moving through town halls, extracted weekly from official agendas and minutes.
-    Every item links to its source document.</p>
+    <p class="sub">Bids, projects, and housing moving through North Shore town halls —
+    from the public record, with a source link on every item.</p>
     <div class="coverage" id="coverage" aria-label="Town coverage and data freshness"></div>
+  </div>
+</div>
+
+<div class="controls" id="controls" hidden>
+  <div class="wrap">
+    <div class="controls-row">
+      <div class="mode-switch" role="group" aria-label="Audience mode">
+        <button type="button" data-mode="contractor">Contractors</button>
+        <button type="button" data-mode="realtor">Realtors</button>
+      </div>
+      <span class="mode-hint" id="modeHint" hidden>Pick your view — we’ll remember it.</span>
+      <div class="view-tabs" id="viewTabs" role="tablist" aria-label="Views"></div>
+      <button class="filters-btn" id="filtersBtn" type="button" aria-expanded="false" aria-controls="filtersPanel">Filters</button>
+    </div>
+    <div class="chiprow" id="chipRow"></div>
+    <div class="filters-panel" id="filtersPanel" hidden>
+      <input type="search" id="qInput" placeholder="Search projects, names, addresses…" aria-label="Search">
+      <label>Stage <select id="stageSel"><option value="">all</option></select></label>
+      <label>From <input type="date" id="fromDate"></label>
+      <label>To <input type="date" id="toDate"></label>
+      <button class="chip" id="clearBtn" type="button">clear all</button>
+    </div>
   </div>
 </div>
 
 <main id="main" class="wrap">
   <div id="detailView" hidden></div>
-
   <div id="feedView">
-    <div class="filters" id="filters" hidden>
-      <div class="chiprow" id="typeChips" aria-label="Filter by event type"></div>
-      <label>Stage
-        <select id="stageSel"><option value="">all</option></select>
-      </label>
-      <label>From <input type="date" id="fromDate"></label>
-      <label>To <input type="date" id="toDate"></label>
-      <button class="chip" id="clearBtn" type="button">clear filters</button>
-    </div>
-
-    <div id="thisWeek"></div>
-    <div id="stories"></div>
-    <div id="standalone"></div>
+    <div id="content"></div>
     <div id="stateCard" class="state-card" hidden></div>
   </div>
 
@@ -134,6 +177,6 @@
   </footer>
 </main>
 
-<script src="signals.js"></script>
+<script src="signals.js?v=4"></script>
 </body>
 </html>
