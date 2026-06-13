@@ -114,7 +114,8 @@
       <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="#0d2d52"/><rect x="6" y="16" width="4" height="9" rx="1.5" fill="#fff" opacity=".65"/><rect x="13" y="8" width="4" height="17" rx="1.5" fill="#fff"/><rect x="20" y="12" width="4" height="13" rx="1.5" fill="#fff" opacity=".8"/></svg>
       <b>civi<i>ca</i></b>
     </a>
-    <nav class="nav" aria-label="Primary">
+    <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu">☰</button>
+      <nav class="nav" id="primaryNav" aria-label="Primary">
       <a href="map.html">Map</a>
       <a href="signals/">Signals</a>
       <a href="leaderboard.html">Leaderboard</a>
@@ -412,6 +413,19 @@ function toggleAcc(btn){
   const open = acc.classList.toggle('open');
   btn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
+</script>
+<script>
+(function(){
+  var b=document.getElementById('navBurger'), n=document.getElementById('primaryNav');
+  if(!b||!n)return;
+  function close(){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); }
+  b.addEventListener('click',function(e){ e.stopPropagation();
+    var o=n.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false'); });
+  document.addEventListener('click',function(e){
+    if(n.classList.contains('open') && !n.contains(e.target) && e.target!==b) close(); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && n.classList.contains('open')){ close(); b.focus(); } });
+})();
 </script>
 </body>
 </html>

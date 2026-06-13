@@ -54,7 +54,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
   min-height:44px; display:inline-flex; align-items:center; transition:color .15s, background .15s; }
 .nav a:hover{ color:var(--text); background:var(--surface-soft); text-decoration:none; }
 .nav a[aria-current="page"]{ color:var(--ink); font-weight:700; }
-@media(max-width:680px){ .nav a.opt{ display:none; } }
+/* Hamburger menu — collapses the nav into a dropdown on small screens */
+.nav-burger{ display:none; align-items:center; justify-content:center; width:44px; height:44px; flex:0 0 auto;
+  background:none; border:1px solid var(--border); border-radius:var(--r-sm); color:var(--ink); font-size:20px; line-height:1; cursor:pointer; }
+.nav-burger:hover{ background:var(--surface-soft); }
+@media(max-width:680px){
+  .nav-burger{ display:inline-flex; }
+  .nav{ position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:0;
+    background:var(--surface); border-bottom:1px solid var(--border); box-shadow:var(--shadow); padding:6px var(--s3) 10px; }
+  .nav:not(.open){ display:none; }
+  .nav a{ width:100%; padding:13px 10px; border-radius:0; border-bottom:1px solid var(--border); }
+  .nav a:last-child{ border-bottom:none; }
+}
 @media(max-width:480px){
   .hdr-in{ height:56px; }
   .logo b{ font-size:18px; }
