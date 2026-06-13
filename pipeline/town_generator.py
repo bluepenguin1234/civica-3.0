@@ -349,7 +349,6 @@ def build_hero(row, place, state, county):
     <h1>{place}, {state}</h1>
     <div class="hero-sub">{county} · Pop. {pop:,}{mcd_tag}</div>
     <div class="rank-line">Ranks <span>#{rk} of {tot}</span> towns in {county} — {rank_phrase(rk, tot)}</div>
-    <div class="dc-chip">Town-level: <b>crime · income · growth · schools</b> &nbsp;·&nbsp; County-level: <i>economy · appreciation · climate</i></div>
   </div>
   <div class="hero-score">
     <div class="score-hero">
