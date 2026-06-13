@@ -6,7 +6,16 @@ endpoint  /AgendaCenter/UpdateCategoryList?catID=<catID>&year=<YYYY>  (verified
 against danversma.gov), which returns the same ViewFile links. We sweep the
 default page plus one request per year from the backfill floor to this year.
 
-ViewFile link shape:  /AgendaCenter/ViewFile/<Agenda|Minutes>/_<MMDDYYYY>-<id>
+ViewFile link shape:  /AgendaCenter/ViewFile/<Type>/_<MMDDYYYY>-<id>
+where <Type> is Agenda, Minutes, or — when a town posts the full application
+packet behind a meeting — a packet/attachment type (e.g. Agenda_Packet, Packet,
+Attachments). Step 6 widened the regex from the original (Agenda|Minutes) to any
+type segment and classifies it; unknown types are ignored so we don't grab junk.
+
+NOTE (verified 2026-06-12): the North Shore CivicPlus towns (Danvers, Beverly,
+Salem, Swampscott) do NOT expose a separate packet type via AgendaCenter — only
+Agenda + Minutes. This adapter captures packets wherever a town does post them,
+but for those towns the packet pass legitimately finds zero.
 """
 
 from __future__ import annotations
@@ -20,8 +29,20 @@ from signals.crawl.adapters.base import BaseAdapter, DocumentRef
 
 _CATID_RE = re.compile(r"-(\d+)/?$")
 _VIEWFILE_RE = re.compile(
-    r"/AgendaCenter/ViewFile/(Agenda|Minutes)/_(\d{2})(\d{2})(\d{4})-(\d+)"
+    r"/AgendaCenter/ViewFile/([A-Za-z0-9_]+)/_(\d{2})(\d{2})(\d{4})-(\d+)"
 )
+
+
+def _classify(type_seg):
+    """Map a ViewFile <Type> segment to a doc_type, or None to ignore it."""
+    t = type_seg.lower()
+    if "packet" in t or "attach" in t:
+        return "packet"
+    if t == "agenda":
+        return "agenda"
+    if t == "minutes":
+        return "minutes"
+    return None  # unknown ViewFile type — don't download it
 
 
 def _iso(mm, dd, yyyy):
@@ -65,15 +86,17 @@ class CivicPlusAdapter(BaseAdapter):
             html = self.fetch(list_url)
             if not html:
                 continue
-            for dtype, mm, dd, yyyy, vid in _VIEWFILE_RE.findall(html):
-                key = (dtype, mm, dd, yyyy, vid)
+            for type_seg, mm, dd, yyyy, vid in _VIEWFILE_RE.findall(html):
+                key = (type_seg, mm, dd, yyyy, vid)
                 if key in seen:
                     continue
                 seen.add(key)
-                doc_type = dtype.lower()
+                doc_type = _classify(type_seg)
+                if doc_type is None:
+                    continue  # not an agenda/minutes/packet ViewFile — skip
                 iso = _iso(mm, dd, yyyy)
                 refs.append(DocumentRef(
-                    url=f"{host}/AgendaCenter/ViewFile/{dtype}/_{mm}{dd}{yyyy}-{vid}",
+                    url=f"{host}/AgendaCenter/ViewFile/{type_seg}/_{mm}{dd}{yyyy}-{vid}",
                     doc_type=doc_type,
                     guessed_meeting_date=iso,
                     filename=f"{board_id}_{doc_type}_{iso or 'undated'}_{vid}.pdf",

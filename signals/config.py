@@ -34,6 +34,12 @@ CRAWL_DELAY_SECONDS = 5.0
 # the fetch to the newest N and date-filter each detail page after fetching.
 BIDS_RECENT_COUNT = 8
 
+# Agenda packets (Step 6): some CivicPlus towns attach the full application
+# packet (engineer letterhead, applicant phone numbers) behind a meeting. These
+# can run to hundreds of pages; any document over this cap is archived but flagged
+# extraction_status='skipped_large' so one giant packet can't blow up extraction.
+PACKET_PAGE_CAP = 150
+
 # Rolling crawl window: only crawl documents newer than this many days (~3 months).
 # Signals tracks current development activity; the historical archive accrues
 # naturally from repeated weekly runs, so we don't deep-backfill.

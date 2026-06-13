@@ -129,7 +129,8 @@ def load_towns():
 def crawl_town(town, fetcher, conn, backfill_start):
     town_id = town.get("town_id", "?")
     platform = town.get("platform", "")
-    stats = {"found": 0, "new": 0, "dup": 0, "skip": 0, "scan": 0, "fail": 0, "note": ""}
+    stats = {"found": 0, "new": 0, "dup": 0, "skip": 0, "scan": 0,
+             "large": 0, "fail": 0, "note": ""}
 
     adapter_cls = ADAPTERS.get(platform)
     if adapter_cls is None or platform == "manual":
@@ -178,9 +179,18 @@ def crawl_town(town, fetcher, conn, backfill_start):
             local_path = f"signals/raw/{town_id}/{board_id}/{filename}"
 
             page_count, is_scanned = analyze_pdf(content)
-            status = "skipped_scan" if is_scanned else "pending"
-            if is_scanned:
+            if page_count is not None and page_count > config.PACKET_PAGE_CAP:
+                # Step 6 page cap: archive it, but never feed a giant packet to
+                # extraction. extract.py only picks up extraction_status='pending'.
+                status = "skipped_large"
+                stats["large"] += 1
+                print(f"      ~ {page_count}p > cap {config.PACKET_PAGE_CAP} — "
+                      f"archived as skipped_large: {ref.doc_type}")
+            elif is_scanned:
+                status = "skipped_scan"
                 stats["scan"] += 1
+            else:
+                status = "pending"
             try:
                 conn.execute(
                     "INSERT INTO documents (doc_id, town_id, board_id, doc_type, "
@@ -287,7 +297,7 @@ def crawl_bids(town, fetcher, conn, cutoff):
 def print_report(results, active):
     print("\n=== crawl coverage report ===")
     hdr = (f"{'town':<16}{'found':>6}{'new':>5}{'dup':>5}{'skip':>6}"
-           f"{'scan':>6}{'fail':>6}  notes")
+           f"{'scan':>6}{'large':>6}{'fail':>6}  notes")
     print(hdr)
     print("-" * len(hdr))
     flags = []
@@ -296,7 +306,8 @@ def print_report(results, active):
         s = results.get(tid, {})
         note = s.get("error") or s.get("note") or ""
         print(f"{tid:<16}{s.get('found', 0):>6}{s.get('new', 0):>5}{s.get('dup', 0):>5}"
-              f"{s.get('skip', 0):>6}{s.get('scan', 0):>6}{s.get('fail', 0):>6}  {note}")
+              f"{s.get('skip', 0):>6}{s.get('scan', 0):>6}{s.get('large', 0):>6}"
+              f"{s.get('fail', 0):>6}  {note}")
         if s.get("found", 0) == 0 and not s.get("error"):
             flags.append(tid)
     for tid in flags:
@@ -341,8 +352,8 @@ def main(argv=None):
             stats = crawl_town(town, fetcher, conn, cutoff)
         except Exception as exc:  # one broken town must not kill the run
             print(f"  !! {town_id} failed: {exc.__class__.__name__}: {exc}")
-            results[town_id] = {"found": 0, "new": 0, "dup": 0, "skip": 0,
-                                "scan": 0, "fail": 0, "error": f"{exc.__class__.__name__}: {exc}"}
+            results[town_id] = {"found": 0, "new": 0, "dup": 0, "skip": 0, "scan": 0,
+                                "large": 0, "fail": 0, "error": f"{exc.__class__.__name__}: {exc}"}
             continue
         try:
             bids = crawl_bids(town, fetcher, conn, cutoff)

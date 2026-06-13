@@ -109,6 +109,17 @@ def main():
           f"no needs_review events older than {NEEDS_REVIEW_MAX_AGE_DAYS} days "
           f"({len(stale_review)} stale — run signals/review/review.py)")
 
+    print("\n=== DOCUMENTS (Step 6) ===")
+    DOC_TYPES = {"agenda", "minutes", "packet", "bid", "other", None}
+    bad_doctype = [d["doc_id"] for d in docs.values() if d["doc_type"] not in DOC_TYPES]
+    check(not bad_doctype, f"document doc_type enum ({len(bad_doctype)} bad)")
+    oversize_live = [d["doc_id"] for d in docs.values()
+                     if d["page_count"] and d["page_count"] > config.PACKET_PAGE_CAP
+                     and d["extraction_status"] in ("pending", "done")]
+    check(not oversize_live,
+          f"no document over the {config.PACKET_PAGE_CAP}-page cap is queued or "
+          f"extracted (must be skipped_large) ({len(oversize_live)} over cap)")
+
     print("\n=== EXTRACTION V2 FIELDS ===")
     live = [e for e in events if e["review_status"] != "rejected"]
     bad_trades, bad_next, bad_tenure, trade_counts = [], [], [], []
