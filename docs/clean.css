@@ -87,6 +87,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 
 /* ── Page hero (compact, minimal) ── */
 .page-hero{ padding:var(--s6) 0 var(--s4); }
+@media(max-width:640px){ .page-hero{ padding-top:var(--s4); } }  /* halve top gap on mobile */
 .page-hero .eyebrow{ font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--primary-strong); }
 .page-hero h1{ font-size:clamp(28px,4.6vw,40px); font-weight:800; line-height:1.08; margin:var(--s1) 0 var(--s2); }
 .page-hero p{ font-size:18px; color:var(--muted); max-width:60ch; }
