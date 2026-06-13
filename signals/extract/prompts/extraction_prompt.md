@@ -5,7 +5,7 @@ minutes). Extract EVENTS matching these types only:
 residential_project, commercial_project, mixed_use_project, subdivision,
 40b_application, zoning_amendment, variance_special_permit,
 tax_override_debt_exclusion, infrastructure_project, municipal_property,
-master_plan_comp_plan, other_notable
+master_plan_comp_plan, bid_rfp, other_notable
 
 Rules:
 - Routine administrative items (minutes approval, bill payment, appointments,
@@ -68,6 +68,17 @@ Rules:
     plumbing, hvac, roofing) ONLY at stage approved or permitted — at earlier
     stages tag only trades the document actually describes.
   - Informational items, plans, and studies: empty array.
+- A public bid or RFP notice (doc_type=bid) is a single bid_rfp event:
+  - next_date = the Closing Date / submission due date, as an ISO date.
+  - job_contact = the named procurement Contact Person (role, name, org, and
+    any phone). CivicPlus obfuscates emails as "[email protected]" — that is NOT
+    a real address; record contact_info ONLY if a real email or phone is
+    printed, else null.
+  - is_public_work = 1; dollar_value only if an estimated value is stated.
+  - trades = the trades the procured work or materials imply (e.g. iron pipe ->
+    utilities; pavement markings -> paving_asphalt).
+  - summary: what is being procured, plus where to obtain the documents (e.g. a
+    ProjectDog project code) if stated. Return exactly ONE bid_rfp event.
 - summary: 1–3 sentences, plain language, written for a real-estate professional.
   Lead with what happened, then the size/scale.
 - source_page: the PDF page number where the item appears.

@@ -26,10 +26,11 @@ import re
 import sqlite3
 import sys
 import time
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urlunsplit
 
 import requests
 import yaml
+from bs4 import BeautifulSoup
 
 from signals import config, db
 from signals.crawl.adapters.civicplus import CivicPlusAdapter
@@ -197,6 +198,92 @@ def crawl_town(town, fetcher, conn, backfill_start):
     return stats
 
 
+def _clean_bid_html(html):
+    """Strip a CivicPlus bid detail page to readable key/value text."""
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["script", "style", "nav", "header", "footer"]):
+        tag.decompose()
+    txt = re.sub(r"[ \t]+", " ", soup.get_text("\n", strip=True))
+    return re.sub(r"\n{2,}", "\n", txt).strip()
+
+
+def _bid_closing_iso(text):
+    """Parse the 'Closing Date/Time' field of a bid page to an ISO date."""
+    m = re.search(r"Closing Date/Time\s*:?\s*\n?\s*([^\n]+)", text, re.I)
+    if not m:
+        return None
+    d = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", m.group(1))
+    if not d:
+        return None
+    mo, dy, yr = d.groups()
+    try:
+        return dt.date(int(yr), int(mo), int(dy)).isoformat()
+    except ValueError:
+        return None
+
+
+def crawl_bids(town, fetcher, conn, cutoff):
+    """Crawl the town's public bids/RFP module (CivicPlus). Bid detail pages are
+    HTML, not PDF: each is saved with a `.txt` text sidecar so extract.py reads
+    it the same way it reads scanned-PDF `.ocr.txt` sidecars. Only the N most
+    recent bids are fetched; stale closed bids (closing date before the lookback
+    cutoff) are skipped."""
+    bids_url = (town.get("bids_url") or "").strip()
+    if not bids_url:
+        return None
+    town_id = town["town_id"]
+    parts = urlsplit(bids_url)
+    host = urlunsplit((parts.scheme, parts.netloc, "", "", ""))
+    index_url = bids_url + ("&" if parts.query else "?") + "showAllBids=on"
+    stats = {"found": 0, "new": 0, "dup": 0, "skip": 0, "fail": 0}
+
+    html = fetcher.fetch_text(index_url)
+    if not html:
+        print(f"  - {town_id}/bids: index fetch failed")
+        return stats
+    ids = sorted({int(m) for m in re.findall(r"bids\.aspx\?bidID=(\d+)", html, re.I)},
+                 reverse=True)[:config.BIDS_RECENT_COUNT]
+    print(f"  - {town_id}/bids: checking {len(ids)} most-recent bid(s)")
+    for bid in ids:
+        url = f"{host}/bids.aspx?bidID={bid}"
+        if conn.execute("SELECT 1 FROM documents WHERE source_url=? LIMIT 1",
+                        (url,)).fetchone():
+            stats["skip"] += 1
+            continue
+        detail = fetcher.fetch_text(url)
+        if not detail:
+            stats["fail"] += 1
+            continue
+        text = _clean_bid_html(detail)
+        closing = _bid_closing_iso(text)
+        stats["found"] += 1
+        if closing and closing < cutoff:
+            continue  # stale closed bid outside the lookback window
+        data = detail.encode("utf-8")
+        doc_id = hashlib.sha256(data).hexdigest()
+        if conn.execute("SELECT 1 FROM documents WHERE doc_id=? LIMIT 1",
+                        (doc_id,)).fetchone():
+            stats["dup"] += 1
+            continue
+        dest = os.path.join(config.RAW_DIR, town_id, "bids")
+        os.makedirs(dest, exist_ok=True)
+        fname = f"bid_{bid}.html"
+        with open(os.path.join(dest, fname), "w", encoding="utf-8") as fh:
+            fh.write(detail)
+        with open(os.path.join(dest, fname + ".txt"), "w", encoding="utf-8") as fh:
+            fh.write(f"[PAGE 1]\nPUBLIC BID / RFP NOTICE\n\n{text}")
+        conn.execute(
+            "INSERT INTO documents (doc_id, town_id, board_id, doc_type, meeting_date, "
+            "source_url, local_path, fetched_at, processed_at, extraction_status, "
+            "page_count, is_scanned) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+            (doc_id, town_id, "bids", "bid", closing, url,
+             f"signals/raw/{town_id}/bids/{fname}",
+             dt.datetime.now().isoformat(timespec="seconds"), None, "pending", 1, 0))
+        conn.commit()
+        stats["new"] += 1
+    return stats
+
+
 def print_report(results, active):
     print("\n=== crawl coverage report ===")
     hdr = (f"{'town':<16}{'found':>6}{'new':>5}{'dup':>5}{'skip':>6}"
@@ -251,11 +338,20 @@ def main(argv=None):
         town_id = town.get("town_id", "?")
         print(f"== {town_id} ({town.get('platform')}) ==")
         try:
-            results[town_id] = crawl_town(town, fetcher, conn, cutoff)
+            stats = crawl_town(town, fetcher, conn, cutoff)
         except Exception as exc:  # one broken town must not kill the run
             print(f"  !! {town_id} failed: {exc.__class__.__name__}: {exc}")
             results[town_id] = {"found": 0, "new": 0, "dup": 0, "skip": 0,
                                 "scan": 0, "fail": 0, "error": f"{exc.__class__.__name__}: {exc}"}
+            continue
+        try:
+            bids = crawl_bids(town, fetcher, conn, cutoff)
+            if bids:
+                for k in ("found", "new", "dup", "skip", "fail"):
+                    stats[k] = stats.get(k, 0) + bids.get(k, 0)
+        except Exception as exc:  # a bids failure must not drop the board results
+            print(f"  - {town_id}/bids failed: {exc.__class__.__name__}: {exc}")
+        results[town_id] = stats
 
     print_report(results, active)
     conn.close()

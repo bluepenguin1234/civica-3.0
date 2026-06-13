@@ -27,7 +27,7 @@ EVENT_TYPES = {
     "subdivision", "40b_application", "zoning_amendment",
     "variance_special_permit", "tax_override_debt_exclusion",
     "infrastructure_project", "municipal_property", "master_plan_comp_plan",
-    "other_notable",
+    "bid_rfp", "other_notable",
 }
 STAGES = {
     "proposed", "hearing", "continued", "approved", "denied", "withdrawn",
@@ -150,6 +150,15 @@ def main():
               f"({cont_with}/{cont_total} = {share:.0%})")
     else:
         print("  [ -- ] no 'continued to' events to check next_date coverage against")
+
+    bids = [e for e in live if e["event_type"] == "bid_rfp"]
+    bid_no_date = [e["event_id"] for e in bids if not e["next_date"]]
+    if bids:
+        check(not bid_no_date,
+              f"every bid_rfp carries a next_date (due date) "
+              f"({len(bid_no_date)} of {len(bids)} missing)")
+    else:
+        print("  [ -- ] no bid_rfp events yet (town may have no open bids)")
 
     print("\n=== AGENDA/MINUTES MERGE (Step 2) ===")
     doc_type = {d["doc_id"]: d["doc_type"] for d in docs.values()}

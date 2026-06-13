@@ -40,6 +40,8 @@ def main():
     towns = {t["town_id"]: t for t in registry}
     board_names = {(t["town_id"], b["board_id"]): b.get("name", b["board_id"])
                    for t in registry for b in t.get("boards", [])}
+    for t in registry:  # the bids module is not a registry board
+        board_names[(t["town_id"], "bids")] = "Bids & RFPs"
     today = dt.date.today()
 
     coverage = []

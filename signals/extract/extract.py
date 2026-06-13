@@ -47,7 +47,7 @@ EVENT_TYPES = {
     "subdivision", "40b_application", "zoning_amendment",
     "variance_special_permit", "tax_override_debt_exclusion",
     "infrastructure_project", "municipal_property", "master_plan_comp_plan",
-    "other_notable",
+    "bid_rfp", "other_notable",
 }
 STAGES = {
     "proposed", "hearing", "continued", "approved", "denied", "withdrawn",
@@ -96,21 +96,24 @@ def call_claude(prompt: str) -> tuple[str, dict]:
 def pdf_pages(path: str) -> list[str]:
     """Page texts, each prefixed with its [PAGE n] marker.
 
-    Scanned documents transcribed by the OCR path (signals/extract/ocr.py)
-    have a sidecar `<pdf>.ocr.txt` — prefer it over pdfplumber, which sees
-    no text in image-only PDFs.
+    Text sidecars take precedence over pdfplumber: `<path>.ocr.txt` for scanned
+    PDFs (signals/extract/ocr.py) and `<path>.txt` for non-PDF documents like
+    bid/RFP HTML pages (signals/crawl/crawl.py). This is how the extractor
+    processes documents that aren't machine-readable PDFs.
     """
-    sidecar = path + ".ocr.txt"
-    if os.path.exists(sidecar):
-        with open(sidecar, "r", encoding="utf-8") as fh:
-            text = fh.read()
-        parts = re.split(r"(?=\[PAGE \d+\])", text)
-        pages = [p.strip() for p in parts if p.strip()]
-        if pages:
-            return pages
-    with pdfplumber.open(path) as pdf:
-        return [f"[PAGE {i}]\n{(p.extract_text() or '').strip()}"
-                for i, p in enumerate(pdf.pages, start=1)]
+    for sidecar in (path + ".ocr.txt", path + ".txt"):
+        if os.path.exists(sidecar):
+            with open(sidecar, "r", encoding="utf-8") as fh:
+                text = fh.read()
+            parts = re.split(r"(?=\[PAGE \d+\])", text)
+            pages = [p.strip() for p in parts if p.strip()]
+            if pages:
+                return pages
+    if path.lower().endswith(".pdf"):
+        with pdfplumber.open(path) as pdf:
+            return [f"[PAGE {i}]\n{(p.extract_text() or '').strip()}"
+                    for i, p in enumerate(pdf.pages, start=1)]
+    raise ExtractionError(f"no text sidecar for non-PDF document: {path}")
 
 
 def chunk_pages(pages: list[str]) -> list[str]:

@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-06-12T21:35:01",
+ "generated_at": "2026-06-12T21:52:34",
  "coverage": [
   {
    "town_id": "danvers_ma",
    "name": "Danvers",
    "place_fips": "2500916250",
-   "doc_freshness_days": 1
+   "doc_freshness_days": 0
   }
  ],
  "stories": [
@@ -412,6 +412,96 @@
    ]
   },
   {
+   "story_id": "2d3ab1d1-7595-4bc5-87ba-e39821469370",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Purchase of Ductile Iron Pipe and Fittings",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-06-04",
+   "last_activity": "2026-06-04",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "7f18df35-0054-4f94-affe-e2c54b339ea9",
+     "date": "2026-06-04",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "Danvers issued Bid 2026-29 for the purchase of ductile iron pipe and fittings. Bid submissions closed June 4, 2026; bid documents and specifications are available via ProjectDog project code 874746 at www.projectdog.com.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=125",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=125"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "b18bc230-2d04-4ef3-9dc0-17f57453f0c9",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Purchase of Brass and Copper Fittings",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-06-04",
+   "last_activity": "2026-06-04",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "ef88dc96-74cc-4fd7-9313-59590acf762a",
+     "date": "2026-06-04",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "Town of Danvers solicited bids for the purchase of brass and copper fittings (Bid No. 2026-28). Bid closed June 4, 2026; documents and submission are handled through ProjectDog project code 874745.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=124",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=124"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "84da3366-9f14-449f-9250-daf770b5a697",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Purchase of Valves, Hydrants and Iron Products",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-06-04",
+   "last_activity": "2026-06-04",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "c2987ff4-2d2d-4e36-b072-cfdf796e98fd",
+     "date": "2026-06-04",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "The Town of Danvers issued Bid #2026-30 for the purchase of valves, hydrants, and iron products, with a closing date of June 4, 2026. Bid documents are available through ProjectDog at project code 874747 (www.projectdog.com). The bid status is listed as closed.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=123",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=123"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "story_id": "e2a4125b-83ae-4eb9-84d6-c238cc6ba58b",
    "town_id": "danvers_ma",
    "town": "Danvers",
@@ -668,6 +758,36 @@
    ]
   },
   {
+   "story_id": "3d5b1569-1ddb-4e3f-aa74-4f8869975d73",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Pavement Markings (Bid 2026-27)",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-05-21",
+   "last_activity": "2026-05-21",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "d580e896-9203-4f8b-a0b4-fca2248653b0",
+     "date": "2026-05-21",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "Danvers issued a public bid for furnishing all labor and equipment for the application of reflectorized painted pavement markings. Bidders are required to be prequalified by MassDOT in the 'Pavement Markings' category. Bid documents and submission are handled through ProjectDog project code 874485; the bid closed on 5/21/2026.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=122",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=122"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "story_id": "ca1a2100-641f-45de-a2b5-2e98713c0c6f",
    "town_id": "danvers_ma",
    "town": "Danvers",
@@ -771,6 +891,66 @@
       {
        "kind": "agenda",
        "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "df2ba112-2654-4c72-a61d-d8834de176f6",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Crack Sealing (Bid 2026-25)",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-05-14",
+   "last_activity": "2026-05-14",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "abd3c980-b9c9-459a-b4ce-a77d237e994f",
+     "date": "2026-05-14",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "Town of Danvers is procuring crack sealing and micro surfacing services under Bid 2026-25. Bid documents are available through ProjectDog at project code 874330; submissions must be made via ProjectDog at project code 873970. MassDOT prequalification in crack sealing is required.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=121",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=121"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "7b1a6f0b-2183-4319-bd90-ae8480e365c1",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Sanitary Sewer System Rehabilitation",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-05-14",
+   "last_activity": "2026-05-14",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "8246b905-0584-44bd-b307-940c77f12c41",
+     "date": "2026-05-14",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "The Town of Danvers solicited bids for rehabilitation of approximately 8,100 linear feet of sanitary sewers, including excavation spot repairs, rehabilitation of approximately 55 manholes, lateral connection lining of approximately 20 sewer services, and sewer service grouting. Bid documents were available through ProjectDog at project code 873970; the bid closed May 14, 2026.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=119",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=119"
       }
      ]
     }
@@ -957,6 +1137,36 @@
    ]
   },
   {
+   "story_id": "8442bdc6-3ec2-45b2-b603-86da1868ee65",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Request for Written Responses for Wayfinding Signs",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-05-07",
+   "last_activity": "2026-05-07",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "7316d7aa-0323-46fe-8fd5-61de3c3a4fc1",
+     "date": "2026-05-07",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "Danvers issued Bid No. 2026-26 seeking written responses for wayfinding signs as part of a downtown improvements project. Submission deadline was May 7, 2026 at 11:00 AM; bid documents available via ProjectDog project code 872929.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=120",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=120"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "story_id": "4bf3180e-fb7c-4561-8714-946a3ba98d19",
    "town_id": "danvers_ma",
    "town": "Danvers",
@@ -985,6 +1195,36 @@
       {
        "kind": "agenda",
        "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "e29f4469-3046-41ca-8c05-496960cdaa3f",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "name": "Perennial and Annual Bed Maintenance",
+   "address": null,
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-04-19",
+   "last_activity": "2026-04-19",
+   "status": "active",
+   "events": [
+    {
+     "event_id": "8936252a-7174-43fa-83c9-9fd3f0ff39e9",
+     "date": "2026-04-19",
+     "board": "Bids & RFPs",
+     "event_type": "bid_rfp",
+     "stage": "informational",
+     "summary": "The Town of Danvers solicited bids for perennial and annual bed maintenance services (Bid No. 2026-02). The bid closed April 19, 2026; documents and submission are handled electronically through ProjectDog at project code 873461.",
+     "source_url": "https://www.danversma.gov/bids.aspx?bidID=117",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.danversma.gov/bids.aspx?bidID=117"
       }
      ]
     }
@@ -2299,6 +2539,126 @@
    ]
   },
   {
+   "event_id": "c2987ff4-2d2d-4e36-b072-cfdf796e98fd",
+   "date": "2026-06-04",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Purchase of Valves, Hydrants and Iron Products",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Danvers issued Bid #2026-30 for the purchase of valves, hydrants, and iron products, with a closing date of June 4, 2026. Bid documents are available through ProjectDog at project code 874747 (www.projectdog.com). The bid status is listed as closed.",
+   "story_id": "84da3366-9f14-449f-9250-daf770b5a697",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=123",
+   "source_page": 1,
+   "confidence": 0.92,
+   "owner": null,
+   "next_date": "2026-06-04",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=123"
+    }
+   ]
+  },
+  {
+   "event_id": "ef88dc96-74cc-4fd7-9313-59590acf762a",
+   "date": "2026-06-04",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Purchase of Brass and Copper Fittings",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": null,
+    "name": null,
+    "org": null,
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Town of Danvers solicited bids for the purchase of brass and copper fittings (Bid No. 2026-28). Bid closed June 4, 2026; documents and submission are handled through ProjectDog project code 874745.",
+   "story_id": "b18bc230-2d04-4ef3-9dc0-17f57453f0c9",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=124",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-04",
+   "trades": [
+    "plumbing",
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=124"
+    }
+   ]
+  },
+  {
+   "event_id": "7f18df35-0054-4f94-affe-e2c54b339ea9",
+   "date": "2026-06-04",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Purchase of Ductile Iron Pipe and Fittings",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Danvers issued Bid 2026-29 for the purchase of ductile iron pipe and fittings. Bid submissions closed June 4, 2026; bid documents and specifications are available via ProjectDog project code 874746 at www.projectdog.com.",
+   "story_id": "2d3ab1d1-7595-4bc5-87ba-e39821469370",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=125",
+   "source_page": 1,
+   "confidence": 0.92,
+   "owner": null,
+   "next_date": "2026-06-04",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=125"
+    }
+   ]
+  },
+  {
    "event_id": "6eac3cb1-0171-4f17-9a56-8e1c1d081d76",
    "date": "2026-06-02",
    "town_id": "danvers_ma",
@@ -2702,6 +3062,44 @@
    ]
   },
   {
+   "event_id": "d580e896-9203-4f8b-a0b4-fca2248653b0",
+   "date": "2026-05-21",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Pavement Markings (Bid 2026-27)",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Danvers issued a public bid for furnishing all labor and equipment for the application of reflectorized painted pavement markings. Bidders are required to be prequalified by MassDOT in the 'Pavement Markings' category. Bid documents and submission are handled through ProjectDog project code 874485; the bid closed on 5/21/2026.",
+   "story_id": "3d5b1569-1ddb-4e3f-aa74-4f8869975d73",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=122",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-05-21",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=122"
+    }
+   ]
+  },
+  {
    "event_id": "bac88e00-4587-437f-b4c7-c59fb054cb68",
    "date": "2026-05-19",
    "town_id": "danvers_ma",
@@ -2780,6 +3178,95 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+    }
+   ]
+  },
+  {
+   "event_id": "8246b905-0584-44bd-b307-940c77f12c41",
+   "date": "2026-05-14",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Sanitary Sewer System Rehabilitation",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Contact Person",
+    "name": null,
+    "org": "Town of Danvers",
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Danvers solicited bids for rehabilitation of approximately 8,100 linear feet of sanitary sewers, including excavation spot repairs, rehabilitation of approximately 55 manholes, lateral connection lining of approximately 20 sewer services, and sewer service grouting. Bid documents were available through ProjectDog at project code 873970; the bid closed May 14, 2026.",
+   "story_id": "7b1a6f0b-2183-4319-bd90-ae8480e365c1",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=119",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-05-14",
+   "trades": [
+    "utilities",
+    "site_excavation",
+    "masonry",
+    "stormwater_septic"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=119"
+    }
+   ]
+  },
+  {
+   "event_id": "abd3c980-b9c9-459a-b4ce-a77d237e994f",
+   "date": "2026-05-14",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Crack Sealing (Bid 2026-25)",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Contact Person",
+    "name": null,
+    "org": "Town of Danvers",
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Town of Danvers is procuring crack sealing and micro surfacing services under Bid 2026-25. Bid documents are available through ProjectDog at project code 874330; submissions must be made via ProjectDog at project code 873970. MassDOT prequalification in crack sealing is required.",
+   "story_id": "df2ba112-2654-4c72-a61d-d8834de176f6",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=121",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-05-14",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=121"
     }
    ]
   },
@@ -3123,6 +3610,47 @@
    ]
   },
   {
+   "event_id": "7316d7aa-0323-46fe-8fd5-61de3c3a4fc1",
+   "date": "2026-05-07",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Request for Written Responses for Wayfinding Signs",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Contact Person",
+    "name": null,
+    "org": null,
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Danvers issued Bid No. 2026-26 seeking written responses for wayfinding signs as part of a downtown improvements project. Submission deadline was May 7, 2026 at 11:00 AM; bid documents available via ProjectDog project code 872929.",
+   "story_id": "8442bdc6-3ec2-45b2-b603-86da1868ee65",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=120",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-05-07",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=120"
+    }
+   ]
+  },
+  {
    "event_id": "167ee046-5e57-4155-8a69-2ce4ca3b3932",
    "date": "2026-05-07",
    "town_id": "danvers_ma",
@@ -3440,6 +3968,44 @@
     {
      "kind": "agenda",
      "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+    }
+   ]
+  },
+  {
+   "event_id": "8936252a-7174-43fa-83c9-9fd3f0ff39e9",
+   "date": "2026-04-19",
+   "town_id": "danvers_ma",
+   "town": "Danvers",
+   "place_fips": "2500916250",
+   "board": "Bids & RFPs",
+   "event_type": "bid_rfp",
+   "stage": "informational",
+   "project_name": "Perennial and Annual Bed Maintenance",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Danvers solicited bids for perennial and annual bed maintenance services (Bid No. 2026-02). The bid closed April 19, 2026; documents and submission are handled electronically through ProjectDog at project code 873461.",
+   "story_id": "e29f4469-3046-41ca-8c05-496960cdaa3f",
+   "source_url": "https://www.danversma.gov/bids.aspx?bidID=117",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-04-19",
+   "trades": [
+    "landscaping"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.danversma.gov/bids.aspx?bidID=117"
     }
    ]
   },

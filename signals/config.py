@@ -29,6 +29,11 @@ PUBLISH_DIR = os.path.join(REPO_ROOT, "docs", "output", "signals")  # JSON for t
 # municipal servers — be a good citizen.
 CRAWL_DELAY_SECONDS = 5.0
 
+# Bids/RFP crawl (Step 3): fetch only the N most-recent bids per run. Bid IDs are
+# monotonic (newest = highest), and the index has no per-row dates, so we bound
+# the fetch to the newest N and date-filter each detail page after fetching.
+BIDS_RECENT_COUNT = 8
+
 # Rolling crawl window: only crawl documents newer than this many days (~3 months).
 # Signals tracks current development activity; the historical archive accrues
 # naturally from repeated weekly runs, so we don't deep-backfill.

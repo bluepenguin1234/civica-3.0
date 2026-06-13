@@ -46,7 +46,8 @@
       name: "Conservation Commission"
       agenda_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
       minutes_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
-  notes: "CivicPlus AgendaCenter; agendas + minutes share one category page per board. All 4 boards verified live with recent 2026 postings on 2026-06-11."
+  bids_url: "https://www.danversma.gov/Bids.aspx"   # CivicPlus bids module (Step 3); open bids by default, ?showAllBids=on for history
+  notes: "CivicPlus AgendaCenter; agendas + minutes share one category page per board. All 4 boards verified live with recent 2026 postings on 2026-06-11. Bids module crawled for public RFPs."
   status: "active"               # URLs filled & verified 2026-06-11
   last_verified: "2026-06-11"
 
