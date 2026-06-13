@@ -250,6 +250,8 @@ def build_head(row, place, state, county, score, label, fips, style):
   background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); border-radius:100px;
   padding:7px 14px; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .15s; }}
 .pdf-btn:hover {{ background:rgba(255,255,255,.22); }}
+/* Mobile: don't float the PDF button over the title — flow it full-width at the foot of the hero. */
+@media (max-width:640px) {{ .pdf-btn {{ position:static; order:1; flex-basis:100%; justify-content:center; margin-top:8px; }} }}
 /* print-only header / footer (hidden on screen, revealed in @media print) */
 .print-only {{ display:none; }}
 .print-head {{ align-items:center; justify-content:space-between; padding:0 0 12px; border-bottom:2px solid #0d2d52; margin-bottom:16px; }}
