@@ -404,6 +404,15 @@ def main():
             check(not moat_leak,
                   f"public feed entities carry no enriched contact fields — the moat stays "
                   f"in gated contacts.json ({len(moat_leak)} leak)")
+            # Step 9 card wiring depends on every event/story carrying contacts[].
+            ev_no_contacts = [fe.get("event_id") for fe in feed_events
+                              if not isinstance(fe.get("contacts"), list)]
+            st_no_contacts = [s.get("story_id") for s in feed.get("stories", [])
+                              if not isinstance(s.get("contacts"), list)]
+            check(not ev_no_contacts,
+                  f"every feed event carries a contacts[] array ({len(ev_no_contacts)} missing)")
+            check(not st_no_contacts,
+                  f"every feed story carries a contacts[] array ({len(st_no_contacts)} missing)")
         except (json.JSONDecodeError, OSError) as exc:
             check(False, f"feed.json parses ({exc})")
     else:

@@ -188,8 +188,11 @@ function unitsPill(units, tenure) {
   return `<span class="tag units">${fmtNum(units)} unit${units === 1 ? "" : "s"}${esc(t)}</span>`;
 }
 function firstSentence(text) {
-  const m = String(text || "").match(/^.*?[.!?](?:\s|$)/);
-  return m ? m[0].trim() : String(text || "");
+  const s = String(text || "").trim();
+  // Require >=15 chars before the stop so an initial like "B. Dupont" or
+  // "St. John's" doesn't get read as a whole sentence.
+  const m = s.match(/^.{15,}?[.!?](?:\s|$)/);
+  return (m ? m[0] : s).trim();
 }
 function entityHref(name, contacts) {  // resolve a displayed name to its entity page
   if (!name || !contacts) return null;
@@ -214,6 +217,34 @@ function contactLine(ev) {
     return `Contact: <b>${esc([j.role, j.name, j.org].filter(Boolean).join(", "))}</b>`;
   }
   return "";
+}
+/* The single most actionable contact for a card (Step 9): bids -> purchasing /
+ * public contact; realtor mode -> developer/owner; approvals -> developer; else
+ * the lead party. Roles come from the resolved entity contacts (Step 7). */
+function pickContact(contacts, { isBid = false, isApproval = false } = {}) {
+  if (!contacts || !contacts.length) return null;
+  const roleset = (c) => new Set(c.roles || (c.role ? [c.role] : []));
+  let pref;
+  if (isBid) pref = ["public_contact"];
+  else if (STATE && STATE.mode === "realtor") pref = ["developer", "owner"];
+  else if (isApproval) pref = ["developer", "gc"];
+  else pref = ["developer", "owner", "public_contact"];
+  for (const r of pref) {
+    const hit = contacts.find((c) => roleset(c).has(r));
+    if (hit) return hit;
+  }
+  return contacts[0];
+}
+function cardContact(ev, contacts) {
+  const c = pickContact(contacts, {
+    isBid: ev.event_type === "bid_rfp", isApproval: WON_STAGES.has(ev.stage) });
+  if (!c) return contactLine(ev);  // fall back to raw applicant/owner text
+  const role = ROLE_LABELS[(c.roles && c.roles[0]) || c.role] || "Contact";
+  return `${esc(role)}: <a href="#entity/${esc(c.entity_id)}"><b>${esc(c.name)}</b></a>`;
+}
+function moreContacts(contacts, storyId) {  // "View contacts (n)" when several exist
+  if (!storyId || !contacts || contacts.length < 2) return "";
+  return `<a href="#story/${esc(storyId)}">View contacts (${contacts.length})</a>`;
 }
 function tagChips(ev) {
   const tags = [];
@@ -244,7 +275,8 @@ function eventCard(ev, { duePill = false } = {}) {
     <div class="l1"><h3>${head}</h3>${stageBadge(ev.stage)}${datebit}</div>
     <p class="l2">${esc(firstSentence(ev.summary))}</p>
     <div class="l3">${tagChips(ev)}</div>
-    <div class="l4"><span>${contactLine(ev)}</span><span class="links">${srcLinks(ev)}</span></div>
+    <div class="l4"><span>${cardContact(ev, ev.contacts)}</span>
+      <span class="links">${[moreContacts(ev.contacts, ev.story_id), srcLinks(ev)].filter(Boolean).join(" ")}</span></div>
   </article>`;
 }
 function storyCard(story, { nextPill = true } = {}) {
@@ -261,11 +293,12 @@ function storyCard(story, { nextPill = true } = {}) {
   return `<article class="scard">
     <div class="l1"><h3><a href="#story/${esc(story.story_id)}">${esc(story.name)}</a></h3>
       ${stageBadge(story.current_stage)}${datebit}</div>
-    <p class="l2">${esc(firstSentence(latest.summary))}</p>
+    <p class="l2">${esc(firstSentence((story.brief && story.brief.status) || latest.summary))}</p>
     <div class="l3">${unitsPill(story.total_units, storyTenure(story))}
       <span class="tag">${esc(story.events.length)} meetings</span>${trades}</div>
-    <div class="l4"><span>${contactLine(latest)}</span>
-      <span class="links"><a href="#story/${esc(story.story_id)}">History →</a></span></div>
+    <div class="l4"><span>${cardContact(latest, story.contacts)}</span>
+      <span class="links">${[moreContacts(story.contacts, story.story_id),
+        `<a href="#story/${esc(story.story_id)}">History →</a>`].filter(Boolean).join(" ")}</span></div>
   </article>`;
 }
 const sectionH = (title, n) =>
