@@ -44,7 +44,7 @@
 .lg-toggle{ display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--text); cursor:pointer; }
 .lg-toggle input{ width:15px; height:15px; accent-color:var(--primary-strong); }
 @media(max-width:640px){ .map-search{ left:12px; right:60px; width:auto; } #map{ height:64vh; } }
-@media(max-width:480px){ .statline{ gap:12px; } .statline .s .n{ font-size:18px; } }  /* keep all four stats on one line on phones */
+@media(max-width:480px){ .statline{ gap:12px; justify-content:space-between; } .statline .s{ text-align:center; } .statline .s .n{ font-size:18px; } }  /* phones: four stats on one line, each number centered over its label */
 </style>
 </head>
 <body>
