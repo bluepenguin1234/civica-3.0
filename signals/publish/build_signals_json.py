@@ -88,6 +88,11 @@ def main():
             "source_url": e["source_url"],
             "source_page": e["source_page"],
             "confidence": e["confidence"],
+            "owner": e["owner"],
+            "next_date": e["next_date"],
+            "trades": _j(e["trades"]) or [],
+            "is_public_work": bool(e["is_public_work"]),
+            "tenure": e["tenure"],
         })
 
     stories = []

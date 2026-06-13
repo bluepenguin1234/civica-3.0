@@ -53,6 +53,15 @@ STAGES = {
     "proposed", "hearing", "continued", "approved", "denied", "withdrawn",
     "permitted", "under_construction", "informational",
 }
+# Closed trade vocabulary (extraction v2). Anything else is dropped in
+# validation — the validator also asserts published events stay inside it.
+TRADES = {
+    "site_excavation", "demolition", "paving_asphalt", "concrete_foundation",
+    "framing_carpentry", "roofing", "electrical", "plumbing", "hvac",
+    "masonry", "drywall_finishes", "landscaping", "utilities", "solar_energy",
+    "stormwater_septic",
+}
+TENURES = {"rental", "ownership", "unknown"}
 
 
 class ExtractionError(Exception):
@@ -191,6 +200,34 @@ def validate_event(ev: dict):
         soft.append(f"job_contact={contact!r} not an object")
         contact = None
 
+    # --- extraction v2 fields ---
+    owner = ev.get("owner")
+    if owner is not None and not isinstance(owner, str):
+        soft.append(f"owner={owner!r} not a string")
+        owner = None
+    next_date = ev.get("next_date")
+    if next_date is not None:
+        try:
+            dt.date.fromisoformat(str(next_date))
+            next_date = str(next_date)
+        except ValueError:
+            soft.append(f"next_date={next_date!r} not ISO")
+            next_date = None
+    trades = ev.get("trades")
+    if trades is None:
+        trades = []
+    if not isinstance(trades, list):
+        soft.append(f"trades={trades!r} not a list")
+        trades = []
+    bad_trades = [t for t in trades if t not in TRADES]
+    if bad_trades:
+        soft.append(f"dropped non-vocabulary trades {bad_trades!r}")
+    trades = [t for t in trades if t in TRADES]
+    tenure = ev.get("tenure")
+    if tenure is not None and tenure not in TENURES:
+        soft.append(f"tenure={tenure!r} not in enum")
+        tenure = None
+
     clean = {
         "event_type": ev["event_type"],
         "project_name": ev.get("project_name") or None,
@@ -205,6 +242,11 @@ def validate_event(ev: dict):
         "summary": summary.strip(),
         "source_page": _int_or_none(ev.get("source_page"), "source_page", soft),
         "confidence": float(conf),
+        "owner": owner,
+        "next_date": next_date,
+        "trades": json.dumps(trades) if trades else None,
+        "is_public_work": 1 if ev.get("is_public_work") else 0,
+        "tenure": tenure,
     }
     return clean, soft
 
@@ -275,14 +317,17 @@ def extract_doc(conn, doc, template, town_names, board_names, totals):
             "INSERT INTO events (event_id, doc_id, town_id, board_id, meeting_date, "
             "event_type, project_name, address, applicant, applicant_reps, job_contact, "
             "residential_units, commercial_sqft, dollar_value, stage, summary, "
-            "source_page, confidence, created_at, review_status) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "source_page, confidence, created_at, review_status, "
+            "owner, next_date, trades, is_public_work, tenure) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (str(uuid.uuid4()), doc["doc_id"], doc["town_id"], doc["board_id"],
              doc["meeting_date"], ev["event_type"], ev["project_name"], ev["address"],
              ev["applicant"], ev["applicant_reps"], ev["job_contact"],
              ev["residential_units"], ev["commercial_sqft"], ev["dollar_value"],
              ev["stage"], ev["summary"], ev["source_page"], ev["confidence"],
-             now, review_status_for(conn, ev["confidence"])),
+             now, review_status_for(conn, ev["confidence"]),
+             ev["owner"], ev["next_date"], ev["trades"], ev["is_public_work"],
+             ev["tenure"]),
         )
     conn.execute(
         "UPDATE documents SET extraction_status='done', processed_at=? WHERE doc_id=?",
@@ -340,10 +385,23 @@ def main(argv=None):
                   f"| p.{ev['source_page']}] {ev['summary']}")
             if ev["applicant"]:
                 print(f"      applicant: {ev['applicant']}")
+            if ev["owner"]:
+                print(f"      owner: {ev['owner']}")
             if ev["applicant_reps"]:
                 print(f"      reps: {ev['applicant_reps']}")
             if ev["job_contact"]:
                 print(f"      job contact: {ev['job_contact']}")
+            v2 = []
+            if ev["next_date"]:
+                v2.append(f"next: {ev['next_date']}")
+            if ev["trades"]:
+                v2.append(f"trades: {ev['trades']}")
+            if ev["is_public_work"]:
+                v2.append("public work")
+            if ev["tenure"]:
+                v2.append(f"tenure: {ev['tenure']}")
+            if v2:
+                print(f"      {' | '.join(v2)}")
         print()
 
     print("=== extraction run summary ===")

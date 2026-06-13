@@ -73,7 +73,12 @@ CREATE TABLE IF NOT EXISTS events (
     confidence        REAL,                              -- 0-1 from extraction
     story_id          TEXT REFERENCES project_stories(story_id),   -- set in Phase 3
     created_at        TEXT,
-    review_status     TEXT NOT NULL DEFAULT 'needs_review'  -- auto_approved | needs_review | human_approved | rejected
+    review_status     TEXT NOT NULL DEFAULT 'needs_review',  -- auto_approved | needs_review | human_approved | rejected
+    owner             TEXT,                              -- property owner as named, when distinct from applicant
+    next_date         TEXT,                              -- ISO continuation/next-hearing/bid-due date, ONLY if stated
+    trades            TEXT,                              -- JSON array from the closed trade vocabulary (extract.TRADES)
+    is_public_work    INTEGER,                           -- 1 when the buyer is the town/district
+    tenure            TEXT                               -- rental | ownership | unknown (housing only, never guessed)
 );
 
 CREATE INDEX IF NOT EXISTS idx_events_town_date ON events(town_id, meeting_date);
@@ -90,10 +95,26 @@ def connect():
     return conn
 
 
+# MIGRATIONS: columns added after the initial schema shipped. CREATE TABLE
+# above includes them for fresh databases; ALTER covers existing ones.
+_EVENT_MIGRATIONS = (
+    ("owner", "TEXT"),
+    ("next_date", "TEXT"),
+    ("trades", "TEXT"),
+    ("is_public_work", "INTEGER"),
+    ("tenure", "TEXT"),
+)
+
+
 def init_db():
     """Create the schema if needed (idempotent) and return an open connection."""
     conn = connect()
     conn.executescript(SCHEMA)
+    for col, typ in _EVENT_MIGRATIONS:
+        try:
+            conn.execute(f"ALTER TABLE events ADD COLUMN {col} {typ}")
+        except sqlite3.OperationalError:
+            pass  # column already exists
     conn.commit()
     return conn
 

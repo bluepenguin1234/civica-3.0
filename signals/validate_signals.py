@@ -18,6 +18,7 @@ import sys
 import yaml
 
 from signals import config, db
+from signals.extract.extract import TRADES, TENURES
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -106,6 +107,49 @@ def main():
     check(not stale_review,
           f"no needs_review events older than {NEEDS_REVIEW_MAX_AGE_DAYS} days "
           f"({len(stale_review)} stale — run signals/review/review.py)")
+
+    print("\n=== EXTRACTION V2 FIELDS ===")
+    live = [e for e in events if e["review_status"] != "rejected"]
+    bad_trades, bad_next, bad_tenure, trade_counts = [], [], [], []
+    cont_total = cont_with = 0
+    for e in live:
+        try:
+            tr = json.loads(e["trades"]) if e["trades"] else []
+        except json.JSONDecodeError:
+            tr = None
+        if not isinstance(tr, list) or any(t not in TRADES for t in (tr or [])):
+            bad_trades.append(e["event_id"])
+        elif tr:
+            trade_counts.append(len(tr))
+        if e["next_date"]:
+            try:
+                dt.date.fromisoformat(e["next_date"])
+            except (ValueError, TypeError):
+                bad_next.append(e["event_id"])
+        if e["tenure"] is not None and e["tenure"] not in TENURES:
+            bad_tenure.append(e["event_id"])
+        if e["summary"] and "continued to" in e["summary"].lower():
+            cont_total += 1
+            if e["next_date"]:
+                cont_with += 1
+    check(not bad_trades, f"trades within the closed vocabulary ({len(bad_trades)} bad)")
+    check(not bad_next, f"next_date parses as ISO when present ({len(bad_next)} bad)")
+    check(not bad_tenure, f"tenure enum ({len(bad_tenure)} bad)")
+    if trade_counts:
+        trade_counts.sort()
+        median = trade_counts[len(trade_counts) // 2]
+        check(median <= 4,
+              f"median trades/event <= 4 over tagged events (median={median}, "
+              f"n={len(trade_counts)})")
+    else:
+        warn(False, "no events carry trades yet (expected before re-extraction)")
+    if cont_total:
+        share = cont_with / cont_total
+        check(share >= 0.6,
+              f">=60% of 'continued to' events carry next_date "
+              f"({cont_with}/{cont_total} = {share:.0%})")
+    else:
+        print("  [ -- ] no 'continued to' events to check next_date coverage against")
 
     print("\n=== STORIES ===")
     stories = conn.execute("SELECT * FROM project_stories").fetchall()

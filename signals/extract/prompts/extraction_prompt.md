@@ -41,6 +41,33 @@ Rules:
   applicant/address/file number): extract them consistently — every such item
   on the document, each as its best-guess type with confidence <= 0.5 — or it
   becomes random which filings get tracked.
+- owner: the property owner exactly as named in the document, ONLY when the
+  document names an owner distinct from the applicant. Null otherwise.
+- next_date: the continuation date, next-hearing date, or bid-due date as an
+  ISO date (YYYY-MM-DD), ONLY if explicitly stated in the document
+  ("continued to June 23, 2026" -> "2026-06-23"). Null when no future date is
+  stated. Never compute or guess a date.
+- is_public_work: 1 only when the buyer/proponent of the work is the town,
+  city, district, or another public agency (municipal buildings, road/water/
+  sewer work, public bids). 0 otherwise.
+- tenure: for housing events only (residential/mixed-use/subdivision/40B or
+  any event with residential_units): "rental" or "ownership" ONLY when the
+  document states it (apartments/leasing -> rental; condominiums/for-sale ->
+  ownership); otherwise "unknown". Null for non-housing events.
+- trades: a JSON array of construction trades the DESCRIBED SCOPE implies,
+  drawn ONLY from this closed list (any other value is invalid):
+  site_excavation, demolition, paving_asphalt, concrete_foundation,
+  framing_carpentry, roofing, electrical, plumbing, hvac, masonry,
+  drywall_finishes, landscaping, utilities, solar_energy, stormwater_septic
+  Tagging rules:
+  - Tag only what the described scope implies (a utility-pole petition ->
+    ["utilities","electrical"]; a parking-lot expansion ->
+    ["site_excavation","paving_asphalt","landscaping"]).
+  - A new building with no scope detail gets the generic full-building set
+    (site_excavation, concrete_foundation, framing_carpentry, electrical,
+    plumbing, hvac, roofing) ONLY at stage approved or permitted — at earlier
+    stages tag only trades the document actually describes.
+  - Informational items, plans, and studies: empty array.
 - summary: 1–3 sentences, plain language, written for a real-estate professional.
   Lead with what happened, then the size/scale.
 - source_page: the PDF page number where the item appears.
@@ -49,10 +76,11 @@ Rules:
 - If the document contains no qualifying events, return an empty list.
 
 Return ONLY a JSON array of event objects with these exact keys:
-event_type, project_name, address, applicant, applicant_reps, job_contact,
-residential_units, commercial_sqft, dollar_value, stage, summary, source_page,
-confidence
-Use null for unknown fields. No markdown fences, no commentary.
+event_type, project_name, address, applicant, owner, applicant_reps,
+job_contact, residential_units, commercial_sqft, dollar_value, stage, summary,
+source_page, confidence, next_date, trades, is_public_work, tenure
+Use null for unknown fields (trades may be [] instead of null). No markdown
+fences, no commentary.
 
 Document metadata: town={town}, board={board}, doc_type={doc_type},
 meeting_date={meeting_date}
