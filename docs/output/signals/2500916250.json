@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-06-12T23:42:42",
+ "generated_at": "2026-06-13T06:45:26",
  "coverage": [
   {
    "town_id": "danvers_ma",
    "name": "Danvers",
    "place_fips": "2500916250",
-   "doc_freshness_days": 0
+   "doc_freshness_days": 1
   }
  ],
  "stories": [
@@ -3298,6 +3298,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3348,6 +3349,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3386,6 +3388,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3436,6 +3439,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3489,6 +3493,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3539,6 +3544,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "rental",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3595,6 +3601,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3656,6 +3663,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3708,6 +3716,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -3754,6 +3763,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -3794,6 +3804,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -3835,6 +3846,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3885,6 +3897,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3935,6 +3948,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -3985,6 +3999,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4035,6 +4050,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4085,6 +4101,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4135,6 +4152,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4185,6 +4203,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4223,6 +4242,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4273,6 +4293,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4327,6 +4348,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4379,6 +4401,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -4422,6 +4445,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4488,6 +4512,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4559,6 +4584,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -4616,6 +4642,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -4666,6 +4693,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -4737,6 +4765,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -4821,6 +4850,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -4904,6 +4934,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -4984,6 +5015,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -5037,6 +5069,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -5087,6 +5120,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -5137,6 +5171,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "rental",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -5192,6 +5227,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -5241,6 +5277,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5318,6 +5355,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5368,6 +5406,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5418,6 +5457,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5456,6 +5496,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5499,6 +5540,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -5549,6 +5591,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5610,6 +5653,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5678,6 +5722,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "bid",
    "sources": [
     {
@@ -5716,6 +5761,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5771,6 +5817,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5833,6 +5880,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5888,6 +5936,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5938,6 +5987,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -5978,6 +6028,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6019,6 +6070,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6060,6 +6112,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6100,6 +6153,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6138,6 +6192,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6178,6 +6233,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6220,6 +6276,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6258,6 +6315,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6296,6 +6354,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6334,6 +6393,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6384,6 +6444,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6476,6 +6537,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6578,6 +6640,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6633,6 +6696,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6671,6 +6735,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6709,6 +6774,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6747,6 +6813,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6803,6 +6870,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6866,6 +6934,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -6904,6 +6973,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -6956,6 +7026,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -7008,6 +7079,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -7069,6 +7141,7 @@
    ],
    "is_public_work": false,
    "tenure": "unknown",
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7164,6 +7237,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7272,6 +7346,7 @@
    ],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7365,6 +7440,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7475,6 +7551,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7530,6 +7607,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7573,6 +7651,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {
@@ -7637,6 +7716,7 @@
    ],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7680,6 +7760,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7741,6 +7822,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -7779,6 +7861,7 @@
    "trades": [],
    "is_public_work": false,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "minutes",
    "sources": [
     {
@@ -8647,6 +8730,7 @@
    "trades": [],
    "is_public_work": true,
    "tenure": null,
+   "ref_number": null,
    "source_kind": "agenda",
    "sources": [
     {

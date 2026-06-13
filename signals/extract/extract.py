@@ -47,7 +47,7 @@ EVENT_TYPES = {
     "subdivision", "40b_application", "zoning_amendment",
     "variance_special_permit", "tax_override_debt_exclusion",
     "infrastructure_project", "municipal_property", "master_plan_comp_plan",
-    "bid_rfp", "other_notable",
+    "bid_rfp", "permit_issued", "other_notable",
 }
 STAGES = {
     "proposed", "hearing", "continued", "approved", "denied", "withdrawn",

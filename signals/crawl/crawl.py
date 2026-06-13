@@ -21,11 +21,13 @@ import argparse
 import datetime as dt
 import hashlib
 import io
+import json
 import os
 import re
 import sqlite3
 import sys
 import time
+import uuid
 from urllib.parse import urlsplit, urlunsplit
 
 import requests
@@ -38,6 +40,7 @@ from signals.crawl.adapters.civicclerk import CivicClerkAdapter
 from signals.crawl.adapters.granicus import GranicusAdapter
 from signals.crawl.adapters.generic_html import GenericHtmlAdapter
 from signals.crawl.adapters import commbuys
+from signals.crawl.adapters import opendata_permits
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -109,6 +112,16 @@ class PoliteFetcher:
     def post_text(self, url, data, extra_headers=None):
         resp = self.request(url, "POST", data=data, extra_headers=extra_headers)
         return resp.text if resp is not None else None
+
+    def stream(self, url, extra_headers=None):
+        """Streaming GET for large bulk files (Step S3 permit CSVs)."""
+        self._wait(url)
+        try:
+            return self._session.get(url, headers=extra_headers, stream=True,
+                                     timeout=config.REQUEST_TIMEOUT_SECONDS)
+        except requests.RequestException as exc:
+            print(f"      ! stream error ({exc.__class__.__name__}): {url}")
+            return None
 
 
 def analyze_pdf(content):
@@ -378,6 +391,92 @@ def crawl_commbuys(towns, fetcher, conn):
     return out
 
 
+def _permit_summary(p):
+    if p["is_new_dwelling"]:
+        s = f"New residential construction permit issued at {p['address']}."
+    elif p["is_demo"]:
+        s = f"Demolition permit issued at {p['address']}."
+    elif p["is_solar"]:
+        s = f"Solar installation permit issued at {p['address']}."
+    else:
+        s = f"Building permit issued at {p['address']}: {p['worktype'] or 'work'}."
+    if p["value"]:
+        s += f" Declared value ${p['value']:,}."
+    return s
+
+
+def crawl_permits(towns, fetcher, conn):
+    """Open-data building permits (Step S3). Structured CSV rows become
+    permit_issued events directly — NO LLM, the data is already clean — bounded to
+    recent + relevant per config. Idempotent: events dedup by (town_id, ref_number).
+    Only open-data cities (registry permits.platform=='ckan_csv', status active)."""
+    targets = [t for t in towns if (t.get("permits") or {}).get("platform") == "ckan_csv"
+               and (t["permits"].get("status") == "active")]
+    if not targets:
+        return {}
+    print("\n== BUILDING PERMITS (open data) ==")
+    cutoff = (dt.date.today() - dt.timedelta(days=config.PERMIT_LOOKBACK_DAYS)).isoformat()
+    out = {}
+    for t in targets:
+        town_id, src = t["town_id"], t["permits"]
+        stats = {"found": 0, "new": 0, "dup": 0, "skip": 0, "fail": 0}
+        print(f"  - {town_id}/permits: fetching {src['url']} (bulk CSV, this is heavy)…")
+        try:
+            permits = opendata_permits.fetch_permits(fetcher, src, cutoff)
+        except Exception as exc:
+            print(f"    ! {town_id}/permits failed: {exc.__class__.__name__}: {exc}")
+            out[town_id] = stats
+            continue
+        stats["found"] = len(permits)
+        print(f"    {len(permits)} recent relevant permit(s) "
+              f"(>= ${config.PERMIT_VALUE_THRESHOLD:,} or notable, last "
+              f"{config.PERMIT_LOOKBACK_DAYS}d, cap {config.PERMIT_MAX_PER_TOWN})")
+        if not permits:
+            out[town_id] = stats
+            continue
+        dest = os.path.join(config.RAW_DIR, town_id, "permits")
+        os.makedirs(dest, exist_ok=True)
+        slice_name = f"permits_{permits[0]['issued_date']}.json"
+        blob = json.dumps(permits, ensure_ascii=False, indent=1)
+        with open(os.path.join(dest, slice_name), "w", encoding="utf-8") as fh:
+            fh.write(blob)
+        doc_id = hashlib.sha256(blob.encode("utf-8")).hexdigest()
+        had_doc = conn.execute("SELECT 1 FROM documents WHERE doc_id=?", (doc_id,)).fetchone()
+        if not had_doc:
+            conn.execute(
+                "INSERT INTO documents (doc_id, town_id, board_id, doc_type, meeting_date, "
+                "source_url, local_path, fetched_at, processed_at, extraction_status, "
+                "page_count, is_scanned) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                (doc_id, town_id, "permits", "permit_list", permits[0]["issued_date"],
+                 src["url"], f"signals/raw/{town_id}/permits/{slice_name}",
+                 dt.datetime.now().isoformat(timespec="seconds"), None, "done", len(permits), 0))
+            conn.commit()
+        now = dt.datetime.now().isoformat(timespec="seconds")
+        for p in permits:
+            if not p["ref_number"] or not p["address"]:
+                stats["skip"] += 1
+                continue
+            if conn.execute("SELECT 1 FROM events WHERE town_id=? AND ref_number=? "
+                            "AND event_type='permit_issued' LIMIT 1",
+                            (town_id, p["ref_number"])).fetchone():
+                stats["dup"] += 1
+                continue
+            conn.execute(
+                "INSERT INTO events (event_id, doc_id, town_id, board_id, meeting_date, "
+                "event_type, project_name, address, applicant, dollar_value, stage, summary, "
+                "confidence, created_at, review_status, is_public_work, trades, ref_number) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (str(uuid.uuid4()), doc_id, town_id, "permits", p["issued_date"],
+                 "permit_issued", p["address"], p["address"], p["applicant"], p["value"],
+                 "permitted", _permit_summary(p), 1.0, now, "auto_approved", 0,
+                 json.dumps(p["trades"]) if p["trades"] else None, p["ref_number"]))
+            stats["new"] += 1
+        conn.commit()
+        print(f"    -> {stats['new']} new, {stats['dup']} already on record, {stats['skip']} skipped")
+        out[town_id] = stats
+    return out
+
+
 def print_report(results, active):
     print("\n=== crawl coverage report ===")
     hdr = (f"{'town':<16}{'found':>6}{'new':>5}{'dup':>5}{'skip':>6}"
@@ -404,6 +503,9 @@ def print_report(results, active):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Civica Signals crawl orchestrator.")
     parser.add_argument("--town", help="crawl a single town_id (for debugging)")
+    parser.add_argument("--permits", action="store_true",
+                        help="also run the open-data building-permit ingest "
+                             "(heavy bulk CSV download; run weekly, not in the daily crawl)")
     args = parser.parse_args(argv)
 
     towns = load_towns()
@@ -460,6 +562,14 @@ def main(argv=None):
         total_new = sum(s["new"] for s in cb_results.values())
         print(f"COMMBUYS summary: {total_found} open bid(s) seen, "
               f"{total_new} new document(s) stored.")
+
+    if args.permits:
+        perm_towns = ([t for t in towns if t.get("town_id") == args.town] if args.town
+                      else [t for t in towns if (t.get("permits") or {}).get("platform") == "ckan_csv"])
+        perm_results = crawl_permits(perm_towns, fetcher, conn)
+        if perm_results:
+            print(f"PERMITS summary: {sum(s['new'] for s in perm_results.values())} "
+                  f"new permit event(s) ingested.")
     conn.close()
 
 

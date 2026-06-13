@@ -81,7 +81,8 @@ CREATE TABLE IF NOT EXISTS events (
     trades            TEXT,                              -- JSON array from the closed trade vocabulary (extract.TRADES)
     is_public_work    INTEGER,                           -- 1 when the buyer is the town/district
     tenure            TEXT,                              -- rental | ownership | unknown (housing only, never guessed)
-    superseded_by     TEXT                               -- event_id of the minutes twin that merged this agenda echo (Phase/Step 2); set in link stage
+    superseded_by     TEXT,                              -- event_id of the minutes twin that merged this agenda echo (Phase/Step 2); set in link stage
+    ref_number        TEXT                               -- external record id: permit number (Step S3) / bid number
 );
 
 CREATE INDEX IF NOT EXISTS idx_events_town_date ON events(town_id, meeting_date);
@@ -132,6 +133,7 @@ _EVENT_MIGRATIONS = (
     ("is_public_work", "INTEGER"),
     ("tenure", "TEXT"),
     ("superseded_by", "TEXT"),
+    ("ref_number", "TEXT"),
 )
 _STORY_MIGRATIONS = (
     ("brief", "TEXT"),

@@ -227,3 +227,26 @@
   notes: "CivicPlus (migrated off old Drupal site — legacy URLs 404). ZBA slug omits 'of': Zoning-Board-Appeals-3. Minutes lag agendas 1-3 months. Verified live 2026-06-12."
   status: "pending"             # deferred until Step 10 (URLs researched+verified, do not crawl yet)
   last_verified: "2026-06-12"
+
+# ── Open-data permits city (Step S3). NOT a North Shore agenda town — added only
+#    for its building-permit feed. Boston publishes Approved Building Permits as a
+#    daily CKAN CSV; robots allows the /dataset resource download (/api + /datastore
+#    are disallowed, so the full bulk CSV is the compliant path). The agenda crawler
+#    skips it (status pending); the permit crawler keys on permits.status.
+- town_id: "boston_ma"
+  name: "Boston"
+  state: "MA"
+  place_fips: "2507000"          # 7-digit place fips (Boston is a city); in town_scores.csv
+  county: "Suffolk"
+  platform: "manual"             # no agenda adapter
+  boards: []
+  permits:
+    url: "https://data.boston.gov/dataset/approved-building-permits"   # CKAN dataset page; adapter resolves the current CSV resource link from it
+    platform: "ckan_csv"
+    profile: "boston"
+    format: "csv"
+    status: "active"
+    last_verified: "2026-06-13"
+  notes: "Open-data permits source only (Step S3). data.boston.gov CKAN; ~646k rows full history, ingest bounded to recent + >=$20k/notable. Permit 'applicant' field carries the contractor/permittee."
+  status: "pending"              # no agenda crawl; permits.status drives the permit crawler
+  last_verified: "2026-06-13"

@@ -49,6 +49,17 @@ COMMBUYS_OPENBIDS = ("https://www.commbuys.com/bso/view/search/external/"
 # extraction_status='skipped_large' so one giant packet can't blow up extraction.
 PACKET_PAGE_CAP = 150
 
+# Building permits (Step S3) — open-data cities only (CKAN/CSV). Permits are
+# high-volume, so we ingest a bounded, relevant slice: issued within the lookback
+# window AND (declared value >= the threshold OR a notable type: new dwelling,
+# demolition, solar). The robots-allowed path is the full bulk CSV (the datastore
+# API is robots-disallowed), so this is a heavy weekly pull, run on its own.
+PERMIT_VALUE_THRESHOLD = 20000
+PERMIT_LOOKBACK_DAYS = 30
+PERMIT_MAX_PER_TOWN = 150          # cap the newest relevant permits per run
+PERMIT_NOTABLE_KEYWORDS = ("new construction", "erect", "demolition", "demo ",
+                           "raze", "solar")
+
 # Rolling crawl window: only crawl documents newer than this many days (~3 months).
 # Signals tracks current development activity; the historical archive accrues
 # naturally from repeated weekly runs, so we don't deep-backfill.

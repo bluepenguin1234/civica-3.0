@@ -100,7 +100,13 @@ def map_rep_role(raw: str | None) -> str:
 def iter_mentions(ev):
     """Yield (raw_name, role, source) for every named party in one event."""
     if ev["applicant"]:
-        yield ev["applicant"], "developer", "applicant"
+        if ev["event_type"] == "permit_issued":
+            # a permit's applicant is the contractor pulling it (Step S3) — the GC
+            # when it's a firm, the homeowner when it's a person.
+            role = "gc" if classify(ev["applicant"]) == "firm" else "owner"
+        else:
+            role = "developer"
+        yield ev["applicant"], role, "applicant"
     if ev["owner"]:
         yield ev["owner"], "owner", "owner"
     try:

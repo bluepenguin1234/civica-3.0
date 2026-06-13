@@ -28,7 +28,7 @@ EVENT_TYPES = {
     "subdivision", "40b_application", "zoning_amendment",
     "variance_special_permit", "tax_override_debt_exclusion",
     "infrastructure_project", "municipal_property", "master_plan_comp_plan",
-    "bid_rfp", "other_notable",
+    "bid_rfp", "permit_issued", "other_notable",
 }
 STAGES = {
     "proposed", "hearing", "continued", "approved", "denied", "withdrawn",
@@ -110,7 +110,7 @@ def main():
           f"({len(stale_review)} stale — run signals/review/review.py)")
 
     print("\n=== DOCUMENTS (Step 6) ===")
-    DOC_TYPES = {"agenda", "minutes", "packet", "bid", "other", None}
+    DOC_TYPES = {"agenda", "minutes", "packet", "bid", "permit_list", "other", None}
     bad_doctype = [d["doc_id"] for d in docs.values() if d["doc_type"] not in DOC_TYPES]
     check(not bad_doctype, f"document doc_type enum ({len(bad_doctype)} bad)")
     oversize_live = [d["doc_id"] for d in docs.values()
@@ -119,6 +119,21 @@ def main():
     check(not oversize_live,
           f"no document over the {config.PACKET_PAGE_CAP}-page cap is queued or "
           f"extracted (must be skipped_large) ({len(oversize_live)} over cap)")
+
+    # Step S3 permits: a permit must carry its number + address, and an issued
+    # permit only ever moves a story forward (permitted / under_construction).
+    permits = [e for e in events if e["event_type"] == "permit_issued"]
+    permit_bad = [e["event_id"] for e in permits if not e["ref_number"] or not e["address"]]
+    check(not permit_bad,
+          f"every permit_issued event has a permit number + address ({len(permit_bad)} bad)")
+    permit_badstage = [e["event_id"] for e in permits
+                       if e["stage"] not in ("permitted", "under_construction")]
+    check(not permit_badstage,
+          f"permit_issued stage is permitted/under_construction — never backwards "
+          f"({len(permit_badstage)} bad)")
+    no_src_doc = [e["event_id"] for e in permits if e["doc_id"] not in docs]
+    check(not no_src_doc,
+          f"every permit_issued event traces to a source document ({len(no_src_doc)} bad)")
 
     print("\n=== EXTRACTION V2 FIELDS ===")
     live = [e for e in events if e["review_status"] != "rejected"]

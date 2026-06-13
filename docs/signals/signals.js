@@ -33,7 +33,7 @@ const TYPE_LABELS = {
   variance_special_permit: "Variance / SP", tax_override_debt_exclusion: "Override",
   infrastructure_project: "Infrastructure", municipal_property: "Municipal property",
   master_plan_comp_plan: "Plans & studies", bid_rfp: "Bid / RFP",
-  other_notable: "Other",
+  permit_issued: "Permit", other_notable: "Other",
 };
 const TRADE_LABELS = {
   site_excavation: "Excavation", demolition: "Demolition",
@@ -221,11 +221,12 @@ function contactLine(ev) {
 /* The single most actionable contact for a card (Step 9): bids -> purchasing /
  * public contact; realtor mode -> developer/owner; approvals -> developer; else
  * the lead party. Roles come from the resolved entity contacts (Step 7). */
-function pickContact(contacts, { isBid = false, isApproval = false } = {}) {
+function pickContact(contacts, { isBid = false, isApproval = false, isPermit = false } = {}) {
   if (!contacts || !contacts.length) return null;
   const roleset = (c) => new Set(c.roles || (c.role ? [c.role] : []));
   let pref;
   if (isBid) pref = ["public_contact"];
+  else if (isPermit) pref = ["gc", "owner", "developer"];       // a permit's lead is the contractor
   else if (STATE && STATE.mode === "realtor") pref = ["developer", "owner"];
   else if (isApproval) pref = ["developer", "gc"];
   else pref = ["developer", "owner", "public_contact"];
@@ -237,7 +238,8 @@ function pickContact(contacts, { isBid = false, isApproval = false } = {}) {
 }
 function cardContact(ev, contacts) {
   const c = pickContact(contacts, {
-    isBid: ev.event_type === "bid_rfp", isApproval: WON_STAGES.has(ev.stage) });
+    isBid: ev.event_type === "bid_rfp", isApproval: WON_STAGES.has(ev.stage),
+    isPermit: ev.event_type === "permit_issued" });
   if (!c) return contactLine(ev);  // fall back to raw applicant/owner text
   const role = ROLE_LABELS[(c.roles && c.roles[0]) || c.role] || "Contact";
   return `${esc(role)}: <a href="#entity/${esc(c.entity_id)}"><b>${esc(c.name)}</b></a>`;
@@ -328,7 +330,7 @@ function renderOpenJobs() {
     html += emptyCard(`No open bids right now${lastBid ? ` — the most recent closed <b>${esc(fmtDate(lastBid.next_date))}</b>` : ""}. New postings appear here automatically.`);
   }
   if (wins.length)
-    html += sectionH("Approved in the last 60 days", wins.length) + wins.map((e) => eventCard(e)).join("");
+    html += sectionH("Just permitted & approved", wins.length) + wins.map((e) => eventCard(e)).join("");
   if (funded.length)
     html += sectionH("Funded public work", funded.length) + funded.map((e) => eventCard(e)).join("");
   return html;
@@ -347,9 +349,13 @@ function renderComingUp() {
     + all.map((s) => storyCard(s)).join("");
 }
 
+function storyHasNewHousingPermit(story) {  // new-dwelling / teardown permits are a listing signal
+  return storyFullEvents(story).some((e) => e.event_type === "permit_issued" &&
+    /new residential|demolition/i.test(e.summary || ""));
+}
 function renderNewHousing() {
   const stories = visibleStories(visibleEvents())
-    .filter((s) => [...storyTypes(s)].some((t) => HOUSING_TYPES.has(t)));
+    .filter((s) => [...storyTypes(s)].some((t) => HOUSING_TYPES.has(t)) || storyHasNewHousingPermit(s));
   const won = stories.filter((s) => WON_STAGES.has(s.current_stage))
     .sort((a, b) => (b.last_activity || "").localeCompare(a.last_activity || ""));
   const stalled = stories.filter((s) => DEAD_STAGES.has(s.current_stage) ||

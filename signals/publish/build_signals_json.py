@@ -33,7 +33,7 @@ def _j(value):
     return json.loads(value) if value else None
 
 
-_SOURCE_LABELS = {"commbuys": "COMMBUYS", "bids": "Town bids"}
+_SOURCE_LABELS = {"commbuys": "COMMBUYS", "bids": "Town bids", "permits": "Permit record"}
 
 
 def _source_label(board_id, doc_type):
@@ -68,9 +68,10 @@ def main():
     towns = {t["town_id"]: t for t in registry}
     board_names = {(t["town_id"], b["board_id"]): b.get("name", b["board_id"])
                    for t in registry for b in t.get("boards", [])}
-    for t in registry:  # the bid sources are not registry boards
+    for t in registry:  # the bid/permit sources are not registry boards
         board_names[(t["town_id"], "bids")] = "Bids & RFPs"
         board_names[(t["town_id"], "commbuys")] = "COMMBUYS"
+        board_names[(t["town_id"], "permits")] = "Building permits"
     today = dt.date.today()
 
     coverage = []
@@ -138,6 +139,7 @@ def main():
             "trades": _j(e["trades"]) or [],
             "is_public_work": bool(e["is_public_work"]),
             "tenure": e["tenure"],
+            "ref_number": e["ref_number"],
             "source_kind": e["doc_type"],
             "sources": sources,
         })
