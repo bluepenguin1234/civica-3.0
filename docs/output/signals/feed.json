@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T23:02:31",
+ "generated_at": "2026-06-12T23:42:42",
  "coverage": [
   {
    "town_id": "danvers_ma",
@@ -9,6 +9,342 @@
   }
  ],
  "stories": [
+  {
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-25",
+   "last_activity": "2026-06-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+     "date": "2026-06-25",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-25",
+   "last_activity": "2026-06-25",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+     "date": "2026-06-25",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-24",
+   "last_activity": "2026-06-24",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "e9f6520ac7e91cee",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+     "date": "2026-06-24",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "079d0ca5-f2ec-4225-a3a8-950e7e379bbc",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "name": "26-69-WB Website Hosting & Digital Marketing Services for the North Shore Workforce Board",
+   "address": "93 Washington Street, Salem, MA 01970",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-23",
+   "last_activity": "2026-06-23",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "6c4cc22d-7caf-40dd-b2c4-fde1ba16f720",
+     "date": "2026-06-23",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "City of Salem Purchasing Department is soliciting open-market bids for website hosting and digital marketing services on behalf of the North Shore Workforce Board. The bid closing date was extended from June 16 to June 23, 2026 via Addendum 1. Bid documents (BD-23-1165-COSPD-COS01-130060) are available on CommBuys.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-23",
+   "last_activity": "2026-06-23",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+     "date": "2026-06-23",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-22",
+   "last_activity": "2026-06-22",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+     "date": "2026-06-22",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
   {
    "story_id": "39df86ca-1a69-4e1d-b2d3-e56ec96d1777",
    "town_id": "danvers_ma",
@@ -47,7 +383,176 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "7b742798-e288-49dd-a07e-b94a2d6bc35a",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "name": "26-63-SPS Lease at Collins Middle School for Youth Outreach",
+   "address": "Collins Middle School, Salem, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-16",
+   "last_activity": "2026-06-16",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "6de46a93-4334-4001-a220-2ae669289b15",
+     "date": "2026-06-16",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Salem School Department is soliciting bids to lease space at Collins Middle School for a Youth Outreach Program. No square footage or lease value is stated. A pre-bid conference was held June 6, 2026; the RFP manual is available as an attachment on CommBuys.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "96e47fb1-1c61-4ed6-bdef-8695491fa3d7",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "name": "26-64-SPS Lease at Salem High School for Child Care",
+   "address": "Salem High School, Salem, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-16",
+   "last_activity": "2026-06-16",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "0aba23b3-2f0d-4842-a665-3a3248318736",
+     "date": "2026-06-16",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Salem is soliciting proposals to lease space at Salem High School for a child care facility. This is an open-market, non-statewide solicitation (CommBuys BD-23-1165-COSPD-COS01-129370); a pre-bid conference was held June 6, 2026. Bid documents are available via the RFP manual attached to the CommBuys posting.",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+       "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "479cbafa-cb46-4f97-abb7-395d2f8c0f54",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "name": "26-65-SPS Lease at Horace Mann Laboratory School for Early Education",
+   "address": null,
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-06-16",
+   "last_activity": "2026-06-16",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "da8e22f3-1926-49f1-8247-e4fcee6321b0",
+     "date": "2026-06-16",
+     "board": "COMMBUYS",
+     "event_type": "bid_rfp",
+     "stage": "proposed",
+     "summary": "The City of Salem School Department is soliciting bids for a lease of space at Horace Mann Laboratory School to house an Early Education Program. A pre-bid conference was held June 6, 2026; bids are due June 16, 2026. Bid documents are available as '26-65-SPS RFP Manual - Lease at HMLS for ECC.pdf' via CommBuys (BD-23-1165-COSPS-COSPS-129373).",
+     "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+     "sources": [
+      {
+       "kind": "bid",
+       "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+       "label": "COMMBUYS"
       }
      ]
     }
@@ -157,11 +662,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+       "label": "Agenda"
       }
      ]
     },
@@ -176,11 +683,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+       "label": "Agenda"
       }
      ]
     },
@@ -195,7 +704,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730",
+       "label": "Agenda"
       }
      ]
     },
@@ -210,11 +720,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+       "label": "Agenda"
       }
      ]
     },
@@ -229,7 +741,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+       "label": "Agenda"
       }
      ]
     },
@@ -244,7 +757,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     },
@@ -259,7 +773,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+       "label": "Agenda"
       }
      ]
     }
@@ -315,7 +830,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+       "label": "Agenda"
       }
      ]
     },
@@ -330,7 +846,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+       "label": "Agenda"
       }
      ]
     },
@@ -345,7 +862,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+       "label": "Agenda"
       }
      ]
     },
@@ -360,7 +878,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+       "label": "Agenda"
       }
      ]
     }
@@ -392,7 +911,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+       "label": "Agenda"
       }
      ]
     }
@@ -436,7 +956,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+       "label": "Agenda"
       }
      ]
     }
@@ -489,7 +1010,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+       "label": "Agenda"
       }
      ]
     },
@@ -504,7 +1026,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+       "label": "Agenda"
       }
      ]
     }
@@ -559,7 +1082,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+       "label": "Agenda"
       }
      ]
     }
@@ -603,7 +1127,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+       "label": "Agenda"
       }
      ]
     }
@@ -635,7 +1160,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=125"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=125",
+       "label": "Town bids"
       }
      ]
     }
@@ -667,7 +1193,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=124"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=124",
+       "label": "Town bids"
       }
      ]
     }
@@ -699,7 +1226,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=123"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=123",
+       "label": "Town bids"
       }
      ]
     }
@@ -743,7 +1271,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769",
+       "label": "Agenda"
       }
      ]
     }
@@ -814,11 +1343,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+       "label": "Agenda"
       }
      ]
     },
@@ -833,11 +1364,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
+       "label": "Agenda"
       }
      ]
     },
@@ -852,15 +1385,18 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+       "label": "Agenda"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+       "label": "Agenda"
       }
      ]
     },
@@ -875,7 +1411,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     },
@@ -890,7 +1427,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     }
@@ -934,7 +1472,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     }
@@ -978,7 +1517,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     }
@@ -1022,7 +1562,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+       "label": "Agenda"
       }
      ]
     }
@@ -1066,7 +1607,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+       "label": "Agenda"
       }
      ]
     }
@@ -1098,7 +1640,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=122"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=122",
+       "label": "Town bids"
       }
      ]
     }
@@ -1153,7 +1696,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751",
+       "label": "Agenda"
       }
      ]
     }
@@ -1235,7 +1779,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+       "label": "Agenda"
       }
      ]
     },
@@ -1250,11 +1795,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+       "label": "Agenda"
       }
      ]
     }
@@ -1309,7 +1856,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+       "label": "Agenda"
       }
      ]
     }
@@ -1353,7 +1901,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=121"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=121",
+       "label": "Town bids"
       }
      ]
     }
@@ -1397,7 +1946,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=119"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=119",
+       "label": "Town bids"
       }
      ]
     }
@@ -1441,7 +1991,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+       "label": "Agenda"
       }
      ]
     }
@@ -1507,7 +2058,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+       "label": "Minutes"
       }
      ]
     }
@@ -1551,7 +2103,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+       "label": "Minutes"
       }
      ]
     }
@@ -1595,7 +2148,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+       "label": "Minutes"
       }
      ]
     }
@@ -1627,7 +2181,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+       "label": "Minutes"
       }
      ]
     }
@@ -1659,7 +2214,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+       "label": "Minutes"
       }
      ]
     }
@@ -1691,7 +2247,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=120"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=120",
+       "label": "Town bids"
       }
      ]
     }
@@ -1746,11 +2303,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
+       "label": "Agenda"
       }
      ]
     }
@@ -1782,7 +2341,8 @@
      "sources": [
       {
        "kind": "bid",
-       "url": "https://www.danversma.gov/bids.aspx?bidID=117"
+       "url": "https://www.danversma.gov/bids.aspx?bidID=117",
+       "label": "Town bids"
       }
      ]
     }
@@ -1826,11 +2386,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
+       "label": "Agenda"
       }
      ]
     }
@@ -1874,11 +2436,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
+       "label": "Agenda"
       }
      ]
     }
@@ -1962,11 +2526,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+       "label": "Agenda"
       }
      ]
     },
@@ -1981,11 +2547,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+       "label": "Agenda"
       }
      ]
     }
@@ -2029,7 +2597,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2073,7 +2642,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2105,7 +2675,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2137,7 +2708,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2169,7 +2741,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2201,7 +2774,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2233,7 +2807,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2265,7 +2840,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2297,7 +2873,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2329,7 +2906,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2361,7 +2939,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2393,7 +2972,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2425,7 +3005,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+       "label": "Minutes"
       }
      ]
     }
@@ -2457,7 +3038,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2489,7 +3071,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2521,7 +3104,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2565,7 +3149,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2620,7 +3205,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2652,7 +3238,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+       "label": "Minutes"
       }
      ]
     }
@@ -2760,11 +3347,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
+       "label": "Agenda"
       }
      ]
     },
@@ -2779,7 +3368,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+       "label": "Agenda"
       }
      ]
     }
@@ -2832,11 +3422,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
+       "label": "Agenda"
       }
      ]
     },
@@ -2851,7 +3443,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+       "label": "Agenda"
       }
      ]
     }
@@ -2917,11 +3510,13 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+       "label": "Minutes"
       },
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+       "label": "Agenda"
       }
      ]
     }
@@ -2953,7 +3548,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+       "label": "Minutes"
       }
      ]
     }
@@ -2985,7 +3581,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+       "label": "Minutes"
       }
      ]
     }
@@ -3040,7 +3637,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+       "label": "Minutes"
       }
      ]
     }
@@ -3072,7 +3670,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+       "label": "Minutes"
       }
      ]
     }
@@ -3104,7 +3703,8 @@
      "sources": [
       {
        "kind": "minutes",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+       "label": "Minutes"
       }
      ]
     }
@@ -3159,7 +3759,8 @@
      "sources": [
       {
        "kind": "agenda",
-       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698",
+       "label": "Agenda"
       }
      ]
     }
@@ -3167,6 +3768,419 @@
   }
  ],
  "events": [
+  {
+   "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / Purchasing Agent",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [
+    "demolition",
+    "concrete_foundation",
+    "framing_carpentry",
+    "masonry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+   "date": "2026-06-24",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Natalie Swanstrom",
+    "org": "Town of Swampscott – Facilities Dept",
+    "contact_info": "nswanstrom@swampscottma.gov; (781) 596-8860"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-24",
+   "trades": [
+    "demolition",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "e9f6520ac7e91cee",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+   "date": "2026-06-23",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / DPW",
+    "name": "Allison Jenkins",
+    "org": "Town of Marblehead – Department of Public Works",
+    "contact_info": "jenkinsa@marbleheadma.gov; (781) 631-0236 Ext. 4138"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6c4cc22d-7caf-40dd-b2c4-fde1ba16f720",
+   "date": "2026-06-23",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-69-WB Website Hosting & Digital Marketing Services for the North Shore Workforce Board",
+   "address": "93 Washington Street, Salem, MA 01970",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem, COSPD - Purchasing",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "City of Salem Purchasing Department is soliciting open-market bids for website hosting and digital marketing services on behalf of the North Shore Workforce Board. The bid closing date was extended from June 16 to June 23, 2026 via Addendum 1. Bid documents (BD-23-1165-COSPD-COS01-130060) are available on CommBuys.",
+   "story_id": "079d0ca5-f2ec-4225-a3a8-950e7e379bbc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+   "date": "2026-06-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000; 191 Cabot Street, Beverly, MA 01915"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-22",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
   {
    "event_id": "ef347c1d-dc47-4094-b507-9b7cb433c544",
    "date": "2026-06-17",
@@ -3205,7 +4219,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3218,6 +4233,204 @@
      ],
      "sources": [
       "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "da8e22f3-1926-49f1-8247-e4fcee6321b0",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-65-SPS Lease at Horace Mann Laboratory School for Early Education",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem School Department",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem School Department is soliciting bids for a lease of space at Horace Mann Laboratory School to house an Early Education Program. A pre-bid conference was held June 6, 2026; bids are due June 16, 2026. Bid documents are available as '26-65-SPS RFP Manual - Lease at HMLS for ECC.pdf' via CommBuys (BD-23-1165-COSPS-COSPS-129373).",
+   "story_id": "479cbafa-cb46-4f97-abb7-395d2f8c0f54",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "0aba23b3-2f0d-4842-a665-3a3248318736",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-64-SPS Lease at Salem High School for Child Care",
+   "address": "Salem High School, Salem, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem – Purchasing",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem is soliciting proposals to lease space at Salem High School for a child care facility. This is an open-market, non-statewide solicitation (CommBuys BD-23-1165-COSPD-COS01-129370); a pre-bid conference was held June 6, 2026. Bid documents are available via the RFP manual attached to the CommBuys posting.",
+   "story_id": "96e47fb1-1c61-4ed6-bdef-8695491fa3d7",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6de46a93-4334-4001-a220-2ae669289b15",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-63-SPS Lease at Collins Middle School for Youth Outreach",
+   "address": "Collins Middle School, Salem, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem School Department",
+    "contact_info": "Phone: (978) 619-5696; Email: adelaney@salem.com"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem School Department is soliciting bids to lease space at Collins Middle School for a Youth Outreach Program. No square footage or lease value is stated. A pre-bid conference was held June 6, 2026; the RFP manual is available as an attachment on CommBuys.",
+   "story_id": "7b742798-e288-49dd-a07e-b94a2d6bc35a",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
      ]
     }
    ]
@@ -3254,7 +4467,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "label": "Agenda"
     }
    ],
    "contacts": []
@@ -3291,7 +4505,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3340,7 +4555,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3392,7 +4608,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3441,7 +4658,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3496,7 +4714,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3556,7 +4775,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3607,7 +4827,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=123"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=123",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -3652,7 +4873,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=124"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=124",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -3691,7 +4913,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=125"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=125",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -3731,7 +4954,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3780,7 +5004,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3829,7 +5054,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3878,7 +5104,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3927,7 +5154,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -3976,7 +5204,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4025,7 +5254,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4074,7 +5304,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "label": "Agenda"
     }
    ],
    "contacts": []
@@ -4111,7 +5342,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4160,7 +5392,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4213,7 +5446,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4264,7 +5498,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=122"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=122",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -4306,7 +5541,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4371,7 +5607,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4441,7 +5678,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=119"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=119",
+     "label": "Town bids"
     }
    ],
    "contacts": [
@@ -4497,7 +5735,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=121"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=121",
+     "label": "Town bids"
     }
    ],
    "contacts": [
@@ -4546,7 +5785,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4616,15 +5856,18 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "label": "Agenda"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4697,11 +5940,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4778,11 +6023,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4856,7 +6103,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4908,7 +6156,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -4957,7 +6206,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5006,7 +6256,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5060,7 +6311,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=120"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=120",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -5108,7 +6360,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -5184,7 +6437,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -5233,7 +6487,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -5282,7 +6537,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5319,7 +6575,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5361,7 +6618,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5410,11 +6668,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5469,11 +6729,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5535,7 +6797,8 @@
    "sources": [
     {
      "kind": "bid",
-     "url": "https://www.danversma.gov/bids.aspx?bidID=117"
+     "url": "https://www.danversma.gov/bids.aspx?bidID=117",
+     "label": "Town bids"
     }
    ],
    "contacts": []
@@ -5572,11 +6835,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5625,11 +6890,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -5685,7 +6952,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -5739,7 +7007,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -5788,7 +7057,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5827,7 +7097,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5867,7 +7138,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5907,7 +7179,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5946,7 +7219,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -5983,7 +7257,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6022,7 +7297,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6063,7 +7339,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6100,7 +7377,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6137,7 +7415,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6174,7 +7453,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6223,11 +7503,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6313,11 +7595,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6413,11 +7697,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6466,7 +7752,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6503,7 +7790,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6540,7 +7828,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6577,7 +7866,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -6632,7 +7922,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -6694,7 +7985,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -6731,7 +8023,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6782,7 +8075,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6833,7 +8127,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6893,11 +8188,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -6986,11 +8283,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -7092,11 +8391,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -7183,11 +8484,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -7291,11 +8594,13 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "label": "Minutes"
     },
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -7344,7 +8649,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -7386,7 +8692,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -7449,7 +8756,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -7491,7 +8799,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "label": "Minutes"
     }
    ],
    "contacts": [
@@ -7551,7 +8860,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -7588,7 +8898,8 @@
    "sources": [
     {
      "kind": "minutes",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "label": "Minutes"
     }
    ],
    "contacts": []
@@ -7616,6 +8927,61 @@
     "df2ba112-2654-4c72-a61d-d8834de176f6"
    ],
    "n_projects": 7
+  },
+  {
+   "entity_id": "807f30b1e7e6d34b",
+   "name": "Anthony P. Delaney",
+   "kind": "person",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "079d0ca5-f2ec-4225-a3a8-950e7e379bbc",
+    "479cbafa-cb46-4f97-abb7-395d2f8c0f54",
+    "7b742798-e288-49dd-a07e-b94a2d6bc35a",
+    "96e47fb1-1c61-4ed6-bdef-8695491fa3d7"
+   ],
+   "n_projects": 4
+  },
+  {
+   "entity_id": "21dbc526ffa07e4e",
+   "name": "City of Beverly",
+   "kind": "public_office",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+    "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+    "f695eea6-f929-4d7e-99b5-cc16685596c9"
+   ],
+   "n_projects": 3
+  },
+  {
+   "entity_id": "d1128dfbd400bfc7",
+   "name": "David Gelineau",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+    "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+    "f695eea6-f929-4d7e-99b5-cc16685596c9"
+   ],
+   "n_projects": 3
   },
   {
    "entity_id": "d3c0f10746f08d4c",
@@ -7649,6 +9015,40 @@
    "story_ids": [
     "0882aeba-818a-413e-9b9d-7115d6d5f9d0",
     "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "be51db9cc8327b93",
+   "name": "City of Salem School Department",
+   "kind": "public_office",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "479cbafa-cb46-4f97-abb7-395d2f8c0f54",
+    "7b742798-e288-49dd-a07e-b94a2d6bc35a"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "41d32a8264cc06f1",
+   "name": "City of Salem, COSPD - Purchasing",
+   "kind": "public_office",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "079d0ca5-f2ec-4225-a3a8-950e7e379bbc",
+    "96e47fb1-1c61-4ed6-bdef-8695491fa3d7"
    ],
    "n_projects": 2
   },
@@ -7763,6 +9163,22 @@
    ],
    "story_ids": [
     "1e948c24-1603-4327-b6bd-a70ae0c6146a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "ec6fdc1b18cfc33e",
+   "name": "Allison Jenkins",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "43de2ffd-37a7-4355-a06f-808bfec11fa8"
    ],
    "n_projects": 1
   },
@@ -8223,6 +9639,22 @@
    "n_projects": 1
   },
   {
+   "entity_id": "3ec8472318bdf2b4",
+   "name": "Natalie Swanstrom",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "0bd96f91-ee28-4760-a535-6448807d4c94"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "56b52a63fceea750",
    "name": "National Grid",
    "kind": "firm",
@@ -8414,9 +9846,454 @@
     "f2934f89-9e22-40cb-9b97-fd393fb39dc6"
    ],
    "n_projects": 1
+  },
+  {
+   "entity_id": "0173cb6dce5f34ec",
+   "name": "Town of Marblehead – Department of Public Works",
+   "kind": "public_office",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "43de2ffd-37a7-4355-a06f-808bfec11fa8"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "e9f6520ac7e91cee",
+   "name": "Town of Swampscott – Facilities Dept",
+   "kind": "public_office",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "public_contact"
+   ],
+   "story_ids": [
+    "0bd96f91-ee28-4760-a535-6448807d4c94"
+   ],
+   "n_projects": 1
   }
  ],
  "upcoming": [
+  {
+   "event_id": "15ce9313-b08c-45f8-b97b-8bc87c047750",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly High School Cafeteria Redesign and Renovation (Bid #26-015)",
+   "address": "Beverly High School, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / Purchasing Agent",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is seeking sealed bids for the redesign, renovation, and revitalization of the cafeteria space at Beverly High School (Bid #26-015). Sealed bids are due June 25, 2026 at 11:00 AM. Bid documents are available at https://www.beverlyma.gov/Bids.aspx or from the Office of the Purchasing Agent, Room 24, 191 Cabot St., Beverly City Hall during regular business hours.",
+   "story_id": "f695eea6-f929-4d7e-99b5-cc16685596c9",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130001&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "8da2a297-0ce3-4668-8935-60984f34c0fb",
+   "date": "2026-06-25",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Beverly City Hall Renovations",
+   "address": "191 Cabot Street, Beverly, MA 01915",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting Statements of Qualifications from trade filed sub-bid contractors to prequalify for renovation of existing Beverly City Hall, demolition of the attached annex building down to its foundation, and construction of a new three-story addition. Filed sub-bid categories include Masonry, Roofing, Plumbing, Electrical, HVAC, and others. Interested parties must register and use Project Code 874345.",
+   "story_id": "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-25",
+   "trades": [
+    "demolition",
+    "concrete_foundation",
+    "framing_carpentry",
+    "masonry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-130197&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "20667c22-2419-4571-850f-58deddfd5808",
+   "date": "2026-06-24",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "SHS Cafeteria Floor Replacement",
+   "address": "22 Monument Ave, Swampscott, MA 01907",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Natalie Swanstrom",
+    "org": "Town of Swampscott – Facilities Dept",
+    "contact_info": "nswanstrom@swampscottma.gov; (781) 596-8860"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Swampscott is soliciting open-market bids for cafeteria floor replacement at Swampscott High School (BD-24-1333-SFAC-SFAC-130425). Scope covers removal and off-site disposal of existing flooring and installation of new flooring per specifications. Bid documents are available on CommBuys; quotes are due June 24, 2026 at 11:00 AM.",
+   "story_id": "0bd96f91-ee28-4760-a535-6448807d4c94",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-24",
+   "trades": [
+    "demolition",
+    "drywall_finishes"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-24-1333-SFAC-SFAC-130425&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3ec8472318bdf2b4",
+     "name": "Natalie Swanstrom",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "e9f6520ac7e91cee",
+     "name": "Town of Swampscott – Facilities Dept",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "25fe1ef0-7bed-411b-a15e-3509df1ac3b8",
+   "date": "2026-06-23",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-60 Furnishing Bituminous Concrete",
+   "address": "7 Widger Rd, Marblehead, MA 01945",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser / DPW",
+    "name": "Allison Jenkins",
+    "org": "Town of Marblehead – Department of Public Works",
+    "contact_info": "jenkinsa@marbleheadma.gov; (781) 631-0236 Ext. 4138"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead DPW is soliciting open-market bids for the supply of bituminous concrete (UNSPSC 30-12-16 Asphalts). Bids close June 23, 2026 at 10:00 AM; solicitation documents are available on CommBuys under bid number BD-26-1293-MAR14-MAR14-130407.",
+   "story_id": "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [
+    "paving_asphalt"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "ec6fdc1b18cfc33e",
+     "name": "Allison Jenkins",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "0173cb6dce5f34ec",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6c4cc22d-7caf-40dd-b2c4-fde1ba16f720",
+   "date": "2026-06-23",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-69-WB Website Hosting & Digital Marketing Services for the North Shore Workforce Board",
+   "address": "93 Washington Street, Salem, MA 01970",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem, COSPD - Purchasing",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "City of Salem Purchasing Department is soliciting open-market bids for website hosting and digital marketing services on behalf of the North Shore Workforce Board. The bid closing date was extended from June 16 to June 23, 2026 via Addendum 1. Bid documents (BD-23-1165-COSPD-COS01-130060) are available on CommBuys.",
+   "story_id": "079d0ca5-f2ec-4225-a3a8-950e7e379bbc",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-23",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-130060&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "40c41f2b-a316-4fff-bfff-6bc4ec7eee1b",
+   "date": "2026-06-22",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "Wireless Telephone Communications Facility Folly Hill Water Tower",
+   "address": "Folly Hill Water Tower, Beverly, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "David Gelineau",
+    "org": "City of Beverly",
+    "contact_info": "dgelineau@beverlyma.gov; (978) 921-6000; 191 Cabot Street, Beverly, MA 01915"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Beverly is soliciting proposals for a wireless telephone communications facility at the Folly Hill Water Tower (Bid #26-014, CommBuys BD-26-1141-BEVLY-BEVLY-129611). This is a statewide open-market solicitation; no estimated contract value is stated. Bids close June 22, 2026 at 11:00 AM.",
+   "story_id": "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-22",
+   "trades": [
+    "utilities"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1141-BEVLY-BEVLY-129611&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d1128dfbd400bfc7",
+     "name": "David Gelineau",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
   {
    "event_id": "ef347c1d-dc47-4094-b507-9b7cb433c544",
    "date": "2026-06-17",
@@ -8455,7 +10332,8 @@
    "sources": [
     {
      "kind": "agenda",
-     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780",
+     "label": "Agenda"
     }
    ],
    "contacts": [
@@ -8468,6 +10346,204 @@
      ],
      "sources": [
       "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "da8e22f3-1926-49f1-8247-e4fcee6321b0",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-65-SPS Lease at Horace Mann Laboratory School for Early Education",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem School Department",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem School Department is soliciting bids for a lease of space at Horace Mann Laboratory School to house an Early Education Program. A pre-bid conference was held June 6, 2026; bids are due June 16, 2026. Bid documents are available as '26-65-SPS RFP Manual - Lease at HMLS for ECC.pdf' via CommBuys (BD-23-1165-COSPS-COSPS-129373).",
+   "story_id": "479cbafa-cb46-4f97-abb7-395d2f8c0f54",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129373&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "0aba23b3-2f0d-4842-a665-3a3248318736",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-64-SPS Lease at Salem High School for Child Care",
+   "address": "Salem High School, Salem, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem – Purchasing",
+    "contact_info": "adelaney@salem.com; (978) 619-5696"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem is soliciting proposals to lease space at Salem High School for a child care facility. This is an open-market, non-statewide solicitation (CommBuys BD-23-1165-COSPD-COS01-129370); a pre-bid conference was held June 6, 2026. Bid documents are available via the RFP manual attached to the CommBuys posting.",
+   "story_id": "96e47fb1-1c61-4ed6-bdef-8695491fa3d7",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPD-COS01-129370&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "41d32a8264cc06f1",
+     "name": "City of Salem, COSPD - Purchasing",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6de46a93-4334-4001-a220-2ae669289b15",
+   "date": "2026-06-16",
+   "town_id": "salem_ma",
+   "town": "Salem",
+   "place_fips": "2559105",
+   "board": "COMMBUYS",
+   "event_type": "bid_rfp",
+   "stage": "proposed",
+   "project_name": "26-63-SPS Lease at Collins Middle School for Youth Outreach",
+   "address": "Collins Middle School, Salem, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": {
+    "role": "Purchaser",
+    "name": "Anthony P. Delaney",
+    "org": "City of Salem School Department",
+    "contact_info": "Phone: (978) 619-5696; Email: adelaney@salem.com"
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The City of Salem School Department is soliciting bids to lease space at Collins Middle School for a Youth Outreach Program. No square footage or lease value is stated. A pre-bid conference was held June 6, 2026; the RFP manual is available as an attachment on CommBuys.",
+   "story_id": "7b742798-e288-49dd-a07e-b94a2d6bc35a",
+   "source_url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": "2026-06-16",
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "source_kind": "bid",
+   "sources": [
+    {
+     "kind": "bid",
+     "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-23-1165-COSPS-COSPS-129364&external=true&parentUrl=close",
+     "label": "COMMBUYS"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "807f30b1e7e6d34b",
+     "name": "Anthony P. Delaney",
+     "kind": "person",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "be51db9cc8327b93",
+     "name": "City of Salem School Department",
+     "kind": "public_office",
+     "roles": [
+      "public_contact"
+     ],
+     "sources": [
+      "job_contact"
      ]
     }
    ]

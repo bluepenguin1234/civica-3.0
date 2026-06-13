@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T23:02:31",
+ "generated_at": "2026-06-12T23:42:43",
  "contacts": {
   "26adfe1e27b1e7f7": {
    "linkedin": {
@@ -493,6 +493,42 @@
    },
    "registry": {
     "value": "https://www.google.com/search?q=%22Genesis+AEC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "807f30b1e7e6d34b": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Anthony+P.+Delaney+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "d1128dfbd400bfc7": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=David+Gelineau+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "ec6fdc1b18cfc33e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Allison+Jenkins+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "3ec8472318bdf2b4": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Natalie+Swanstrom+Swampscott+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-12",

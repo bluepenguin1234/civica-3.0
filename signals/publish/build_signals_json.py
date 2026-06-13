@@ -33,6 +33,17 @@ def _j(value):
     return json.loads(value) if value else None
 
 
+_SOURCE_LABELS = {"commbuys": "COMMBUYS", "bids": "Town bids"}
+
+
+def _source_label(board_id, doc_type):
+    """Human label for a source link, naming where the record came from (Step S1)."""
+    if board_id in _SOURCE_LABELS:
+        return _SOURCE_LABELS[board_id]
+    return {"agenda": "Agenda", "minutes": "Minutes", "packet": "Packet",
+            "bid": "Bid"}.get(doc_type, doc_type or "source")
+
+
 def _dedupe_contacts(items):
     """Collapse an event's mentions to one entry per entity (merge roles/sources)."""
     out = {}
@@ -57,8 +68,9 @@ def main():
     towns = {t["town_id"]: t for t in registry}
     board_names = {(t["town_id"], b["board_id"]): b.get("name", b["board_id"])
                    for t in registry for b in t.get("boards", [])}
-    for t in registry:  # the bids module is not a registry board
+    for t in registry:  # the bid sources are not registry boards
         board_names[(t["town_id"], "bids")] = "Bids & RFPs"
+        board_names[(t["town_id"], "commbuys")] = "COMMBUYS"
     today = dt.date.today()
 
     coverage = []
@@ -92,9 +104,11 @@ def main():
     for e in rows:
         if e["superseded_by"]:
             continue  # merged into its minutes twin
-        sources = [{"kind": e["doc_type"], "url": e["source_url"]}]
+        sources = [{"kind": e["doc_type"], "url": e["source_url"],
+                    "label": _source_label(e["board_id"], e["doc_type"])}]
         for child in children.get(e["event_id"], []):
-            sources.append({"kind": child["doc_type"], "url": child["source_url"]})
+            sources.append({"kind": child["doc_type"], "url": child["source_url"],
+                            "label": _source_label(child["board_id"], child["doc_type"])})
         t = towns.get(e["town_id"], {})
         events.append({
             "event_id": e["event_id"],

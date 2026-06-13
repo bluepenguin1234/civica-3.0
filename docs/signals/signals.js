@@ -258,7 +258,7 @@ function tagChips(ev) {
 }
 function srcLinks(ev) {
   const links = (ev.sources || []).map((s) =>
-    `<a href="${esc(s.url)}" rel="noopener">${esc(s.kind)} ↗</a>`);
+    `<a href="${esc(s.url)}" rel="noopener">${esc(s.label || s.kind)} ↗</a>`);
   if (!links.length && ev.source_url)
     links.push(`<a href="${esc(ev.source_url)}" rel="noopener">source ↗</a>`);
   return links.join(" ");

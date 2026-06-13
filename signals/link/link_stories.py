@@ -107,6 +107,46 @@ def supersede_agenda_echoes(conn):
     return superseded
 
 
+def _bid_title(r):
+    return (r["project_name"] or (r["summary"] or "")[:90] or "").lower().strip()
+
+
+def supersede_duplicate_bids(conn):
+    """Cross-source bid dedup (Step S1). The same solicitation can appear on a
+    town's own bids page and on COMMBUYS. Within a town, two published bid_rfp
+    events whose titles fuzzy-match >= 85 (same convention as story linking)
+    collapse to one published card carrying both source links — the COMMBUYS copy
+    (richer, real contact info) survives. Idempotent; runs after agenda merging so
+    it never resets that. Returns the number merged."""
+    rows = conn.execute(
+        "SELECT e.event_id, e.town_id, e.project_name, e.summary, d.board_id "
+        "FROM events e JOIN documents d ON d.doc_id = e.doc_id "
+        "WHERE e.event_type='bid_rfp' AND e.superseded_by IS NULL "
+        "AND e.review_status IN ('auto_approved','human_approved')").fetchall()
+    by_town = {}
+    for r in rows:
+        by_town.setdefault(r["town_id"], []).append(r)
+    merged = 0
+    for bids in by_town.values():
+        used = set()
+        for i in range(len(bids)):
+            if bids[i]["event_id"] in used:
+                continue
+            for j in range(i + 1, len(bids)):
+                if bids[j]["event_id"] in used:
+                    continue
+                ti, tj = _bid_title(bids[i]), _bid_title(bids[j])
+                if ti and tj and fuzz.token_set_ratio(ti, tj) >= NAME_MATCH_THRESHOLD:
+                    survivor, dup = bids[i], bids[j]
+                    if bids[j]["board_id"] == "commbuys" and bids[i]["board_id"] != "commbuys":
+                        survivor, dup = bids[j], bids[i]
+                    conn.execute("UPDATE events SET superseded_by=? WHERE event_id=?",
+                                 (survivor["event_id"], dup["event_id"]))
+                    used.add(dup["event_id"])
+                    merged += 1
+    return merged
+
+
 def refresh_story(conn, story_id):
     """Recompute a story's rollup fields from its (non-superseded) events."""
     evs = conn.execute(
@@ -180,6 +220,7 @@ def main():
         touched.add(story_id)
 
     superseded = supersede_agenda_echoes(conn)  # merge agenda echoes (Step 2)
+    bid_dups = supersede_duplicate_bids(conn)    # cross-source bid dedup (Step S1)
     for story_id in stories:  # refresh all (also re-applies dormant/dead rules)
         refresh_story(conn, story_id)
     conn.commit()
@@ -202,6 +243,7 @@ def main():
     print(f"events processed: {len(events)} | linked to existing stories: {linked} "
           f"| new stories: {created}")
     print(f"agenda echoes superseded by their minutes twin: {superseded}")
+    print(f"duplicate bids merged across sources (town page <-> COMMBUYS): {bid_dups}")
     print(f"stories total: {n_stories} ({multi} with 2+ events)")
     if ambiguous:
         print(f"AMBIGUOUS: {len(ambiguous)} event(s) matched 2+ stories — "

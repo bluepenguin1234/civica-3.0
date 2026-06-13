@@ -413,6 +413,31 @@ def main():
                   f"every feed event carries a contacts[] array ({len(ev_no_contacts)} missing)")
             check(not st_no_contacts,
                   f"every feed story carries a contacts[] array ({len(st_no_contacts)} missing)")
+            # Step S1: published bids carry a due date + a labeled source; no town
+            # publishes the same bid number twice (cross-source dedup must have run).
+            feed_bids = [fe for fe in feed_events if fe.get("event_type") == "bid_rfp"]
+            bid_nodate = [fe.get("event_id") for fe in feed_bids if not fe.get("next_date")]
+            check(not bid_nodate,
+                  f"every published bid_rfp has a next_date ({len(bid_nodate)} missing)")
+            bid_nolabel = [fe.get("event_id") for fe in feed_bids
+                           if not any(s.get("label") for s in (fe.get("sources") or []))]
+            check(not bid_nolabel,
+                  f"every published bid_rfp carries a source label ({len(bid_nolabel)} missing)")
+
+            def _bidnum(url):
+                m = re.search(r"docId=([^&]+)", url or "") or re.search(r"bidID=(\d+)", url or "")
+                return m.group(1) if m else None
+            seen_bn, dup_bn = {}, []
+            for fe in feed_bids:
+                for s in (fe.get("sources") or []):
+                    bn = _bidnum(s.get("url"))
+                    if not bn:
+                        continue
+                    key = (fe.get("town_id"), bn)
+                    if key in seen_bn and seen_bn[key] != fe.get("event_id"):
+                        dup_bn.append(key)
+                    seen_bn.setdefault(key, fe.get("event_id"))
+            check(not dup_bn, f"no duplicate bid number published per town ({len(dup_bn)} dup)")
         except (json.JSONDecodeError, OSError) as exc:
             check(False, f"feed.json parses ({exc})")
     else:

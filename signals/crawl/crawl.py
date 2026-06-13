@@ -37,6 +37,7 @@ from signals.crawl.adapters.civicplus import CivicPlusAdapter
 from signals.crawl.adapters.civicclerk import CivicClerkAdapter
 from signals.crawl.adapters.granicus import GranicusAdapter
 from signals.crawl.adapters.generic_html import GenericHtmlAdapter
+from signals.crawl.adapters import commbuys
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -65,12 +66,17 @@ class PoliteFetcher:
                 time.sleep(gap)
         self._last_hit[host] = time.monotonic()
 
-    def request(self, url):
-        """GET with rate limiting + retries. Returns Response or None."""
+    def request(self, url, method="GET", data=None, extra_headers=None):
+        """GET/POST with rate limiting + retries. Returns Response or None."""
         for attempt in range(1, config.MAX_RETRIES + 1):
             self._wait(url)
             try:
-                resp = self._session.get(url, timeout=config.REQUEST_TIMEOUT_SECONDS)
+                if method == "POST":
+                    resp = self._session.post(url, data=data, headers=extra_headers,
+                                              timeout=config.REQUEST_TIMEOUT_SECONDS)
+                else:
+                    resp = self._session.get(url, headers=extra_headers,
+                                             timeout=config.REQUEST_TIMEOUT_SECONDS)
             except requests.RequestException as exc:
                 if attempt == config.MAX_RETRIES:
                     print(f"      ! request error ({exc.__class__.__name__}); gave up: {url}")
@@ -94,6 +100,15 @@ class PoliteFetcher:
     def fetch_bytes(self, url):
         resp = self.request(url)
         return resp.content if resp is not None else None
+
+    # COMMBUYS (Step S1) needs custom headers + POST through the same polite layer.
+    def get_text(self, url, extra_headers=None):
+        resp = self.request(url, extra_headers=extra_headers)
+        return resp.text if resp is not None else None
+
+    def post_text(self, url, data, extra_headers=None):
+        resp = self.request(url, "POST", data=data, extra_headers=extra_headers)
+        return resp.text if resp is not None else None
 
 
 def analyze_pdf(content):
@@ -294,6 +309,75 @@ def crawl_bids(town, fetcher, conn, cutoff):
     return stats
 
 
+def crawl_commbuys(towns, fetcher, conn):
+    """Statewide COMMBUYS open-bid crawl (Step S1). One org-filtered search per
+    registry town that has a commbuys_org, regardless of its agenda-site status —
+    COMMBUYS is an independent source. Each open bid's detail page is saved as
+    HTML + a `.txt` sidecar (doc_type='bid', board_id='commbuys'), so it flows
+    through the same extractor as the town bids module. Returns per-town stats."""
+    targets = [t for t in towns if (t.get("commbuys_org") or "").strip()]
+    if not targets:
+        return {}
+    print("\n== COMMBUYS (statewide procurement) ==")
+    commbuys.prime(fetcher)
+    out = {}
+    for t in targets:
+        town_id = t["town_id"]
+        org = t["commbuys_org"].strip()
+        stats = {"found": 0, "new": 0, "dup": 0, "skip": 0, "fail": 0}
+        try:
+            bids = commbuys.search_org_bids(fetcher, org)
+        except Exception as exc:
+            print(f"  - {town_id}/commbuys failed: {exc.__class__.__name__}: {exc}")
+            out[town_id] = stats
+            continue
+        if bids is None:
+            print(f"  - {town_id}/commbuys: org {org!r} not found in COMMBUYS dropdown "
+                  f"(registry value may be stale)")
+            out[town_id] = stats
+            continue
+        print(f"  - {town_id}/commbuys: {len(bids)} open bid(s) for {org!r}")
+        for b in bids:
+            stats["found"] += 1
+            if conn.execute("SELECT 1 FROM documents WHERE source_url=? LIMIT 1",
+                            (b["detail_url"],)).fetchone():
+                stats["skip"] += 1
+                continue
+            detail = fetcher.get_text(b["detail_url"], extra_headers=commbuys.CB_HEADERS)
+            if not detail:
+                stats["fail"] += 1
+                continue
+            data = detail.encode("utf-8")
+            doc_id = hashlib.sha256(data).hexdigest()
+            if conn.execute("SELECT 1 FROM documents WHERE doc_id=? LIMIT 1",
+                            (doc_id,)).fetchone():
+                stats["dup"] += 1
+                continue
+            dest = os.path.join(config.RAW_DIR, town_id, "commbuys")
+            os.makedirs(dest, exist_ok=True)
+            fname = re.sub(r"[^A-Za-z0-9._-]", "_", b["bid_number"]) + ".html"
+            with open(os.path.join(dest, fname), "w", encoding="utf-8") as fh:
+                fh.write(detail)
+            text = _clean_bid_html(detail)
+            header = (f"[PAGE 1]\nPUBLIC BID / RFP NOTICE (COMMBUYS)\n"
+                      f"COMMBUYS Bid Number: {b['bid_number']}\n"
+                      f"Buyer: {b['buyer']}\nTitle: {b['title']}\n"
+                      f"Bid Closing Date: {b['close_raw']}\n\n{text}")
+            with open(os.path.join(dest, fname + ".txt"), "w", encoding="utf-8") as fh:
+                fh.write(header)
+            conn.execute(
+                "INSERT INTO documents (doc_id, town_id, board_id, doc_type, meeting_date, "
+                "source_url, local_path, fetched_at, processed_at, extraction_status, "
+                "page_count, is_scanned) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                (doc_id, town_id, "commbuys", "bid", b["close_iso"], b["detail_url"],
+                 f"signals/raw/{town_id}/commbuys/{fname}",
+                 dt.datetime.now().isoformat(timespec="seconds"), None, "pending", 1, 0))
+            conn.commit()
+            stats["new"] += 1
+        out[town_id] = stats
+    return out
+
+
 def print_report(results, active):
     print("\n=== crawl coverage report ===")
     hdr = (f"{'town':<16}{'found':>6}{'new':>5}{'dup':>5}{'skip':>6}"
@@ -365,6 +449,17 @@ def main(argv=None):
         results[town_id] = stats
 
     print_report(results, active)
+
+    # COMMBUYS is statewide and source-independent of the agenda sites, so it
+    # runs for every registry town that has a commbuys_org (not just active ones).
+    cb_towns = active if args.town else [t for t in towns
+                                         if (t.get("commbuys_org") or "").strip()]
+    cb_results = crawl_commbuys(cb_towns, fetcher, conn)
+    if cb_results:
+        total_found = sum(s["found"] for s in cb_results.values())
+        total_new = sum(s["new"] for s in cb_results.values())
+        print(f"COMMBUYS summary: {total_found} open bid(s) seen, "
+              f"{total_new} new document(s) stored.")
     conn.close()
 
 

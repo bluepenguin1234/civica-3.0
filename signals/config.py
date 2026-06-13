@@ -34,6 +34,15 @@ CRAWL_DELAY_SECONDS = 5.0
 # the fetch to the newest N and date-filter each detail page after fetching.
 BIDS_RECENT_COUNT = 8
 
+# COMMBUYS — the statewide MA procurement portal (Step S1). One source covering
+# every registry town, filtered by purchasing organization. The legacy
+# publicBids.sdo URL is dead; the live open-bids search is a JSF/PrimeFaces page.
+# Org filtering is a form POST (GET query params are ignored). robots.txt
+# (vendor: periscopeholdings.com) disallows only /craft — these paths are allowed.
+COMMBUYS_ENTRY = "https://www.commbuys.com/bso/"
+COMMBUYS_OPENBIDS = ("https://www.commbuys.com/bso/view/search/external/"
+                     "advancedSearchBid.xhtml?openBids=true")
+
 # Agenda packets (Step 6): some CivicPlus towns attach the full application
 # packet (engineer letterhead, applicant phone numbers) behind a meeting. These
 # can run to hundreds of pages; any document over this cap is archived but flagged

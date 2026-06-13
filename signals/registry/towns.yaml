@@ -47,6 +47,7 @@
       agenda_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
       minutes_url: "https://www.danversma.gov/AgendaCenter/Conservation-Commission-4"
   bids_url: "https://www.danversma.gov/Bids.aspx"   # CivicPlus bids module (Step 3); open bids by default, ?showAllBids=on for history
+  commbuys_org: "Town of Danvers"   # COMMBUYS purchasing-org string (Step S1); exact dropdown label, verified live 2026-06-12 (org id 1256)
   notes: "CivicPlus AgendaCenter; agendas + minutes share one category page per board. All 4 boards verified live with recent 2026 postings on 2026-06-11. Bids module crawled for public RFPs."
   status: "active"               # URLs filled & verified 2026-06-11
   last_verified: "2026-06-11"
@@ -74,6 +75,7 @@
       name: "Conservation Commission"
       agenda_url: "https://www.beverlyma.gov/AgendaCenter/Conservation-Commission-10"
       minutes_url: "https://www.beverlyma.gov/AgendaCenter/Conservation-Commission-10"
+  commbuys_org: "City of Beverly"   # COMMBUYS purchasing-org (Step S1); verified live 2026-06-12 (org id 1141, 3 open bids incl. City Hall renovations)
   notes: "CivicPlus. Council posts many meeting types under category 49 (heavy in budget season). ZBA minutes lag agendas by months. Verified live 2026-06-12."
   status: "pending"             # deferred until Step 10 (URLs researched+verified, do not crawl yet)
   last_verified: "2026-06-12"
@@ -101,6 +103,7 @@
       name: "Conservation Commission"
       agenda_url: "https://www.salemma.gov/AgendaCenter/Conservation-Commission-17"
       minutes_url: "https://www.salemma.gov/AgendaCenter/Conservation-Commission-17"
+  commbuys_org: "City of Salem"   # COMMBUYS purchasing-org (Step S1); verified live 2026-06-12 (org id 1165, 4 open bids)
   notes: "CivicPlus. CAUTION: ZBA is category 47 (category 40 serves the Youth Commission). A parallel CivicClerk portal exists (salemma.portal.civicclerk.com, JS-rendered) — AgendaCenter is canonical and current. Verified live 2026-06-12."
   status: "pending"             # deferred until Step 10 (URLs researched+verified, do not crawl yet)
   last_verified: "2026-06-12"
@@ -128,6 +131,7 @@
       name: "Conservation Commission"
       agenda_url: "TODO"
       minutes_url: "https://www.peabody-ma.gov/meeting%20minutes.html"
+  commbuys_org: "City of Peabody"   # COMMBUYS purchasing-org (Step S1); verified live 2026-06-12 (org id 1161, 0 open bids currently)
   notes: "Peabody publishes NO agendas online (verified 2026-06-12); all boards share one minutes hub with wildly inconsistent PDF filenames under /pdf_minutes/. ZBA minutes stale since 2024-05. Needs a custom one-off adapter (per-board path filters: /pdf_minutes/city_council/, /Planning Board Minutes/, /ConComm/) or stays manual. Trap: pmlp.com (CivicPlus) is the utility, not the city."
   status: "pending"
   last_verified: "2026-06-12"
@@ -155,6 +159,7 @@
       name: "Conservation Commission"
       agenda_url: "https://marbleheadma.gov/category/conservation-commission/"
       minutes_url: "https://marbleheadma.gov/category/conservation-commission/"
+  commbuys_org: "Town of Marblehead"   # COMMBUYS purchasing-org (Step S1); verified live 2026-06-12 (org id 1293, 1 open bid: bituminous concrete)
   notes: "WordPress (migrated off CivicPlus; old marblehead.org URLs are dead). PDF names like 2026-06-15-<Board>-Agenda.pdf. Minutes lag badly (ConCom newest minutes 2024); some minutes are .doc (skipped). Category archives paginate — first page covers the recent window. Verified live 2026-06-12."
   status: "pending"             # deferred until Step 10 (URLs researched+verified, do not crawl yet)
   last_verified: "2026-06-12"
@@ -182,6 +187,7 @@
       name: "Conservation Commission"
       agenda_url: "https://www.swampscottma.gov/AgendaCenter/Conservation-Commission-21"
       minutes_url: "https://www.swampscottma.gov/AgendaCenter/Conservation-Commission-21"
+  commbuys_org: "Town of Swampscott"   # COMMBUYS purchasing-org (Step S1); verified live 2026-06-12 (org id 1333, 1 open bid: HS cafeteria floor)
   notes: "CivicPlus (migrated off old Drupal site — legacy URLs 404). ZBA slug omits 'of': Zoning-Board-Appeals-3. Minutes lag agendas 1-3 months. Verified live 2026-06-12."
   status: "pending"             # deferred until Step 10 (URLs researched+verified, do not crawl yet)
   last_verified: "2026-06-12"
