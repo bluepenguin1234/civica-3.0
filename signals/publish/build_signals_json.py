@@ -146,11 +146,12 @@ def main():
         if eid not in entities_by_id:
             t = towns.get(r["town_scope"], {})
             entities_by_id[eid] = {
+                # Public-record directory data only. Enriched contact fields
+                # (website/phone/linkedin) live in the gated contacts.json.
                 "entity_id": eid, "name": r["canonical_name"], "kind": r["kind"],
                 "town_id": r["town_scope"], "town": t.get("name", r["town_scope"]),
                 "place_fips": str(t.get("place_fips", "")),
-                "website": r["website"], "phone": r["phone"],
-                "linkedin_url": r["linkedin_url"], "review_status": r["review_status"],
+                "review_status": r["review_status"],
                 "_roles": set(), "_stories": set(),
             }
         entities_by_id[eid]["_roles"].add(r["role"])

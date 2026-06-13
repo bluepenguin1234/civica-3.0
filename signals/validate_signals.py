@@ -291,6 +291,67 @@ def main():
          f"no two entities share a town+kind+normalized-name key "
          f"({len(dup_keys)} collision(s) — check ambiguous_entities.txt)")
 
+    print("\n=== CONTACT ENRICHMENT (Step 8) ===")
+    from signals.enrich.enrich_entities import PHONE_SOURCES, WEBSITE_SOURCES, PUBLISHABLE
+    ENRICH_STATUSES = {"auto", "needs_review", "human_verified", "rejected"}
+    enr_by_ent = {}
+    bad_ejson, bad_prov, bad_estatus = [], [], []
+    bad_phone_src, bad_site_src, bad_linkedin = [], [], []
+    for e in ents:
+        if not e["enrichment"]:
+            continue
+        try:
+            enr = json.loads(e["enrichment"])
+        except (json.JSONDecodeError, TypeError):
+            bad_ejson.append(e["entity_id"])
+            continue
+        enr_by_ent[e["entity_id"]] = enr
+        for field, p in enr.items():
+            if not isinstance(p, dict) or not all(
+                    k in p for k in ("value", "source", "confidence", "verified", "status")):
+                bad_prov.append((e["entity_id"], field))
+                continue
+            if p["status"] not in ENRICH_STATUSES:
+                bad_estatus.append((e["entity_id"], field))
+            if field == "phone" and p["source"] not in PHONE_SOURCES:
+                bad_phone_src.append((e["entity_id"], p["source"]))
+            if field == "website" and p["source"] not in WEBSITE_SOURCES:
+                bad_site_src.append((e["entity_id"], p["source"]))
+            if field == "linkedin" and "/search/" not in (p["value"] or "") and p["source"] != "firm_site":
+                bad_linkedin.append(e["entity_id"])
+    check(not bad_ejson, f"entity enrichment is valid JSON ({len(bad_ejson)} bad)")
+    check(not bad_prov,
+          f"every enriched field carries value/source/confidence/verified/status ({len(bad_prov)} bad)")
+    check(not bad_estatus, f"enrichment field status enum ({len(bad_estatus)} bad)")
+    check(not bad_phone_src,
+          f"phone source is the firm's site or the registry only — never broker "
+          f"({len(bad_phone_src)} bad)")
+    check(not bad_site_src,
+          f"website source is the firm's site or the registry only ({len(bad_site_src)} bad)")
+    check(not bad_linkedin,
+          f"linkedin is a constructed search URL unless the firm's site links it "
+          f"({len(bad_linkedin)} bad)")
+
+    contacts_path = os.path.join(config.PUBLISH_DIR, "contacts.json")
+    if os.path.exists(contacts_path):
+        with open(contacts_path, "r", encoding="utf-8") as fh:
+            cj = json.load(fh)
+        check(True, "contacts.json parses")
+        cmap = cj.get("contacts", {})
+        bad_ckey = [k for k in cmap if k not in ent_ids]
+        check(not bad_ckey, f"every contacts.json key is a real entity ({len(bad_ckey)} bad)")
+        leaked = []
+        for eid, fields in cmap.items():
+            enr = enr_by_ent.get(eid, {})
+            for fname in fields:
+                if enr.get(fname, {}).get("status") not in PUBLISHABLE:
+                    leaked.append((eid, fname))
+        check(not leaked,
+              f"contacts.json publishes ONLY auto/human_verified fields — no needs_review "
+              f"or rejected leak ({len(leaked)} leak(s))")
+    else:
+        warn(False, "contacts.json not built yet (run signals.publish.build_contacts_json)")
+
     print("\n=== REGISTRY vs town_scores.csv ===")
     if os.path.exists(TOWN_SCORES):
         import csv
@@ -338,6 +399,11 @@ def main():
                         for c in fe.get("contacts", []) if c.get("entity_id") not in feed_ent_ids]
             check(not dangling,
                   f"every feed event contact references a feed entity ({len(dangling)} dangling)")
+            moat_leak = [en.get("entity_id") for en in feed.get("entities", [])
+                         if any(k in en for k in ("phone", "website", "linkedin_url"))]
+            check(not moat_leak,
+                  f"public feed entities carry no enriched contact fields — the moat stays "
+                  f"in gated contacts.json ({len(moat_leak)} leak)")
         except (json.JSONDecodeError, OSError) as exc:
             check(False, f"feed.json parses ({exc})")
     else:

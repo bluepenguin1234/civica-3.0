@@ -95,10 +95,11 @@ CREATE TABLE IF NOT EXISTS entities (
     website           TEXT,                              -- web-lookup enrichment (Step 8; null now)
     phone             TEXT,                              -- Step 8 enrichment
     linkedin_url      TEXT,                              -- Step 8 enrichment
-    enrich_source     TEXT,                              -- Step 8 enrichment
-    enrich_confidence REAL,                              -- Step 8 enrichment
-    last_verified     TEXT,                              -- Step 8 enrichment
-    review_status     TEXT NOT NULL DEFAULT 'auto_resolved'  -- auto_resolved | human_verified | needs_review
+    enrich_source     TEXT,                              -- Step 8 enrichment (summary)
+    enrich_confidence REAL,                              -- Step 8 enrichment (summary)
+    last_verified     TEXT,                              -- Step 8 enrichment (summary)
+    review_status     TEXT NOT NULL DEFAULT 'auto_resolved',  -- auto_resolved | human_verified | needs_review
+    enrichment        TEXT                               -- Step 8: per-field provenance JSON {field:{value,source,confidence,verified,status}}
 );
 
 CREATE TABLE IF NOT EXISTS event_entities (
@@ -136,6 +137,9 @@ _STORY_MIGRATIONS = (
     ("brief", "TEXT"),
     ("brief_last_activity", "TEXT"),
 )
+_ENTITY_MIGRATIONS = (
+    ("enrichment", "TEXT"),
+)
 
 
 def init_db():
@@ -143,7 +147,8 @@ def init_db():
     conn = connect()
     conn.executescript(SCHEMA)
     for table, migrations in (("events", _EVENT_MIGRATIONS),
-                              ("project_stories", _STORY_MIGRATIONS)):
+                              ("project_stories", _STORY_MIGRATIONS),
+                              ("entities", _ENTITY_MIGRATIONS)):
         for col, typ in migrations:
             try:
                 conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")

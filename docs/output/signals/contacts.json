@@ -1,0 +1,503 @@
+{
+ "generated_at": "2026-06-12T23:02:31",
+ "contacts": {
+  "26adfe1e27b1e7f7": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=John+Morin+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "0efd8d33cb0ce866": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Katie+Cruz+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "52336e6f1569476a": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Adel+Shahin+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "c43f7ce1143a0563": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Peter+Vanko+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "4dbe835259af290a": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Adimir+Toska+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "a31cad494a2f2ed8": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Brett+Hanley+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "9e5034eeef0574db": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Brian+DApice+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "7eaeba4ba6d854ae": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Cindy+Murphy+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "a4abe175e8f4113c": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Greg+Maynard+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "b77bedf58c0d6794": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=John+Lacroix+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "d53d9daf9937fe39": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Keith+Oakley+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "341194a511513a9e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Majlinda+%26+Spartak+Vaka+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "8900b2cc6a3839e4": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Mike+Vienneau+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "32e93bd942200341": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jason+A.+Panos+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "8e408d270401a0ad": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Danell+Baptiste+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "34fa911e21ff24ba": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jay+Polakiewicz+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "54044f3768ef8688": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=John+Kiley%2C+Jr.+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "336559eb59f4c488": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Melissa+Nardone+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "50c684cf16a3b8b4": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Abiomed%2C+Inc.+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Abiomed%2C+Inc.%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "56b52a63fceea750": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=National+Grid+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22National+Grid%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "3df6e4dee17fd452": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=T.A.K.J.%2C+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22T.A.K.J.%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "613715e48aa02eda": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=The+Mega+Group+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22The+Mega+Group%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "76d15cb249393973": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Broadway+Capital+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Broadway+Capital%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "40027689e9b18bbc": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Sign+Design+Inc.+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Sign+Design+Inc.%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "887bba2e1249f239": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Hancock+Associates+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Hancock+Associates%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "01e28454e7a3ed1e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Forest+River+Realty%2C+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Forest+River+Realty%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "5836af55ee948a88": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Morin-Cameron+Group+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Morin-Cameron+Group%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "7e80f0cf06be8dae": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=8+Fairview+Street+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%228+Fairview+Street+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "86df8eba77121f15": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=B.+Dupont-Raesly%2C+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22B.+Dupont-Raesly%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "faadc8df028f88d7": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=High+Point+Engineering+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22High+Point+Engineering%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "643f9255b3dabaac": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Seaside+Legal+Solutions+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Seaside+Legal+Solutions%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "c7ec59670542b736": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Dana+R.+MacNamee%2C+Manager+of+Bay+State+RE+Holdings%2C+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Dana+R.+MacNamee%2C+Manager+of+Bay+State+RE+Holdings%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "22bab6fdc4d196aa": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Danvers+Electric+and+Verizon+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Danvers+Electric+and+Verizon%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "aa5e31067c99abbc": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=St.+Johns+Preparatory+School+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22St.+Johns+Preparatory+School%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "485bc074a51a562f": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Steven+Tedesco%2C+Temar+Properties%2C+LLC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Steven+Tedesco%2C+Temar+Properties%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "e05bbcbceeec389a": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=20+Water+LLC+%28Chris+Blasczak%2C+Manager%29+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%2220+Water+LLC+%28Chris+Blasczak%2C+Manager%29%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "5717181bb207c8c3": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Peter+M.+Zagorski%2C+Trustee+PMZ+Realty+Trust+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Peter+M.+Zagorski%2C+Trustee+PMZ+Realty+Trust%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "cc9b7f1bc10a43e9": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=New+England+Home+for+the+Deaf+%2F+Winn+Development+Company+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22New+England+Home+for+the+Deaf+%2F+Winn+Development+Company%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  },
+  "1dca37b489f42d47": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Genesis+AEC+Danvers+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Genesis+AEC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-12",
+    "kind": "search"
+   }
+  }
+ }
+}

@@ -35,6 +35,7 @@ Run-Step 'extract'   'signals.extract.extract'         | Out-Null
 Run-Step 'link'      'signals.link.link_stories'       | Out-Null
 Run-Step 'briefs'    'signals.synthesize.build_briefs' | Out-Null
 Run-Step 'entities'  'signals.enrich.resolve_entities' | Out-Null
+Run-Step 'enrich'    'signals.enrich.enrich_entities'  | Out-Null
 
 # The gate: red means STOP — do not publish, site keeps the last good data.
 if (-not (Run-Step 'validate' 'signals.validate_signals')) {
@@ -47,6 +48,7 @@ if (-not (Run-Step 'publish' 'signals.publish.build_signals_json')) {
     Stop-Transcript | Out-Null
     exit 1
 }
+Run-Step 'contacts' 'signals.publish.build_contacts_json' | Out-Null   # gated directory
 
 # Push ONLY the published data files, and only if they actually changed.
 git add docs/output/signals

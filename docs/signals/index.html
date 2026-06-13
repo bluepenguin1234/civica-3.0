@@ -96,6 +96,15 @@
 .outlook{ margin-top:12px; background:var(--surface-soft); border-left:3px solid var(--warning); border-radius:var(--r-sm); padding:10px 14px; }
 .outlook-tag{ font-size:10.5px; font-weight:800; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; margin-bottom:4px; }
 .outlook p{ font-size:13.5px; line-height:1.6; color:var(--text); font-style:italic; }
+/* Entity contact card + provenance (Step 8). Public record vs enriched is marked on every contact. */
+.cfields{ display:grid; gap:10px; }
+.cfield{ display:flex; flex-wrap:wrap; gap:6px 12px; align-items:baseline; }
+.cfield .ck{ font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; min-width:78px; }
+.cfield .cv{ font-size:14px; color:var(--text); }
+.prov{ display:inline-block; font-size:10px; font-weight:700; border-radius:var(--r-pill); padding:2px 8px; white-space:nowrap; vertical-align:middle; }
+.prov-record{ color:var(--muted); background:var(--surface-sunken); }
+.prov-search{ color:var(--muted); background:var(--surface-sunken); }
+.prov-enriched{ color:var(--ink); background:var(--surface-soft); border:1px solid var(--success); }
 .contact-list{ margin:12px 0; display:grid; gap:8px; }
 .contact-list .c{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r-sm); padding:10px 14px; font-size:13.5px; }
 .contact-list .c b{ color:var(--ink); }
@@ -186,6 +195,6 @@
   </footer>
 </main>
 
-<script src="signals.js?v=6"></script>
+<script src="signals.js?v=7"></script>
 </body>
 </html>

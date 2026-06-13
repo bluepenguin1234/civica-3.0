@@ -68,6 +68,7 @@ const KIND_LABELS = { person: "Person", firm: "Firm", public_office: "Public off
 const roleList = (roles) => (roles || []).map((r) => ROLE_LABELS[r] || r).join(" · ");
 
 let FEED = null;
+let CONTACTS = {};  // gated enrichment (Step 8), fetched through the access seam
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g,
   (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -486,10 +487,22 @@ function renderEntity(entityId) {
   }
   const stories = (ent.story_ids || []).map(storyById).filter(Boolean)
     .sort((a, b) => (b.last_activity || "").localeCompare(a.last_activity || ""));
-  const enrich = [];  // Step 8 fills these; from the public record otherwise
-  if (ent.website) enrich.push(`<a href="${esc(ent.website)}" rel="noopener">Website ↗</a>`);
-  if (ent.phone) enrich.push(`<a href="tel:${esc(ent.phone)}">${esc(ent.phone)}</a>`);
-  if (ent.linkedin_url) enrich.push(`<a href="${esc(ent.linkedin_url)}" rel="noopener">LinkedIn ↗</a>`);
+
+  const enr = CONTACTS[ent.entity_id] || {};
+  const provTag = (p) => p.source === "constructed_search"
+    ? `<span class="prov prov-search">search link</span>`
+    : `<span class="prov prov-enriched">enriched · ${esc(p.source)} · verified ${esc(p.verified || "")}</span>`;
+  const row = (label, html, p) => `<div class="cfield"><span class="ck">${esc(label)}</span>
+    <span class="cv">${html} ${provTag(p)}</span></div>`;
+  const fields = [];
+  if (enr.phone) fields.push(row("Phone",
+    `<a href="tel:${esc(enr.phone.value)}">${esc(enr.phone.value)}</a>`, enr.phone));
+  if (enr.website) fields.push(row("Website",
+    `<a href="${esc(enr.website.value)}" rel="noopener">${esc(enr.website.value)} ↗</a>`, enr.website));
+  if (enr.linkedin) fields.push(row("LinkedIn",
+    `<a href="${esc(enr.linkedin.value)}" rel="noopener">Search LinkedIn ↗</a>`, enr.linkedin));
+  if (enr.registry) fields.push(row("MA registry",
+    `<a href="${esc(enr.registry.value)}" rel="noopener">Look up the LLC ↗</a>`, enr.registry));
 
   $("detailView").innerHTML = `
     <a class="backlink" href="#" onclick="location.hash='';return false;">← All signals</a>
@@ -498,13 +511,14 @@ function renderEntity(entityId) {
       <span class="tag">${esc(KIND_LABELS[ent.kind] || ent.kind)}</span>
       ${(ent.roles || []).map((r) => `<span class="tag">${esc(ROLE_LABELS[r] || r)}</span>`).join("")}
       <span class="date-pill">${esc(ent.town)}, MA</span>
+      <span class="prov prov-record">name: public record</span>
     </div>
     <div class="brief">
-      ${enrich.length
-        ? `<p class="brief-what">${enrich.join(" &nbsp;·&nbsp; ")}</p>`
-        : `<p class="brief-what" style="font-weight:500;color:var(--muted)">No direct contact details
-           on the public record yet — names and roles below are drawn from the meeting documents.</p>`}
-      <div style="font-size:11px;color:var(--muted);margin-top:6px">Sourced from public municipal records.</div>
+      ${fields.length ? `<div class="cfields">${fields.join("")}</div>`
+        : `<p class="brief-what" style="font-weight:500;color:var(--muted)">No contact links yet.</p>`}
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">Names &amp; roles are from the
+        public municipal record; search links are generated; phone/website are enrichment we verify
+        from the firm's own site or the state registry before publishing.</div>
     </div>
     <h3 class="section-h" style="font-size:15px">Projects
       <span class="count">${stories.length}</span></h3>
@@ -637,6 +651,13 @@ async function boot() {
     showError(String(err.message || err));
     return;
   }
+  // The gated contact directory — fetched only after checkAccess() passed above,
+  // so it sits behind the same seam (Phase 5B: a paid-tier endpoint). A failure
+  // here is non-fatal: the feed still renders, just without enriched contacts.
+  try {
+    const cr = await fetch(`${DATA_BASE_URL}/contacts.json`, { cache: "no-cache" });
+    if (cr.ok) CONTACTS = (await cr.json()).contacts || {};
+  } catch (_) { CONTACTS = {}; }
   STATE = readState();
   if (STATE.mode) localStorage.setItem(MODE_KEY, STATE.mode);
   renderCoverage();

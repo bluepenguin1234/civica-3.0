@@ -33,10 +33,14 @@ echo "[init] signals: synthesize story briefs"
 python -m signals.synthesize.build_briefs
 echo "[init] signals: resolve entities (directory)"
 python -m signals.enrich.resolve_entities
+echo "[init] signals: enrich contacts (safe links)"
+python -m signals.enrich.enrich_entities
 echo "[init] signals: validate"
 python -m signals.validate_signals
 echo "[init] signals: publish feed"
 python -m signals.publish.build_signals_json
+echo "[init] signals: publish gated contacts"
+python -m signals.publish.build_contacts_json
 cd pipeline
 
 echo "[init] done"
