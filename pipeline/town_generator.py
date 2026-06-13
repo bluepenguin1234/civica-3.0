@@ -32,6 +32,11 @@ SCORES = os.path.join(BASE, 'town_scores.csv')
 OUT_DIR = os.path.join(SITE, 'output', 'towns')
 STATE_DIR = os.path.join(SITE, 'output', 'states')
 RANK_DIR = os.path.join(SITE, 'output', 'rankings')
+# Rankings are sidelined from the live site (2026-06-13). The generator code is kept
+# intact; flip this to True (and re-run town_generator.py) to bring rankings back —
+# that re-enables the nav link, the town-page "Featured in" card, the rankings pages,
+# and their sitemap entries. Existing docs/output/rankings/ pages were removed.
+SHOW_RANKINGS = False
 OUT_INDEX = os.path.join(SITE, 'output', 'town_index.json')
 PROGRESS = os.path.join(OUT_DIR, '_progress.json')
 # Absolute base for canonical/OG/sitemap/JSON-LD URLs. MUST match the live host or Google
@@ -324,8 +329,7 @@ def build_nav():
   <div class="nav-right">
     <span class="nav-tag" style="margin-right:8px;">Town Report</span>
     <a class="nav-back" href="../../signals/" style="margin-right:14px;">Signals</a>
-    <a class="nav-back" href="../rankings/index.html" style="margin-right:14px;">Rankings</a>
-    <a class="nav-back" href="../../index.html">← All Towns</a>
+    ''' + ('<a class="nav-back" href="../rankings/index.html" style="margin-right:14px;">Rankings</a>\n    ' if SHOW_RANKINGS else '') + '''<a class="nav-back" href="../../index.html">← All Towns</a>
   </div>
 </nav>'''
 
@@ -778,7 +782,7 @@ def generate_page(row, style, geo, siblings):
   {build_glance(row)}
   {build_dimension_card(row)}
   {build_position_card(row)}
-  {build_rankings_chips(row)}
+  {build_rankings_chips(row) if SHOW_RANKINGS else ''}
   {build_fundamentals_card(row)}
   {build_location_card(row, lat, lon)}
   {build_peers_card(siblings, fips, place)}
@@ -1342,7 +1346,7 @@ def main():
     # Bake crawlable content into the JS-driven landing + leaderboard.
     inject_ssr(sorted(index_map.values(), key=lambda x: x['score'], reverse=True))
     # Category ranking pages (safest / schools / affordable / growth — national + per-state).
-    rank_urls = generate_rankings(df)
+    rank_urls = generate_rankings(df) if SHOW_RANKINGS else []
     # Regenerate the sitemap once everything is built (idempotent).
     if not remaining:
         n_urls = write_sitemap(index_map, rank_urls)
