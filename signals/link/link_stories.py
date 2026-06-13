@@ -79,11 +79,40 @@ def candidate_stories(ev, stories):
     return [], None
 
 
+def supersede_agenda_echoes(conn):
+    """Merge agenda echoes: within a story, an agenda event sharing a
+    (board, meeting_date) with a minutes event is superseded by that minutes
+    event. The agenda event stays in the DB but leaves the feed; the minutes
+    event carries both source links. Idempotent (recomputed each run).
+    """
+    conn.execute("UPDATE events SET superseded_by = NULL")
+    rows = conn.execute(
+        "SELECT e.event_id, e.story_id, e.board_id, e.meeting_date, d.doc_type "
+        "FROM events e JOIN documents d ON d.doc_id = e.doc_id "
+        "WHERE e.story_id IS NOT NULL "
+        "AND e.review_status IN ('auto_approved', 'human_approved')").fetchall()
+    groups = {}
+    for r in rows:
+        if r["doc_type"] in ("agenda", "minutes"):
+            key = (r["story_id"], r["board_id"], r["meeting_date"])
+            groups.setdefault(key, {"agenda": [], "minutes": []})[r["doc_type"]].append(r["event_id"])
+    superseded = 0
+    for g in groups.values():
+        if g["agenda"] and g["minutes"]:
+            survivor = g["minutes"][0]
+            for agenda_id in g["agenda"]:
+                conn.execute("UPDATE events SET superseded_by = ? WHERE event_id = ?",
+                             (survivor, agenda_id))
+                superseded += 1
+    return superseded
+
+
 def refresh_story(conn, story_id):
-    """Recompute a story's rollup fields from its member events."""
+    """Recompute a story's rollup fields from its (non-superseded) events."""
     evs = conn.execute(
         "SELECT meeting_date, stage, residential_units FROM events "
-        "WHERE story_id=? ORDER BY meeting_date", (story_id,)).fetchall()
+        "WHERE story_id=? AND superseded_by IS NULL ORDER BY meeting_date",
+        (story_id,)).fetchall()
     if not evs:
         return
     latest = evs[-1]
@@ -150,6 +179,7 @@ def main():
                      (story_id, ev["event_id"]))
         touched.add(story_id)
 
+    superseded = supersede_agenda_echoes(conn)  # merge agenda echoes (Step 2)
     for story_id in stories:  # refresh all (also re-applies dormant/dead rules)
         refresh_story(conn, story_id)
     conn.commit()
@@ -167,10 +197,11 @@ def main():
     n_stories = conn.execute("SELECT COUNT(*) FROM project_stories").fetchone()[0]
     multi = conn.execute(
         "SELECT COUNT(*) FROM (SELECT story_id FROM events WHERE story_id IS NOT NULL "
-        "GROUP BY story_id HAVING COUNT(*) > 1)").fetchone()[0]
+        "AND superseded_by IS NULL GROUP BY story_id HAVING COUNT(*) > 1)").fetchone()[0]
     print("=== story linking report ===")
     print(f"events processed: {len(events)} | linked to existing stories: {linked} "
           f"| new stories: {created}")
+    print(f"agenda echoes superseded by their minutes twin: {superseded}")
     print(f"stories total: {n_stories} ({multi} with 2+ events)")
     if ambiguous:
         print(f"AMBIGUOUS: {len(ambiguous)} event(s) matched 2+ stories — "
@@ -182,6 +213,7 @@ def main():
             "SELECT s.story_id, s.canonical_name, s.canonical_address, s.current_stage, "
             "s.status, COUNT(e.event_id) AS n FROM project_stories s "
             "JOIN events e ON e.story_id = s.story_id "
+            "WHERE e.superseded_by IS NULL "
             "GROUP BY s.story_id HAVING n > 1 ORDER BY n DESC"):
         print(f"  [{s['n']} events] {s['canonical_name']} "
               f"@ {s['canonical_address']} -> {s['current_stage']} ({s['status']})")

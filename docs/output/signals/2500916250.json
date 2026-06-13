@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T21:30:04",
+ "generated_at": "2026-06-12T21:35:01",
  "coverage": [
   {
    "town_id": "danvers_ma",
@@ -29,7 +29,13 @@
      "event_type": "other_notable",
      "stage": "informational",
      "summary": "Kim Lundgren Associates is presenting to the joint boards on a Green Communities initiative. No program scope, dollar values, or specific project details were described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+      }
+     ]
     }
    ]
   },
@@ -53,25 +59,17 @@
      "event_type": "commercial_project",
      "stage": "continued",
      "summary": "The Commission continued the Request for Determination of Applicability for a 10.4-acre R&D campus at 54 Cherry Hill Drive to April 9, 2026, pending a site visit. Abiomed proposes to replace approximately 8,000–9,000 sq ft of existing building with a roughly 23,000 sq ft addition, plus parking expansion, EV charging, ADA improvements, and landscaping, adding a net of approximately 9,180 sq ft of impervious area within the 100-foot wetland buffer. At least one commissioner indicated a preference for a full Order of Conditions rather than a negative determination given the scale of buffer disturbance.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
-    },
-    {
-     "event_id": "1e00ed56-52f9-423f-a482-ad40225483b6",
-     "date": "2026-03-26",
-     "board": "Conservation Commission",
-     "event_type": "commercial_project",
-     "stage": "hearing",
-     "summary": "Request for Determination of Applicability filed by Abiomed for work at 54 Cherry Hill Drive (DCC File No. 2026-01). No project scope or scale is described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
-    },
-    {
-     "event_id": "37bd991a-332a-4932-9992-05b9ca67817e",
-     "date": "2026-04-09",
-     "board": "Conservation Commission",
-     "event_type": "commercial_project",
-     "stage": "hearing",
-     "summary": "Request for Determination of Applicability filed under DCC File No. 2026-01 for work at 54 Cherry Hill Drive. Applicant is Abiomed; project scope and nature of wetlands work are not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+      }
+     ]
     },
     {
      "event_id": "a9b16546-af1c-459a-bdc9-81f164b49c1e",
@@ -80,7 +78,17 @@
      "event_type": "commercial_project",
      "stage": "proposed",
      "summary": "Conservation Commission issued a positive Determination of Applicability for Abiomed's proposed office and parking expansion at 54 Cherry Hill Drive (DCC 2026-01), requiring the applicant to file a full Notice of Intent before work may proceed. The project includes approximately 9,000 square feet of new pavement, roughly 267 total parking spaces, and a new two-story office building connected to the existing facility; commissioners felt the scope was too large for an RDA-level review.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+      }
+     ]
     },
     {
      "event_id": "b777c0ce-421c-4186-96a4-1e8cf6cc2329",
@@ -89,16 +97,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "Abiomed, Inc. is before the Planning Board for Site Plan Review of a new building addition, parking lot expansion, and associated site modifications at 54 Cherry Hill Drive, an Industrial II (I-2) zoned property. No square footage, unit counts, or dollar figures are specified in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
-    },
-    {
-     "event_id": "d45b43b2-319b-451c-bfc3-940bbade0003",
-     "date": "2026-05-14",
-     "board": "Conservation Commission",
-     "event_type": "commercial_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 54 Cherry Hill Drive (DEP File No. 14-1452), submitted by Abiomed, Inc. No project scope or description is provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
+      }
+     ]
     },
     {
      "event_id": "1b41fee1-ed2d-4f2e-ac2f-ace9bbac0af6",
@@ -107,7 +112,17 @@
      "event_type": "commercial_project",
      "stage": "continued",
      "summary": "Conservation Commission continued the Notice of Intent hearing for Abiomed, Inc. at 54 Cherry Hill Drive to May 28, 2026, pending staff review of updated paperwork after a wetland on the property was reclassified from Bordering Vegetated Wetland to Isolated Vegetated Wetland, requiring a new local waiver. The project scope is limited to installation of a no-storage sign and minor site work; no design changes to the approved elements are anticipated.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      }
+     ]
     },
     {
      "event_id": "7ab683be-8563-4abe-8545-451c28ed34ef",
@@ -116,7 +131,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "Abiomed, Inc. is seeking Site Plan Review to construct a new building addition and expand the parking lot at its 54 Cherry Hill Drive campus in the Industrial II (I-2) zoning district. The project also includes associated site modifications.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+      }
+     ]
     },
     {
      "event_id": "88f28ddf-ba55-4083-b0fa-b0edc0683431",
@@ -125,7 +146,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "Notice of Intent filed by Abiomed, Inc. for work at 54 Cherry Hill Drive (DEP File No. 14-1452). Project scope is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     },
     {
      "event_id": "d189f8c7-2d00-4726-8bd8-792fd2699b21",
@@ -134,7 +161,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "Abiomed, Inc. is seeking site plan review to construct a new building addition and expand the existing parking lot at 54 Cherry Hill Drive, located in the Industrial II (I-2) zoning district, along with associated site modifications. No square footage or construction value is stated in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+      }
+     ]
     }
    ]
   },
@@ -158,7 +191,13 @@
      "event_type": "mixed_use_project",
      "stage": "hearing",
      "summary": "Public hearing for special permits, waivers, and site plan review for a mixed-use redevelopment of two parcels within the Maple Street Traditional Neighborhood Development Overlay District (Limited Mixed Use Sub-District). The proposal includes a mixed-use building with 18 residential units, 12 townhouse units, and retention of an existing single-family house, with associated site modifications across parcels currently zoned I-1 and R-1.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+      }
+     ]
     },
     {
      "event_id": "376c80e3-3df1-4799-837d-d2616053b421",
@@ -167,7 +206,13 @@
      "event_type": "mixed_use_project",
      "stage": "continued",
      "summary": "The applicant requested a continuance to the May 26, 2026 Planning Board meeting for this public hearing on a mixed-use redevelopment at 156 and 158 Maple Street within the Maple Street Traditional Neighborhood Development Overlay District. The proposal includes a mixed-use building with 18 residential units, 12 townhouse units, and an existing single-family house to be retained, with associated site modifications across two parcels whose underlying zoning is I-1 and R-1.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+      }
+     ]
     },
     {
      "event_id": "72ed0307-e4f7-420e-8787-fb3ae10fa96d",
@@ -176,7 +221,13 @@
      "event_type": "mixed_use_project",
      "stage": "continued",
      "summary": "Peter M. Zagorski (PMZ Realty Trust) is seeking Special Permits, Waivers, and Site Plan Review for a mixed-use redevelopment of two abutting parcels in the Maple Street Traditional Neighborhood Development Overlay District. The proposal includes a mixed-use building with 18 residential units and 12 townhouse units, plus retention of an existing single-family house. The applicant requested a continuance to the June 9, 2026 Planning Board meeting.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+      }
+     ]
     },
     {
      "event_id": "9e42065a-372d-44ed-b9cf-8af7d09ef0ba",
@@ -185,7 +236,13 @@
      "event_type": "mixed_use_project",
      "stage": "continued",
      "summary": "PMZ Realty Trust is seeking special permits, waivers, and site plan review to redevelop two parcels in the Maple Street Traditional Neighborhood Development Overlay District (Limited Mixed Use Sub-District) with a mixed-use building containing 18 residential units, 12 townhouse units, and an existing single-family house to remain—30 new residential units in total. The applicant requested a continuance to the June 23, 2026 Planning Board meeting.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+      }
+     ]
     }
    ]
   },
@@ -209,7 +266,13 @@
      "event_type": "master_plan_comp_plan",
      "stage": "informational",
      "summary": "The Planning Board will discuss the town's Housing Production Plan (HPP). No project-specific details or action items are described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+      }
+     ]
     }
    ]
   },
@@ -233,7 +296,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "T.A.K.J., LLC is seeking site plan review for a new building and associated site modifications at 37 Popes Lane and 85 Newbury Street, in the Highway Corridor Zone (HC2). The agenda provides no detail on building use, size, or program; this public hearing accompanies the same applicant's ANR lot-combination request for the same parcels.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+      }
+     ]
     }
    ]
   },
@@ -257,7 +326,13 @@
      "event_type": "variance_special_permit",
      "stage": "hearing",
      "summary": "New England Home for the Deaf and Winn Development Company seek to modify Condition 5 of Special Permit #23-5012 for 154 and 170 Water Street, replacing a permanent Danvers-resident leasing preference with one limited to the initial lease-up period, in conformance with Fair Housing Guidelines and Regulations.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+      }
+     ]
     },
     {
      "event_id": "ef6dd8cb-b69e-486d-9a32-93bde67dbf2a",
@@ -266,7 +341,13 @@
      "event_type": "variance_special_permit",
      "stage": "continued",
      "summary": "Continued hearing on a request to modify Special Permit Condition 5 (Docket #23-5012) for the housing development at 154 and 170 Water Street. The applicant seeks to replace the Danvers resident leasing preference in perpetuity with a preference limited to the initial lease-up period only, subject to HLC approval and in conformance with Fair Housing guidelines.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+      }
+     ]
     }
    ]
   },
@@ -290,7 +371,13 @@
      "event_type": "variance_special_permit",
      "stage": "hearing",
      "summary": "Request for a variance to construct a single-family home on a 10,000 sq ft lot in an R-3 zone where 30,000 sq ft is required, plus an appeal of the Building Commissioner's denial of building permit R-26-72. The applicant is an LLC seeking dimensional relief to enable new residential construction on a non-conforming lot.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+      }
+     ]
     }
    ]
   },
@@ -314,7 +401,13 @@
      "event_type": "variance_special_permit",
      "stage": "hearing",
      "summary": "Request for findings under Section 3.11 of the Danvers Zoning Bylaw to construct an accessory building in the Danversport-Industrial zone at reduced front setbacks from both Endicott Street (6.9') and Appleton Street (7.1'), where 30' is required as of right.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+      }
+     ]
     }
    ]
   },
@@ -338,7 +431,13 @@
      "event_type": "infrastructure_project",
      "stage": "hearing",
      "summary": "Public hearing on joint Danvers Electric and Verizon petition (No. 20260113-1, dated January 13, 2026) to replace one utility pole along with wires, cable, fixtures, anchors, and guys on Maple Street near house #395 (pole 4-87-1). Danvers Electric is the town's municipal electric utility, making this a public-agency-initiated infrastructure action.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
+      }
+     ]
     }
    ]
   },
@@ -356,31 +455,23 @@
    "status": "active",
    "events": [
     {
-     "event_id": "40c821d3-f535-4a2d-81e0-91b05f5f441a",
-     "date": "2026-04-09",
-     "board": "Conservation Commission",
-     "event_type": "residential_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed under DEP File No. 14-1450 for work at 86 Elliott Street. Applicant is an individual; project scope and nature of wetlands work are not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
-    },
-    {
      "event_id": "2cf98fe0-6c1d-467d-aa15-6f0e7b95a69b",
      "date": "2026-04-09",
      "board": "Conservation Commission",
      "event_type": "residential_project",
      "stage": "continued",
      "summary": "Conservation Commission continued the Notice of Intent for new residential construction at 86 Elliott Street (DEP #14-1450) to April 23, 2026, pending a site visit. The homeowners began clearing and foundation work under a building permit before discovering the site's proximity to an intermittent stream; work was stopped, and the proposal now includes a permeable driveway and stormwater infiltration system.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
-    },
-    {
-     "event_id": "b244a814-67c3-471d-ac80-b6eda5613312",
-     "date": "2026-04-23",
-     "board": "Conservation Commission",
-     "event_type": "residential_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed by Majlinda Vaka at 86 Elliott Street, assigned DEP File No. 14-1450, scheduled before the Conservation Commission on April 23, 2026. Scope of work is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+      }
+     ]
     },
     {
      "event_id": "d0d61cc3-93b7-44c9-b48f-32c8673fca6d",
@@ -389,25 +480,17 @@
      "event_type": "other_notable",
      "stage": "continued",
      "summary": "Notice of Intent (DEP File No. 14-1450) for 86 Elliott Street was continued to May 14, 2026 at the applicant's request. No project scope or nature of work was described in these minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
-    },
-    {
-     "event_id": "1d08514d-0f99-4352-80f5-d8b89aa0df40",
-     "date": "2026-05-14",
-     "board": "Conservation Commission",
-     "event_type": "residential_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 86 Elliott Street (DEP File No. 14-1450), submitted by Majlinda Vaka. No project scope, description, or unit count is provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
-    },
-    {
-     "event_id": "93c50228-5728-4746-84f2-a1feb5e29bba",
-     "date": "2026-05-14",
-     "board": "Conservation Commission",
-     "event_type": "other_notable",
-     "stage": "hearing",
-     "summary": "Enforcement Order hearing before the Danvers Conservation Commission concerning 86 Elliott Street, owned by Majlinda Vaka. No details on the nature or extent of the alleged violation are provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+      }
+     ]
     },
     {
      "event_id": "f623a42e-fd53-4fc5-9db6-b018ba8ba06a",
@@ -416,7 +499,21 @@
      "event_type": "residential_project",
      "stage": "continued",
      "summary": "Conservation Commission continued the Notice of Intent hearing for an unpermitted 900 sq ft ADU (two-bedroom unit above garage) at 86 Elliott Street after finding that the structure encroaches into both the 35-ft no-disturb and 50-ft no-build buffer zones of an intermittent stream, with 2,287 sq ft impacted in the no-disturb zone and 3,296 sq ft in the no-build zone. The applicant began construction after receiving a building permit without knowing a Conservation permit was required and agreed to revise plans to shift the building and driveway further from the stream before the May 28 hearing.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      }
+     ]
     },
     {
      "event_id": "bdc62911-116f-4ad2-b356-2aff11c90c3c",
@@ -425,7 +522,13 @@
      "event_type": "residential_project",
      "stage": "hearing",
      "summary": "Notice of Intent filed with the Conservation Commission for work at 86 Elliott Street (DEP File No. 14-1450). Project scope is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     },
     {
      "event_id": "7aedba2b-d786-403e-a483-5835d7cfc65e",
@@ -434,7 +537,13 @@
      "event_type": "other_notable",
      "stage": "hearing",
      "summary": "Conservation Commission Enforcement Order on the agenda for 86 Elliott Street, owned by Majlinda Vaka. No detail on the nature of the violation is provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     }
    ]
   },
@@ -458,7 +567,13 @@
      "event_type": "residential_project",
      "stage": "hearing",
      "summary": "Notice of Intent filed with the Conservation Commission for work at 32 Centre Street (DEP File No. 14-1453). Project scope is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     }
    ]
   },
@@ -482,7 +597,13 @@
      "event_type": "residential_project",
      "stage": "hearing",
      "summary": "Notice of Intent filed with the Conservation Commission for work at 267 Centre Street (DEP File No. 14-1454). Project scope is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     }
    ]
   },
@@ -506,7 +627,13 @@
      "event_type": "residential_project",
      "stage": "hearing",
      "summary": "Notice of Intent filed with the Conservation Commission for work at 28 Brentwood Circle (DEP File No. 14-145, final digit truncated in source). Project scope is not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+      }
+     ]
     }
    ]
   },
@@ -530,7 +657,13 @@
      "event_type": "mixed_use_project",
      "stage": "hearing",
      "summary": "B. Dupont-Raesly, LLC is before the Planning Board for Special Permits and a Waiver to expand an existing building at 103 High Street in the High Street Mixed Use Corridor district. The application addresses urban-form requirements including Build-To-Zone, side yard setback, street-facing transparency for both High Street and Healy Court frontages, and outdoor amenity space.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+      }
+     ]
     }
    ]
   },
@@ -554,7 +687,13 @@
      "event_type": "infrastructure_project",
      "stage": "informational",
      "summary": "The Select Board will receive a Downtown update presented jointly by DPW Director Stephen King and Land Use & Community Services Director Aaron Henry. No project scope, cost, or specific improvements are described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+      }
+     ]
     }
    ]
   },
@@ -565,7 +704,7 @@
    "place_fips": "2500916250",
    "name": "13 Popes Lane Contractor's Yard",
    "address": "13 Popes Lane, Danvers, MA",
-   "current_stage": "hearing",
+   "current_stage": "permitted",
    "total_units": null,
    "first_seen": "2026-05-12",
    "last_activity": "2026-05-14",
@@ -578,16 +717,13 @@
      "event_type": "commercial_project",
      "stage": "hearing",
      "summary": "Forest River Realty, LLC is seeking a Special Permit under Section 30.5 and Site Plan Review under Section 4 of the Zoning Bylaw to construct a contractor's yard with associated site modifications at 13 Popes Lane in the Highway Corridor Zone (HCZ). No square footage or dollar value was stated in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
-    },
-    {
-     "event_id": "acda978c-6961-407b-934b-8deb322b8d22",
-     "date": "2026-05-14",
-     "board": "Conservation Commission",
-     "event_type": "commercial_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 13 Popes Lane (DEP File No. 14-1451), submitted by Forest River Realty. No project scope, unit count, or description is provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+      }
+     ]
     },
     {
      "event_id": "9cf8d92d-cc53-45fa-9abb-e23f51e1943c",
@@ -596,7 +732,17 @@
      "event_type": "commercial_project",
      "stage": "permitted",
      "summary": "Conservation Commission issued an order of conditions approving Forest River Realty's plan to convert an existing two-family residence at 13 Popes Lane into a contractor yard, involving demolition of the older portion of the house, retention of the addition as an office, installation of 15 parking spaces on crushed stone, a bulk storage area, a dumpster pad, and a small retaining wall, with approximately 167 sq ft of buffer-zone impact. Two parking spaces must be relocated out of the no-disturb zone and an updated plan submitted before the order is formally filed; the order carries a three-year limit.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      }
+     ]
     }
    ]
   },
@@ -620,7 +766,13 @@
      "event_type": "other_notable",
      "stage": "hearing",
      "summary": "Request for Certificate of Compliance for 80 Andover Street (DEP File No. 14-0516), submitted by Seaside Legal Solutions on behalf of owner John Kiley, Jr. A Certificate of Compliance closes out a prior Order of Conditions; no information on the original permitted work scope is provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+      }
+     ]
     }
    ]
   },
@@ -644,7 +796,13 @@
      "event_type": "variance_special_permit",
      "stage": "hearing",
      "summary": "Sign Design Inc. requests a variance under Section 37.3 to install aggregate signage of 249 sq ft at 100 Independence Way (C-3 zone), exceeding the by-right allowance of 234 sq ft.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+      }
+     ]
     }
    ]
   },
@@ -668,7 +826,13 @@
      "event_type": "infrastructure_project",
      "stage": "informational",
      "summary": "SESD presented to the Select Board on approximately $390 million in priority capital infrastructure needs, including replacing aging wastewater treatment systems beyond their useful life and critical pipeline infrastructure such as the harbor crossing serving Beverly and Danvers. The district is seeking special state legislation for Proposition 2½ relief and borrowing authority; the Board requested strict financial guardrails, community-specific cost projections, and a robust public education effort before lending formal support.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+      }
+     ]
     }
    ]
   },
@@ -692,7 +856,13 @@
      "event_type": "infrastructure_project",
      "stage": "permitted",
      "summary": "National Grid has begun a 12-week utility project on Conant, Berry, Alden, and Park Streets in Danvers, with both overnight and daytime work phases and on-site police details.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+      }
+     ]
     }
    ]
   },
@@ -716,7 +886,13 @@
      "event_type": "municipal_property",
      "stage": "informational",
      "summary": "Select Board Member Djoko reported attending Essex Tech's information session on its purchase of the Waco building, where discussions covered the school's office-space needs, parking coordination on Preston Street, and winter sidewalk maintenance for students.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+      }
+     ]
     }
    ]
   },
@@ -740,7 +916,13 @@
      "event_type": "other_notable",
      "stage": "proposed",
      "summary": "The Preservation Commission completed a revision to Danvers's demolition bylaw (Article 14), aimed at streamlining the demolition-review process for property owners. The update is headed to Town Meeting for a vote.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+      }
+     ]
     }
    ]
   },
@@ -764,7 +946,13 @@
      "event_type": "master_plan_comp_plan",
      "stage": "informational",
      "summary": "The Affordable Housing Committee continues work on the Danvers Housing Production Plan, which is expected to come before the Select Board in June 2026.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+      }
+     ]
     }
    ]
   },
@@ -782,22 +970,23 @@
    "status": "active",
    "events": [
     {
-     "event_id": "7f170a87-4b58-43e8-977e-99948e65200f",
-     "date": "2026-04-23",
-     "board": "Conservation Commission",
-     "event_type": "other_notable",
-     "stage": "informational",
-     "summary": "Conservation Commission check-in on an existing Enforcement Order at 35 Doty Avenue (DEP #14-0883) involving Edward Doherty. No details on the nature of the violation or required remediation are provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
-    },
-    {
      "event_id": "78fb6504-41d4-424c-a646-53f0371da279",
      "date": "2026-04-23",
      "board": "Conservation Commission",
      "event_type": "other_notable",
      "stage": "informational",
      "summary": "The Commission reviewed the status of an enforcement order at 35 Doty Avenue requiring the applicant to remove a 1,200 sq ft sports court and restore lawn, relocate granite wetland boundary markers, plant 375 sq ft of upland shrubs, and install a 100 sq ft pollinator garden. Corrective work is expected by June 6, after which a site visit will be scheduled and a Certificate of Compliance issued to close out the enforcement order.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+      }
+     ]
     }
    ]
   },
@@ -821,16 +1010,17 @@
      "event_type": "variance_special_permit",
      "stage": "informational",
      "summary": "The ZBA held an informal check-in on a 2024 special permit (Docket 24-5085) for conversion of a circa-1900 single-family home into a two-unit duplex; members found the as-built structure deviated from approved plans with two front doors, a substantially altered roofline, and a side-by-side rather than front-to-back unit layout. By board consensus—no formal vote taken—the project was allowed to proceed as built, citing cross-department miscommunication and the unreasonable hardship of requiring structural redesign at the interior-finish stage.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
-    },
-    {
-     "event_id": "cb53a96a-7492-4883-bf68-6b95a9ddbc86",
-     "date": "2026-04-13",
-     "board": "Zoning Board of Appeals",
-     "event_type": "residential_project",
-     "stage": "continued",
-     "summary": "Check-in on a continued Special Permit application (case 24-5085) under Section 30.2.D to convert an existing circa-1900 single-family home into two dwelling units. No scope detail or outcome is provided in this agenda item.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+      }
+     ]
     }
    ]
   },
@@ -854,16 +1044,17 @@
      "event_type": "variance_special_permit",
      "stage": "approved",
      "summary": "The ZBA unanimously approved a Finding under Section 3.10 allowing 20 Water LLC to substitute a former restaurant (pre-existing non-conforming use) with a by-appointment recording studio at this R-1 property. No footprint changes are involved; approval was conditioned on hours of 9 AM–8 PM and sign lighting off one hour after closing.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
-    },
-    {
-     "event_id": "90e64d00-5a2a-4ce9-83b3-515ab15a4121",
-     "date": "2026-04-13",
-     "board": "Zoning Board of Appeals",
-     "event_type": "variance_special_permit",
-     "stage": "hearing",
-     "summary": "20 Water LLC seeks a Finding under Section 3.10 of the Zoning Bylaw to substitute a pre-existing non-conforming restaurant use with a recording studio at this R-1 parcel (Map 059, Lot 131). No footprint changes are proposed.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+      }
+     ]
     }
    ]
   },
@@ -874,7 +1065,7 @@
    "place_fips": "2500916250",
    "name": "96-98 Newbury Street, Danvers, MA",
    "address": "96-98 Newbury Street, Danvers, MA",
-   "current_stage": "hearing",
+   "current_stage": "approved",
    "total_units": 24,
    "first_seen": "2026-03-26",
    "last_activity": "2026-04-09",
@@ -887,25 +1078,17 @@
      "event_type": "residential_project",
      "stage": "continued",
      "summary": "The Conservation Commission continued the Notice of Intent hearing for a mobile home park expansion at 96–98 Newbury Street to April 9, 2026, pending a site visit. The project proposes approximately 24 new units, stormwater improvements (detention basins, forebays, manholes), four utility poles, and minor pavement addition within the 100-foot wetland buffer. A no-build zone waiver covering roughly 2,650 sq ft (~11%) of the 35–50 ft zone for stormwater facilities was also presented; ZBA and Planning Board approvals are already in hand.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
-    },
-    {
-     "event_id": "878d5577-5039-45d1-b98d-76cf096c1782",
-     "date": "2026-03-26",
-     "board": "Conservation Commission",
-     "event_type": "residential_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed by Temar Properties, LLC for work at 96-98 Newbury Street under the Massachusetts Wetlands Protection Act (DEP File No. 14-1449). No project scope or scale is described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
-    },
-    {
-     "event_id": "3e668302-2f7e-45b2-adce-61c8e192eb76",
-     "date": "2026-04-09",
-     "board": "Conservation Commission",
-     "event_type": "residential_project",
-     "stage": "hearing",
-     "summary": "Notice of Intent filed under DEP File No. 14-1449 for work at 96-98 Newbury Street. Applicant is Temar Properties, LLC; project scope and nature of wetlands work are not described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+      }
+     ]
     },
     {
      "event_id": "63532bfd-d0e3-4bb8-b1be-0d26b8756fde",
@@ -914,7 +1097,17 @@
      "event_type": "residential_project",
      "stage": "approved",
      "summary": "Conservation Commission issued an Order of Conditions approving two new mobile homes and expanded pavement at 96-98 Newbury Street (DEP #14-1449). A waiver was granted for 280 square feet of pavement within the 50-foot no-build zone, conditioned on a $2,500 bond for debris cleanup and installation of a stone infiltration trench. One commissioner (Splaine) dissented.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+      }
+     ]
     }
    ]
   },
@@ -938,7 +1131,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of $317,000 for pavement management and sidewalk improvements. Scope includes school parking lot restoration, a roadway condition evaluation cycle, ADA wheelchair ramp upgrades, crack sealing, and general pavement preservation; department targets five to six miles of roadway improvements per year.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -962,7 +1161,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend continuation of the roadway acceptance program converting long-maintained private streets to accepted public ways, begun in 2020. Of roughly 70 remaining private streets about 36 are candidates for future acceptance; two to three conversions expected this year, with added survey work to confirm rights-of-way on older roads.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -986,7 +1191,13 @@
      "event_type": "municipal_property",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of $652,000 for improvements to school buildings, Endicott Park, the Peabody Institute Library, and other municipal facilities. Ongoing structural work at the Library Pavilion was noted; long-term planning continues for the Engine 2 fire station.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1010,7 +1221,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend $166,000 for grounds improvements including softball field upgrades, sport field aeration and fertilization, natural resource area fencing and gate replacements, and general maintenance. Rail trail westward expansion continues in coordination with the state, with full build-out expected around 2028.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1034,7 +1251,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend $400,000 to replace the 35-year-old emergency generator at the Endicott Street pump station, the town's second-largest, to meet state-mandated backup power requirements. The existing generator cannot be repurposed due to sizing and funding-source constraints.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1058,7 +1281,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of wastewater collection maintenance and spot repair funding. No dollar amount or additional scope detail was recorded in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1082,7 +1311,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of wastewater pump station improvements. No dollar amount or additional scope detail was recorded in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1106,7 +1341,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of stormwater asset management funding. No dollar amount or additional scope detail was recorded in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1130,7 +1371,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of drainage maintenance funding. No dollar amount or additional scope detail was recorded in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1154,7 +1401,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend $500,000 for ongoing maintenance and rehabilitation of the water treatment plant and groundwater well systems. Scope includes pumps, chemical feeders, control components, sand filter media replacement, and mechanical repairs; ozone treatment studies are ongoing and PFAS is fully removed at the plant.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1178,7 +1431,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend Town Meeting approval of water booster station improvements. No dollar amount or additional scope detail was recorded in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1202,7 +1461,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend appropriating $621,503 in class-action settlement funds from 3M and DuPont toward PFAS treatment design work for Wells 1 and 2. Prior design phases were grant-funded; additional federal support is being pursued to complete the full design before construction.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1226,7 +1491,13 @@
      "event_type": "other_notable",
      "stage": "proposed",
      "summary": "Select Board voted 5-0 to recommend a general bylaw prohibiting virtual currency kiosks in Danvers, citing ongoing fraud targeting vulnerable residents. Two kiosks currently remain in operation; if approved at Town Meeting and by the Attorney General, removal would be required within 30 days.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+      }
+     ]
     }
    ]
   },
@@ -1250,7 +1521,13 @@
      "event_type": "other_notable",
      "stage": "proposed",
      "summary": "The Select Board voted 4-1 to advance a new general bylaw requiring registration of vacant buildings to Town Meeting with a favorable recommendation. The bylaw would impose annual registration fees and daily fines for noncompliance, formalizing existing monitoring practices. Some board members and residents raised concerns about property rights and the completeness of the proposal.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1274,7 +1551,13 @@
      "event_type": "other_notable",
      "stage": "proposed",
      "summary": "The Select Board voted 5-0 to advance an update to the demolition delay bylaw to Town Meeting with a favorable recommendation. The amendment adds a third pathway allowing the Preservation Commission to deem a property historically significant while still permitting minor work that does not affect historical character, bypassing the need for a full public hearing. The change is intended to streamline approvals for non-substantial alterations.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1298,7 +1581,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "The Select Board voted 5-0 to advance an annual $20,000 appropriation for river maintenance dredging to Town Meeting with a favorable recommendation. Major dredging work is unlikely before 2028 due to dependence on competitive state grant funding. The River Committee has been actively pursuing grants to minimize the town's direct financial burden.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1322,7 +1611,13 @@
      "event_type": "zoning_amendment",
      "stage": "hearing",
      "summary": "A citizen petition by Danvers resident Melissa Nardone to allow small, owner-occupied in-home dog care businesses by special permit in R1, R2, and R3 residential zones was advanced to Town Meeting with unfavorable recommendations from both the Planning Board (unanimous) and the Select Board (5-0). The Select Board's unfavorable vote targets the petition's broad district language rather than the underlying concept, and the board directed it back to the Planning Board for refinement. The petitioner intends to narrow the scope at Town Meeting to the R3 district only.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1346,7 +1641,13 @@
      "event_type": "zoning_amendment",
      "stage": "hearing",
      "summary": "A citizen petition to rezone an unspecified parcel from R3 to Highway Corridor, intended to enable development of a hockey rink by Broadway Capital, was advanced to Town Meeting with unfavorable recommendations from both the Planning Board (unanimous) and the Select Board (4-1). Key objections included the wide range of uses permitted under Highway Corridor zoning beyond the stated rink, on-site wetlands and environmental concerns, and Massachusetts law prohibiting conditional zoning tied to a specific use. Broadway Capital has stated financing is contingent on rezoning and has committed to environmental, sound, and traffic studies.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1370,7 +1671,13 @@
      "event_type": "infrastructure_project",
      "stage": "proposed",
      "summary": "The Select Board voted 5-0 to advance a Town Meeting article transferring $408,675 in previously collected 40R incentive payments and transportation mitigation fees into the Downtown Improvement Fund for updated traffic studies, streetscape planning, and related improvements. Board clarification confirmed the funds are not designated for affordable housing.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+      }
+     ]
     }
    ]
   },
@@ -1394,16 +1701,17 @@
      "event_type": "zoning_amendment",
      "stage": "continued",
      "summary": "Citizens' petition to rezone 249 Andover Street from Residential III (R-3) to Highway Corridor Zone (HCZ) to enable a community ice skating rink with a single sheet of ice, approximately 50 parking spaces, lobby, concessions, and locker rooms; site access would require a 70-foot bridge crossing wetlands. The Planning Board continued the hearing to April 6, 2026, citing unresolved questions around abutter outreach, traffic and environmental constraints, potential future HCZ uses if the rink fails, and whether a nonconforming-use substitution through the ZBA would be a preferable pathway.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
-    },
-    {
-     "event_id": "2dcc9165-84d5-4da2-a3c9-411b75a643b6",
-     "date": "2026-03-24",
-     "board": "Planning Board",
-     "event_type": "zoning_amendment",
-     "stage": "hearing",
-     "summary": "Public hearing on a citizen's petition to rezone 249 Andover Street (Map 047, Parcel 015A) from Residential III (R-3) to the Highway Corridor Zone (HCZ). The petition was filed by Dana R. McNamee as Manager of Bay State RE Holdings, LLC, the site property owner. No development plans or project details are described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+      }
+     ]
     },
     {
      "event_id": "6743a7e0-d1ca-4450-b094-5518935ebb55",
@@ -1412,7 +1720,13 @@
      "event_type": "zoning_amendment",
      "stage": "hearing",
      "summary": "Public hearing on a citizen's petition to rezone 249 Andover Street (Map 047, Parcel 015A) from Residential III (R-3) to the Highway Corridor Zone (HCZ). The petition was filed by the site property owner, Bay State RE Holdings, LLC, through its manager Dana R. MacNamee.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+      }
+     ]
     }
    ]
   },
@@ -1436,16 +1750,17 @@
      "event_type": "zoning_amendment",
      "stage": "continued",
      "summary": "Citizens' petition by Melissa Nardone to amend the Danvers Zoning Bylaw Table of Allowable Uses to allow commercial kennel/boarding and in-home dog daycare by Special Permit from the ZBA in R-1, R-2, and R-3 districts, legalizing a use petitioner says already operates widely across town. The Planning Board continued the hearing to April 6, 2026 pending Town Counsel review of permissible amendments, clarification of petition language, and development of zone-specific operational standards.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
-    },
-    {
-     "event_id": "7d4c18d5-8a9b-4164-80f9-da8fe7a11c0c",
-     "date": "2026-03-24",
-     "board": "Planning Board",
-     "event_type": "zoning_amendment",
-     "stage": "hearing",
-     "summary": "Public hearing on a citizen's petition to amend the Danvers Zoning Bylaw Table of Allowable Uses, converting commercial kennel, boarding, and training facilities from a prohibited use to a use allowable by Special Permit from the ZBA in R-1, R-2, and R-3 residential zoning districts. This is a town-wide bylaw text amendment with no specific property identified.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+      }
+     ]
     },
     {
      "event_id": "1d5b314c-e811-42cc-808a-9e5e02ca37bd",
@@ -1454,7 +1769,13 @@
      "event_type": "zoning_amendment",
      "stage": "hearing",
      "summary": "Public hearing on a citizen's petition to amend Table 1 of the Danvers Zoning Bylaw to reclassify commercial kennel and boarding/training uses from prohibited to allowable by ZBA special permit in R-1, R-2, and R-3 residential zoning districts. The amendment would apply bylaw-wide with no site-specific address.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+      }
+     ]
     }
    ]
   },
@@ -1478,16 +1799,17 @@
      "event_type": "commercial_project",
      "stage": "approved",
      "summary": "The Conservation Commission issued a Negative Determination of Applicability for minor site improvements at St. John's Preparatory School, clearing the project from wetlands jurisdiction. Jurisdictional work is limited to resurfacing existing pavement and replacing curbing within the 100-foot buffer, yielding a net impervious reduction of approximately 350 sq ft; a separate dining hall demolition and addition is also planned outside the jurisdictional area.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
-    },
-    {
-     "event_id": "0ec8c090-66e5-4aae-a234-2c0ccabdebea",
-     "date": "2026-03-26",
-     "board": "Conservation Commission",
-     "event_type": "other_notable",
-     "stage": "hearing",
-     "summary": "Request for Determination of Applicability filed by St. John Preparatory School for work at 65 Summer Street (DCC File No. 2026-02). No project scope or scale is described in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+      }
+     ]
     }
    ]
   },
@@ -1511,7 +1833,13 @@
      "event_type": "variance_special_permit",
      "stage": "proposed",
      "summary": "A Special Permit and Site Plan hearing for 156 Maple Street is scheduled for the April 6, 2026 Planning Board meeting. No applicant, project description, or scope details were provided in these minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+      }
+     ]
     }
    ]
   },
@@ -1535,7 +1863,13 @@
      "event_type": "infrastructure_project",
      "stage": "informational",
      "summary": "The Town of Danvers is proceeding with a water main replacement project on Wenham Street and Wellesley Road, with construction scheduled to begin the week of March 17, 2026, weather permitting. No contractor, dollar value, or procurement contact was named in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+      }
+     ]
     }
    ]
   },
@@ -1559,7 +1893,13 @@
      "event_type": "master_plan_comp_plan",
      "stage": "informational",
      "summary": "Aaron Henry presented a comprehensive draft rewrite of Danvers' Open Space and Recreation Plan, built on state guidance and incorporating nearly 500 community comments emphasizing parks, trail connectivity, and accessibility. The plan will be reviewed by the Planning Board, Recreation Committee, and other committees before returning to the Select Board in 4–6 weeks, with a target state submission by end of May 2026.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+      }
+     ]
     }
    ]
   },
@@ -1583,7 +1923,13 @@
      "event_type": "master_plan_comp_plan",
      "stage": "informational",
      "summary": "The Affordable Housing Committee is reviewing revisions to Danvers' Housing Production Plan; once finalized, the updated plan will come before the Select Board for review and formal adoption. No timeline or scope detail was provided.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+      }
+     ]
     }
    ]
   },
@@ -1607,7 +1953,13 @@
      "event_type": "other_notable",
      "stage": "hearing",
      "summary": "The Danvers Preservation Commission is required to hold a public hearing on proposed alterations to the historic Old Firehouse, which has been deemed historically significant, triggering a mandatory 45-day review period. No applicant, address, ownership, or scope of work was identified in the minutes.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+      }
+     ]
     }
    ]
   },
@@ -1631,7 +1983,13 @@
      "event_type": "other_notable",
      "stage": "informational",
      "summary": "Land Use & Community Services Director Aaron Henry will present to the Select Board on Open Space. No further scope, acreage, acquisition, or funding details are provided in the agenda.",
-     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
+     "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
+      }
+     ]
     }
    ]
   }
@@ -1670,7 +2028,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+    }
+   ]
   },
   {
    "event_id": "42a4931f-705b-4696-b2e5-a9efd177162a",
@@ -1699,7 +2064,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ]
   },
   {
    "event_id": "9e42065a-372d-44ed-b9cf-8af7d09ef0ba",
@@ -1728,7 +2100,14 @@
    "next_date": "2026-06-23",
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ]
   },
   {
    "event_id": "7803d9ad-d3db-480a-9e28-df4965fd47de",
@@ -1757,7 +2136,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ]
   },
   {
    "event_id": "d189f8c7-2d00-4726-8bd8-792fd2699b21",
@@ -1789,7 +2175,14 @@
     "paving_asphalt"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06092026-1776"
+    }
+   ]
   },
   {
    "event_id": "ef6dd8cb-b69e-486d-9a32-93bde67dbf2a",
@@ -1818,7 +2211,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "rental"
+   "tenure": "rental",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+    }
+   ]
   },
   {
    "event_id": "835860ba-f5ab-4beb-bafc-3af64c5e3952",
@@ -1853,7 +2253,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+    }
+   ]
   },
   {
    "event_id": "e3451053-73bd-4cb5-b718-552e8fb391dd",
@@ -1882,7 +2289,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06082026-1771"
+    }
+   ]
   },
   {
    "event_id": "6eac3cb1-0171-4f17-9a56-8e1c1d081d76",
@@ -1914,7 +2328,14 @@
     "electrical"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06022026-1769"
+    }
+   ]
   },
   {
    "event_id": "bdc62911-116f-4ad2-b356-2aff11c90c3c",
@@ -1943,7 +2364,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "7aedba2b-d786-403e-a483-5835d7cfc65e",
@@ -1972,7 +2400,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "88f28ddf-ba55-4083-b0fa-b0edc0683431",
@@ -2001,7 +2436,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "35862f91-5fec-4aaf-9d56-aae6a5a2ca0d",
@@ -2030,7 +2472,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "e6f31856-7288-4db1-bb5b-6ab7ff5ea417",
@@ -2059,7 +2508,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "4845de4e-252f-4e15-850b-e0881f35f8bf",
@@ -2088,7 +2544,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05282026-1766"
+    }
+   ]
   },
   {
    "event_id": "09b2164a-bcb6-4b75-a43c-1056ea4d36db",
@@ -2117,7 +2580,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ]
   },
   {
    "event_id": "72ed0307-e4f7-420e-8787-fb3ae10fa96d",
@@ -2146,7 +2616,14 @@
    "next_date": "2026-06-09",
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ]
   },
   {
    "event_id": "ef29ab99-5ae5-43fd-b7e5-7aea1b9cc1e2",
@@ -2175,7 +2652,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ]
   },
   {
    "event_id": "7ab683be-8563-4abe-8545-451c28ed34ef",
@@ -2208,7 +2692,14 @@
     "landscaping"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05262026-1761"
+    }
+   ]
   },
   {
    "event_id": "bac88e00-4587-437f-b4c7-c59fb054cb68",
@@ -2242,7 +2733,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+    }
+   ]
   },
   {
    "event_id": "51a7e200-4bb6-47d4-955c-4088e975a347",
@@ -2276,65 +2774,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
-  },
-  {
-   "event_id": "1d08514d-0f99-4352-80f5-d8b89aa0df40",
-   "date": "2026-05-14",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "residential_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "86 Elliott Street, Danvers, MA",
-   "applicant": "Majlinda Vaka",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 86 Elliott Street (DEP File No. 14-1450), submitted by Majlinda Vaka. No project scope, description, or unit count is provided in the agenda.",
-   "story_id": "461257d8-e94a-4cee-b50e-ac9c7065c2f7",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "93c50228-5728-4746-84f2-a1feb5e29bba",
-   "date": "2026-05-14",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "other_notable",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "86 Elliott Street, Danvers, MA",
-   "applicant": null,
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Enforcement Order hearing before the Danvers Conservation Commission concerning 86 Elliott Street, owned by Majlinda Vaka. No details on the nature or extent of the alleged violation are provided in the agenda.",
-   "story_id": "461257d8-e94a-4cee-b50e-ac9c7065c2f7",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
-   "source_page": 1,
-   "confidence": 0.75,
-   "owner": "Majlinda Vaka",
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05192026-1751"
+    }
+   ]
   },
   {
    "event_id": "023dfbbd-aad3-4d74-9eaf-d67272017d07",
@@ -2363,65 +2810,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "acda978c-6961-407b-934b-8deb322b8d22",
-   "date": "2026-05-14",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "commercial_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "13 Popes Lane, Danvers, MA",
-   "applicant": "Forest River Realty",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 13 Popes Lane (DEP File No. 14-1451), submitted by Forest River Realty. No project scope, unit count, or description is provided in the agenda.",
-   "story_id": "8c484d74-49eb-4f3b-ab7e-c91fe75c8f4f",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "d45b43b2-319b-451c-bfc3-940bbade0003",
-   "date": "2026-05-14",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "commercial_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "54 Cherry Hill Drive, Danvers, MA",
-   "applicant": "Abiomed, Inc.",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed with the Danvers Conservation Commission for work at 54 Cherry Hill Drive (DEP File No. 14-1452), submitted by Abiomed, Inc. No project scope or description is provided in the agenda.",
-   "story_id": "2d625b9c-791a-48bf-8fe0-0e3b311f7e52",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    }
+   ]
   },
   {
    "event_id": "f623a42e-fd53-4fc5-9db6-b018ba8ba06a",
@@ -2460,7 +2856,22 @@
     "stormwater_septic"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    }
+   ]
   },
   {
    "event_id": "9cf8d92d-cc53-45fa-9abb-e23f51e1943c",
@@ -2502,7 +2913,18 @@
     "stormwater_septic"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    }
+   ]
   },
   {
    "event_id": "1b41fee1-ed2d-4f2e-ac2f-ace9bbac0af6",
@@ -2537,7 +2959,18 @@
    "next_date": "2026-05-28",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05142026-1747"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05142026-1747"
+    }
+   ]
   },
   {
    "event_id": "376c80e3-3df1-4799-837d-d2616053b421",
@@ -2569,7 +3002,14 @@
     "landscaping"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+    }
+   ]
   },
   {
    "event_id": "d6bc8574-aaff-46d0-a5bc-797e06890508",
@@ -2601,7 +3041,14 @@
     "landscaping"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05122026-1744"
+    }
+   ]
   },
   {
    "event_id": "5d5ceb9c-7b99-4ad7-a783-22c2064a3602",
@@ -2630,7 +3077,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+    }
+   ]
   },
   {
    "event_id": "b46159b2-8e0b-48a1-b230-f5efc9239b3a",
@@ -2659,7 +3113,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "rental"
+   "tenure": "rental",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_05112026-1742"
+    }
+   ]
   },
   {
    "event_id": "167ee046-5e57-4155-8a69-2ce4ca3b3932",
@@ -2699,7 +3160,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ]
   },
   {
    "event_id": "2eb0037f-2ce7-419a-a46b-065598aa5c7d",
@@ -2731,7 +3199,14 @@
     "electrical"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ]
   },
   {
    "event_id": "c6ba2bbd-353a-432a-b7bd-d5cfd8c8887e",
@@ -2760,7 +3235,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ]
   },
   {
    "event_id": "fdd0f7f9-6331-4e29-b0ef-62e6adc0732b",
@@ -2789,7 +3271,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ]
   },
   {
    "event_id": "71144adf-2d5e-4023-aaae-4382585ec987",
@@ -2818,7 +3307,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_05072026-1741"
+    }
+   ]
   },
   {
    "event_id": "b777c0ce-421c-4186-96a4-1e8cf6cc2329",
@@ -2852,65 +3348,14 @@
     "framing_carpentry"
    ],
    "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "b244a814-67c3-471d-ac80-b6eda5613312",
-   "date": "2026-04-23",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "residential_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "86 Elliott Street, Danvers, MA",
-   "applicant": "Majlinda Vaka",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed by Majlinda Vaka at 86 Elliott Street, assigned DEP File No. 14-1450, scheduled before the Conservation Commission on April 23, 2026. Scope of work is not described in the agenda.",
-   "story_id": "461257d8-e94a-4cee-b50e-ac9c7065c2f7",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "7f170a87-4b58-43e8-977e-99948e65200f",
-   "date": "2026-04-23",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "other_notable",
-   "stage": "informational",
-   "project_name": null,
-   "address": "35 Doty Avenue, Danvers, MA",
-   "applicant": "Edward Doherty",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Conservation Commission check-in on an existing Enforcement Order at 35 Doty Avenue (DEP #14-0883) involving Edward Doherty. No details on the nature of the violation or required remediation are provided in the agenda.",
-   "story_id": "4bf3180e-fb7c-4561-8714-946a3ba98d19",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723",
-   "source_page": 1,
-   "confidence": 0.35,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04282026-1730"
+    }
+   ]
   },
   {
    "event_id": "d0d61cc3-93b7-44c9-b48f-32c8673fca6d",
@@ -2939,7 +3384,18 @@
    "next_date": "2026-05-14",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+    }
+   ]
   },
   {
    "event_id": "78fb6504-41d4-424c-a646-53f0371da279",
@@ -2974,7 +3430,18 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04232026-1723"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04232026-1723"
+    }
+   ]
   },
   {
    "event_id": "1cadce29-d4f5-4b49-88d0-8d58da3fb26c",
@@ -3003,7 +3470,18 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+    }
+   ]
   },
   {
    "event_id": "3ab62399-30a0-4607-a56b-a4f6af13f538",
@@ -3032,65 +3510,18 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "cb53a96a-7492-4883-bf68-6b95a9ddbc86",
-   "date": "2026-04-13",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Zoning Board of Appeals",
-   "event_type": "residential_project",
-   "stage": "continued",
-   "project_name": "41 Hobart Street Two-Unit Conversion",
-   "address": "41 Hobart Street, Danvers, MA",
-   "applicant": null,
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": 2,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Check-in on a continued Special Permit application (case 24-5085) under Section 30.2.D to convert an existing circa-1900 single-family home into two dwelling units. No scope detail or outcome is provided in this agenda item.",
-   "story_id": "a68100c7-a5c0-4b3f-a372-68d22316e9b7",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
-   "source_page": 1,
-   "confidence": 0.75,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "90e64d00-5a2a-4ce9-83b3-515ab15a4121",
-   "date": "2026-04-13",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Zoning Board of Appeals",
-   "event_type": "variance_special_permit",
-   "stage": "hearing",
-   "project_name": "20 Water Street Non-Conforming Use Substitution",
-   "address": "20 Water Street, Danvers, MA",
-   "applicant": "20 Water LLC (Chris Blasczak, Manager)",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "20 Water LLC seeks a Finding under Section 3.10 of the Zoning Bylaw to substitute a pre-existing non-conforming restaurant use with a recording studio at this R-1 parcel (Map 059, Lot 131). No footprint changes are proposed.",
-   "story_id": "dbafd3e6-083f-4b0f-86da-a98cfb239025",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718",
-   "source_page": 1,
-   "confidence": 0.85,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": "unknown",
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04132026-1718"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04132026-1718"
+    }
+   ]
   },
   {
    "event_id": "c5e5460a-530b-49a6-b5f5-2b16f9b4fec5",
@@ -3126,7 +3557,14 @@
     "paving_asphalt"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "46f026c0-4861-480b-a4d0-d9e40acfc631",
@@ -3160,7 +3598,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "b2d42096-457c-4d14-9a1e-272bf8c83117",
@@ -3189,7 +3634,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "a0ababdd-d916-49fe-848c-5e293f747867",
@@ -3220,7 +3672,14 @@
     "landscaping"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "f32347e0-52ca-4f46-9ced-ed7850ae0d9b",
@@ -3252,7 +3711,14 @@
     "utilities"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "41e8b357-d0fd-4f98-9037-07dce4a8c392",
@@ -3284,7 +3750,14 @@
     "stormwater_septic"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "68bae6a4-b9ab-4d84-8b78-8c0318194914",
@@ -3315,7 +3788,14 @@
     "utilities"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "78525c4d-ec78-436a-9703-a609274e65b3",
@@ -3344,7 +3824,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "7c47ec4f-4e6e-4f7a-bd4b-670c496a0278",
@@ -3375,7 +3862,14 @@
     "stormwater_septic"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "44186e3d-44f6-4613-894e-bad4e52f9b98",
@@ -3408,7 +3902,14 @@
     "plumbing"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "b9f65e35-06b9-410b-aec5-bc85fc2a0cf2",
@@ -3437,7 +3938,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "e3d55865-06ca-491d-95f7-0ac637af7337",
@@ -3466,7 +3974,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "0107c2a5-60d0-4cbc-a619-db2d05aac158",
@@ -3495,94 +4010,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "3e668302-2f7e-45b2-adce-61c8e192eb76",
-   "date": "2026-04-09",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "residential_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "96-98 Newbury Street, Danvers, MA",
-   "applicant": "Steven Tedesco, Temar Properties, LLC",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed under DEP File No. 14-1449 for work at 96-98 Newbury Street. Applicant is Temar Properties, LLC; project scope and nature of wetlands work are not described in the agenda.",
-   "story_id": "d85dfc77-8120-4ff1-b24d-02de893e831c",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "37bd991a-332a-4932-9992-05b9ca67817e",
-   "date": "2026-04-09",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "commercial_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "54 Cherry Hill Drive, Danvers, MA",
-   "applicant": "Abiomed",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Request for Determination of Applicability filed under DCC File No. 2026-01 for work at 54 Cherry Hill Drive. Applicant is Abiomed; project scope and nature of wetlands work are not described in the agenda.",
-   "story_id": "2d625b9c-791a-48bf-8fe0-0e3b311f7e52",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "40c821d3-f535-4a2d-81e0-91b05f5f441a",
-   "date": "2026-04-09",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "residential_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "86 Elliott Street, Danvers, MA",
-   "applicant": "Majlinda Vaka",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed under DEP File No. 14-1450 for work at 86 Elliott Street. Applicant is an individual; project scope and nature of wetlands work are not described in the agenda.",
-   "story_id": "461257d8-e94a-4cee-b50e-ac9c7065c2f7",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1714"
+    }
+   ]
   },
   {
    "event_id": "63532bfd-d0e3-4bb8-b1be-0d26b8756fde",
@@ -3623,7 +4058,18 @@
     "plumbing"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+    }
+   ]
   },
   {
    "event_id": "a9b16546-af1c-459a-bdc9-81f164b49c1e",
@@ -3667,7 +4113,18 @@
     "stormwater_septic"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+    }
+   ]
   },
   {
    "event_id": "2cf98fe0-6c1d-467d-aa15-6f0e7b95a69b",
@@ -3699,7 +4156,18 @@
     "concrete_foundation"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04092026-1716"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04092026-1716"
+    }
+   ]
   },
   {
    "event_id": "8f2fef72-1f03-472d-982b-3c7efe30a8c8",
@@ -3728,7 +4196,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "154fecb3-22c9-4a99-928b-ea5b8fd3f1a5",
@@ -3757,7 +4232,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "8da72294-eea4-47bd-9244-ceae3eec6592",
@@ -3786,7 +4268,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "9f137921-aa2c-450b-803b-15678ba86b29",
@@ -3815,7 +4304,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "afc798a4-4233-4a32-a849-419fca7cc316",
@@ -3850,7 +4346,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "4f8b65e2-b6b2-49c1-945b-fdd52e848974",
@@ -3879,7 +4382,14 @@
    "next_date": "2026-05-18",
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_04072026-1713"
+    }
+   ]
   },
   {
    "event_id": "6743a7e0-d1ca-4450-b094-5518935ebb55",
@@ -3908,7 +4418,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ]
   },
   {
    "event_id": "1d5b314c-e811-42cc-808a-9e5e02ca37bd",
@@ -3937,7 +4454,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ]
   },
   {
    "event_id": "294bd863-433c-4760-9b61-a5a6eb50871c",
@@ -3968,7 +4492,14 @@
     "site_excavation"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_04062026-1715"
+    }
+   ]
   },
   {
    "event_id": "80ce602c-fc32-42ae-a40e-07857f4920c6",
@@ -4008,7 +4539,18 @@
     "paving_asphalt"
    ],
    "is_public_work": false,
-   "tenure": "unknown"
+   "tenure": "unknown",
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+    }
+   ]
   },
   {
    "event_id": "e79481ff-2e74-4e97-8743-9742132916a1",
@@ -4055,7 +4597,18 @@
     "stormwater_septic"
    ],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+    }
+   ]
   },
   {
    "event_id": "fcd6ed54-bf27-4086-98c8-71c912caba58",
@@ -4093,94 +4646,18 @@
     "landscaping"
    ],
    "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "878d5577-5039-45d1-b98d-76cf096c1782",
-   "date": "2026-03-26",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "residential_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "96-98 Newbury Street, Danvers, MA",
-   "applicant": "Steven Tedesco, Temar Properties, LLC",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Notice of Intent filed by Temar Properties, LLC for work at 96-98 Newbury Street under the Massachusetts Wetlands Protection Act (DEP File No. 14-1449). No project scope or scale is described in the agenda.",
-   "story_id": "d85dfc77-8120-4ff1-b24d-02de893e831c",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": "unknown"
-  },
-  {
-   "event_id": "1e00ed56-52f9-423f-a482-ad40225483b6",
-   "date": "2026-03-26",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "commercial_project",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "54 Cherry Hill Drive, Danvers, MA",
-   "applicant": "Abiomed",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Request for Determination of Applicability filed by Abiomed for work at 54 Cherry Hill Drive (DCC File No. 2026-01). No project scope or scale is described in the agenda.",
-   "story_id": "2d625b9c-791a-48bf-8fe0-0e3b311f7e52",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "0ec8c090-66e5-4aae-a234-2c0ccabdebea",
-   "date": "2026-03-26",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Conservation Commission",
-   "event_type": "other_notable",
-   "stage": "hearing",
-   "project_name": null,
-   "address": "65 Summer Street, Danvers, MA",
-   "applicant": "St. John Preparatory School",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Request for Determination of Applicability filed by St. John Preparatory School for work at 65 Summer Street (DCC File No. 2026-02). No project scope or scale is described in the agenda.",
-   "story_id": "018345e8-c8bb-4968-bba2-cc7f73c55e35",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711",
-   "source_page": 1,
-   "confidence": 0.4,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03262026-1711"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03262026-1711"
+    }
+   ]
   },
   {
    "event_id": "e5feb3c0-4a41-4fb6-addc-d7d344b087bf",
@@ -4225,7 +4702,18 @@
    "next_date": "2026-04-06",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+    }
+   ]
   },
   {
    "event_id": "cb0e257d-b98c-4988-816a-572c86abce34",
@@ -4254,7 +4742,18 @@
    "next_date": "2026-04-06",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706"
+    }
+   ]
   },
   {
    "event_id": "49277a11-bb74-496d-8fa8-e94ad2d96997",
@@ -4283,65 +4782,14 @@
    "next_date": "2026-04-06",
    "trades": [],
    "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "2dcc9165-84d5-4da2-a3c9-411b75a643b6",
-   "date": "2026-03-24",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Planning Board",
-   "event_type": "zoning_amendment",
-   "stage": "hearing",
-   "project_name": "249 Andover Street Rezoning – R-3 to Highway Corridor Zone",
-   "address": "249 Andover Street, Danvers, MA (Map 047, Parcel 015A)",
-   "applicant": "Bay State RE Holdings, LLC",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Public hearing on a citizen's petition to rezone 249 Andover Street (Map 047, Parcel 015A) from Residential III (R-3) to the Highway Corridor Zone (HCZ). The petition was filed by Dana R. McNamee as Manager of Bay State RE Holdings, LLC, the site property owner. No development plans or project details are described in the agenda.",
-   "story_id": "f2934f89-9e22-40cb-9b97-fd393fb39dc6",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
-   "source_page": 1,
-   "confidence": 0.9,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
-  },
-  {
-   "event_id": "7d4c18d5-8a9b-4164-80f9-da8fe7a11c0c",
-   "date": "2026-03-24",
-   "town_id": "danvers_ma",
-   "town": "Danvers",
-   "place_fips": "2500916250",
-   "board": "Planning Board",
-   "event_type": "zoning_amendment",
-   "stage": "hearing",
-   "project_name": "Zoning Bylaw Amendment – Commercial Kennel/Boarding/Training Use in Residential Districts",
-   "address": null,
-   "applicant": "Melissa Nardone",
-   "applicant_reps": null,
-   "job_contact": null,
-   "contacts_enriched": null,
-   "residential_units": null,
-   "commercial_sqft": null,
-   "dollar_value": null,
-   "summary": "Public hearing on a citizen's petition to amend the Danvers Zoning Bylaw Table of Allowable Uses, converting commercial kennel, boarding, and training facilities from a prohibited use to a use allowable by Special Permit from the ZBA in R-1, R-2, and R-3 residential zoning districts. This is a town-wide bylaw text amendment with no specific property identified.",
-   "story_id": "1f5c1b69-1e1d-4e53-98af-e603bece13e1",
-   "source_url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03242026-1706",
-   "source_page": 1,
-   "confidence": 0.9,
-   "owner": null,
-   "next_date": null,
-   "trades": [],
-   "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03242026-1706"
+    }
+   ]
   },
   {
    "event_id": "1f3bf2e8-9f9e-4916-ac8b-dc902bae866d",
@@ -4375,7 +4823,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_03172026-1698"
+    }
+   ]
   },
   {
    "event_id": "9f3be615-2a70-4831-a949-6b211c4ab1b7",
@@ -4407,7 +4862,14 @@
     "site_excavation"
    ],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+    }
+   ]
   },
   {
    "event_id": "d350edc3-3e23-4931-9a42-39f2eb3ed0c5",
@@ -4441,7 +4903,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+    }
+   ]
   },
   {
    "event_id": "10bbd18e-5a01-410a-bdc9-76765241cc40",
@@ -4470,7 +4939,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+    }
+   ]
   },
   {
    "event_id": "7ca9260c-2428-4b27-b0c2-13144b854190",
@@ -4499,7 +4975,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": false,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Minutes/_03172026-1698"
+    }
+   ]
   }
  ],
  "upcoming": [
@@ -4536,7 +5019,14 @@
    "next_date": null,
    "trades": [],
    "is_public_work": true,
-   "tenure": null
+   "tenure": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.danversma.gov/AgendaCenter/ViewFile/Agenda/_06172026-1780"
+    }
+   ]
   }
  ]
 }

@@ -58,12 +58,24 @@ def main():
         })
 
     rows = conn.execute(
-        "SELECT e.*, d.source_url FROM events e JOIN documents d ON d.doc_id = e.doc_id "
+        "SELECT e.*, d.source_url, d.doc_type FROM events e JOIN documents d ON d.doc_id = e.doc_id "
         "WHERE e.review_status IN ('auto_approved','human_approved') "
         "ORDER BY e.meeting_date DESC, e.created_at DESC").fetchall()
 
+    # Agenda echoes merged in the link stage carry superseded_by -> their minutes
+    # twin. They leave the feed; the surviving event carries both source links.
+    children = {}
+    for r in rows:
+        if r["superseded_by"]:
+            children.setdefault(r["superseded_by"], []).append(r)
+
     events = []
     for e in rows:
+        if e["superseded_by"]:
+            continue  # merged into its minutes twin
+        sources = [{"kind": e["doc_type"], "url": e["source_url"]}]
+        for child in children.get(e["event_id"], []):
+            sources.append({"kind": child["doc_type"], "url": child["source_url"]})
         t = towns.get(e["town_id"], {})
         events.append({
             "event_id": e["event_id"],
@@ -93,6 +105,8 @@ def main():
             "trades": _j(e["trades"]) or [],
             "is_public_work": bool(e["is_public_work"]),
             "tenure": e["tenure"],
+            "source_kind": e["doc_type"],
+            "sources": sources,
         })
 
     stories = []
@@ -116,7 +130,7 @@ def main():
             "events": [{"event_id": ev["event_id"], "date": ev["date"],
                         "board": ev["board"], "event_type": ev["event_type"],
                         "stage": ev["stage"], "summary": ev["summary"],
-                        "source_url": ev["source_url"]}
+                        "source_url": ev["source_url"], "sources": ev["sources"]}
                        for ev in sorted(member_events, key=lambda x: x["date"] or "")],
         })
 

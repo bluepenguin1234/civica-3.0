@@ -151,6 +151,25 @@ def main():
     else:
         print("  [ -- ] no 'continued to' events to check next_date coverage against")
 
+    print("\n=== AGENDA/MINUTES MERGE (Step 2) ===")
+    doc_type = {d["doc_id"]: d["doc_type"] for d in docs.values()}
+    published = [e for e in live if e["review_status"] in ("auto_approved", "human_approved")
+                 and not e["superseded_by"]]
+    kinds_by_key = {}
+    for e in published:
+        dt_ = doc_type.get(e["doc_id"])
+        if dt_ in ("agenda", "minutes"):
+            kinds_by_key.setdefault((e["story_id"], e["board_id"], e["meeting_date"]), set()).add(dt_)
+    twins = [k for k, v in kinds_by_key.items() if {"agenda", "minutes"} <= v]
+    check(not twins,
+          f"no published event keeps a published agenda/minutes twin "
+          f"(same story+board+date) ({len(twins)} unmerged pair(s))")
+    all_ids = {e["event_id"] for e in events}
+    orphan_sup = [e["event_id"] for e in events
+                  if e["superseded_by"] and e["superseded_by"] not in all_ids]
+    check(not orphan_sup,
+          f"every superseded_by points at a real event ({len(orphan_sup)} orphan)")
+
     print("\n=== STORIES ===")
     stories = conn.execute("SELECT * FROM project_stories").fetchall()
     story_ids = {s["story_id"] for s in stories}
