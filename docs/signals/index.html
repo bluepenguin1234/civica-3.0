@@ -38,13 +38,20 @@
 .view-tabs button{ font:inherit; font-size:13.5px; font-weight:600; color:var(--muted); background:none;
   border:0; border-bottom:2.5px solid transparent; padding:0 10px; min-height:40px; cursor:pointer; }
 .view-tabs button[aria-selected="true"]{ color:var(--primary-strong); border-bottom-color:var(--primary-strong); font-weight:700; }
-.filters-btn{ margin-left:auto; font:inherit; font-size:13px; font-weight:600; color:var(--muted);
+.filters-btn{ font:inherit; font-size:13px; font-weight:600; color:var(--muted);
   background:var(--surface); border:1px solid var(--border); border-radius:var(--r-pill); padding:0 14px; min-height:40px; cursor:pointer; }
+/* Only the first right-side button carries the auto margin so Trades + Filters group at the edge. */
+#chipsBtn{ margin-left:auto; }
 .filters-btn[aria-expanded="true"]{ color:var(--primary-strong); border-color:var(--primary); }
 .chiprow{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
 .chip{ font:inherit; font-size:12.5px; font-weight:600; color:var(--muted); background:var(--surface); border:1px solid var(--border);
   border-radius:var(--r-pill); padding:0 13px; min-height:40px; display:inline-flex; align-items:center; cursor:pointer; }
 .chip[aria-pressed="true"]{ color:#fff; background:var(--primary-strong); border-color:var(--primary-strong); }
+/* Trades/housing dropdown panel (collapsed by default) */
+.chip-dropdown{ margin-top:10px; padding:12px 14px; background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r); box-shadow:var(--shadow); max-height:240px; overflow:auto; }
+.chip-dropdown[hidden]{ display:none; }
+.filters-btn.has-sel{ color:var(--primary-strong); border-color:var(--primary); }
 
 /* ── Hidden filters panel ── */
 .filters-panel{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 0 4px; }
@@ -123,7 +130,7 @@
 @media(max-width:680px){
   .hero-band h1{ font-size:22px; }
   .scard{ padding:13px 14px; }
-  .filters-btn{ margin-left:0; }
+  #chipsBtn{ margin-left:0; }
 }
 </style>
 </head>
@@ -164,9 +171,10 @@
       </div>
       <span class="mode-hint" id="modeHint" hidden>Pick your view — we’ll remember it.</span>
       <div class="view-tabs" id="viewTabs" role="tablist" aria-label="Views"></div>
+      <button class="filters-btn" id="chipsBtn" type="button" aria-expanded="false" aria-controls="chipRow">Trades</button>
       <button class="filters-btn" id="filtersBtn" type="button" aria-expanded="false" aria-controls="filtersPanel">Filters</button>
     </div>
-    <div class="chiprow" id="chipRow"></div>
+    <div class="chiprow chip-dropdown" id="chipRow" role="group" aria-label="Trade filters" hidden></div>
     <div class="filters-panel" id="filtersPanel" hidden>
       <input type="search" id="qInput" placeholder="Search projects, names, addresses…" aria-label="Search">
       <label>Stage <select id="stageSel"><option value="">all</option></select></label>
@@ -195,6 +203,6 @@
   </footer>
 </main>
 
-<script src="signals.js?v=10"></script>
+<script src="signals.js?v=11"></script>
 </body>
 </html>

@@ -56,7 +56,8 @@ const HOUSING_CATS = {  // realtor chip row (client-side view filters, not facts
   zoning: "Zoning changes",
 };
 const VIEWS = {
-  contractor: [["open", "Open jobs"], ["coming", "Coming up"], ["all", "Everything"]],
+  contractor: [["open", "Open jobs"], ["coming", "Coming up"],
+               ["commbuys", "COMMBUYS"], ["permits", "Permits"], ["all", "Everything"]],
   realtor: [["new", "New housing"], ["works", "In the works"], ["all", "Everything"]],
 };
 const ROLE_LABELS = {  // event_entities.role (Step 7)
@@ -415,8 +416,32 @@ function renderEverything() {  // the chronological audit feed (unchanged shape)
   return html;
 }
 
+function renderBids() {  // dedicated COMMBUYS / bids tab — quick access to every bid
+  const evs = visibleEvents().filter((e) => e.event_type === "bid_rfp");
+  const today = todayISO();
+  const open = evs.filter((e) => e.next_date && e.next_date >= today)
+    .sort((a, b) => a.next_date.localeCompare(b.next_date));
+  const closed = evs.filter((e) => !(e.next_date && e.next_date >= today))
+    .sort((a, b) => (b.next_date || b.date || "").localeCompare(a.next_date || a.date || ""));
+  let html = sectionH("Open bids — soonest due first", open.length);
+  html += open.length ? open.map((e) => eventCard(e, { duePill: true })).join("")
+    : emptyCard("No open bids match these filters. COMMBUYS bids appear the moment a registry town posts one.");
+  if (closed.length)
+    html += sectionH("Recently closed", closed.length) + closed.map((e) => eventCard(e)).join("");
+  return html;
+}
+function renderPermits() {  // dedicated permits tab — recently issued, newest first
+  const evs = visibleEvents().filter((e) => e.event_type === "permit_issued")
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  if (!evs.length)
+    return sectionH("Building permits", 0)
+      + emptyCard("No issued permits match these filters. Permits come from open-data cities (e.g. Boston).");
+  return sectionH("Recently issued permits — newest first", evs.length)
+    + evs.map((e) => eventCard(e)).join("");
+}
+
 const RENDERERS = {
-  open: renderOpenJobs, coming: renderComingUp,
+  open: renderOpenJobs, coming: renderComingUp, commbuys: renderBids, permits: renderPermits,
   new: renderNewHousing, works: renderInTheWorks, all: renderEverything,
 };
 
@@ -572,7 +597,16 @@ function buildTabs() {
     `<button type="button" role="tab" data-view="${key}"
        aria-selected="${STATE.view === key}">${esc(label)}</button>`).join("");
 }
-function buildChips() {
+function updateChipsButton() {  // label + active-count on the dropdown trigger
+  const mode = STATE.mode || "contractor";
+  const sel = (mode === "realtor" ? STATE.types : STATE.trades).length;
+  const label = mode === "realtor" ? "Housing" : "Trades";
+  const btn = $("chipsBtn");
+  btn.textContent = sel ? `${label} (${sel})` : label;
+  btn.classList.toggle("has-sel", sel > 0);
+  $("chipRow").setAttribute("aria-label", `${label} filters`);
+}
+function buildChips() {  // fills the (collapsed) dropdown panel
   const mode = STATE.mode || "contractor";
   let html = "";
   if (mode === "realtor") {
@@ -587,6 +621,11 @@ function buildChips() {
          aria-pressed="${STATE.trades.includes(t)}">${esc(TRADE_LABELS[t] || t)}</button>`).join("");
   }
   $("chipRow").innerHTML = html;
+  updateChipsButton();
+}
+function closeChipDropdown() {
+  $("chipRow").hidden = true;
+  $("chipsBtn").setAttribute("aria-expanded", "false");
 }
 function syncModeButtons() {
   document.querySelectorAll(".mode-switch button").forEach((b) =>
@@ -598,6 +637,7 @@ function setMode(mode) {
   localStorage.setItem(MODE_KEY, mode);
   STATE.view = VIEWS[mode][0][0];
   writeState(STATE);
+  closeChipDropdown();
   syncModeButtons(); buildTabs(); buildChips(); renderFeed();
 }
 function buildControls() {
@@ -619,7 +659,26 @@ function buildControls() {
     const list = STATE.mode === "realtor" ? STATE.types : STATE.trades;
     const i = list.indexOf(key);
     i >= 0 ? list.splice(i, 1) : list.push(key);
-    writeState(STATE); buildChips(); renderFeed();
+    b.setAttribute("aria-pressed", String(i < 0));  // toggle in place — keep focus/scroll
+    updateChipsButton();
+    writeState(STATE); renderFeed();
+  });
+  $("chipsBtn").addEventListener("click", () => {
+    const panel = $("chipRow");
+    panel.hidden = !panel.hidden;
+    $("chipsBtn").setAttribute("aria-expanded", String(!panel.hidden));
+  });
+  document.addEventListener("click", (e) => {  // click-away closes the trades dropdown
+    if (!$("chipRow").hidden &&
+        !e.target.closest("#chipRow") && !e.target.closest("#chipsBtn")) {
+      closeChipDropdown();
+    }
+  });
+  document.addEventListener("keydown", (e) => {  // Esc closes it (keyboard parity), focus returns to the trigger
+    if (e.key === "Escape" && !$("chipRow").hidden) {
+      closeChipDropdown();
+      $("chipsBtn").focus();
+    }
   });
   $("filtersBtn").addEventListener("click", () => {
     const panel = $("filtersPanel");
