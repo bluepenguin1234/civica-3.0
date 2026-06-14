@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T16:18:54",
+ "generated_at": "2026-06-13T20:42:42",
  "coverage": [
   {
    "town_id": "marblehead_ma",
@@ -35,7 +35,7 @@
      ]
     },
     {
-     "entity_id": "0173cb6dce5f34ec",
+     "entity_id": "9aaf7be5ac57a15c",
      "name": "Town of Marblehead – Department of Public Works",
      "kind": "public_office",
      "roles": [
@@ -60,6 +60,424 @@
        "kind": "bid",
        "url": "https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-26-1293-MAR14-MAR14-130407&external=true&parentUrl=close",
        "label": "COMMBUYS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "f4117814-985e-4696-b56c-43a31ed0f3e6",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Broughton Road Multi-Family Development – Winn Development Pre-Application",
+   "address": "Broughton Road, Marblehead, MA",
+   "current_stage": "informational",
+   "total_units": null,
+   "first_seen": "2026-06-15",
+   "last_activity": "2026-06-15",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "651063197ac61864",
+     "name": "Winn Development",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "42d18c8b72e682c0",
+     "name": "Marblehead Housing Authority",
+     "kind": "public_office",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "2b51b73c-d58c-4d53-9227-1018cde8de67",
+     "date": "2026-06-15",
+     "board": "Town Planning Board",
+     "event_type": "residential_project",
+     "stage": "informational",
+     "summary": "Winn Development has filed a Pre-Application proposing a residential multi-family development on Broughton Road on land associated with the Marblehead Housing Authority; the Planning Board will conduct an initial review and discussion on June 15, 2026. No unit count, density, or program details are provided in the agenda.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "5dbff121-c624-42f6-9ba2-9dc633483ad7",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Stramski's Pier Temporary Repairs",
+   "address": "Stramski's Pier, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-06-11",
+   "last_activity": "2026-06-11",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "9aaf7be5ac57a15c",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "6e33cd0a-a032-4e1f-b410-a35ee09d244e",
+     "date": "2026-06-11",
+     "board": "Conservation Commission",
+     "event_type": "infrastructure_project",
+     "stage": "hearing",
+     "summary": "The Town of Marblehead (Harbor's & Water department) filed an Emergency Certificate request to complete temporary repairs to the damaged Stramski's Pier. This is a public-owned coastal structure seeking expedited Conservation Commission authorization.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-11-Conservation-Commission-Agenda-AMENDED.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-11-Conservation-Commission-Agenda-AMENDED.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "437fcebf-dd7b-41ef-a47f-c43486add4a6",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "9 Maple Circle, Marblehead, MA",
+   "address": "9 Maple Circle, Marblehead, MA",
+   "current_stage": "continued",
+   "total_units": 2,
+   "first_seen": "2026-03-24",
+   "last_activity": "2026-05-26",
+   "status": "active",
+   "brief": {
+    "what": "Maple Circle Marblehead LLC seeks a Special Permit or Variance from the Zoning Board of Appeals to subdivide 9 Maple Circle in Marblehead's Single Residence District into two lots: Lot 1 retains the existing dwelling with substandard front and side yard setbacks, and Lot 2 would receive a new single-family dwelling with substandard frontage and lot width.",
+    "status": "The application has been continued twice — from January 27 to March 24, then to May 26, 2026 — with no evidence taken at either hearing.",
+    "whats_next": "No next step or hearing date is stated in the record.",
+    "outlook": "Three continuances with no evidence taken suggests the applicant or board is not yet ready to proceed on the merits; momentum appears slow, and further continuances are plausible before substantive review begins.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:40:20"
+   },
+   "contacts": [
+    {
+     "entity_id": "d239adda9b887eef",
+     "name": "Maple Circle Marblehead LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "47c255e9-caa6-4116-a23e-d6830d79755a",
+     "date": "2026-03-24",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Maple Circle Marblehead LLC seeks a special permit or variance to divide 9 Maple Circle into two building lots in the Single Residence District: Lot 1 retains the existing dwelling (substandard front and side yard setbacks) and Lot 2 would receive a new single-family dwelling (substandard frontage and lot width). The matter was continued from January 27, 2026 with no evidence taken.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "d09da1cb-9c95-4531-ae22-c1ab40cb6af5",
+     "date": "2026-05-26",
+     "board": "Zoning Board of Appeals",
+     "event_type": "subdivision",
+     "stage": "continued",
+     "summary": "Maple Circle Marblehead LLC seeks a Special Permit or Variance to divide 9 Maple Circle into two building lots, each with dimensional non-conformities, and to construct a new single-family dwelling on the newly created Lot 2. The application was continued from March 24, 2026 with no evidence yet taken.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "a7f418cd-2c33-447f-ba6f-7e0ed4fb3e35",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "340 Ocean Avenue Teardown-Rebuild",
+   "address": "340 Ocean Avenue, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-05-26",
+   "last_activity": "2026-05-26",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "a49bf30549d925c0",
+     "name": "Nathaniel Walton",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "536343fa-5a27-4c77-890c-508fc5700399",
+     "date": "2026-05-26",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Nathaniel Walton seeks a Special Permit to demolish an existing non-conforming single-family home at 340 Ocean Avenue and replace it with a new 2.5-story single-family residence on the same non-conforming lot in the Expanded Single Residence District. The rebuilt home will not meet lot area requirements and will encroach into the side and rear yard setbacks.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "523d641f-c3b8-4ef4-abe2-aa6b1020217f",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "132 Washington Street Mixed-Use Conversion",
+   "address": "132 Washington Street, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-05-26",
+   "last_activity": "2026-05-26",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "32b6d687a0db4d10",
+     "name": "Stephanie Brocoum",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "b8b02d36-4638-4eed-86b9-7adf5b77ceec",
+     "date": "2026-05-26",
+     "board": "Zoning Board of Appeals",
+     "event_type": "mixed_use_project",
+     "stage": "hearing",
+     "summary": "Stephanie Brocoum seeks Special Permit(s) on court-ordered remand to construct a rear addition to an existing non-conforming two-story commercial building at 132 Washington Street and convert the second floor from office to residential use, creating a mixed-use (commercial and residential) property in the Unrestricted District. The rear addition will encroach on the side yard setback.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "2ea6bd8d-38b9-4974-bd8d-f4c92ce86b4b",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Residential Addition, Deck, and Stormwater Work — 18 May Street",
+   "address": "18 May Street, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-05-14",
+   "last_activity": "2026-05-14",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "2edd625f7154ea47",
+     "name": "Monica, Dale & Oe Onusseit",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "589d13d1a78afd29",
+     "name": "Goddard Consulting",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "87556d04-a203-4175-8e8b-e3d0f2da59ef",
+     "date": "2026-05-14",
+     "board": "Conservation Commission",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "Monica, Dale, and Oe Onusseit are seeking Conservation Commission approval (file 40-1609) for a residential addition, deck with stairs, landscaping, and stormwater mitigation and management at 18 May Street. The project is within or adjacent to a wetland resource area, requiring ConCom review.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "b7f42439-0e5f-414f-b2fc-012414704dd3",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Soil Testing and Remediation at Lighthouse Point — Chandler Hovey Park",
+   "address": "Chandler Hovey Park / Lighthouse Point, Marblehead, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-05-14",
+   "last_activity": "2026-05-14",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "9aaf7be5ac57a15c",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7364c6ad1d8384bb",
+     "name": "United States Coast Guard",
+     "kind": "person",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "5c7f2548-87b1-4519-add4-289293101ca8",
+     "date": "2026-05-14",
+     "board": "Conservation Commission",
+     "event_type": "infrastructure_project",
+     "stage": "hearing",
+     "summary": "The Town of Marblehead is before the Conservation Commission (file 40-1605) for a public hearing on soil testing and environmental remediation at Lighthouse Point within Chandler Hovey Park. The United States Coast Guard is listed as a named party alongside the Town, suggesting federal involvement in or responsibility for the environmental work at this coastal public-park site.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "3be3408c-a72a-48a9-90c6-bba7ae7d4f5c",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "name": "Accessory Dwelling Unit – 6 Broadmere Way",
+   "address": "6 Broadmere Way, Marblehead, MA",
+   "current_stage": "continued",
+   "total_units": null,
+   "first_seen": "2026-05-12",
+   "last_activity": "2026-05-12",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "de7cf81c0d5f31a6",
+     "name": "Richard Spenceley/OTR Realty",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "91802fa1-883a-4e53-ac7b-c4a091a72ee1",
+     "date": "2026-05-12",
+     "board": "Town Planning Board",
+     "event_type": "residential_project",
+     "stage": "continued",
+     "summary": "Accessory dwelling unit application at 6 Broadmere Way, continued from both March 10, 2026 and April 14, 2026 with evidence previously taken. Applicant is Richard Spenceley/OTR Realty; the ADU constitutes a new residential unit.",
+     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-12-Planning-Board-Agenda.pdf",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-12-Planning-Board-Agenda.pdf",
+       "label": "Agenda"
       }
      ]
     }
@@ -267,51 +685,6 @@
    ]
   },
   {
-   "story_id": "437fcebf-dd7b-41ef-a47f-c43486add4a6",
-   "town_id": "marblehead_ma",
-   "town": "Marblehead",
-   "place_fips": "2500938400",
-   "name": "9 Maple Circle, Marblehead, MA",
-   "address": "9 Maple Circle, Marblehead, MA",
-   "current_stage": "continued",
-   "total_units": 2,
-   "first_seen": "2026-03-24",
-   "last_activity": "2026-03-24",
-   "status": "active",
-   "brief": null,
-   "contacts": [
-    {
-     "entity_id": "d239adda9b887eef",
-     "name": "Maple Circle Marblehead LLC",
-     "kind": "firm",
-     "roles": [
-      "developer"
-     ],
-     "sources": [
-      "applicant"
-     ]
-    }
-   ],
-   "events": [
-    {
-     "event_id": "47c255e9-caa6-4116-a23e-d6830d79755a",
-     "date": "2026-03-24",
-     "board": "Zoning Board of Appeals",
-     "event_type": "subdivision",
-     "stage": "continued",
-     "summary": "Maple Circle Marblehead LLC seeks a special permit or variance to divide 9 Maple Circle into two building lots in the Single Residence District: Lot 1 retains the existing dwelling (substandard front and side yard setbacks) and Lot 2 would receive a new single-family dwelling (substandard frontage and lot width). The matter was continued from January 27, 2026 with no evidence taken.",
-     "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
-     "sources": [
-      {
-       "kind": "agenda",
-       "url": "https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-24-Zoning-Board-of-Appeals-Agenda.pdf",
-       "label": "Agenda"
-      }
-     ]
-    }
-   ]
-  },
-  {
    "story_id": "2d418e30-255a-4734-8723-9814de8a2fe3",
    "town_id": "marblehead_ma",
    "town": "Marblehead",
@@ -460,7 +833,7 @@
      ]
     },
     {
-     "entity_id": "0173cb6dce5f34ec",
+     "entity_id": "9aaf7be5ac57a15c",
      "name": "Town of Marblehead – Department of Public Works",
      "kind": "public_office",
      "roles": [
@@ -468,6 +841,464 @@
      ],
      "sources": [
       "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "2b51b73c-d58c-4d53-9227-1018cde8de67",
+   "date": "2026-06-15",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Town Planning Board",
+   "event_type": "residential_project",
+   "stage": "informational",
+   "project_name": "Broughton Road Multi-Family Development – Winn Development Pre-Application",
+   "address": "Broughton Road, Marblehead, MA",
+   "applicant": "Winn Development",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Winn Development has filed a Pre-Application proposing a residential multi-family development on Broughton Road on land associated with the Marblehead Housing Authority; the Planning Board will conduct an initial review and discussion on June 15, 2026. No unit count, density, or program details are provided in the agenda.",
+   "story_id": "f4117814-985e-4696-b56c-43a31ed0f3e6",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": "Marblehead Housing Authority",
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "651063197ac61864",
+     "name": "Winn Development",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "42d18c8b72e682c0",
+     "name": "Marblehead Housing Authority",
+     "kind": "public_office",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6e33cd0a-a032-4e1f-b410-a35ee09d244e",
+   "date": "2026-06-11",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Conservation Commission",
+   "event_type": "infrastructure_project",
+   "stage": "hearing",
+   "project_name": "Stramski's Pier Temporary Repairs",
+   "address": "Stramski's Pier, Marblehead, MA",
+   "applicant": "Town of Marblehead",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead (Harbor's & Water department) filed an Emergency Certificate request to complete temporary repairs to the damaged Stramski's Pier. This is a public-owned coastal structure seeking expedited Conservation Commission authorization.",
+   "story_id": "5dbff121-c624-42f6-9ba2-9dc633483ad7",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-11-Conservation-Commission-Agenda-AMENDED.pdf",
+   "source_page": 2,
+   "confidence": 0.8,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "concrete_foundation",
+    "masonry"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-11-Conservation-Commission-Agenda-AMENDED.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9aaf7be5ac57a15c",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d09da1cb-9c95-4531-ae22-c1ab40cb6af5",
+   "date": "2026-05-26",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "subdivision",
+   "stage": "continued",
+   "project_name": "9 Maple Circle Two-Lot Subdivision",
+   "address": "9 Maple Circle, Marblehead, MA",
+   "applicant": "Maple Circle Marblehead LLC",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Maple Circle Marblehead LLC seeks a Special Permit or Variance to divide 9 Maple Circle into two building lots, each with dimensional non-conformities, and to construct a new single-family dwelling on the newly created Lot 2. The application was continued from March 24, 2026 with no evidence yet taken.",
+   "story_id": "437fcebf-dd7b-41ef-a47f-c43486add4a6",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "ownership",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d239adda9b887eef",
+     "name": "Maple Circle Marblehead LLC",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "536343fa-5a27-4c77-890c-508fc5700399",
+   "date": "2026-05-26",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": "340 Ocean Avenue Teardown-Rebuild",
+   "address": "340 Ocean Avenue, Marblehead, MA",
+   "applicant": "Nathaniel Walton",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Nathaniel Walton seeks a Special Permit to demolish an existing non-conforming single-family home at 340 Ocean Avenue and replace it with a new 2.5-story single-family residence on the same non-conforming lot in the Expanded Single Residence District. The rebuilt home will not meet lot area requirements and will encroach into the side and rear yard setbacks.",
+   "story_id": "a7f418cd-2c33-447f-ba6f-7e0ed4fb3e35",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition"
+   ],
+   "is_public_work": false,
+   "tenure": "ownership",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "a49bf30549d925c0",
+     "name": "Nathaniel Walton",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "b8b02d36-4638-4eed-86b9-7adf5b77ceec",
+   "date": "2026-05-26",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Zoning Board of Appeals",
+   "event_type": "mixed_use_project",
+   "stage": "hearing",
+   "project_name": "132 Washington Street Mixed-Use Conversion",
+   "address": "132 Washington Street, Marblehead, MA",
+   "applicant": "Stephanie Brocoum",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Stephanie Brocoum seeks Special Permit(s) on court-ordered remand to construct a rear addition to an existing non-conforming two-story commercial building at 132 Washington Street and convert the second floor from office to residential use, creating a mixed-use (commercial and residential) property in the Unrestricted District. The rear addition will encroach on the side yard setback.",
+   "story_id": "523d641f-c3b8-4ef4-abe2-aa6b1020217f",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+   "source_page": 2,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-26-Zoning-Board-of-Appeals-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "32b6d687a0db4d10",
+     "name": "Stephanie Brocoum",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "87556d04-a203-4175-8e8b-e3d0f2da59ef",
+   "date": "2026-05-14",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Conservation Commission",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "Residential Addition, Deck, and Stormwater Work — 18 May Street",
+   "address": "18 May Street, Marblehead, MA",
+   "applicant": "Monica, Dale & Oe Onusseit",
+   "applicant_reps": [
+    {
+     "role": "consultant",
+     "name": null,
+     "firm": "Goddard Consulting"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Monica, Dale, and Oe Onusseit are seeking Conservation Commission approval (file 40-1609) for a residential addition, deck with stairs, landscaping, and stormwater mitigation and management at 18 May Street. The project is within or adjacent to a wetland resource area, requiring ConCom review.",
+   "story_id": "2ea6bd8d-38b9-4974-bd8d-f4c92ce86b4b",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+   "source_page": 2,
+   "confidence": 0.8,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "framing_carpentry",
+    "landscaping",
+    "stormwater_septic"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "2edd625f7154ea47",
+     "name": "Monica, Dale & Oe Onusseit",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "589d13d1a78afd29",
+     "name": "Goddard Consulting",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "5c7f2548-87b1-4519-add4-289293101ca8",
+   "date": "2026-05-14",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Conservation Commission",
+   "event_type": "infrastructure_project",
+   "stage": "hearing",
+   "project_name": "Soil Testing and Remediation at Lighthouse Point — Chandler Hovey Park",
+   "address": "Chandler Hovey Park / Lighthouse Point, Marblehead, MA",
+   "applicant": "Town of Marblehead",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Town of Marblehead is before the Conservation Commission (file 40-1605) for a public hearing on soil testing and environmental remediation at Lighthouse Point within Chandler Hovey Park. The United States Coast Guard is listed as a named party alongside the Town, suggesting federal involvement in or responsibility for the environmental work at this coastal public-park site.",
+   "story_id": "b7f42439-0e5f-414f-b2fc-012414704dd3",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+   "source_page": 2,
+   "confidence": 0.8,
+   "owner": "United States Coast Guard",
+   "next_date": null,
+   "trades": [
+    "site_excavation"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-14-Conservation-Commission-AMENDED-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "9aaf7be5ac57a15c",
+     "name": "Town of Marblehead – Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7364c6ad1d8384bb",
+     "name": "United States Coast Guard",
+     "kind": "person",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "91802fa1-883a-4e53-ac7b-c4a091a72ee1",
+   "date": "2026-05-12",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Town Planning Board",
+   "event_type": "residential_project",
+   "stage": "continued",
+   "project_name": "Accessory Dwelling Unit – 6 Broadmere Way",
+   "address": "6 Broadmere Way, Marblehead, MA",
+   "applicant": "Richard Spenceley/OTR Realty",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Accessory dwelling unit application at 6 Broadmere Way, continued from both March 10, 2026 and April 14, 2026 with evidence previously taken. Applicant is Richard Spenceley/OTR Realty; the ADU constitutes a new residential unit.",
+   "story_id": "3be3408c-a72a-48a9-90c6-bba7ae7d4f5c",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-12-Planning-Board-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.78,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/05/2026-05-12-Planning-Board-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "de7cf81c0d5f31a6",
+     "name": "Richard Spenceley/OTR Realty",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
      ]
     }
    ]
@@ -875,6 +1706,25 @@
  ],
  "entities": [
   {
+   "entity_id": "9aaf7be5ac57a15c",
+   "name": "Town of Marblehead – Department of Public Works",
+   "kind": "public_office",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "public_contact"
+   ],
+   "story_ids": [
+    "43de2ffd-37a7-4355-a06f-808bfec11fa8",
+    "5dbff121-c624-42f6-9ba2-9dc633483ad7",
+    "b7f42439-0e5f-414f-b2fc-012414704dd3"
+   ],
+   "n_projects": 3
+  },
+  {
    "entity_id": "ba7a6c02389eae9d",
    "name": "237 Washington Street LLC",
    "kind": "firm",
@@ -923,6 +1773,22 @@
    "n_projects": 1
   },
   {
+   "entity_id": "589d13d1a78afd29",
+   "name": "Goddard Consulting",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "2ea6bd8d-38b9-4974-bd8d-f4c92ce86b4b"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "fc67cc25f8eb5eaa",
    "name": "Jennifer Smith and Richard Katz",
    "kind": "firm",
@@ -951,6 +1817,70 @@
    ],
    "story_ids": [
     "437fcebf-dd7b-41ef-a47f-c43486add4a6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "42d18c8b72e682c0",
+   "name": "Marblehead Housing Authority",
+   "kind": "public_office",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "owner"
+   ],
+   "story_ids": [
+    "f4117814-985e-4696-b56c-43a31ed0f3e6"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "2edd625f7154ea47",
+   "name": "Monica, Dale & Oe Onusseit",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "2ea6bd8d-38b9-4974-bd8d-f4c92ce86b4b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "a49bf30549d925c0",
+   "name": "Nathaniel Walton",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "a7f418cd-2c33-447f-ba6f-7e0ed4fb3e35"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "de7cf81c0d5f31a6",
+   "name": "Richard Spenceley/OTR Realty",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "3be3408c-a72a-48a9-90c6-bba7ae7d4f5c"
    ],
    "n_projects": 1
   },
@@ -987,18 +1917,50 @@
    "n_projects": 1
   },
   {
-   "entity_id": "0173cb6dce5f34ec",
-   "name": "Town of Marblehead – Department of Public Works",
-   "kind": "public_office",
+   "entity_id": "32b6d687a0db4d10",
+   "name": "Stephanie Brocoum",
+   "kind": "person",
    "town_id": "marblehead_ma",
    "town": "Marblehead",
    "place_fips": "2500938400",
    "review_status": "auto_resolved",
    "roles": [
-    "public_contact"
+    "developer"
    ],
    "story_ids": [
-    "43de2ffd-37a7-4355-a06f-808bfec11fa8"
+    "523d641f-c3b8-4ef4-abe2-aa6b1020217f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7364c6ad1d8384bb",
+   "name": "United States Coast Guard",
+   "kind": "person",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "owner"
+   ],
+   "story_ids": [
+    "b7f42439-0e5f-414f-b2fc-012414704dd3"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "651063197ac61864",
+   "name": "Winn Development",
+   "kind": "firm",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "f4117814-985e-4696-b56c-43a31ed0f3e6"
    ],
    "n_projects": 1
   }
@@ -1061,7 +2023,7 @@
      ]
     },
     {
-     "entity_id": "0173cb6dce5f34ec",
+     "entity_id": "9aaf7be5ac57a15c",
      "name": "Town of Marblehead – Department of Public Works",
      "kind": "public_office",
      "roles": [
@@ -1069,6 +2031,68 @@
      ],
      "sources": [
       "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "2b51b73c-d58c-4d53-9227-1018cde8de67",
+   "date": "2026-06-15",
+   "town_id": "marblehead_ma",
+   "town": "Marblehead",
+   "place_fips": "2500938400",
+   "board": "Town Planning Board",
+   "event_type": "residential_project",
+   "stage": "informational",
+   "project_name": "Broughton Road Multi-Family Development – Winn Development Pre-Application",
+   "address": "Broughton Road, Marblehead, MA",
+   "applicant": "Winn Development",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Winn Development has filed a Pre-Application proposing a residential multi-family development on Broughton Road on land associated with the Marblehead Housing Authority; the Planning Board will conduct an initial review and discussion on June 15, 2026. No unit count, density, or program details are provided in the agenda.",
+   "story_id": "f4117814-985e-4696-b56c-43a31ed0f3e6",
+   "source_url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": "Marblehead Housing Authority",
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://marbleheadma.gov/wp-content/uploads/2026/06/2026-06-15-Marblehead-Planning-Board-Agenda.pdf",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "651063197ac61864",
+     "name": "Winn Development",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "42d18c8b72e682c0",
+     "name": "Marblehead Housing Authority",
+     "kind": "public_office",
+     "roles": [
+      "owner"
+     ],
+     "sources": [
+      "owner"
      ]
     }
    ]

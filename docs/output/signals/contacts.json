@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T16:18:54",
+ "generated_at": "2026-06-13T20:42:42",
  "contacts": {
   "26adfe1e27b1e7f7": {
    "linkedin": {
@@ -1557,15 +1557,6 @@
     "kind": "search"
    }
   },
-  "78186b67e9d3f087": {
-   "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Steve+Senna+Salem+MA",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   }
-  },
   "7c36e2c2535a2269": {
    "linkedin": {
     "value": "https://www.linkedin.com/search/results/all/?keywords=Adimir+Toska+Salem+MA",
@@ -1640,7 +1631,7 @@
   },
   "68057ca11b7e2c77": {
    "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Dave+Stockles+Salem+MA",
+    "value": "https://www.linkedin.com/search/results/all/?keywords=David+Stockless+Salem+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -1712,7 +1703,7 @@
   },
   "a6b227d9ee58e07e": {
    "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Christina+Granese+Salem+MA",
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Christina+Mihos+Granese+Salem+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -1740,15 +1731,6 @@
   "5b51a8bc2c149eb6": {
    "linkedin": {
     "value": "https://www.linkedin.com/search/results/all/?keywords=Joseph+C.+Correnti%2C+Esq.+Salem+MA",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   }
-  },
-  "cd97792a6d2c2ed6": {
-   "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Weston+and+Sampson+Salem+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -1794,6 +1776,15 @@
   "e3c8150670494af8": {
    "linkedin": {
     "value": "https://www.linkedin.com/search/results/all/?keywords=David+Veritas+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "d362633b16b0b9e2": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Lisa+Chandler+Beverly+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -1906,22 +1897,6 @@
     "kind": "search"
    }
   },
-  "a45e5c90a89ac550": {
-   "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=KMDG+Salem+MA",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   },
-   "registry": {
-    "value": "https://www.google.com/search?q=%22KMDG%22+site%3Acorp.sec.state.ma.us",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   }
-  },
   "4edf0119b5be6870": {
    "linkedin": {
     "value": "https://www.linkedin.com/search/results/all/?keywords=BlueWave+Salem+MA",
@@ -1956,14 +1931,14 @@
   },
   "647866b59ecc836f": {
    "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Scott+Grover%2C+Esq.+f%2Fb%2Fo+ZXE%2C+LLC+Salem+MA",
+    "value": "https://www.linkedin.com/search/results/all/?keywords=ZXE%2C+LLC+Salem+MA",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
    },
    "registry": {
-    "value": "https://www.google.com/search?q=%22Scott+Grover%2C+Esq.+f%2Fb%2Fo+ZXE%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "value": "https://www.google.com/search?q=%22ZXE%2C+LLC%22+site%3Acorp.sec.state.ma.us",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -2108,22 +2083,6 @@
    },
    "registry": {
     "value": "https://www.google.com/search?q=%22Stonefield+Engineering%22+site%3Acorp.sec.state.ma.us",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   }
-  },
-  "d5abb1c35de24e4b": {
-   "linkedin": {
-    "value": "https://www.linkedin.com/search/results/all/?keywords=Joseph+C.+Correnti%2C+Esq.+f%2Fb%2Fo+AvalonBay+Communities%2C+Inc.+Salem+MA",
-    "source": "constructed_search",
-    "confidence": 1.0,
-    "verified": "2026-06-13",
-    "kind": "search"
-   },
-   "registry": {
-    "value": "https://www.google.com/search?q=%22Joseph+C.+Correnti%2C+Esq.+f%2Fb%2Fo+AvalonBay+Communities%2C+Inc.%22+site%3Acorp.sec.state.ma.us",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",
@@ -2396,6 +2355,638 @@
    },
    "registry": {
     "value": "https://www.google.com/search?q=%22Cellco+Partnership+d%2Fb%2Fa+Verizon+Wireless+and+the+Towers%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "b0ee1b5ba0d67c17": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Kleinfelder+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Kleinfelder%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "7039c39373048b58": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jay+Carroll+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "9ba0026e4d33d92d": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Katy+Olyha+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "b1dcfca7654d688d": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Paul+Caron+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "db467d289aaeeea7": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Steve+Senna+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "b649ef4e7a3c7e5e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Bill+McHugh+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "590fc6f0c4b486e5": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Dan+Turgeon+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "b051e8922ffd4a07": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Kayla+Dorst+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "18ec7eb122bf3901": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Paul+Wright+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "8eff1d634ee7d127": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Todd+Waller+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "6d5559993a263c27": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=David+Wytmar+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "63cd5b4795bcc67d": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jacob+Levine+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "065ae78686123317": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Carol+Babcock+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "27c9a59ab642ec69": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Ryan+Carlucci+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "dd5e61e3d91750c0": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Felicia+Pierce+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "0ab9cf7e68e095f1": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jonathan+Evans+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "805690b2281d610f": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Northshore+CDC+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "3e5f176d8505a2b9": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Steve+Standish+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "255b1bfd7ec38e00": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Will+Granberry+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "6e9a503b447f7ac7": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Daniel+LaCivita+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "8db565218533ed22": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=David+Kucharsky+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "0f9dc05fa0cd903f": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Edward+Bradford+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "940216a6e9a4f37b": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Cassie+Whithouse+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "59df0eec4dcc0eb5": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Weston+and+Sampson+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "9ed44756ed6f03e8": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=House+of+Seven+Gables+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "a478daf0695ba349": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Robert+J.+Willwerth%2C+III+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "4c8c155b5b7c471e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Caitlin+White+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "b7d55fbeb0da1420": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Jon+Ouellette+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "55b723ae0e4dc94f": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Robert+Zarelli+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "d7093973041b7279": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Pamela+Boardway+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "0b909c68881af7bb": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Julianna+Newmeyer+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "3ef3f53a8cbe509b": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Robert+and+Elizabeth+Taylor+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "50c3344b85f63255": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Norse+Environmental+Services+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "a49bf30549d925c0": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Nathaniel+Walton+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "32b6d687a0db4d10": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Stephanie+Brocoum+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "589d13d1a78afd29": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Goddard+Consulting+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "7364c6ad1d8384bb": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=United+States+Coast+Guard+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "9d341d0a2a77564e": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Gary+Kenneth+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "aa1f8fd358ae6141": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=David+Wilkinson+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "7c8c842ef996ddf2": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Sheryl+Birenbaum+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "7a08964a3864c513": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Matthew+Wolverton+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "8fef76a738ab618b": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=KMDG+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22KMDG%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "4d2f7d33191ef779": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Bohler+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Bohler%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "f02d852235e7b4c1": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=AvalonBay+Communities%2C+Inc.+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22AvalonBay+Communities%2C+Inc.%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "c3bef699bfaf3e66": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Hause+Group+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Hause+Group%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "3d91a0607584e3dd": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=2+Bridge%2C+LLC+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%222+Bridge%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "8b1b2e8ef866bc77": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Groundworks+LTD+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Groundworks+LTD%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "e357d866496c49c9": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=MASS+Design+Group+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22MASS+Design+Group%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "9d245e5063327942": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Turnstone+II%2C+LLC+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Turnstone+II%2C+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "d751c772a1429044": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=33+School+Street+LLC+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%2233+School+Street+LLC%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "ffa38fb47d6b1194": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Vanasse+and+Associates+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Vanasse+and+Associates%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "70f502fe69f79a37": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=House+of+the+Seven+Gables+Settlement+Association+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22House+of+the+Seven+Gables+Settlement+Association%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "3e6569b3d4d51f72": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Scott+Grover%2C+Esq.+F%2Fb%2Fo+North+Shore+Community+Development+Corporation+%28NSCDC%29+and+North+Shore+Community+Health+Center+%28NSCHC%29+Salem+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Scott+Grover%2C+Esq.+F%2Fb%2Fo+North+Shore+Community+Development+Corporation+%28NSCDC%29+and+North+Shore+Community+Health+Center+%28NSCHC%29%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "2edd625f7154ea47": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Monica%2C+Dale+%26+Oe+Onusseit+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Monica%2C+Dale+%26+Oe+Onusseit%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "de7cf81c0d5f31a6": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Richard+Spenceley%2FOTR+Realty+Marblehead+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Richard+Spenceley%2FOTR+Realty%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "80a47809ffffa6b4": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Hancock+Associates+Beverly+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Hancock+Associates%22+site%3Acorp.sec.state.ma.us",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   }
+  },
+  "add2395f35c423ef": {
+   "linkedin": {
+    "value": "https://www.linkedin.com/search/results/all/?keywords=Amrep+Swampscott+MA",
+    "source": "constructed_search",
+    "confidence": 1.0,
+    "verified": "2026-06-13",
+    "kind": "search"
+   },
+   "registry": {
+    "value": "https://www.google.com/search?q=%22Amrep%22+site%3Acorp.sec.state.ma.us",
     "source": "constructed_search",
     "confidence": 1.0,
     "verified": "2026-06-13",

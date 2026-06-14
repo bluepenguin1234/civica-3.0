@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T16:18:54",
+ "generated_at": "2026-06-13T20:42:42",
  "coverage": [
   {
    "town_id": "swampscott_ma",
@@ -66,6 +66,154 @@
    ]
   },
   {
+   "story_id": "a73b07d2-4004-4ec4-be3c-765ffca014f7",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "Humphrey Street Overlay District Ground-Floor Commercial Preservation Amendment",
+   "address": "Humphrey Street, Swampscott, MA",
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-05-11",
+   "last_activity": "2026-06-08",
+   "status": "active",
+   "brief": {
+    "what": "A proposed zoning amendment to the Humphrey Street Overlay District in Swampscott, MA that would require discretionary review — and potentially a special permit — before ground-floor commercial space in mixed-use buildings can be converted to residential use.",
+    "status": "The amendment is at a preliminary discussion stage; the Planning Board reviewed the concept at its June 8, 2026 meeting with no formal public hearing yet scheduled.",
+    "whats_next": "No formal hearing date is stated in the record; the Board indicated intent to develop draft language in coordination with broader master planning efforts for a future Town Meeting.",
+    "outlook": "Momentum appears cautious but directional — the Board expressed support for drafting language as early as May and returned to the topic within a month, suggesting the concept has internal traction. Progress will likely depend on how quickly draft language is produced and whether it is tied to an upcoming Town Meeting warrant cycle.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:39:44"
+   },
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "3c2ae144-b53b-4fa1-9a59-8d5a594c457d",
+     "date": "2026-05-11",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "informational",
+     "summary": "Planning Board discussed a potential zoning amendment to the Humphrey Street Overlay District to prevent ground-floor commercial space in mixed-use buildings from being converted to residential use without discretionary review. The discussion was prompted by recent inquiries and proposals to convert corridor properties to multifamily residential. Strategies discussed include requiring ground-floor commercial use in key segments and mandating a special permit for commercial-to-residential conversions; Board expressed support for developing draft language for a future Town Meeting in coordination with broader master planning efforts.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+       "label": "Minutes"
+      }
+     ]
+    },
+    {
+     "event_id": "1b288591-6807-4bae-9def-b636146e9a4b",
+     "date": "2026-06-08",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "proposed",
+     "summary": "The Planning Board will discuss a potential zoning amendment to protect existing ground-floor commercial space in mixed-use buildings. This is a preliminary discussion with no formal hearing scheduled.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "0269ec02-c571-4830-ba97-c7756bb22f5b",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "Petition 26-09 — 10 Puritan Park ADU",
+   "address": "10 Puritan Park, Swampscott, MA (Map 30-103-0)",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-06-08",
+   "last_activity": "2026-06-08",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "aa1f8fd358ae6141",
+     "name": "David Wilkinson",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "0bec55ed-8459-4abb-9973-7a6eb5ea72f1",
+     "date": "2026-06-08",
+     "board": "Planning Board",
+     "event_type": "residential_project",
+     "stage": "hearing",
+     "summary": "Site Plan Special Permit application to construct an 896 square foot accessory dwelling unit (ADU), breezeway, and porch addition to an existing single-family residence in the A-1 zoning district.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "f0ff08b4-0618-4f8c-8b0e-46d65514be4f",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "10 Danvers Road Earth Removal / Rock Quarry — Amrep",
+   "address": "10 Danvers Road, Swampscott, MA",
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-06-03",
+   "last_activity": "2026-06-03",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "add2395f35c423ef",
+     "name": "Amrep",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "926a6957-a9b5-4049-a306-3198a0ad7d8b",
+     "date": "2026-06-03",
+     "board": "Select Board",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Joint public hearing of the Select Board and Earth Removal Advisory Committee on an application from Amrep for an earth removal permit authorizing continued operation of a rock quarry and associated activities at 10 Danvers Road. The item was scheduled for discussion and possible vote at the June 3 meeting.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06032026-743",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06032026-743",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "story_id": "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
    "town_id": "swampscott_ma",
    "town": "Swampscott",
@@ -75,15 +223,58 @@
    "current_stage": "informational",
    "total_units": null,
    "first_seen": "2026-04-21",
-   "last_activity": "2026-04-21",
+   "last_activity": "2026-05-11",
    "status": "active",
-   "brief": null,
+   "brief": {
+    "what": "The Town of Swampscott, MA is pursuing zoning bylaw amendments to support compliance with its MS4 stormwater permit, covering parking reductions via special permit, green infrastructure in landscaped parking islands, updated compact-car stall and permeable-paving standards, and overlay-district dimensional changes.",
+    "status": "The proposal is at the informational stage; the Planning Board heard a presentation from Town DPW and consultant Kleinfelder in May 2026 and expressed general support for the policy direction but requested further review of the redlined bylaw language before taking formal action.",
+    "whats_next": "The Planning Board is expected to complete its review of the redlined language, with the amendments targeted for consideration at the December 2026 Town Meeting.",
+    "outlook": "Two consecutive informational hearings with no recorded opposition and a supportive Planning Board signal steady forward momentum; the principal risk is procedural — if the redline review surfaces disagreements or requires additional public process, the December 2026 Town Meeting window could tighten.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:41:14"
+   },
    "contacts": [
     {
-     "entity_id": "1922e7941f582807",
-     "name": "Peter Varga",
+     "entity_id": "207a4ea9330ec7b4",
+     "name": "Town of Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7af502b24bea04e0",
+     "name": "Mark Noonan",
      "kind": "person",
      "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "65dd58f20f44b631",
+     "name": "Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db4c606227cfacd5",
+     "name": "Elyse Thompson",
+     "kind": "person",
+     "roles": [
+      "representative",
       "engineer"
      ],
      "sources": [
@@ -95,6 +286,7 @@
      "name": "Kleinfelder",
      "kind": "firm",
      "roles": [
+      "representative",
       "engineer"
      ],
      "sources": [
@@ -102,8 +294,8 @@
      ]
     },
     {
-     "entity_id": "db4c606227cfacd5",
-     "name": "Elyse Thompson",
+     "entity_id": "1922e7941f582807",
+     "name": "Peter Varga",
      "kind": "person",
      "roles": [
       "engineer"
@@ -131,6 +323,150 @@
       {
        "kind": "agenda",
        "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_04212026-667",
+       "label": "Agenda"
+      }
+     ]
+    },
+    {
+     "event_id": "fd0df51a-097c-40e3-b3ca-4c16f4328a1b",
+     "date": "2026-05-11",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "informational",
+     "summary": "Town DPW and consultant Kleinfelder presented proposed zoning bylaw amendments to advance MS4 stormwater permit compliance by reducing impervious cover and promoting green infrastructure. Key proposals include allowing parking reductions via special permit, permitting landscaped parking islands to function as rain gardens or bioswales, updating overlay-district parking dimensional standards, and allowing permeable paving. Board expressed general support for the policy direction but requested further review of the redlined language before any formal action.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "949e0a39-b397-4e0b-bb85-2dc209e2596c",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "3 Robin Lane ADU Addition",
+   "address": "3 Robin Lane (Map 24-88-0), Swampscott, MA",
+   "current_stage": "approved",
+   "total_units": 1,
+   "first_seen": "2026-05-11",
+   "last_activity": "2026-05-11",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "7c8c842ef996ddf2",
+     "name": "Sheryl Birenbaum",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7a08964a3864c513",
+     "name": "Matthew Wolverton",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "9d341d0a2a77564e",
+     "name": "Gary Kenneth",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "6d1c050e-386b-4c4b-9a42-cd41fe7d6bf9",
+     "date": "2026-05-11",
+     "board": "Planning Board",
+     "event_type": "variance_special_permit",
+     "stage": "approved",
+     "summary": "Planning Board unanimously approved a Site Plan Special Permit for an 828 sq ft accessory dwelling unit addition and deck at 3 Robin Lane within the Floodplain Overlay District. The ADU is designed for accessible living accommodations to meet a medical need, incorporating kitchen and bathroom facilities, sump pump infrastructure, and drainage improvements to limit new impervious surface. Approval is subject to standard conditions and compliance with floodplain and building requirements.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+       "label": "Minutes"
+      },
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "826355e3-42bf-4bf5-8b62-099f83314786",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "name": "MS4 Stormwater Zoning Bylaw Amendment",
+   "address": null,
+   "current_stage": "proposed",
+   "total_units": null,
+   "first_seen": "2026-05-11",
+   "last_activity": "2026-05-11",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "65dd58f20f44b631",
+     "name": "Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "b0ee1b5ba0d67c17",
+     "name": "Kleinfelder",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "e61774a5-feef-487f-bcf9-6990e7d138f0",
+     "date": "2026-05-11",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "proposed",
+     "summary": "Proposed amendments to the Swampscott Zoning Bylaw, prepared by Kleinfelder and the Department of Public Works, to achieve MS4 stormwater permit compliance by reducing impervious surface area and promoting green infrastructure. Item is before the Planning Board for discussion.",
+     "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
        "label": "Agenda"
       }
      ]
@@ -349,6 +685,460 @@
      ],
      "sources": [
       "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "0bec55ed-8459-4abb-9973-7a6eb5ea72f1",
+   "date": "2026-06-08",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "residential_project",
+   "stage": "hearing",
+   "project_name": "Petition 26-09 — 10 Puritan Park ADU",
+   "address": "10 Puritan Park, Swampscott, MA (Map 30-103-0)",
+   "applicant": "David Wilkinson",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Site Plan Special Permit application to construct an 896 square foot accessory dwelling unit (ADU), breezeway, and porch addition to an existing single-family residence in the A-1 zoning district.",
+   "story_id": "0269ec02-c571-4830-ba97-c7756bb22f5b",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+   "source_page": 1,
+   "confidence": 0.9,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "aa1f8fd358ae6141",
+     "name": "David Wilkinson",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "1b288591-6807-4bae-9def-b636146e9a4b",
+   "date": "2026-06-08",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "proposed",
+   "project_name": "Ground-Floor Commercial Preservation Zoning Amendment",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Planning Board will discuss a potential zoning amendment to protect existing ground-floor commercial space in mixed-use buildings. This is a preliminary discussion with no formal hearing scheduled.",
+   "story_id": "a73b07d2-4004-4ec4-be3c-765ffca014f7",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+   "source_page": 1,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06082026-729",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "926a6957-a9b5-4049-a306-3198a0ad7d8b",
+   "date": "2026-06-03",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Select Board",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": "10 Danvers Road Earth Removal / Rock Quarry — Amrep",
+   "address": "10 Danvers Road, Swampscott, MA",
+   "applicant": "Amrep",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Joint public hearing of the Select Board and Earth Removal Advisory Committee on an application from Amrep for an earth removal permit authorizing continued operation of a rock quarry and associated activities at 10 Danvers Road. The item was scheduled for discussion and possible vote at the June 3 meeting.",
+   "story_id": "f0ff08b4-0618-4f8c-8b0e-46d65514be4f",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06032026-743",
+   "source_page": 1,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "site_excavation"
+   ],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_06032026-743",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "add2395f35c423ef",
+     "name": "Amrep",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "6d1c050e-386b-4c4b-9a42-cd41fe7d6bf9",
+   "date": "2026-05-11",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "variance_special_permit",
+   "stage": "approved",
+   "project_name": "3 Robin Lane ADU Addition",
+   "address": "3 Robin Lane, Swampscott, MA (Map 24-88-0)",
+   "applicant": "Sheryl Birenbaum",
+   "applicant_reps": [
+    {
+     "role": "attorney",
+     "name": "Matthew Wolverton",
+     "firm": null
+    },
+    {
+     "role": "architect",
+     "name": "Gary Kenneth",
+     "firm": null
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Planning Board unanimously approved a Site Plan Special Permit for an 828 sq ft accessory dwelling unit addition and deck at 3 Robin Lane within the Floodplain Overlay District. The ADU is designed for accessible living accommodations to meet a medical need, incorporating kitchen and bathroom facilities, sump pump infrastructure, and drainage improvements to limit new impervious surface. Approval is subject to standard conditions and compliance with floodplain and building requirements.",
+   "story_id": "949e0a39-b397-4e0b-bb85-2dc209e2596c",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+   "source_page": 2,
+   "confidence": 0.95,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "roofing",
+    "stormwater_septic"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "label": "Minutes"
+    },
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "7c8c842ef996ddf2",
+     "name": "Sheryl Birenbaum",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7a08964a3864c513",
+     "name": "Matthew Wolverton",
+     "kind": "person",
+     "roles": [
+      "attorney"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "9d341d0a2a77564e",
+     "name": "Gary Kenneth",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "fd0df51a-097c-40e3-b3ca-4c16f4328a1b",
+   "date": "2026-05-11",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "informational",
+   "project_name": "MS4 Permit Compliance / Green Infrastructure Zoning Bylaw Amendments",
+   "address": null,
+   "applicant": "Town of Swampscott Department of Public Works",
+   "applicant_reps": [
+    {
+     "role": "DPW representative",
+     "name": "Mark Noonan",
+     "firm": "Department of Public Works"
+    },
+    {
+     "role": "consultant",
+     "name": "Elyse Thompson",
+     "firm": "Kleinfelder"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Town DPW and consultant Kleinfelder presented proposed zoning bylaw amendments to advance MS4 stormwater permit compliance by reducing impervious cover and promoting green infrastructure. Key proposals include allowing parking reductions via special permit, permitting landscaped parking islands to function as rain gardens or bioswales, updating overlay-district parking dimensional standards, and allowing permeable paving. Board expressed general support for the policy direction but requested further review of the redlined language before any formal action.",
+   "story_id": "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+   "source_page": 3,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "207a4ea9330ec7b4",
+     "name": "Town of Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "7af502b24bea04e0",
+     "name": "Mark Noonan",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "65dd58f20f44b631",
+     "name": "Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "db4c606227cfacd5",
+     "name": "Elyse Thompson",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "b0ee1b5ba0d67c17",
+     "name": "Kleinfelder",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "3c2ae144-b53b-4fa1-9a59-8d5a594c457d",
+   "date": "2026-05-11",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "informational",
+   "project_name": "Humphrey Street Overlay District Ground-Floor Commercial Preservation Amendment",
+   "address": "Humphrey Street, Swampscott, MA",
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Planning Board discussed a potential zoning amendment to the Humphrey Street Overlay District to prevent ground-floor commercial space in mixed-use buildings from being converted to residential use without discretionary review. The discussion was prompted by recent inquiries and proposals to convert corridor properties to multifamily residential. Strategies discussed include requiring ground-floor commercial use in key segments and mandating a special permit for commercial-to-residential conversions; Board expressed support for developing draft language for a future Town Meeting in coordination with broader master planning efforts.",
+   "story_id": "a73b07d2-4004-4ec4-be3c-765ffca014f7",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+   "source_page": 4,
+   "confidence": 0.85,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Minutes/_05112026-693",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "e61774a5-feef-487f-bcf9-6990e7d138f0",
+   "date": "2026-05-11",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "proposed",
+   "project_name": "MS4 Stormwater Zoning Bylaw Amendment",
+   "address": null,
+   "applicant": "Swampscott Department of Public Works",
+   "applicant_reps": [
+    {
+     "role": "consultant",
+     "name": null,
+     "firm": "Kleinfelder"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Proposed amendments to the Swampscott Zoning Bylaw, prepared by Kleinfelder and the Department of Public Works, to achieve MS4 stormwater permit compliance by reducing impervious surface area and promoting green infrastructure. Item is before the Planning Board for discussion.",
+   "story_id": "826355e3-42bf-4bf5-8b62-099f83314786",
+   "source_url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
+   "source_page": 1,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.swampscottma.gov/AgendaCenter/ViewFile/Agenda/_05112026-693",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "65dd58f20f44b631",
+     "name": "Swampscott Department of Public Works",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "b0ee1b5ba0d67c17",
+     "name": "Kleinfelder",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
      ]
     }
    ]
@@ -630,6 +1420,42 @@
  ],
  "entities": [
   {
+   "entity_id": "b0ee1b5ba0d67c17",
+   "name": "Kleinfelder",
+   "kind": "firm",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "representative"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
+    "826355e3-42bf-4bf5-8b62-099f83314786"
+   ],
+   "n_projects": 2
+  },
+  {
+   "entity_id": "65dd58f20f44b631",
+   "name": "Swampscott Department of Public Works",
+   "kind": "public_office",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer",
+    "representative"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9",
+    "826355e3-42bf-4bf5-8b62-099f83314786"
+   ],
+   "n_projects": 2
+  },
+  {
    "entity_id": "a4c02d4b836a8996",
    "name": "Town of Swampscott – Facilities Dept",
    "kind": "public_office",
@@ -648,6 +1474,38 @@
    "n_projects": 2
   },
   {
+   "entity_id": "add2395f35c423ef",
+   "name": "Amrep",
+   "kind": "firm",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "f0ff08b4-0618-4f8c-8b0e-46d65514be4f"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "aa1f8fd358ae6141",
+   "name": "David Wilkinson",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "0269ec02-c571-4830-ba97-c7756bb22f5b"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "db4c606227cfacd5",
    "name": "Elyse Thompson",
    "kind": "person",
@@ -656,10 +1514,27 @@
    "place_fips": "2500968645",
    "review_status": "auto_resolved",
    "roles": [
-    "engineer"
+    "engineer",
+    "representative"
    ],
    "story_ids": [
     "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "9d341d0a2a77564e",
+   "name": "Gary Kenneth",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect"
+   ],
+   "story_ids": [
+    "949e0a39-b397-4e0b-bb85-2dc209e2596c"
    ],
    "n_projects": 1
   },
@@ -680,18 +1555,34 @@
    "n_projects": 1
   },
   {
-   "entity_id": "b0ee1b5ba0d67c17",
-   "name": "Kleinfelder",
-   "kind": "firm",
+   "entity_id": "7af502b24bea04e0",
+   "name": "Mark Noonan",
+   "kind": "person",
    "town_id": "swampscott_ma",
    "town": "Swampscott",
    "place_fips": "2500968645",
    "review_status": "auto_resolved",
    "roles": [
-    "engineer"
+    "representative"
    ],
    "story_ids": [
     "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7a08964a3864c513",
+   "name": "Matthew Wolverton",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "attorney"
+   ],
+   "story_ids": [
+    "949e0a39-b397-4e0b-bb85-2dc209e2596c"
    ],
    "n_projects": 1
   },
@@ -740,6 +1631,38 @@
    ],
    "story_ids": [
     "b6c9ce41-da7f-41d4-91a1-22c865a61048"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "7c8c842ef996ddf2",
+   "name": "Sheryl Birenbaum",
+   "kind": "person",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "949e0a39-b397-4e0b-bb85-2dc209e2596c"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "207a4ea9330ec7b4",
+   "name": "Town of Swampscott Department of Public Works",
+   "kind": "public_office",
+   "town_id": "swampscott_ma",
+   "town": "Swampscott",
+   "place_fips": "2500968645",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "49deb6b5-0dba-49f6-b1b3-7bed0d64abd9"
    ],
    "n_projects": 1
   }

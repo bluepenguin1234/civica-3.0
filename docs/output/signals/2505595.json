@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T16:18:54",
+ "generated_at": "2026-06-13T20:42:42",
  "coverage": [
   {
    "town_id": "beverly_ma",
@@ -178,18 +178,117 @@
    ]
   },
   {
+   "story_id": "f3a3ff72-d9db-4dff-8e40-aae597213552",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "ADU at 20 Roundy Street",
+   "address": "20 Roundy Street, Beverly, MA",
+   "current_stage": "hearing",
+   "total_units": 1,
+   "first_seen": "2026-05-27",
+   "last_activity": "2026-05-27",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "0b909c68881af7bb",
+     "name": "Julianna Newmeyer",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "b6075295-bea3-4b2e-a18d-4f85a6406d00",
+     "date": "2026-05-27",
+     "board": "Zoning Board of Appeals",
+     "event_type": "variance_special_permit",
+     "stage": "hearing",
+     "summary": "Applicant seeks a variance under §300-37 D(8) to demolish and reconstruct a pre-existing nonconforming accessory structure as an accessory dwelling unit, with a rear yard setback encroachment into the RHD district. Creates one new dwelling unit on an existing residential lot.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05272026-2751",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05272026-2751",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "6db8511c-acac-480c-af9d-dd31bf42b6f8",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Proposed Amendments to Beverly Zoning Ordinance — Accessory Dwelling Units",
+   "address": null,
+   "current_stage": "hearing",
+   "total_units": null,
+   "first_seen": "2026-05-26",
+   "last_activity": "2026-05-26",
+   "status": "active",
+   "brief": null,
+   "contacts": [],
+   "events": [
+    {
+     "event_id": "d73817df-5502-42b3-ae1e-ecdcf9a6fd2f",
+     "date": "2026-05-26",
+     "board": "Planning Board",
+     "event_type": "zoning_amendment",
+     "stage": "hearing",
+     "summary": "The Beverly Planning Board will hold a public hearing on proposed amendments to the City Zoning Ordinance regarding accessory dwelling units (ADUs). No draft text, specific provisions, or scope of the amendment are described in the agenda.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05262026-2766",
+     "sources": [
+      {
+       "kind": "agenda",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05262026-2766",
+       "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "story_id": "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042",
    "town_id": "beverly_ma",
    "town": "Beverly",
    "place_fips": "2505595",
    "name": "Glen Urquhart School Building Raze and Rebuild",
    "address": "206 Greenwood Avenue, Beverly, MA",
-   "current_stage": "continued",
+   "current_stage": "permitted",
    "total_units": null,
    "first_seen": "2026-04-29",
-   "last_activity": "2026-04-29",
+   "last_activity": "2026-05-19",
    "status": "active",
-   "brief": null,
+   "brief": {
+    "what": "Glen Urquhart School proposes to raze an existing building at 206 Greenwood Avenue in Beverly, MA and replace it with a structure housing two classrooms, an exhibition hall, and administrative and meeting space, with a net reduction of over 1,000 sq ft of impervious surface and invasive species removal with native replanting.",
+    "status": "The Beverly Conservation Commission closed its public hearing on May 19, 2026 and issued an Order of Conditions approving the project, subject to invasive species management with two years of annual monitoring, dewatering controls during construction, and 75% planting survivorship as a condition of the final Certificate of Compliance.",
+    "whats_next": "The project must satisfy construction-phase conditions — dewatering with a sediment bag, invasive species management, and achieving 75% planting survivorship — before a Certificate of Compliance will be issued.",
+    "outlook": "With Conservation Commission approval secured and conditions clearly defined, the project appears positioned to move into permitting and construction without significant regulatory obstacles; the two-year post-construction monitoring requirement means the compliance timeline will extend well past project completion.",
+    "trades": [
+     "demolition",
+     "site_excavation",
+     "concrete_foundation",
+     "framing_carpentry",
+     "roofing",
+     "electrical",
+     "plumbing",
+     "hvac",
+     "landscaping",
+     "stormwater_septic",
+     "utilities"
+    ],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:40:08"
+   },
    "contacts": [
     {
      "entity_id": "976130e219853c77",
@@ -238,6 +337,67 @@
       {
        "kind": "minutes",
        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_04292026-2723",
+       "label": "Minutes"
+      }
+     ]
+    },
+    {
+     "event_id": "f9f76482-5438-4789-80a7-2fd875b53724",
+     "date": "2026-05-19",
+     "board": "Conservation Commission",
+     "event_type": "commercial_project",
+     "stage": "permitted",
+     "summary": "The Conservation Commission closed the public hearing and issued an Order of Conditions permitting Glen Urquhart School to raze and rebuild an existing building at 206 Greenwood Avenue. Conditions include invasive species management with two years of annual monitoring, dewatering with a sediment bag during construction, and 75% planting survivorship before a Certificate of Compliance will be issued.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "5a8faf0f-39e7-441c-a5dc-bbda5d35949e",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "23 Virginia Avenue ADU Staircase Addition",
+   "address": "23 Virginia Avenue, Beverly, MA",
+   "current_stage": "approved",
+   "total_units": 1,
+   "first_seen": "2026-05-19",
+   "last_activity": "2026-05-19",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "3ef3f53a8cbe509b",
+     "name": "Robert and Elizabeth Taylor",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "5eb00045-fe81-4a91-a745-77cfc118ad44",
+     "date": "2026-05-19",
+     "board": "Conservation Commission",
+     "event_type": "residential_project",
+     "stage": "approved",
+     "summary": "The Commission issued a Negative 3 Determination clearing the proposal to create an accessory dwelling unit within the existing house at 23 Virginia Avenue. The project involves constructing an exterior enclosed staircase addition on helical piers at the rear of the house providing secondary egress to the second-floor ADU, sited more than 25 feet from the bordering vegetated wetland.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
        "label": "Minutes"
       }
      ]
@@ -395,7 +555,16 @@
    "first_seen": "2026-03-25",
    "last_activity": "2026-04-22",
    "status": "active",
-   "brief": null,
+   "brief": {
+    "what": "Albert Turner is seeking a variance at 26 Mason Street (RMD district) in Beverly, MA to construct a new detached single-car garage with an accessory dwelling unit on the second floor, under Beverly Zoning Ordinance §§300-36 D(6) and D(8).",
+    "status": "The variance hearing opened March 25, 2026 and was continued by the Zoning Board of Appeals at the April 22, 2026 session without a vote.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "A continuation after a single hearing is routine for variance applications and does not signal opposition, but the board has not yet acted; whether the project advances will depend on what outstanding questions prompted the continuation.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:40:33"
+   },
    "contacts": [
     {
      "entity_id": "ca8a6a591604c59f",
@@ -472,7 +641,16 @@
    "first_seen": "2026-03-25",
    "last_activity": "2026-04-22",
    "status": "active",
-   "brief": null,
+   "brief": {
+    "what": "Jason Irving and 21 Bridge Street LLC are seeking a zoning variance to subdivide the existing lot at 21 Bridge Street in Beverly, MA's R10 district into two lots — retaining the current single-family home and creating a new lot for construction of an additional single-family home.",
+    "status": "The Zoning Board of Appeals hearing has been continued across at least three sessions, most recently on April 22, 2026, with no decision reached and no new continuation date stated in the record.",
+    "whats_next": "No next step or continuation date is stated in the record.",
+    "outlook": "Three consecutive continuations without a stated next date suggest the application is unresolved and may be facing procedural or substantive friction; forward momentum appears slow until the board schedules and closes the hearing.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:39:15"
+   },
    "contacts": [
     {
      "entity_id": "9581aeb015399be8",
@@ -805,7 +983,16 @@
    "first_seen": "2026-03-25",
    "last_activity": "2026-03-25",
    "status": "active",
-   "brief": null,
+   "brief": {
+    "what": "David Veritas is seeking a variance at 6 Greenleaf Drive (R15 district) in Beverly, MA to construct a detached accessory structure combining a 2-car garage and an accessory dwelling unit (ADU), to be sited in front of the existing single-family home. The proposed structure meets all setback and height requirements; the variance from Section 300-27B(2) is required solely because of its placement in front of the principal dwelling.",
+    "status": "A public hearing before the Beverly Zoning Board of Appeals was held on March 25, 2026.",
+    "whats_next": "No next step stated in the record.",
+    "outlook": "The project's limited variance scope — needed only for siting placement, not for setbacks or height — suggests a relatively straightforward case before the board, which may favor a favorable outcome, though no board decision is yet on record.",
+    "trades": [],
+    "est_value": null,
+    "next_date": null,
+    "generated_at": "2026-06-13T20:42:34"
+   },
    "contacts": [
     {
      "entity_id": "e3c8150670494af8",
@@ -917,7 +1104,7 @@
    "place_fips": "2505595",
    "name": "Gillis Park Reconstruction",
    "address": "28 Porter Street, Beverly, MA",
-   "current_stage": "hearing",
+   "current_stage": "approved",
    "total_units": null,
    "first_seen": "2026-03-18",
    "last_activity": "2026-03-18",
@@ -934,18 +1121,67 @@
      "sources": [
       "applicant"
      ]
+    },
+    {
+     "entity_id": "4c8c155b5b7c471e",
+     "name": "Caitlin White",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "80a47809ffffa6b4",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "b7d55fbeb0da1420",
+     "name": "Jon Ouellette",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
     }
    ],
    "events": [
     {
-     "event_id": "1fcc11d2-a8b4-4cb5-95aa-ec34e27ad2d2",
+     "event_id": "c0dffbf4-0478-4904-ba53-e2ea07678d05",
      "date": "2026-03-18",
      "board": "Conservation Commission",
-     "event_type": "municipal_property",
-     "stage": "hearing",
-     "summary": "City of Beverly has filed a new Notice of Intent for reconstruction of the basketball court and addition of a pavilion and pathway at Gillis Park, 28 Porter Street. The project is subject to Conservation Commission wetlands review.",
-     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
+     "event_type": "infrastructure_project",
+     "stage": "approved",
+     "summary": "The Conservation Commission closed the hearing and issued an Order of Conditions under DEP File #5-1463 for the City of Beverly to reconstruct Gillis Park: converting a full basketball court to a half court with a pavilion, and adding a patio paver entrance with seating wall, flagpole, and ADA-compliant ramp outside the buffer zones. The project reduces overall impervious area within Coastal Bank and Riverfront Area resource zones and includes planting of three white flowering dogwood trees.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
      "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+       "label": "Minutes"
+      },
       {
        "kind": "agenda",
        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
@@ -1006,6 +1242,129 @@
        "kind": "agenda",
        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
        "label": "Agenda"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "45284866-bfd3-4988-a600-a648aa66b4c6",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "Lothrop Street Memorial ADA Walkway — Minor Modification",
+   "address": "41 Lothrop Street, Beverly, MA",
+   "current_stage": "approved",
+   "total_units": null,
+   "first_seen": "2026-03-18",
+   "last_activity": "2026-03-18",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "engineer"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "d546c306-f81e-4127-9220-baf03b1196fe",
+     "date": "2026-03-18",
+     "board": "Conservation Commission",
+     "event_type": "infrastructure_project",
+     "stage": "approved",
+     "summary": "The Conservation Commission approved a minor modification under DEP File #5-1455 to add an ADA-compliant asphalt walkway spur to the existing Lothrop Street memorial, involving approximately 368 sq ft of disturbance within the 100-foot buffer zone. The improvement was funded through the Community Preservation Committee and carries a hard completion deadline of end of June 2026 as a condition of the funding.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+       "label": "Minutes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "story_id": "dcb3da2c-acc6-4cff-a4fa-27be0bca7cec",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "name": "269 Dodge Street Residential Addition, Pool, and Site Reconstruction",
+   "address": "269 Dodge Street, Beverly, MA",
+   "current_stage": "approved",
+   "total_units": null,
+   "first_seen": "2026-03-18",
+   "last_activity": "2026-03-18",
+   "status": "active",
+   "brief": null,
+   "contacts": [
+    {
+     "entity_id": "d7093973041b7279",
+     "name": "Pamela Boardway",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "55b723ae0e4dc94f",
+     "name": "Robert Zarelli",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "50c3344b85f63255",
+     "name": "Norse Environmental Services",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ],
+   "events": [
+    {
+     "event_id": "bc1995d2-b2d3-4495-9636-09235ce70902",
+     "date": "2026-03-18",
+     "board": "Conservation Commission",
+     "event_type": "residential_project",
+     "stage": "approved",
+     "summary": "The Conservation Commission closed the hearing and issued an Order of Conditions under DEP File #5-1461 for a multi-element residential project near a pond at 269 Dodge Street: demolition of an existing driveway, greenhouse, and patio; construction of a new addition; replacement of a deck; and installation of a therapeutic pool, patio, and retaining wall. Special conditions govern soil stockpiling outside buffer zones, tree removal by hand tools, chlorinated pool drainage away from wetlands, and use of ACQ pressure-treated lumber for the deck.",
+     "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+     "sources": [
+      {
+       "kind": "minutes",
+       "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+       "label": "Minutes"
       }
      ]
     }
@@ -1222,6 +1581,244 @@
      ],
      "sources": [
       "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "b6075295-bea3-4b2e-a18d-4f85a6406d00",
+   "date": "2026-05-27",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Zoning Board of Appeals",
+   "event_type": "variance_special_permit",
+   "stage": "hearing",
+   "project_name": "ADU at 20 Roundy Street",
+   "address": "20 Roundy Street, Beverly, MA",
+   "applicant": "Julianna Newmeyer",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "Applicant seeks a variance under §300-37 D(8) to demolish and reconstruct a pre-existing nonconforming accessory structure as an accessory dwelling unit, with a rear yard setback encroachment into the RHD district. Creates one new dwelling unit on an existing residential lot.",
+   "story_id": "f3a3ff72-d9db-4dff-8e40-aae597213552",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05272026-2751",
+   "source_page": 1,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "framing_carpentry",
+    "electrical",
+    "plumbing"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05272026-2751",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "0b909c68881af7bb",
+     "name": "Julianna Newmeyer",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "d73817df-5502-42b3-ae1e-ecdcf9a6fd2f",
+   "date": "2026-05-26",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Planning Board",
+   "event_type": "zoning_amendment",
+   "stage": "hearing",
+   "project_name": "Proposed Amendments to Beverly Zoning Ordinance — Accessory Dwelling Units",
+   "address": null,
+   "applicant": null,
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Beverly Planning Board will hold a public hearing on proposed amendments to the City Zoning Ordinance regarding accessory dwelling units (ADUs). No draft text, specific provisions, or scope of the amendment are described in the agenda.",
+   "story_id": "6db8511c-acac-480c-af9d-dd31bf42b6f8",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05262026-2766",
+   "source_page": 1,
+   "confidence": 0.82,
+   "owner": null,
+   "next_date": null,
+   "trades": [],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "agenda",
+   "sources": [
+    {
+     "kind": "agenda",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_05262026-2766",
+     "label": "Agenda"
+    }
+   ],
+   "contacts": []
+  },
+  {
+   "event_id": "f9f76482-5438-4789-80a7-2fd875b53724",
+   "date": "2026-05-19",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "commercial_project",
+   "stage": "permitted",
+   "project_name": "Glen Urquhart School Building Raze and Rebuild",
+   "address": "206 Greenwood Avenue, Beverly, MA",
+   "applicant": "Glen Urquhart School c/o Lindsay Calef",
+   "applicant_reps": [
+    {
+     "role": "Environmental Consultant",
+     "name": "Mike DeRosa",
+     "firm": "DeRosa Environmental"
+    }
+   ],
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Conservation Commission closed the public hearing and issued an Order of Conditions permitting Glen Urquhart School to raze and rebuild an existing building at 206 Greenwood Avenue. Conditions include invasive species management with two years of annual monitoring, dewatering with a sediment bag during construction, and 75% planting survivorship before a Certificate of Compliance will be issued.",
+   "story_id": "05c99cdf-a9fd-4a7c-ac04-cb4d7067b042",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+   "source_page": 2,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "roofing",
+    "stormwater_septic"
+   ],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "976130e219853c77",
+     "name": "Glen Urquhart School c/o Lindsay Calef",
+     "kind": "firm",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "b901c41d2ae74b54",
+     "name": "Mike DeRosa",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "ac28d78c138e149c",
+     "name": "DeRosa Environmental",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "5eb00045-fe81-4a91-a745-77cfc118ad44",
+   "date": "2026-05-19",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "residential_project",
+   "stage": "approved",
+   "project_name": "23 Virginia Avenue ADU Staircase Addition",
+   "address": "23 Virginia Avenue, Beverly, MA",
+   "applicant": "Robert and Elizabeth Taylor",
+   "applicant_reps": null,
+   "job_contact": null,
+   "contacts_enriched": null,
+   "residential_units": 1,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Commission issued a Negative 3 Determination clearing the proposal to create an accessory dwelling unit within the existing house at 23 Virginia Avenue. The project involves constructing an exterior enclosed staircase addition on helical piers at the rear of the house providing secondary egress to the second-floor ADU, sited more than 25 feet from the bordering vegetated wetland.",
+   "story_id": "5a8faf0f-39e7-441c-a5dc-bbda5d35949e",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+   "source_page": 6,
+   "confidence": 0.8,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "concrete_foundation",
+    "framing_carpentry"
+   ],
+   "is_public_work": false,
+   "tenure": "unknown",
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_05192026-2752",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "3ef3f53a8cbe509b",
+     "name": "Robert and Elizabeth Taylor",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
      ]
     }
    ]
@@ -2289,43 +2886,246 @@
    ]
   },
   {
-   "event_id": "1fcc11d2-a8b4-4cb5-95aa-ec34e27ad2d2",
+   "event_id": "d546c306-f81e-4127-9220-baf03b1196fe",
    "date": "2026-03-18",
    "town_id": "beverly_ma",
    "town": "Beverly",
    "place_fips": "2505595",
    "board": "Conservation Commission",
-   "event_type": "municipal_property",
-   "stage": "hearing",
-   "project_name": "Gillis Park Reconstruction",
-   "address": "28 Porter Street, Beverly, MA",
+   "event_type": "infrastructure_project",
+   "stage": "approved",
+   "project_name": "Lothrop Street Memorial ADA Walkway — Minor Modification",
+   "address": "41 Lothrop Street, Beverly, MA",
    "applicant": "City of Beverly",
-   "applicant_reps": null,
+   "applicant_reps": [
+    {
+     "role": "City Engineer",
+     "name": "Lisa Chandler",
+     "firm": "City of Beverly"
+    }
+   ],
+   "job_contact": {
+    "role": "City Engineer",
+    "name": "Lisa Chandler",
+    "org": "City of Beverly",
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Conservation Commission approved a minor modification under DEP File #5-1455 to add an ADA-compliant asphalt walkway spur to the existing Lothrop Street memorial, involving approximately 368 sq ft of disturbance within the 100-foot buffer zone. The improvement was funded through the Community Preservation Committee and carries a hard completion deadline of end of June 2026 as a condition of the funding.",
+   "story_id": "45284866-bfd3-4988-a600-a648aa66b4c6",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+   "source_page": 2,
+   "confidence": 0.88,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "paving_asphalt",
+    "landscaping"
+   ],
+   "is_public_work": true,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "21dbc526ffa07e4e",
+     "name": "City of Beverly",
+     "kind": "public_office",
+     "roles": [
+      "developer",
+      "engineer",
+      "public_contact"
+     ],
+     "sources": [
+      "applicant",
+      "applicant_reps",
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "engineer",
+      "public_contact"
+     ],
+     "sources": [
+      "applicant_reps",
+      "job_contact"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "bc1995d2-b2d3-4495-9636-09235ce70902",
+   "date": "2026-03-18",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "residential_project",
+   "stage": "approved",
+   "project_name": "269 Dodge Street Residential Addition, Pool, and Site Reconstruction",
+   "address": "269 Dodge Street, Beverly, MA",
+   "applicant": "Pamela Boardway",
+   "applicant_reps": [
+    {
+     "role": "architect",
+     "name": "Robert Zarelli",
+     "firm": null
+    },
+    {
+     "role": "environmental consultant",
+     "name": null,
+     "firm": "Norse Environmental Services"
+    }
+   ],
    "job_contact": null,
    "contacts_enriched": null,
    "residential_units": null,
    "commercial_sqft": null,
    "dollar_value": null,
-   "summary": "City of Beverly has filed a new Notice of Intent for reconstruction of the basketball court and addition of a pavilion and pathway at Gillis Park, 28 Porter Street. The project is subject to Conservation Commission wetlands review.",
+   "summary": "The Conservation Commission closed the hearing and issued an Order of Conditions under DEP File #5-1461 for a multi-element residential project near a pond at 269 Dodge Street: demolition of an existing driveway, greenhouse, and patio; construction of a new addition; replacement of a deck; and installation of a therapeutic pool, patio, and retaining wall. Special conditions govern soil stockpiling outside buffer zones, tree removal by hand tools, chlorinated pool drainage away from wetlands, and use of ACQ pressure-treated lumber for the deck.",
+   "story_id": "dcb3da2c-acc6-4cff-a4fa-27be0bca7cec",
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+   "source_page": 3,
+   "confidence": 0.75,
+   "owner": null,
+   "next_date": null,
+   "trades": [
+    "demolition",
+    "site_excavation",
+    "concrete_foundation",
+    "framing_carpentry",
+    "roofing",
+    "electrical",
+    "plumbing",
+    "hvac",
+    "masonry",
+    "landscaping",
+    "stormwater_septic"
+   ],
+   "is_public_work": false,
+   "tenure": null,
+   "ref_number": null,
+   "source_kind": "minutes",
+   "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+     "label": "Minutes"
+    }
+   ],
+   "contacts": [
+    {
+     "entity_id": "d7093973041b7279",
+     "name": "Pamela Boardway",
+     "kind": "person",
+     "roles": [
+      "developer"
+     ],
+     "sources": [
+      "applicant"
+     ]
+    },
+    {
+     "entity_id": "55b723ae0e4dc94f",
+     "name": "Robert Zarelli",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "50c3344b85f63255",
+     "name": "Norse Environmental Services",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    }
+   ]
+  },
+  {
+   "event_id": "c0dffbf4-0478-4904-ba53-e2ea07678d05",
+   "date": "2026-03-18",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "board": "Conservation Commission",
+   "event_type": "infrastructure_project",
+   "stage": "approved",
+   "project_name": "Gillis Park Basketball Court Reconstruction and Pavilion",
+   "address": "28 Porter Street, Beverly, MA",
+   "applicant": "City of Beverly",
+   "applicant_reps": [
+    {
+     "role": "project presenter",
+     "name": "Caitlin White",
+     "firm": "Hancock Associates"
+    },
+    {
+     "role": "landscape architect",
+     "name": "Jon Ouellette",
+     "firm": null
+    },
+    {
+     "role": "City Engineer",
+     "name": "Lisa Chandler",
+     "firm": "City of Beverly"
+    }
+   ],
+   "job_contact": {
+    "role": "City Engineer",
+    "name": "Lisa Chandler",
+    "org": "City of Beverly",
+    "contact_info": null
+   },
+   "contacts_enriched": null,
+   "residential_units": null,
+   "commercial_sqft": null,
+   "dollar_value": null,
+   "summary": "The Conservation Commission closed the hearing and issued an Order of Conditions under DEP File #5-1463 for the City of Beverly to reconstruct Gillis Park: converting a full basketball court to a half court with a pavilion, and adding a patio paver entrance with seating wall, flagpole, and ADA-compliant ramp outside the buffer zones. The project reduces overall impervious area within Coastal Bank and Riverfront Area resource zones and includes planting of three white flowering dogwood trees.",
    "story_id": "3934ed3c-5fbf-458e-925c-bee2f784bd01",
-   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
-   "source_page": 1,
-   "confidence": 0.85,
+   "source_url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+   "source_page": 3,
+   "confidence": 0.92,
    "owner": null,
    "next_date": null,
    "trades": [
     "site_excavation",
     "paving_asphalt",
     "concrete_foundation",
-    "framing_carpentry",
-    "roofing",
+    "masonry",
     "landscaping"
    ],
    "is_public_work": true,
    "tenure": null,
    "ref_number": null,
-   "source_kind": "agenda",
+   "source_kind": "minutes",
    "sources": [
+    {
+     "kind": "minutes",
+     "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_03182026-2668",
+     "label": "Minutes"
+    },
     {
      "kind": "agenda",
      "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_03182026-2668",
@@ -2338,10 +3138,60 @@
      "name": "City of Beverly",
      "kind": "public_office",
      "roles": [
-      "developer"
+      "developer",
+      "engineer",
+      "public_contact"
      ],
      "sources": [
-      "applicant"
+      "applicant",
+      "applicant_reps",
+      "job_contact"
+     ]
+    },
+    {
+     "entity_id": "4c8c155b5b7c471e",
+     "name": "Caitlin White",
+     "kind": "person",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "80a47809ffffa6b4",
+     "name": "Hancock Associates",
+     "kind": "firm",
+     "roles": [
+      "representative"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "b7d55fbeb0da1420",
+     "name": "Jon Ouellette",
+     "kind": "person",
+     "roles": [
+      "architect"
+     ],
+     "sources": [
+      "applicant_reps"
+     ]
+    },
+    {
+     "entity_id": "d362633b16b0b9e2",
+     "name": "Lisa Chandler",
+     "kind": "person",
+     "roles": [
+      "engineer",
+      "public_contact"
+     ],
+     "sources": [
+      "applicant_reps",
+      "job_contact"
      ]
     }
    ]
@@ -2431,16 +3281,18 @@
    "review_status": "auto_resolved",
    "roles": [
     "developer",
+    "engineer",
     "public_contact"
    ],
    "story_ids": [
     "3934ed3c-5fbf-458e-925c-bee2f784bd01",
+    "45284866-bfd3-4988-a600-a648aa66b4c6",
     "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
     "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c",
     "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
     "f695eea6-f929-4d7e-99b5-cc16685596c9"
    ],
-   "n_projects": 5
+   "n_projects": 6
   },
   {
    "entity_id": "fe13504bd623e0ac",
@@ -2475,6 +3327,25 @@
     "4fae0a42-1bc4-4890-8446-4a7af022b9cc",
     "eaf53e77-211b-49f0-a6bb-2ed3ad6903f0",
     "f695eea6-f929-4d7e-99b5-cc16685596c9"
+   ],
+   "n_projects": 3
+  },
+  {
+   "entity_id": "d362633b16b0b9e2",
+   "name": "Lisa Chandler",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "engineer",
+    "public_contact"
+   ],
+   "story_ids": [
+    "3934ed3c-5fbf-458e-925c-bee2f784bd01",
+    "45284866-bfd3-4988-a600-a648aa66b4c6",
+    "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c"
    ],
    "n_projects": 3
   },
@@ -2523,6 +3394,22 @@
    ],
    "story_ids": [
     "7147a542-77a3-4807-9073-bd348b9c674b"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "4c8c155b5b7c471e",
+   "name": "Caitlin White",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "3934ed3c-5fbf-458e-925c-bee2f784bd01"
    ],
    "n_projects": 1
   },
@@ -2623,6 +3510,22 @@
    "n_projects": 1
   },
   {
+   "entity_id": "80a47809ffffa6b4",
+   "name": "Hancock Associates",
+   "kind": "firm",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "3934ed3c-5fbf-458e-925c-bee2f784bd01"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "9581aeb015399be8",
    "name": "Jason Irving / 21 Bridge Street LLC",
    "kind": "firm",
@@ -2635,6 +3538,22 @@
    ],
    "story_ids": [
     "a5a759df-a52a-4bce-aa06-909bbd9d9580"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "b7d55fbeb0da1420",
+   "name": "Jon Ouellette",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect"
+   ],
+   "story_ids": [
+    "3934ed3c-5fbf-458e-925c-bee2f784bd01"
    ],
    "n_projects": 1
   },
@@ -2655,18 +3574,18 @@
    "n_projects": 1
   },
   {
-   "entity_id": "d362633b16b0b9e2",
-   "name": "Lisa Chandler",
+   "entity_id": "0b909c68881af7bb",
+   "name": "Julianna Newmeyer",
    "kind": "person",
    "town_id": "beverly_ma",
    "town": "Beverly",
    "place_fips": "2505595",
    "review_status": "auto_resolved",
    "roles": [
-    "public_contact"
+    "developer"
    ],
    "story_ids": [
-    "e2e21e86-618a-4adc-9eb6-70d8d5f26c0c"
+    "f3a3ff72-d9db-4dff-8e40-aae597213552"
    ],
    "n_projects": 1
   },
@@ -2687,6 +3606,38 @@
    "n_projects": 1
   },
   {
+   "entity_id": "50c3344b85f63255",
+   "name": "Norse Environmental Services",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "representative"
+   ],
+   "story_ids": [
+    "dcb3da2c-acc6-4cff-a4fa-27be0bca7cec"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "d7093973041b7279",
+   "name": "Pamela Boardway",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "dcb3da2c-acc6-4cff-a4fa-27be0bca7cec"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "256322e4994b01b8",
    "name": "Peter and Lousie Kennedy",
    "kind": "person",
@@ -2703,6 +3654,22 @@
    "n_projects": 1
   },
   {
+   "entity_id": "3ef3f53a8cbe509b",
+   "name": "Robert and Elizabeth Taylor",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "developer"
+   ],
+   "story_ids": [
+    "5a8faf0f-39e7-441c-a5dc-bbda5d35949e"
+   ],
+   "n_projects": 1
+  },
+  {
    "entity_id": "1cce2a9cf4bb9253",
    "name": "Robert Noyes II & Stephanie Marie Noyes",
    "kind": "firm",
@@ -2715,6 +3682,22 @@
    ],
    "story_ids": [
     "64a289cc-d618-42ba-8e06-0dfe9f0ed98a"
+   ],
+   "n_projects": 1
+  },
+  {
+   "entity_id": "55b723ae0e4dc94f",
+   "name": "Robert Zarelli",
+   "kind": "person",
+   "town_id": "beverly_ma",
+   "town": "Beverly",
+   "place_fips": "2505595",
+   "review_status": "auto_resolved",
+   "roles": [
+    "architect"
+   ],
+   "story_ids": [
+    "dcb3da2c-acc6-4cff-a4fa-27be0bca7cec"
    ],
    "n_projects": 1
   },

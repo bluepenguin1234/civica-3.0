@@ -180,6 +180,9 @@ def main(argv=None):
                         help="rebuild every multi-event story's brief, not just dirty ones")
     parser.add_argument("--limit", type=int, default=None,
                         help="max stories to synthesize this run")
+    parser.add_argument("--shard", type=str, default=None,
+                        help="only stories where rowid %% N == K, given as 'K/N' "
+                             "(run N parallel workers over disjoint, stable story sets)")
     args = parser.parse_args(argv)
 
     with open(PROMPT_PATH, "r", encoding="utf-8") as fh:
@@ -188,7 +191,11 @@ def main(argv=None):
 
     conn = db.init_db()
     today = dt.date.today().isoformat()
-    stories = conn.execute("SELECT * FROM project_stories").fetchall()
+    if args.shard:
+        k, n = (int(x) for x in args.shard.split("/"))
+        stories = conn.execute("SELECT * FROM project_stories WHERE (rowid % ?) = ?", (n, k)).fetchall()
+    else:
+        stories = conn.execute("SELECT * FROM project_stories").fetchall()
 
     todo = []
     for s in stories:

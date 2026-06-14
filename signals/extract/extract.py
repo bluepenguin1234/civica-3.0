@@ -344,6 +344,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Civica Signals extraction (Phase 2).")
     parser.add_argument("--limit", type=int, default=None,
                         help="max documents to process this run")
+    parser.add_argument("--shard", type=str, default=None,
+                        help="process only docs where rowid %% N == K, given as 'K/N' "
+                             "(run N parallel workers over disjoint, stable doc sets)")
     args = parser.parse_args(argv)
 
     with open(PROMPT_PATH, "r", encoding="utf-8") as fh:
@@ -351,9 +354,14 @@ def main(argv=None):
     town_names, board_names = registry_names()
 
     conn = db.init_db()
-    query = ("SELECT * FROM documents WHERE extraction_status='pending' "
+    where, params = "extraction_status='pending'", ()
+    if args.shard:
+        k, n = (int(x) for x in args.shard.split("/"))
+        where += " AND (rowid % ?) = ?"   # rowid is stable per doc -> disjoint, race-free shards
+        params = (n, k)
+    query = (f"SELECT * FROM documents WHERE {where} "
              "ORDER BY meeting_date ASC, doc_id ASC")
-    docs = conn.execute(query).fetchall()
+    docs = conn.execute(query, params).fetchall()
     if args.limit:
         docs = docs[:args.limit]
     if not docs:
