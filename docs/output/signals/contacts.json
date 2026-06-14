@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T21:29:05",
+ "generated_at": "2026-06-13T22:17:30",
  "contacts": {
   "26adfe1e27b1e7f7": {
    "linkedin": {
@@ -205,6 +205,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.nationalgridus.com/ma-home/",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "1-800-322-3223",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
    }
   },
   "3df6e4dee17fd452": {
@@ -429,6 +441,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.stjohnsprep.org",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "978-774-1050",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "admission@stjohnsprep.org",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
    }
   },
   "485bc074a51a562f": {
@@ -493,6 +523,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.winncompanies.com",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(617) 742-4500",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@winnco.com",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
    }
   },
   "1dca37b489f42d47": {
@@ -2085,6 +2133,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.winncompanies.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(617) 742-4500",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@winnco.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
    }
   },
   "769c703be0e3369c": {
@@ -2167,6 +2233,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.lunadesign.com/",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(781) 245-6530",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "luna@lunadesign.com",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
    }
   },
   "929ffeaf59f9e827": {
@@ -2183,6 +2267,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://stonefieldeng.com",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617.203.2076",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
    }
   },
   "fb146bdd3f0aac25": {
@@ -2419,6 +2515,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.gus.org/",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "978-927-1064",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@gus.org",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
    }
   },
   "1cce2a9cf4bb9253": {
@@ -2483,6 +2597,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.kleinfelder.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "+1 619-831-4600",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
    }
   },
   "7039c39373048b58": {
@@ -3033,6 +3159,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://rdva.com",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(978) 474-8800",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
    }
   },
   "70f502fe69f79a37": {
@@ -3049,6 +3187,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://7gables.org",
+    "source": "firm_site",
+    "confidence": 0.96,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(978) 744-0991",
+    "source": "firm_site",
+    "confidence": 0.96,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@7gables.org",
+    "source": "firm_site",
+    "confidence": 0.96,
+    "verified": "2026-06-13"
    }
   },
   "3e6569b3d4d51f72": {
