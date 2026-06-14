@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-13T20:42:42",
+ "generated_at": "2026-06-13T21:29:05",
  "contacts": {
   "26adfe1e27b1e7f7": {
    "linkedin": {
@@ -177,6 +177,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.abiomed.com",
+    "source": "firm_site",
+    "confidence": 0.97,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "1-978-646-1400",
+    "source": "firm_site",
+    "confidence": 0.97,
+    "verified": "2026-06-13"
    }
   },
   "56b52a63fceea750": {
@@ -1458,6 +1470,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://citywright.com/",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617-680-4894",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@citywright.com",
+    "source": "firm_site",
+    "confidence": 0.88,
+    "verified": "2026-06-13"
    }
   },
   "6e35249aa48c73c5": {
@@ -1474,6 +1504,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.pjdionne.com/",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(781) 938-5662",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@pjdionne.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
    }
   },
   "ae405eec2a4e82c7": {
@@ -1895,6 +1943,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://architecturalteam.com",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617.889.4402",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@architecturalteam.com",
+    "source": "firm_site",
+    "confidence": 0.95,
+    "verified": "2026-06-13"
    }
   },
   "4edf0119b5be6870": {
@@ -1911,6 +1977,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://bluewave.energy/",
+    "source": "firm_site",
+    "confidence": 0.86,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(617) 209-3122",
+    "source": "firm_site",
+    "confidence": 0.86,
+    "verified": "2026-06-13"
    }
   },
   "db4f1631d1b12ec1": {
@@ -2055,6 +2133,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://griffineng.com/",
+    "source": "firm_site",
+    "confidence": 0.85,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "(978) 927-5111",
+    "source": "firm_site",
+    "confidence": 0.85,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@griffineng.com",
+    "source": "firm_site",
+    "confidence": 0.85,
+    "verified": "2026-06-13"
    }
   },
   "6a7a4f9ac430cfac": {
@@ -2119,6 +2215,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.beaconcommunitiesllc.com",
+    "source": "firm_site",
+    "confidence": 0.86,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617.574.1100",
+    "source": "firm_site",
+    "confidence": 0.86,
+    "verified": "2026-06-13"
    }
   },
   "44cc9461fa71f4cc": {
@@ -2751,6 +2859,24 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://www.klopfermartin.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617.227.2560",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
+   },
+   "email": {
+    "value": "info@klopfermartin.com",
+    "source": "firm_site",
+    "confidence": 0.9,
+    "verified": "2026-06-13"
    }
   },
   "4d2f7d33191ef779": {
@@ -2767,6 +2893,18 @@
     "confidence": 1.0,
     "verified": "2026-06-13",
     "kind": "search"
+   },
+   "website": {
+    "value": "https://bohlerengineering.com",
+    "source": "firm_site",
+    "confidence": 0.92,
+    "verified": "2026-06-13"
+   },
+   "phone": {
+    "value": "617-849-8040",
+    "source": "firm_site",
+    "confidence": 0.92,
+    "verified": "2026-06-13"
    }
   },
   "f02d852235e7b4c1": {

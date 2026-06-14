@@ -561,6 +561,8 @@ function renderEntity(entityId) {
   const fields = [];
   if (enr.phone) fields.push(row("Phone",
     `<a href="tel:${esc(enr.phone.value)}">${esc(enr.phone.value)}</a>`, enr.phone));
+  if (enr.email) fields.push(row("Email",
+    `<a href="mailto:${esc(enr.email.value)}">${esc(enr.email.value)}</a>`, enr.email));
   if (enr.website) fields.push(row("Website",
     `<a href="${esc(enr.website.value)}" rel="noopener">${esc(enr.website.value)} ↗</a>`, enr.website));
   if (enr.linkedin) fields.push(row("LinkedIn",

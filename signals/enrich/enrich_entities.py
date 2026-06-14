@@ -41,10 +41,18 @@ from signals import db
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-PUBLISHABLE = {"auto", "human_verified"}     # statuses that reach contacts.json
+# statuses that reach contacts.json. auto_verified = a researched website/phone/
+# email that TWO independent agents confirmed on the firm's own site (machine-
+# verified) — the only path that publishes without a human in review_entities.py.
+PUBLISHABLE = {"auto", "human_verified", "auto_verified"}
 PHONE_SOURCES = {"firm_site", "ma_soc_registry"}   # never broker/people-search
 WEBSITE_SOURCES = {"firm_site", "ma_soc_registry"}
-INGEST_FIELDS = {"website", "phone"}
+EMAIL_SOURCES = {"firm_site", "ma_soc_registry"}   # only a firm-site/registry email
+INGEST_FIELDS = {"website", "phone", "email"}
+# A machine-verified field must clear this confidence bar to auto-publish; below it
+# we hold it for human review instead of trusting it. A wrong contact is worse than none.
+AUTO_VERIFY_MIN_CONFIDENCE = 0.85
+_EMAIL_RE = __import__("re").compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
 
 def _town_state(town_id):
@@ -107,27 +115,37 @@ def refresh_safe_links(conn, today):
     return n
 
 
-def ingest(conn, path, today):
-    """Load researched website/phone values as needs_review. Input JSON is a list
-    of {entity_id, field, value, source, confidence}. Phone/website sources are
-    restricted to the firm's own site or the registry — anything else is refused.
+_FIELD_SOURCES = {"website": WEBSITE_SOURCES, "phone": PHONE_SOURCES, "email": EMAIL_SOURCES}
+
+
+def ingest(conn, path, today, status="needs_review"):
+    """Load researched website/phone/email values. Input JSON is a list of
+    {entity_id, field, value, source, confidence}. Sources are restricted to the
+    firm's own site or the MA registry — anything else (broker/people-search/social)
+    is refused. status='needs_review' (default, human path) holds the value invisible
+    until approved; status='auto_verified' (machine-verified path) publishes it, but
+    ONLY if it clears AUTO_VERIFY_MIN_CONFIDENCE — otherwise it is held for review.
     """
     with open(path, "r", encoding="utf-8") as fh:
         items = json.load(fh)
-    added = skipped = 0
+    added = held = skipped = 0
     for it in items:
         eid = it.get("entity_id")
         field = it.get("field")
         value = (it.get("value") or "").strip()
         source = it.get("source")
+        conf = float(it.get("confidence", 0.7))
         if field not in INGEST_FIELDS or not eid or not value:
             print(f"   ! skip (bad shape): {it}")
             skipped += 1
             continue
-        allowed = PHONE_SOURCES if field == "phone" else WEBSITE_SOURCES
-        if source not in allowed:
-            print(f"   ! REFUSED {field} for {eid}: source {source!r} not in {sorted(allowed)} "
-                  f"(never people-search/broker)")
+        if source not in _FIELD_SOURCES[field]:
+            print(f"   ! REFUSED {field} for {eid}: source {source!r} not in "
+                  f"{sorted(_FIELD_SOURCES[field])} (never people-search/broker/social)")
+            skipped += 1
+            continue
+        if field == "email" and not _EMAIL_RE.match(value):
+            print(f"   ! REFUSED email for {eid}: {value!r} is not a valid address")
             skipped += 1
             continue
         row = conn.execute("SELECT enrichment, canonical_name FROM entities WHERE entity_id=?",
@@ -136,16 +154,23 @@ def ingest(conn, path, today):
             print(f"   ! skip (unknown entity): {eid}")
             skipped += 1
             continue
+        # auto_verified must clear the confidence bar; otherwise hold for review.
+        st = status
+        if st == "auto_verified" and conf < AUTO_VERIFY_MIN_CONFIDENCE:
+            st = "needs_review"
         enr = json.loads(row["enrichment"]) if row["enrichment"] else {}
-        enr[field] = {"value": value, "source": source,
-                      "confidence": float(it.get("confidence", 0.7)),
-                      "verified": today, "status": "needs_review"}
+        enr[field] = {"value": value, "source": source, "confidence": conf,
+                      "verified": today, "status": st}
         conn.execute("UPDATE entities SET enrichment=? WHERE entity_id=?",
                      (json.dumps(enr, ensure_ascii=False), eid))
-        print(f"   + {field} for {row['canonical_name']} (needs_review): {value}")
-        added += 1
+        tag = "PUBLISHED" if st in PUBLISHABLE else "held"
+        print(f"   + {field} for {row['canonical_name']} ({tag} · {st} · {conf:.2f}): {value}")
+        if st in PUBLISHABLE:
+            added += 1
+        else:
+            held += 1
     conn.commit()
-    return added, skipped
+    return added, held, skipped
 
 
 def print_worklist(conn):
@@ -167,7 +192,10 @@ def main(argv=None):
     parser.add_argument("--worklist", action="store_true",
                         help="print what needs researching (no DB writes)")
     parser.add_argument("--ingest", metavar="FILE",
-                        help="load researched website/phone JSON as needs_review")
+                        help="load researched website/phone/email JSON as needs_review (human path)")
+    parser.add_argument("--ingest-verified", metavar="FILE", dest="ingest_verified",
+                        help="load TWO-agent-confirmed website/phone/email JSON as auto_verified "
+                             "(publishes if confidence >= the auto-verify bar)")
     args = parser.parse_args(argv)
 
     conn = db.init_db()
@@ -177,10 +205,13 @@ def main(argv=None):
         print_worklist(conn)
         conn.close()
         return
-    if args.ingest:
-        added, skipped = ingest(conn, args.ingest, today)
-        print(f"ingest: {added} field(s) loaded as needs_review, {skipped} skipped.")
-        print("review + approve with: python -m signals.review.review_entities")
+    if args.ingest or args.ingest_verified:
+        path = args.ingest_verified or args.ingest
+        status = "auto_verified" if args.ingest_verified else "needs_review"
+        added, held, skipped = ingest(conn, path, today, status=status)
+        print(f"ingest: {added} published, {held} held for review, {skipped} skipped/refused.")
+        if held:
+            print("review the held fields with: python -m signals.review.review_entities")
         conn.close()
         return
 

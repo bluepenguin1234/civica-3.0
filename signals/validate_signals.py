@@ -307,11 +307,12 @@ def main():
          f"({len(dup_keys)} collision(s) — check ambiguous_entities.txt)")
 
     print("\n=== CONTACT ENRICHMENT (Step 8) ===")
-    from signals.enrich.enrich_entities import PHONE_SOURCES, WEBSITE_SOURCES, PUBLISHABLE
-    ENRICH_STATUSES = {"auto", "needs_review", "human_verified", "rejected"}
+    from signals.enrich.enrich_entities import (PHONE_SOURCES, WEBSITE_SOURCES,
+                                                EMAIL_SOURCES, PUBLISHABLE)
+    ENRICH_STATUSES = {"auto", "needs_review", "human_verified", "auto_verified", "rejected"}
     enr_by_ent = {}
     bad_ejson, bad_prov, bad_estatus = [], [], []
-    bad_phone_src, bad_site_src, bad_linkedin = [], [], []
+    bad_phone_src, bad_site_src, bad_linkedin, bad_email = [], [], [], []
     for e in ents:
         if not e["enrichment"]:
             continue
@@ -332,6 +333,9 @@ def main():
                 bad_phone_src.append((e["entity_id"], p["source"]))
             if field == "website" and p["source"] not in WEBSITE_SOURCES:
                 bad_site_src.append((e["entity_id"], p["source"]))
+            if field == "email" and (p["source"] not in EMAIL_SOURCES
+                                     or "@" not in (p["value"] or "")):
+                bad_email.append((e["entity_id"], p["source"]))
             if field == "linkedin" and "/search/" not in (p["value"] or "") and p["source"] != "firm_site":
                 bad_linkedin.append(e["entity_id"])
     check(not bad_ejson, f"entity enrichment is valid JSON ({len(bad_ejson)} bad)")
@@ -343,6 +347,8 @@ def main():
           f"({len(bad_phone_src)} bad)")
     check(not bad_site_src,
           f"website source is the firm's site or the registry only ({len(bad_site_src)} bad)")
+    check(not bad_email,
+          f"email is a valid address from the firm's site or the registry only ({len(bad_email)} bad)")
     check(not bad_linkedin,
           f"linkedin is a constructed search URL unless the firm's site links it "
           f"({len(bad_linkedin)} bad)")
@@ -362,8 +368,8 @@ def main():
                 if enr.get(fname, {}).get("status") not in PUBLISHABLE:
                     leaked.append((eid, fname))
         check(not leaked,
-              f"contacts.json publishes ONLY auto/human_verified fields — no needs_review "
-              f"or rejected leak ({len(leaked)} leak(s))")
+              f"contacts.json publishes ONLY auto / human_verified / auto_verified fields — "
+              f"no needs_review or rejected leak ({len(leaked)} leak(s))")
     else:
         warn(False, "contacts.json not built yet (run signals.publish.build_contacts_json)")
 
