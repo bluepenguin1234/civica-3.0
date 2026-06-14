@@ -93,7 +93,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 
 /* ── Cards / sections ── */
 .card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:var(--s3); }
-.section{ padding:var(--s5) 0; }
+.section{ padding:var(--s4) 0; }
 .section-title{ font-size:24px; font-weight:700; margin-bottom:var(--s4); }
 
 /* ── Search (shared with homepage + map) ── */
@@ -140,7 +140,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 }
 
 /* ── Footer ── */
-.foot{ border-top:1px solid var(--border); padding:var(--s5) 0; color:var(--muted); font-size:13px; line-height:1.8; }
+.foot{ border-top:1px solid var(--border); padding:var(--s4) 0; color:var(--muted); font-size:13px; line-height:1.8; }
 .foot a{ color:var(--primary-strong); }
 .foot-links{ display:flex; gap:var(--s3); flex-wrap:wrap; margin-bottom:var(--s2); }
 .foot-links a{ font-weight:500; }
